@@ -103,6 +103,19 @@ FinVeda is a prototype for a smart investing platform focused on transparency, e
 	- Profile, preferences, security settings, and notification controls.
 	- Screenshot: [Prototype/UsersSmartInvesting/13-user-settings-screen.png](Prototype/UsersSmartInvesting/13-user-settings-screen.png)
 
+#### Users Smart Investing: 
+
+- [Prototype/UsersSmartInvesting/01-dashboard-code.html](Prototype/UsersSmartInvesting/01-dashboard-code.html): Personalized portfolio snapshot, performance, alerts, and quick actions.
+- [Prototype/UsersSmartInvesting/02-portfolio-code.html](Prototype/UsersSmartInvesting/02-portfolio-code.html): Holdings, allocation views, and rebalancing entry points.
+- [Prototype/UsersSmartInvesting/03-transaction-history-code.html](Prototype/UsersSmartInvesting/03-transaction-history-code.html): Filterable history of buys, sells, and transfers.
+- [Prototype/UsersSmartInvesting/04-behavioral-finance-code.html](Prototype/UsersSmartInvesting/04-behavioral-finance-code.html): Behavioral insights, bias detection, and coaching tips.
+- [Prototype/UsersSmartInvesting/05-projections-code.html](Prototype/UsersSmartInvesting/05-projections-code.html): Scenario-based return, volatility, and drawdown projections.
+- [Prototype/UsersSmartInvesting/06-risk-profiling-code.html](Prototype/UsersSmartInvesting/06-risk-profiling-code.html): Risk tolerance assessment with recommended allocation bands.
+- [Prototype/UsersSmartInvesting/07-tax-optimization-code.html](Prototype/UsersSmartInvesting/07-tax-optimization-code.html): Tax-aware strategies like loss harvesting and account placement.
+- [Prototype/UsersSmartInvesting/08-financial-goals-code.html](Prototype/UsersSmartInvesting/08-financial-goals-code.html): Goal setup for retirement/education and progress tracking.
+- [Prototype/UsersSmartInvesting/10-alerts-code.html](Prototype/UsersSmartInvesting/10-alerts-code.html): Configurable alerts for prices, news, and portfolio thresholds.
+- [Prototype/UsersSmartInvesting/13-user-settings-code.html](Prototype/UsersSmartInvesting/13-user-settings-code.html): Profile, preferences, security, and notification controls.
+
 ## Typical User Flow
 
 - Start at Home → Learn more via About/Education → Create account → Login.
