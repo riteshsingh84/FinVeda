@@ -1,11 +1,44 @@
- .material-symbols-outlined {
-     font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
- }
+:root {
+    --color-primary: #06bcf9;
+    --background-dark: #0f1e23;
+    --border-dark: #27353a;
+}
 
- .glow-effect {
-     background: radial-gradient(circle at center, rgba(6, 168, 249, 0.15) 0%, transparent 70%);
- }
+.material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
 
- .logo-image {
-     width: 70px;
- }
+.glow-effect {
+    background: radial-gradient(circle at center, rgba(6, 168, 249, 0.15) 0%, transparent 70%);
+}
+
+.logo-image {
+    width: 70px;
+}
+
+/* Global scrollbar styling */
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+html::-webkit-scrollbar-track,
+body::-webkit-scrollbar-track {
+    background: var(--background-dark);
+}
+html::-webkit-scrollbar-thumb,
+body::-webkit-scrollbar-thumb {
+    background: var(--border-dark);
+    border-radius: 4px;
+}
+html::-webkit-scrollbar-thumb:hover,
+body::-webkit-scrollbar-thumb:hover {
+    background: #3a4e55;
+}
+
+/* Home hero visual background */
+.home-hero-visual {
+    background-position: center;
+    background-size: cover;
+    background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBkvH2fQblHaBHsKV1tn7JMtJMUSU2D-M3mUpTNZjlF5U4g26zqd_8lDi10Y4yHYM8hwD3v066Ol79U_Usa3M9_B-seA_Z8IyF-yCsHQYESyI8E2GylMak4UhkCNTm4Zq_kDfuxi9vW8NP127YC821FF71tIO9Lofd002h-31IDsMKcXftbHNwf4xAAXCQqSY4EhZO_B5JuM3E4QrWa5b9seUw9zCCzcJK77aSj50O9Iud3m-AlDws877MqWNms_QkY9HTNgVHoNkk");
+}

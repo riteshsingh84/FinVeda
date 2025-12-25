@@ -27,28 +27,11 @@
             },
         }
     </script>
-<style>
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-        }::-webkit-scrollbar {
-            width: 8px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #0f1e23;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #3a4e55;
-            border-radius: 4px;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background: #06bcf9;
-        }
-        header { display: none; }
-    </style>
+<link rel="stylesheet" href="/css/main.css"/>
 </head>
     <body class="bg-background-light dark:bg-background-dark font-display min-h-screen flex flex-col overflow-x-hidden">
     <div data-include="/shared/header.html"></div>
-<header class="w-full border-b border-border-dark bg-background-dark/80 backdrop-blur-md fixed top-0 z-50 transition-all duration-300">
+<header hidden class="w-full border-b border-border-dark bg-background-dark/80 backdrop-blur-md fixed top-0 z-50 transition-all duration-300">
 <div class="px-6 h-[72px] flex items-center justify-between max-w-7xl mx-auto w-full">
 <a class="flex items-center gap-3 text-white shrink-0 hover:opacity-90 transition-opacity" href="../home.html">
 <div class="size-8 text-primary">
