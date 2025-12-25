@@ -1,4 +1,4 @@
-# FinVeda — Smart Investing Prototype
+# FinVeda - Smart Investing Prototype
 
 FinVeda is a prototype for a smart investing platform focused on transparency, education, and user-centric portfolio management. This repository contains a clickable HTML prototype covering onboarding, core investing workflows, and supporting content (education, news, support). It is ideal for stakeholder reviews, usability testing, and as a foundation for front-end implementation.
 
