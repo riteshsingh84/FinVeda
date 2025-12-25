@@ -1,135 +1,194 @@
 <!DOCTYPE html>
-<html class="dark" lang="en"><head>
-<meta charset="utf-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>FinVeda Resources - Education</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link rel="stylesheet" href="../css/main.css"/>
-<link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FinVeda Resources - Education</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+ <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#06a8f9",
+                        "background-light": "#f5f7f8",
+                        "background-dark": "#0f1c23", // Deep dark blue-grey
+                        "card-dark": "#16262e", // Slightly lighter for cards
+                        "border-dark": "#27343a", // Border color
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+
 </head>
+
 <body class="font-[Manrope] bg-[#0f1e23] text-white">
-<div class="min-h-screen flex flex-col">
-<div data-include="./shared/header.html"></div>
-<main class="flex-1 px-6 py-10">
-	<div class="max-w-[1200px] mx-auto flex flex-col gap-8">
-		<header class="flex flex-col gap-2">
-			<h2 class="text-3xl font-extrabold">Education Center</h2>
-			<p class="text-[#9bb3bb]">Level up your investment game with our curated resources.</p>
-		</header>
-		<section class="flex flex-col gap-4">
-			<div class="relative w-full max-w-2xl">
-				<div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
-					<span class="material-symbols-outlined text-[#9bb3bb]">search</span>
-				</div>
-				<input type="text" placeholder="Search for articles, videos, tutorials..." class="block w-full h-12 pl-12 pr-4 bg-[#27353a] border-none rounded-xl text-white placeholder-[#9bb3bb] focus:ring-2 focus:ring-[#06bcf9] focus:bg-[#2f4046] transition-all" />
-			</div>
-			<div class="flex flex-wrap gap-3">
-				<button class="flex h-8 items-center justify-center gap-x-2 rounded-lg bg-[#27353a] hover:bg-[#34464d] px-3 transition-colors">
-					<span class="text-white text-xs font-medium">Format: All</span>
-					<span class="material-symbols-outlined text-white text-sm">expand_more</span>
-				</button>
-				<button class="flex h-8 items-center justify-center gap-x-2 rounded-lg bg-[#27353a] hover:bg-[#34464d] px-3 transition-colors">
-					<span class="text-white text-xs font-medium">Level: Beginner</span>
-					<span class="material-symbols-outlined text-white text-sm">expand_more</span>
-				</button>
-				<button class="flex h-8 items-center justify-center gap-x-2 rounded-lg bg-[#27353a] hover:bg-[#34464d] px-3 transition-colors">
-					<span class="text-white text-xs font-medium">Topic: Analysis</span>
-					<span class="material-symbols-outlined text-white text-sm">expand_more</span>
-				</button>
-				<div class="ml-auto">
-					<button class="text-[#06bcf9] text-sm font-bold hover:underline">Clear all</button>
-				</div>
-			</div>
-		</section>
-		<section class="grid grid-cols-1 lg:grid-cols-3 gap-6">
-			<div class="lg:col-span-2 relative h-[320px] rounded-2xl overflow-hidden group cursor-pointer shadow-lg shadow-black/20">
-				<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" style="background-image:url('https://lh3.googleusercontent.com/aida-public/AB6AXuAfwgVaD1oiWpjQZdQjjGxipBK4kQe-2DG3uouZpWCzbpgv4QrK2LTGrN0yRL6_WQvFdzc-DQDJIIi9l5rqGJSZwd76sVApjTmXmtZiedKEWKm2YJU0TM4qgTo8zwL0T5BUHF9Wk35tAIB9Y5MP0ARQ7CVNlHas5nWWRoExi0Dl-KE3jZafctB5JBWoOQU_h8nynOqYcaUHq3e2HHaw_wjAh94_XW_Z7091wiMo9UMn9-_HU4wPoNYdU-2JVKr_h5p5l5DSKmb0Drw');"></div>
-				<div class="absolute inset-0 bg-gradient-to-t from-[#0f1e23] via-[#0f1e23]/60 to-transparent"></div>
-				<div class="absolute bottom-0 left-0 p-8 flex flex-col items-start gap-4 max-w-lg">
-					<span class="px-2 py-1 bg-[#06bcf9] text-[#0f1e23] text-xs font-bold uppercase tracking-wider rounded">Featured Course</span>
-					<h3 class="text-2xl font-bold">Mastering Market Volatility</h3>
-					<p class="text-gray-200 text-sm">Learn strategies to protect your portfolio and spot opportunities in uncertain markets.</p>
-					<div class="flex items-center gap-4 mt-2">
-						<button class="flex items-center gap-2 bg-white text-[#0f1e23] px-4 py-2 rounded-lg font-bold hover:bg-gray-100 transition-colors">
-							<span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1;">play_arrow</span>
-							Start Lesson
-						</button>
-						<span class="text-white text-sm font-medium flex items-center gap-1">
-							<span class="material-symbols-outlined text-base">schedule</span> 45 min
-						</span>
-					</div>
-				</div>
-			</div>
-			<div class="bg-[#19252b] rounded-2xl p-6 flex flex-col gap-4 border border-[#27353a]">
-				<div class="flex items-center justify-between">
-					<h4 class="text-lg font-bold">Continue Learning</h4>
-					<a href="#" class="text-[#06bcf9] text-xs font-bold hover:underline">View All</a>
-				</div>
-				<div class="flex flex-col gap-2 p-3 rounded-xl hover:bg-[#27353a] transition-colors cursor-pointer group">
-					<div class="flex gap-3">
-						<div class="size-12 rounded-lg bg-cover bg-center shrink-0" style="background-image:url('https://lh3.googleusercontent.com/aida-public/AB6AXuCfWCPiWAkG6Lo3N1cHQqHjBY0HPz0fA1X9C80y8ZqdS8rJeaLdYaf5buMhS7uGFPMCLfiAnoWuafrm4auqsRrkzj1PIc0tiG_C8vsrZDQgzK_-l35qjJY4zDAqHOenZEHrkRacg07-g1EU6CCVAS2_FWfkCS2m0ofyBs7CkMdjh0ZSRrxy2qarTPIDtnN_V4iMjOYH9IA8fE6Nq_7jjVRm9AkV-AlVOPtQk83drJZWYoHIzgk4L1PBUt5YxjPcQKk7cSxgYDIzaS4');"></div>
-						<div class="flex flex-col justify-center overflow-hidden">
-							<h5 class="text-sm font-bold truncate group-hover:text-[#06bcf9] transition-colors">Crypto Fundamentals</h5>
-							<p class="text-[#9bb3bb] text-xs">Module 3/5 • 12 min left</p>
-						</div>
-					</div>
-					<div class="w-full bg-[#3a4e55] h-1.5 rounded-full mt-1">
-						<div class="bg-[#06bcf9] h-1.5 rounded-full" style="width:60%"></div>
-					</div>
-				</div>
-				<div class="flex flex-col gap-2 p-3 rounded-xl hover:bg-[#27353a] transition-colors cursor-pointer group">
-					<div class="flex gap-3">
-						<div class="size-12 rounded-lg bg-cover bg-center shrink-0" style="background-image:url('https://lh3.googleusercontent.com/aida-public/AB6AXuBFpSx0FqdWgMsRW9mbOoSp9Y_YA6Zous63QXqydtx5_-66aQUirsj5-jnFqW6J1XtfueWO5-GzeDDKfNjgFsz46dZiS5WT5S6VpQBxxTuREH1H4BFEX2YDx03foYkChN0UVjejBGbo3HW3ouMnrPyn1rjBgmmrCo79DxQxGQkDkkzArZscU-UB1bymcfQUxDjGsnP1qEhaIaiQiBpR8cTGLE7Y6sUfDs_duxFgqHBaEPDN_3EwSCZziCoD0CD7Ia-Le9N9Ity5dSQ');"></div>
-						<div class="flex flex-col justify-center overflow-hidden">
-							<h5 class="text-sm font-bold truncate group-hover:text-[#06bcf9] transition-colors">Technical Analysis 101</h5>
-							<p class="text-[#9bb3bb] text-xs">Module 1/4 • 25 min left</p>
-						</div>
-					</div>
-					<div class="w-full bg-[#3a4e55] h-1.5 rounded-full mt-1">
-						<div class="bg-[#06bcf9] h-1.5 rounded-full" style="width:25%"></div>
-					</div>
-				</div>
-			</div>
-		</section>
-		<section class="flex flex-col gap-4 pb-8">
-			<div class="flex items-center justify-between px-1">
-				<h3 class="text-xl font-bold">Recommended for you</h3>
-				<div class="flex gap-2">
-					<button class="size-8 rounded-full border border-[#27353a] flex items-center justify-center text-[#9bb3bb] hover:bg-[#27353a] hover:text-white transition-colors">
-						<span class="material-symbols-outlined text-lg">chevron_left</span>
-					</button>
-					<button class="size-8 rounded-full border border-[#27353a] flex items-center justify-center text-[#9bb3bb] hover:bg-[#27353a] hover:text-white transition-colors">
-						<span class="material-symbols-outlined text-lg">chevron_right</span>
-					</button>
-				</div>
-			</div>
-			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-				<article class="flex flex-col gap-3 group cursor-pointer">
-					<div class="relative aspect-video rounded-xl overflow-hidden bg-[#27353a]">
-						<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110" style="background-image:url('https://lh3.googleusercontent.com/aida-public/AB6AXuASjmSOffj0EGWomoNp6LxgT2y7uGKAxA9zbaDB04XkbwFT_wQhHgguuk63m1pw0XnlbEzAvs-E1ouJHB538lHWRmhRXgtHATqVcFqz5HQxjysDM39E-dQeBdk0Q9WSYyWx0mstjXo_p49hi_DrPHglALla6MJvS2CvzuFL6Gd1ejrBhS9oS9DZJwZw_pHrI1j4PhD3dtCDwJkXD1C_v4w1Rvh-WC_iC6t9m5cEdIxu-ON6i-HG4Ygzo5tSoOCEHyH0ilM0OnM56QE');"></div>
-						<div class="absolute top-2 right-2 bg-black/60 backdrop-blur-sm px-2 py-1 rounded text-white text-xs font-bold flex items-center gap-1">
-							<span class="material-symbols-outlined text-xs">videocam</span> 12:40
-						</div>
-					</div>
-					<div class="flex flex-col gap-1">
-						<div class="flex items-center justify-between">
-							<span class="text-xs font-bold text-[#06bcf9] uppercase">Strategy</span>
-							<button class="text-[#9bb3bb] hover:text-white"><span class="material-symbols-outlined text-lg">bookmark</span></button>
-						</div>
-						<h4 class="font-bold leading-snug group-hover:text-[#06bcf9] transition-colors">Diversification Strategies for 2024</h4>
-						<p class="text-[#9bb3bb] text-xs">Why putting all your eggs in one basket is risky.</p>
-					</div>
-				</article>
-				<!-- 3 more sample cards could be added here -->
-			</div>
-		</section>
-	</div>
-</main>
-<div data-include="./shared/footer.html"></div>
-</div>
-<script src="../shared/include.js"></script>
+    <div class="min-h-screen flex flex-col">
+        <div data-include="./shared/header.html"></div>
+        <main class="flex-1 px-6 py-10">
+            <div class="max-w-[1200px] mx-auto flex flex-col gap-8">
+                <header class="flex flex-col gap-2">
+                    <h2 class="text-3xl font-extrabold">Education Center</h2>
+                    <p class="text-[#9bb3bb]">Level up your investment game with our curated resources.</p>
+                </header>
+                <section class="flex flex-col gap-4">
+                    <div class="relative w-full max-w-2xl">
+                        <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+                            <span class="material-symbols-outlined text-[#9bb3bb]">search</span>
+                        </div>
+                        <input type="text" placeholder="Search for articles, videos, tutorials..."
+                            class="block w-full h-12 pl-12 pr-4 bg-[#27353a] border-none rounded-xl text-white placeholder-[#9bb3bb] focus:ring-2 focus:ring-[#06bcf9] focus:bg-[#2f4046] transition-all" />
+                    </div>
+                    <div class="flex flex-wrap gap-3">
+                        <button
+                            class="flex h-8 items-center justify-center gap-x-2 rounded-lg bg-[#27353a] hover:bg-[#34464d] px-3 transition-colors">
+                            <span class="text-white text-xs font-medium">Format: All</span>
+                            <span class="material-symbols-outlined text-white text-sm">expand_more</span>
+                        </button>
+                        <button
+                            class="flex h-8 items-center justify-center gap-x-2 rounded-lg bg-[#27353a] hover:bg-[#34464d] px-3 transition-colors">
+                            <span class="text-white text-xs font-medium">Level: Beginner</span>
+                            <span class="material-symbols-outlined text-white text-sm">expand_more</span>
+                        </button>
+                        <button
+                            class="flex h-8 items-center justify-center gap-x-2 rounded-lg bg-[#27353a] hover:bg-[#34464d] px-3 transition-colors">
+                            <span class="text-white text-xs font-medium">Topic: Analysis</span>
+                            <span class="material-symbols-outlined text-white text-sm">expand_more</span>
+                        </button>
+                        <div class="ml-auto">
+                            <button class="text-[#06bcf9] text-sm font-bold hover:underline">Clear all</button>
+                        </div>
+                    </div>
+                </section>
+                <section class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                    <div
+                        class="lg:col-span-2 relative h-[320px] rounded-2xl overflow-hidden group cursor-pointer shadow-lg shadow-black/20">
+                        <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
+                            style="background-image:url('https://lh3.googleusercontent.com/aida-public/AB6AXuAfwgVaD1oiWpjQZdQjjGxipBK4kQe-2DG3uouZpWCzbpgv4QrK2LTGrN0yRL6_WQvFdzc-DQDJIIi9l5rqGJSZwd76sVApjTmXmtZiedKEWKm2YJU0TM4qgTo8zwL0T5BUHF9Wk35tAIB9Y5MP0ARQ7CVNlHas5nWWRoExi0Dl-KE3jZafctB5JBWoOQU_h8nynOqYcaUHq3e2HHaw_wjAh94_XW_Z7091wiMo9UMn9-_HU4wPoNYdU-2JVKr_h5p5l5DSKmb0Drw');">
+                        </div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#0f1e23] via-[#0f1e23]/60 to-transparent">
+                        </div>
+                        <div class="absolute bottom-0 left-0 p-8 flex flex-col items-start gap-4 max-w-lg">
+                            <span
+                                class="px-2 py-1 bg-[#06bcf9] text-[#0f1e23] text-xs font-bold uppercase tracking-wider rounded">Featured
+                                Course</span>
+                            <h3 class="text-2xl font-bold">Mastering Market Volatility</h3>
+                            <p class="text-gray-200 text-sm">Learn strategies to protect your portfolio and spot
+                                opportunities in uncertain markets.</p>
+                            <div class="flex items-center gap-4 mt-2">
+                                <button
+                                    class="flex items-center gap-2 bg-white text-[#0f1e23] px-4 py-2 rounded-lg font-bold hover:bg-gray-100 transition-colors">
+                                    <span class="material-symbols-outlined"
+                                        style="font-variation-settings:'FILL' 1;">play_arrow</span>
+                                    Start Lesson
+                                </button>
+                                <span class="text-white text-sm font-medium flex items-center gap-1">
+                                    <span class="material-symbols-outlined text-base">schedule</span> 45 min
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-[#19252b] rounded-2xl p-6 flex flex-col gap-4 border border-[#27353a]">
+                        <div class="flex items-center justify-between">
+                            <h4 class="text-lg font-bold">Continue Learning</h4>
+                            <a href="#" class="text-[#06bcf9] text-xs font-bold hover:underline">View All</a>
+                        </div>
+                        <div
+                            class="flex flex-col gap-2 p-3 rounded-xl hover:bg-[#27353a] transition-colors cursor-pointer group">
+                            <div class="flex gap-3">
+                                <div class="size-12 rounded-lg bg-cover bg-center shrink-0"
+                                    style="background-image:url('https://lh3.googleusercontent.com/aida-public/AB6AXuCfWCPiWAkG6Lo3N1cHQqHjBY0HPz0fA1X9C80y8ZqdS8rJeaLdYaf5buMhS7uGFPMCLfiAnoWuafrm4auqsRrkzj1PIc0tiG_C8vsrZDQgzK_-l35qjJY4zDAqHOenZEHrkRacg07-g1EU6CCVAS2_FWfkCS2m0ofyBs7CkMdjh0ZSRrxy2qarTPIDtnN_V4iMjOYH9IA8fE6Nq_7jjVRm9AkV-AlVOPtQk83drJZWYoHIzgk4L1PBUt5YxjPcQKk7cSxgYDIzaS4');">
+                                </div>
+                                <div class="flex flex-col justify-center overflow-hidden">
+                                    <h5 class="text-sm font-bold truncate group-hover:text-[#06bcf9] transition-colors">
+                                        Crypto Fundamentals</h5>
+                                    <p class="text-[#9bb3bb] text-xs">Module 3/5 • 12 min left</p>
+                                </div>
+                            </div>
+                            <div class="w-full bg-[#3a4e55] h-1.5 rounded-full mt-1">
+                                <div class="bg-[#06bcf9] h-1.5 rounded-full" style="width:60%"></div>
+                            </div>
+                        </div>
+                        <div
+                            class="flex flex-col gap-2 p-3 rounded-xl hover:bg-[#27353a] transition-colors cursor-pointer group">
+                            <div class="flex gap-3">
+                                <div class="size-12 rounded-lg bg-cover bg-center shrink-0"
+                                    style="background-image:url('https://lh3.googleusercontent.com/aida-public/AB6AXuBFpSx0FqdWgMsRW9mbOoSp9Y_YA6Zous63QXqydtx5_-66aQUirsj5-jnFqW6J1XtfueWO5-GzeDDKfNjgFsz46dZiS5WT5S6VpQBxxTuREH1H4BFEX2YDx03foYkChN0UVjejBGbo3HW3ouMnrPyn1rjBgmmrCo79DxQxGQkDkkzArZscU-UB1bymcfQUxDjGsnP1qEhaIaiQiBpR8cTGLE7Y6sUfDs_duxFgqHBaEPDN_3EwSCZziCoD0CD7Ia-Le9N9Ity5dSQ');">
+                                </div>
+                                <div class="flex flex-col justify-center overflow-hidden">
+                                    <h5 class="text-sm font-bold truncate group-hover:text-[#06bcf9] transition-colors">
+                                        Technical Analysis 101</h5>
+                                    <p class="text-[#9bb3bb] text-xs">Module 1/4 • 25 min left</p>
+                                </div>
+                            </div>
+                            <div class="w-full bg-[#3a4e55] h-1.5 rounded-full mt-1">
+                                <div class="bg-[#06bcf9] h-1.5 rounded-full" style="width:25%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="flex flex-col gap-4 pb-8">
+                    <div class="flex items-center justify-between px-1">
+                        <h3 class="text-xl font-bold">Recommended for you</h3>
+                        <div class="flex gap-2">
+                            <button
+                                class="size-8 rounded-full border border-[#27353a] flex items-center justify-center text-[#9bb3bb] hover:bg-[#27353a] hover:text-white transition-colors">
+                                <span class="material-symbols-outlined text-lg">chevron_left</span>
+                            </button>
+                            <button
+                                class="size-8 rounded-full border border-[#27353a] flex items-center justify-center text-[#9bb3bb] hover:bg-[#27353a] hover:text-white transition-colors">
+                                <span class="material-symbols-outlined text-lg">chevron_right</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                        <article class="flex flex-col gap-3 group cursor-pointer">
+                            <div class="relative aspect-video rounded-xl overflow-hidden bg-[#27353a]">
+                                <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                                    style="background-image:url('https://lh3.googleusercontent.com/aida-public/AB6AXuASjmSOffj0EGWomoNp6LxgT2y7uGKAxA9zbaDB04XkbwFT_wQhHgguuk63m1pw0XnlbEzAvs-E1ouJHB538lHWRmhRXgtHATqVcFqz5HQxjysDM39E-dQeBdk0Q9WSYyWx0mstjXo_p49hi_DrPHglALla6MJvS2CvzuFL6Gd1ejrBhS9oS9DZJwZw_pHrI1j4PhD3dtCDwJkXD1C_v4w1Rvh-WC_iC6t9m5cEdIxu-ON6i-HG4Ygzo5tSoOCEHyH0ilM0OnM56QE');">
+                                </div>
+                                <div
+                                    class="absolute top-2 right-2 bg-black/60 backdrop-blur-sm px-2 py-1 rounded text-white text-xs font-bold flex items-center gap-1">
+                                    <span class="material-symbols-outlined text-xs">videocam</span> 12:40
+                                </div>
+                            </div>
+                            <div class="flex flex-col gap-1">
+                                <div class="flex items-center justify-between">
+                                    <span class="text-xs font-bold text-[#06bcf9] uppercase">Strategy</span>
+                                    <button class="text-[#9bb3bb] hover:text-white"><span
+                                            class="material-symbols-outlined text-lg">bookmark</span></button>
+                                </div>
+                                <h4 class="font-bold leading-snug group-hover:text-[#06bcf9] transition-colors">
+                                    Diversification Strategies for 2024</h4>
+                                <p class="text-[#9bb3bb] text-xs">Why putting all your eggs in one basket is risky.</p>
+                            </div>
+                        </article>
+                        <!-- 3 more sample cards could be added here -->
+                    </div>
+                </section>
+            </div>
+        </main>
+        <div data-include="./shared/footer.html"></div>
+    </div>
+    <script src="../shared/include.js"></script>
 </body>
+
 </html>
