@@ -137,6 +137,57 @@
     }
     // Also apply to existing markup in case includes aren't used
     applyBase(document);
+
+    // After includes load, set dynamic page title in the app header
+    try { updateHeaderTitle(); } catch(e) {}
+    try { markActiveNav(); } catch(e) {}
   }
   document.addEventListener('DOMContentLoaded', loadIncludes);
+  
+  // Derive a friendly page title from the current path
+  function derivePageName(){
+    const file = (window.location.pathname.split('/').pop() || '').toLowerCase();
+    const map = {
+      'dashboard.html': 'Dashboard',
+      'portfolio.html': 'Portfolio',
+      'transactions.html': 'Transactions',
+      'behavioral.html': 'Behavioral Finance',
+      'projections.html': 'Projections',
+      'risk.html': 'Risk Profiling',
+      'tax.html': 'Tax Optimization',
+      'goals.html': 'Financial Goals',
+      'settings.html': 'User Settings',
+      'alerts.html': 'Alerts'
+    };
+    return map[file] || (document.title || 'FinVeda').replace(/\s*-.*$/, '').trim();
+  }
+
+  // Populate header title placeholders if present
+  function updateHeaderTitle(){
+    const title = derivePageName();
+    document.querySelectorAll('.fv-page-title').forEach(el => { el.textContent = title; });
+  }
+
+  // Highlight the active nav link in the sidebar based on current page
+  function markActiveNav(){
+    const curr = (new URL(window.location.href)).pathname.toLowerCase();
+    const currFile = curr.split('/').pop();
+    const anchors = document.querySelectorAll('aside a[href]');
+    anchors.forEach(a => {
+      const hrefPath = (new URL(a.getAttribute('href'), window.location.href)).pathname.toLowerCase();
+      const hrefFile = hrefPath.split('/').pop();
+      const isActive = hrefPath === curr || hrefFile === currFile;
+      // Base classes expected on links
+      const baseClasses = [
+        'flex','items-center','gap-3','px-3','py-2.5','rounded-lg','transition-all'
+      ];
+      baseClasses.forEach(c => a.classList.add(c));
+      // Remove any previous active styling
+      a.classList.remove('bg-[#27353a]','text-white','border','border-[#2f3e44]');
+      // Apply active styling when matched
+      if(isActive){
+        a.classList.add('bg-[#27353a]','text-white','border','border-[#2f3e44]');
+      }
+    });
+  }
 })();
