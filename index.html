@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>FinVeda - Smart Investing</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#06a8f9",
+                        "background-light": "#f5f7f8",
+                        "background-dark": "#0f1c23", // Deep dark blue-grey
+                        "card-dark": "#16262e", // Slightly lighter for cards
+                        "border-dark": "#27343a", // Border color
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }.glow-effect {
+            background: radial-gradient(circle at center, rgba(6, 168, 249, 0.15) 0%, transparent 70%);
+        }
+        .logo-image {
+            width: 70px;           
+        }
+    </style>
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark text-slate-900 dark:text-white transition-colors duration-200">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+<div data-include="/shared/header.html"></div>
+<main class="flex-grow flex flex-col">
+<section class="relative px-6 py-12 lg:px-20 lg:py-24 flex justify-center overflow-hidden">
+<div class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[800px] glow-effect pointer-events-none opacity-50 dark:opacity-100"></div>
+<div class="container max-w-[1200px] flex flex-col lg:flex-row items-center gap-12 lg:gap-16 z-10">
+<div class="flex flex-col gap-6 flex-1 text-center lg:text-left">
+<div class="inline-flex items-center justify-center lg:justify-start gap-2 text-primary font-bold text-sm uppercase tracking-wider">
+<span class="material-symbols-outlined text-lg">auto_awesome</span>
+<span>AI-Powered Wealth Management</span>
+</div>
+<h1 class="text-4xl sm:text-5xl lg:text-6xl font-black leading-tight tracking-tight text-slate-900 dark:text-white">
+                            Smart Investing, <br/>
+<span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-cyan-300">Simplified with AI</span>
+</h1>
+<p class="text-slate-600 dark:text-slate-300 text-lg leading-relaxed max-w-2xl mx-auto lg:mx-0">
+                            Unlock institutional-grade analytics and automate your wealth growth. Join the future of personal finance today and let our intelligence work for you.
+                        </p>
+<div class="flex flex-wrap gap-4 justify-center lg:justify-start mt-4">
+<button class="flex min-w-[140px] cursor-pointer items-center justify-center rounded-lg h-12 px-6 bg-primary hover:bg-sky-500 text-white text-base font-bold shadow-lg shadow-primary/25 transition-all" onclick="window.location.href='users/register.html'">
+                                Get Started
+                            </button>
+<button class="flex min-w-[140px] cursor-pointer items-center justify-center rounded-lg h-12 px-6 border border-slate-300 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-900 dark:text-white text-base font-bold transition-all" onclick="window.location.href='app/dashboard.html'">
+                                View Demo
+                            </button>
+</div>
+</div>
+<div class="flex-1 w-full max-w-[600px] lg:max-w-none">
+<div class="relative w-full aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl border border-slate-200 dark:border-border-dark bg-card-dark group">
+<div class="absolute inset-0 bg-cover bg-center opacity-90" data-alt="Futuristic abstract 3D financial data visualization with floating graphs and neon blue nodes" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBkvH2fQblHaBHsKV1tn7JMtJMUSU2D-M3mUpTNZjlF5U4g26zqd_8lDi10Y4yHYM8hwD3v066Ol79U_Usa3M9_B-seA_Z8IyF-yCsHQYESyI8E2GylMak4UhkCNTm4Zq_kDfuxi9vW8NP127YC821FF71tIO9Lofd002h-31IDsMKcXftbHNwf4xAAXCQqSY4EhZO_B5JuM3E4QrWa5b9seUw9zCCzcJK77aSj50O9Iud3m-AlDws877MqWNms_QkY9HTNgVHoNkk");'>
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-background-dark via-transparent to-transparent opacity-80"></div>
+<div class="absolute bottom-6 left-6 right-6 p-4 bg-background-dark/90 backdrop-blur-sm border border-border-dark rounded-xl flex items-center justify-between shadow-lg transform transition-transform group-hover:translate-y-[-5px]">
+<div class="flex items-center gap-3">
+<div class="p-2 bg-green-500/10 rounded-lg text-green-400">
+<span class="material-symbols-outlined">trending_up</span>
+</div>
+<div>
+<p class="text-xs text-slate-400 uppercase font-semibold">Portfolio Growth</p>
+<p class="text-white font-bold text-lg">+12.4% <span class="text-sm font-normal text-slate-400">this month</span></p>
+</div>
+</div>
+<div class="h-8 w-24 bg-gradient-to-r from-transparent via-green-500/20 to-transparent rounded-full blur-xl"></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="border-y border-slate-200 dark:border-border-dark bg-white dark:bg-[#131f26]">
+<div class="container mx-auto max-w-[1200px] px-6 py-12">
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-8">
+<div class="flex flex-col items-center sm:items-start gap-2 p-4">
+<p class="text-slate-500 dark:text-slate-400 text-sm font-semibold uppercase tracking-wider">Assets Managed</p>
+<p class="text-slate-900 dark:text-white text-4xl font-black tracking-tight">$1B+</p>
+</div>
+<div class="flex flex-col items-center sm:items-start gap-2 p-4 border-t sm:border-t-0 sm:border-l border-slate-200 dark:border-border-dark">
+<p class="text-slate-500 dark:text-slate-400 text-sm font-semibold uppercase tracking-wider">Users Trusted</p>
+<p class="text-slate-900 dark:text-white text-4xl font-black tracking-tight">50,000+</p>
+</div>
+<div class="flex flex-col items-center sm:items-start gap-2 p-4 border-t sm:border-t-0 sm:border-l border-slate-200 dark:border-border-dark">
+<p class="text-slate-500 dark:text-slate-400 text-sm font-semibold uppercase tracking-wider">Security Level</p>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">verified_user</span>
+<p class="text-slate-900 dark:text-white text-4xl font-black tracking-tight">Bank-Grade</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-20 px-6">
+<div class="container mx-auto max-w-[1200px]">
+<div class="flex flex-col gap-4 mb-12 text-center max-w-3xl mx-auto">
+<h2 class="text-3xl lg:text-4xl font-bold text-slate-900 dark:text-white">Intelligence for Your Wealth</h2>
+<p class="text-slate-600 dark:text-slate-400 text-lg">Key benefits designed to maximize your returns through advanced algorithms and psychology-based planning.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="group flex flex-col gap-6 rounded-2xl border border-slate-200 dark:border-border-dark bg-white dark:bg-card-dark p-8 hover:border-primary/50 transition-colors shadow-sm dark:shadow-none">
+<div class="w-14 h-14 rounded-full bg-blue-50 dark:bg-primary/10 flex items-center justify-center text-primary group-hover:scale-110 transition-transform duration-300">
+<span class="material-symbols-outlined text-3xl">account_balance_wallet</span>
+</div>
+<div class="flex flex-col gap-2">
+<h3 class="text-xl font-bold text-slate-900 dark:text-white">Optimize Taxes Automatically</h3>
+<p class="text-slate-600 dark:text-slate-400 leading-relaxed">Keep more of what you earn. Our intelligent harvesting engine works 24/7 to minimize your tax liability.</p>
+</div>
+</div>
+<div class="group flex flex-col gap-6 rounded-2xl border border-slate-200 dark:border-border-dark bg-white dark:bg-card-dark p-8 hover:border-primary/50 transition-colors shadow-sm dark:shadow-none">
+<div class="w-14 h-14 rounded-full bg-purple-50 dark:bg-purple-500/10 flex items-center justify-center text-purple-500 group-hover:scale-110 transition-transform duration-300">
+<span class="material-symbols-outlined text-3xl">psychology</span>
+</div>
+<div class="flex flex-col gap-2">
+<h3 class="text-xl font-bold text-slate-900 dark:text-white">Understand Your Psychology</h3>
+<p class="text-slate-600 dark:text-slate-400 leading-relaxed">Master your mindset with AI insights that help you understand your triggers and improve investment discipline.</p>
+</div>
+</div>
+<div class="group flex flex-col gap-6 rounded-2xl border border-slate-200 dark:border-border-dark bg-white dark:bg-card-dark p-8 hover:border-primary/50 transition-colors shadow-sm dark:shadow-none">
+<div class="w-14 h-14 rounded-full bg-green-50 dark:bg-green-500/10 flex items-center justify-center text-green-500 group-hover:scale-110 transition-transform duration-300">
+<span class="material-symbols-outlined text-3xl">track_changes</span>
+</div>
+<div class="flex flex-col gap-2">
+<h3 class="text-xl font-bold text-slate-900 dark:text-white">Achieve Financial Goals</h3>
+<p class="text-slate-600 dark:text-slate-400 leading-relaxed">Hit every target with dynamic planning that adjusts to market conditions and your life changes in real-time.</p>
+</div>
+</div>
+</div>
+<div class="mt-12 flex justify-center">
+<button class="flex items-center gap-2 text-primary hover:text-sky-400 font-bold transition-colors">
+                            Learn more about our features <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+</section>
+<section class="py-20 px-6 border-t border-slate-200 dark:border-border-dark bg-white dark:bg-background-dark overflow-hidden">
+<div class="container mx-auto max-w-[1200px]">
+<div class="flex flex-col lg:flex-row items-center gap-16">
+<div class="flex-1 w-full max-w-[500px]">
+<div class="relative rounded-2xl bg-slate-50 dark:bg-card-dark border border-slate-200 dark:border-border-dark p-8 shadow-2xl">
+<div class="absolute top-0 right-0 p-6 opacity-20">
+<span class="material-symbols-outlined text-8xl text-primary">shield</span>
+</div>
+<h4 class="text-sm font-bold text-slate-500 uppercase tracking-wider mb-6">Your Risk Profile</h4>
+<div class="flex items-center justify-center mb-8">
+<div class="relative w-48 h-48 rounded-full border-[12px] border-slate-200 dark:border-slate-700 flex items-center justify-center">
+<div class="absolute inset-0 rounded-full border-[12px] border-primary border-t-transparent border-l-transparent -rotate-45"></div>
+<div class="text-center">
+<span class="block text-5xl font-black text-slate-900 dark:text-white">65</span>
+<span class="text-sm font-semibold text-primary">Balanced</span>
+</div>
+</div>
+</div>
+<div class="space-y-4">
+<div>
+<div class="flex justify-between text-xs font-semibold mb-1 text-slate-600 dark:text-slate-400">
+<span>Conservative</span>
+<span>Aggressive</span>
+</div>
+<div class="h-2 bg-slate-200 dark:bg-slate-700 rounded-full overflow-hidden">
+<div class="h-full bg-primary w-[65%] rounded-full"></div>
+</div>
+</div>
+<p class="text-xs text-slate-500 dark:text-slate-500 mt-2">
+<span class="material-symbols-outlined text-sm align-middle mr-1 text-green-500">check_circle</span>
+                                        Risk tolerance aligned with market goals
+                                    </p>
+</div>
+</div>
+</div>
+<div class="flex-1 text-center lg:text-left">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-100 dark:bg-primary/20 text-primary text-xs font-bold uppercase tracking-wide mb-6">
+                                Risk Intelligence
+                            </div>
+<h2 class="text-3xl lg:text-4xl font-bold text-slate-900 dark:text-white mb-6">
+                                Risk Profiling that <br/> <span class="text-primary">Adapts to You</span>
+</h2>
+<p class="text-lg text-slate-600 dark:text-slate-400 mb-8 leading-relaxed">
+                                Gone are the days of static questionnaires. Our dynamic risk profiling engine continuously assesses your comfort level against market volatility, ensuring your portfolio lets you sleep soundly while maximizing growth potential.
+                            </p>
+<ul class="flex flex-col gap-4 items-center lg:items-start">
+<li class="flex items-center gap-3 text-slate-700 dark:text-slate-300">
+<span class="material-symbols-outlined text-primary">psychology_alt</span>
+<span>Behavioral analysis integration</span>
+</li>
+<li class="flex items-center gap-3 text-slate-700 dark:text-slate-300">
+<span class="material-symbols-outlined text-primary">tune</span>
+<span>Dynamic re-adjustment triggers</span>
+</li>
+<li class="flex items-center gap-3 text-slate-700 dark:text-slate-300">
+<span class="material-symbols-outlined text-primary">security</span>
+<span>Downside protection protocols</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section class="py-20 px-6 border-t border-slate-200 dark:border-border-dark bg-slate-50 dark:bg-[#131f26] overflow-hidden">
+<div class="container mx-auto max-w-[1200px]">
+<div class="flex flex-col lg:flex-row items-center gap-16">
+<div class="flex-1 text-center lg:text-left order-2 lg:order-1">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-100 dark:bg-purple-500/20 text-purple-600 dark:text-purple-400 text-xs font-bold uppercase tracking-wide mb-6">
+                                Active Surveillance
+                            </div>
+<h2 class="text-3xl lg:text-4xl font-bold text-slate-900 dark:text-white mb-6">
+                                Real-time AI-Powered <br/> <span class="text-purple-500">Portfolio Monitoring</span>
+</h2>
+<p class="text-lg text-slate-600 dark:text-slate-400 mb-8 leading-relaxed">
+                                The market never stops, and neither do we. Our AI monitors your assets 24/7, processing millions of data points per second to identify trends, mitigate threats, and seize opportunities the moment they arise.
+                            </p>
+<button class="text-primary hover:text-white hover:bg-primary border border-primary px-6 py-3 rounded-lg font-bold transition-all" onclick="window.location.href='app/dashboard.html'">
+                                See AI in Action
+                            </button>
+</div>
+<div class="flex-1 w-full max-w-[500px] order-1 lg:order-2">
+<div class="relative rounded-2xl bg-white dark:bg-card-dark border border-slate-200 dark:border-border-dark p-6 shadow-2xl">
+<div class="flex items-center justify-between mb-6 border-b border-slate-100 dark:border-border-dark pb-4">
+<div class="flex items-center gap-2">
+<div class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></div>
+<span class="text-xs font-bold text-slate-500 uppercase">Live Analysis</span>
+</div>
+<span class="material-symbols-outlined text-slate-400">more_horiz</span>
+</div>
+<div class="space-y-4">
+<div class="flex items-center gap-4 p-3 rounded-lg bg-slate-50 dark:bg-background-dark border border-slate-100 dark:border-border-dark">
+<div class="p-2 bg-blue-500/10 rounded text-blue-500">
+<span class="material-symbols-outlined text-xl">analytics</span>
+</div>
+<div class="flex-1">
+<p class="text-sm font-bold text-slate-900 dark:text-white">Sector Rotation Detected</p>
+<p class="text-xs text-slate-500">Tech to Utilities shift analyzing...</p>
+</div>
+<span class="text-xs font-mono text-slate-400">10:42 AM</span>
+</div>
+<div class="flex items-center gap-4 p-3 rounded-lg bg-slate-50 dark:bg-background-dark border border-slate-100 dark:border-border-dark">
+<div class="p-2 bg-green-500/10 rounded text-green-500">
+<span class="material-symbols-outlined text-xl">trending_up</span>
+</div>
+<div class="flex-1">
+<p class="text-sm font-bold text-slate-900 dark:text-white">Opportunity Found: NVDA</p>
+<p class="text-xs text-slate-500">Buy signal strength: 94%</p>
+</div>
+<span class="text-xs font-mono text-slate-400">10:45 AM</span>
+</div>
+<div class="flex items-center gap-4 p-3 rounded-lg bg-slate-50 dark:bg-background-dark border border-slate-100 dark:border-border-dark opacity-60">
+<div class="p-2 bg-orange-500/10 rounded text-orange-500">
+<span class="material-symbols-outlined text-xl">warning</span>
+</div>
+<div class="flex-1">
+<p class="text-sm font-bold text-slate-900 dark:text-white">Volatility Alert</p>
+<p class="text-xs text-slate-500">Checking hedge positions...</p>
+</div>
+<span class="text-xs font-mono text-slate-400">10:48 AM</span>
+</div>
+</div>
+<div class="absolute -inset-4 bg-primary/20 blur-3xl -z-10 rounded-full opacity-50"></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-20 px-6 border-t border-slate-200 dark:border-border-dark bg-white dark:bg-background-dark">
+<div class="container mx-auto max-w-[1200px]">
+<div class="flex flex-col lg:flex-row items-center gap-16">
+<div class="flex-1 w-full max-w-[500px]">
+<div class="grid grid-cols-2 gap-4">
+<div class="col-span-2 bg-slate-50 dark:bg-card-dark p-4 rounded-xl border border-slate-200 dark:border-border-dark flex gap-4 items-center hover:border-primary/50 transition-colors cursor-pointer group">
+<div class="w-16 h-16 rounded-lg bg-slate-200 dark:bg-slate-800 flex items-center justify-center relative overflow-hidden">
+<span class="material-symbols-outlined text-3xl text-slate-400 group-hover:text-white z-10">play_circle</span>
+<div class="absolute inset-0 bg-gradient-to-tr from-primary to-purple-500 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+</div>
+<div>
+<p class="text-xs text-primary font-bold uppercase mb-1">Course • 45m</p>
+<h4 class="font-bold text-slate-900 dark:text-white">Mastering ETFs</h4>
+</div>
+</div>
+<div class="bg-slate-50 dark:bg-card-dark p-4 rounded-xl border border-slate-200 dark:border-border-dark flex flex-col gap-3 hover:border-primary/50 transition-colors cursor-pointer group">
+<div class="w-10 h-10 rounded-full bg-orange-100 dark:bg-orange-500/20 flex items-center justify-center text-orange-500">
+<span class="material-symbols-outlined">menu_book</span>
+</div>
+<h4 class="font-bold text-slate-900 dark:text-white text-sm">Tax Strategies Guide</h4>
+</div>
+<div class="bg-slate-50 dark:bg-card-dark p-4 rounded-xl border border-slate-200 dark:border-border-dark flex flex-col gap-3 hover:border-primary/50 transition-colors cursor-pointer group">
+<div class="w-10 h-10 rounded-full bg-green-100 dark:bg-green-500/20 flex items-center justify-center text-green-500">
+<span class="material-symbols-outlined">podcasts</span>
+</div>
+<h4 class="font-bold text-slate-900 dark:text-white text-sm">Market Weekly</h4>
+</div>
+</div>
+</div>
+<div class="flex-1 text-center lg:text-left">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-green-100 dark:bg-green-500/20 text-green-600 dark:text-green-400 text-xs font-bold uppercase tracking-wide mb-6">
+                                Education
+                            </div>
+<h2 class="text-3xl lg:text-4xl font-bold text-slate-900 dark:text-white mb-6">
+                                Financial Learning <br/> <span class="text-green-500">At Your Fingertips</span>
+</h2>
+<p class="text-lg text-slate-600 dark:text-slate-400 mb-8 leading-relaxed">
+                                Confidence comes from understanding. Access our comprehensive library of articles, video courses, and expert webinars designed to level up your financial literacy, whether you're a beginner or a seasoned pro.
+                            </p>
+<a class="inline-flex items-center gap-2 font-bold text-slate-900 dark:text-white border-b-2 border-primary pb-1 hover:text-primary transition-colors" href="resources/education.html">
+                                Explore the Academy <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<section class="py-20 bg-slate-50 dark:bg-[#131f26] border-y border-slate-200 dark:border-border-dark">
+<div class="container mx-auto max-w-[1000px] px-6">
+<div class="text-center mb-16">
+<h2 class="text-3xl font-bold text-slate-900 dark:text-white mb-4">Your Journey to Wealth</h2>
+<p class="text-slate-600 dark:text-slate-400">Get started in minutes, not days.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
+<div class="hidden md:block absolute top-8 left-[16%] right-[16%] h-[2px] bg-slate-200 dark:bg-border-dark -z-10"></div>
+<div class="flex flex-col items-center text-center gap-4">
+<div class="w-16 h-16 rounded-xl bg-white dark:bg-card-dark border border-slate-200 dark:border-border-dark flex items-center justify-center shadow-lg">
+<span class="material-symbols-outlined text-primary text-3xl">person_add</span>
+</div>
+<div>
+<h3 class="text-lg font-bold text-slate-900 dark:text-white">1. Sign Up &amp; Profile</h3>
+<p class="text-sm text-slate-600 dark:text-slate-400 mt-2">Create your secure account and tell us about your financial aspirations.</p>
+</div>
+</div>
+<div class="flex flex-col items-center text-center gap-4">
+<div class="w-16 h-16 rounded-xl bg-white dark:bg-card-dark border border-slate-200 dark:border-border-dark flex items-center justify-center shadow-lg">
+<span class="material-symbols-outlined text-primary text-3xl">account_balance</span>
+</div>
+<div>
+<h3 class="text-lg font-bold text-slate-900 dark:text-white">2. Connect Accounts</h3>
+<p class="text-sm text-slate-600 dark:text-slate-400 mt-2">Securely link your existing bank and brokerage accounts via Plaid.</p>
+</div>
+</div>
+<div class="flex flex-col items-center text-center gap-4">
+<div class="w-16 h-16 rounded-xl bg-white dark:bg-card-dark border border-slate-200 dark:border-border-dark flex items-center justify-center shadow-lg">
+<span class="material-symbols-outlined text-primary text-3xl">rocket_launch</span>
+</div>
+<div>
+<h3 class="text-lg font-bold text-slate-900 dark:text-white">3. Automate &amp; Grow</h3>
+<p class="text-sm text-slate-600 dark:text-slate-400 mt-2">Activate AI strategies and watch your portfolio optimize automatically.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 px-6 relative overflow-hidden">
+<div class="container mx-auto max-w-[800px] text-center relative z-10">
+<h2 class="text-4xl md:text-5xl font-black text-slate-900 dark:text-white mb-6">Ready to upgrade your financial life?</h2>
+<p class="text-xl text-slate-600 dark:text-slate-300 mb-10">Join thousands of smart investors who are already using AI to secure their future.</p>
+<button class="min-w-[200px] h-14 bg-primary hover:bg-sky-500 text-white rounded-lg text-lg font-bold tracking-wide shadow-lg shadow-primary/30 transition-all transform hover:scale-105" onclick="window.location.href='users/register.html'">
+                        Get Started Now
+                    </button>
+<p class="mt-6 text-sm text-slate-500 dark:text-slate-500">No credit card required for demo.</p>
+</div>
+<div class="absolute inset-0 -z-10 bg-gradient-to-b from-transparent to-slate-100 dark:to-[#0b1419]"></div>
+</section>
+</main>
+<div data-include="/shared/footer.html"></div>
+</div>
+<script src="/shared/include.js"></script>
+</body></html>

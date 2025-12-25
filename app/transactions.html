@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>FinTech Pro - Transactions</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#06bcf9",
+                        "background-light": "#f5f8f8",
+                        "background-dark": "#0f1e23",
+                        "surface-dark": "#16262c",
+                        "border-dark": "#2a3b42",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark text-slate-900 dark:text-white antialiased transition-colors duration-200">
+<div class="flex h-screen w-full overflow-hidden">
+<aside class="flex w-72 flex-col border-r border-slate-200 dark:border-border-dark bg-white dark:bg-surface-dark shrink-0 hidden md:flex h-full overflow-y-auto scrollbar-thin scrollbar-thumb-slate-700 scrollbar-track-transparent">
+<div class="flex flex-col min-h-full p-4">
+<div class="flex flex-col gap-8 flex-1">
+<div class="flex items-center gap-3 px-2">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 border-2 border-primary" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCkSatO05ARYB9NY8q1qUSwVj0fkjGO-7ebOwunQ8P4fJRp_XIPWO7C67Uq0OQLDStYFEuLgWYyVvi-x51UzmYfX82v-md1dYyL0CN_YTlRdie1Kz7iAT7Qg1tLToHocZOCOJ01nbXWvKwb1v8qi4hyytvocijFwy_qUvD2xmuwhMTFqzXGK8eWVfmcxOeSzLPZrrcgNnf5DpKLcEkCXX2lGlSYVI3oLY8kRP5qN4euQS8KfFIG2h4CGj9Fwtqwaw2Wa5akiojudAM");'>
+</div>
+<div class="flex flex-col">
+<h1 class="text-slate-900 dark:text-white text-base font-bold leading-normal">FinTech Pro</h1>
+<p class="text-slate-500 dark:text-slate-400 text-xs font-medium leading-normal">Investor Dashboard</p>
+</div>
+</div>
+<nav class="flex flex-col gap-6">
+<div class="flex flex-col gap-1">
+<div class="px-3 text-xs font-bold text-slate-400 dark:text-slate-500 uppercase tracking-wider mb-1">Overview</div>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-border-dark transition-colors group" href="dashboard.html">
+<span class="material-symbols-outlined text-slate-400 group-hover:text-primary transition-colors text-[20px]">grid_view</span>
+<span class="text-sm font-medium">Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-border-dark transition-colors group" href="portfolio.html">
+<span class="material-symbols-outlined text-slate-400 group-hover:text-primary transition-colors text-[20px]">pie_chart</span>
+<span class="text-sm font-medium">Portfolio</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg bg-primary/10 text-primary transition-colors relative" href="transactions.html">
+<div class="absolute left-0 top-1/2 -translate-y-1/2 w-1 h-6 rounded-r-full bg-primary"></div>
+<span class="material-symbols-outlined text-primary text-[20px]">receipt_long</span>
+<span class="text-sm font-bold">Transactions</span>
+</a>
+</div>
+<div class="flex flex-col gap-1">
+<div class="px-3 text-xs font-bold text-slate-400 dark:text-slate-500 uppercase tracking-wider mb-1">Intelligence</div>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-border-dark transition-colors group" href="behavioral.html">
+<span class="material-symbols-outlined text-slate-400 group-hover:text-primary transition-colors text-[20px]">psychology</span>
+<span class="text-sm font-medium">Behavioral Finance</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-border-dark transition-colors group" href="projections.html">
+<span class="material-symbols-outlined text-slate-400 group-hover:text-primary transition-colors text-[20px]">trending_up</span>
+<span class="text-sm font-medium">Projections</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-border-dark transition-colors group" href="risk.html">
+<span class="material-symbols-outlined text-slate-400 group-hover:text-primary transition-colors text-[20px]">shield</span>
+<span class="text-sm font-medium">Risk Profiling</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-border-dark transition-colors group" href="tax.html">
+<span class="material-symbols-outlined text-slate-400 group-hover:text-primary transition-colors text-[20px]">calculate</span>
+<span class="text-sm font-medium">Tax Optimization</span>
+</a>
+</div>
+<div class="flex flex-col gap-1">
+<div class="px-3 text-xs font-bold text-slate-400 dark:text-slate-500 uppercase tracking-wider mb-1">Market &amp; Plan</div>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-border-dark transition-colors group" href="goals.html">
+<span class="material-symbols-outlined text-slate-400 group-hover:text-primary transition-colors text-[20px]">flag</span>
+<span class="text-sm font-medium">Goals</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-border-dark transition-colors group" href="../resources/news.html">
+<span class="material-symbols-outlined text-slate-400 group-hover:text-primary transition-colors text-[20px]">newspaper</span>
+<span class="text-sm font-medium">News Feed</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-border-dark transition-colors group" href="alerts.html">
+<span class="material-symbols-outlined text-slate-400 group-hover:text-primary transition-colors text-[20px]">notifications</span>
+<span class="text-sm font-medium">Alerts</span>
+</a>
+</div>
+<div class="flex flex-col gap-1">
+<div class="px-3 text-xs font-bold text-slate-400 dark:text-slate-500 uppercase tracking-wider mb-1">Resources</div>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-border-dark transition-colors group" href="../resources/education.html">
+<span class="material-symbols-outlined text-slate-400 group-hover:text-primary transition-colors text-[20px]">school</span>
+<span class="text-sm font-medium">Education</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-border-dark transition-colors group" href="../resources/support.html">
+<span class="material-symbols-outlined text-slate-400 group-hover:text-primary transition-colors text-[20px]">headset_mic</span>
+<span class="text-sm font-medium">Support</span>
+</a>
+</div>
+<div class="flex flex-col gap-1 mt-auto">
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-border-dark transition-colors group" href="settings.html">
+<span class="material-symbols-outlined text-slate-400 group-hover:text-primary transition-colors text-[20px]">settings</span>
+<span class="text-sm font-medium">User Settings</span>
+</a>
+</div>
+</nav>
+</div>
+</aside>
+<main class="flex-1 flex flex-col h-full overflow-hidden relative">
+<header class="md:hidden flex items-center justify-between p-4 border-b border-slate-200 dark:border-border-dark bg-white dark:bg-surface-dark">
+<div class="flex items-center gap-2">
+<div class="bg-primary/20 p-1.5 rounded-lg">
+<span class="material-symbols-outlined text-primary">attach_money</span>
+</div>
+<span class="font-bold text-lg dark:text-white">FinTech Pro</span>
+</div>
+<button class="text-slate-500 dark:text-white">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</header>
+<div class="flex-1 overflow-y-auto p-4 md:p-8 lg:px-12 scrollbar-thin scrollbar-thumb-slate-700 scrollbar-track-transparent">
+<div class="mx-auto max-w-7xl flex flex-col gap-6">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+<div class="flex flex-col gap-1">
+<h1 class="text-3xl md:text-4xl font-black text-slate-900 dark:text-white tracking-tight">Transaction History</h1>
+<p class="text-slate-500 dark:text-slate-400 text-base">View and manage your investment activity across all portfolios.</p>
+</div>
+<button class="flex items-center gap-2 bg-primary hover:bg-blue-400 text-white dark:text-background-dark font-bold px-5 py-2.5 rounded-lg transition-colors shadow-lg shadow-primary/20">
+<span class="material-symbols-outlined text-[20px]">download</span>
+<span>Export Data</span>
+</button>
+</div>
+<div class="bg-white dark:bg-surface-dark rounded-xl border border-slate-200 dark:border-border-dark p-4 shadow-sm">
+<div class="flex flex-col lg:flex-row gap-4">
+<div class="flex-1 relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400">search</span>
+<input class="w-full pl-10 pr-4 py-3 bg-slate-50 dark:bg-background-dark border border-slate-200 dark:border-border-dark rounded-lg text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all" placeholder="Search by asset, symbol, or amount..." type="text"/>
+</div>
+<div class="flex flex-wrap md:flex-nowrap gap-3">
+<div class="w-full md:w-auto min-w-[160px]">
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-[20px]">calendar_month</span>
+<select class="w-full pl-10 pr-8 py-3 appearance-none bg-slate-50 dark:bg-background-dark border border-slate-200 dark:border-border-dark rounded-lg text-slate-900 dark:text-white focus:outline-none focus:border-primary cursor-pointer">
+<option>Last 30 Days</option>
+<option>Last Quarter</option>
+<option>Year to Date</option>
+<option>Custom Range</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 pointer-events-none text-[20px]">expand_more</span>
+</div>
+</div>
+<div class="w-1/2 md:w-auto min-w-[140px]">
+<div class="relative">
+<select class="w-full pl-4 pr-8 py-3 appearance-none bg-slate-50 dark:bg-background-dark border border-slate-200 dark:border-border-dark rounded-lg text-slate-900 dark:text-white focus:outline-none focus:border-primary cursor-pointer">
+<option>Type: All</option>
+<option>Buy</option>
+<option>Sell</option>
+<option>Dividend</option>
+<option>Deposit</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 pointer-events-none text-[20px]">expand_more</span>
+</div>
+</div>
+<div class="w-1/2 md:w-auto min-w-[140px]">
+<div class="relative">
+<select class="w-full pl-4 pr-8 py-3 appearance-none bg-slate-50 dark:bg-background-dark border border-slate-200 dark:border-border-dark rounded-lg text-slate-900 dark:text-white focus:outline-none focus:border-primary cursor-pointer">
+<option>Asset: All</option>
+<option>Stocks</option>
+<option>Crypto</option>
+<option>ETFs</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 pointer-events-none text-[20px]">expand_more</span>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-white dark:bg-surface-dark rounded-xl border border-slate-200 dark:border-border-dark overflow-hidden shadow-sm">
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-slate-50 dark:bg-background-dark border-b border-slate-200 dark:border-border-dark text-xs uppercase text-slate-500 dark:text-slate-400 font-semibold tracking-wider">
+<th class="px-6 py-4 w-40">Date</th>
+<th class="px-6 py-4 w-32">Type</th>
+<th class="px-6 py-4 min-w-[200px]">Asset</th>
+<th class="px-6 py-4 text-right">Qty</th>
+<th class="px-6 py-4 text-right">Price</th>
+<th class="px-6 py-4 text-right">Total Amount</th>
+<th class="px-4 py-4 w-10"></th>
+</tr>
+</thead>
+<tbody class="divide-y divide-slate-100 dark:divide-border-dark text-sm">
+<tr class="hover:bg-slate-50 dark:hover:bg-border-dark/30 transition-colors group">
+<td class="px-6 py-4 text-slate-500 dark:text-slate-400 font-medium whitespace-nowrap">Oct 24, 2023</td>
+<td class="px-6 py-4">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-bold bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20">
+<span class="material-symbols-outlined text-[14px]">arrow_downward</span> Buy
+                                            </span>
+</td>
+<td class="px-6 py-4">
+<div class="flex items-center gap-3">
+<div class="size-8 rounded-full bg-white p-1 flex items-center justify-center shadow-sm">
+<img alt="Apple Inc. Logo" class="size-full object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAH2jdh_pUvuA6GivO_HpdeRDf3LRJZi-BVc7XEPuNQkFvtotGfRdly9fZlEaoUz9osuf9suTElghM_mJfTpdxXrufWXHvCyRcNRCMgjTz3n3HRDCcY6YLSAsaipsQLiPc776JqNeNdYrbs6x16JYlya_wrA_odNJ489AK3m9Z5xAhjyNJbwNljjE1AjNjP3aLjrPglvMDpezJfVCBbURSqCY3EZFRWNYtRVCwhLrjV0blZprPk0Ih7DA1wITwhaqkm1fyKVlPEyz8"/>
+</div>
+<div class="flex flex-col">
+<span class="font-bold text-slate-900 dark:text-white">AAPL</span>
+<span class="text-xs text-slate-500 dark:text-slate-400">Apple Inc.</span>
+</div>
+</div>
+</td>
+<td class="px-6 py-4 text-right text-slate-600 dark:text-slate-300">10.00</td>
+<td class="px-6 py-4 text-right text-slate-600 dark:text-slate-300">$173.00</td>
+<td class="px-6 py-4 text-right font-bold text-slate-900 dark:text-white">$1,730.00</td>
+<td class="px-4 py-4 text-center">
+<button class="text-slate-400 hover:text-primary opacity-0 group-hover:opacity-100 transition-all">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</td>
+</tr>
+<!-- more rows omitted for brevity -->
+</tbody>
+</table>
+</div>
+<div class="flex items-center justify-between px-6 py-4 bg-slate-50/50 dark:bg-black/20 border-t border-slate-200 dark:border-border-dark">
+<span class="text-sm text-slate-500 dark:text-slate-400">Showing <span class="font-bold text-slate-900 dark:text-white">1-5</span> of <span class="font-bold text-slate-900 dark:text-white">128</span> transactions</span>
+<div class="flex gap-2">
+<button class="px-3 py-1.5 text-sm font-medium rounded-lg border border-slate-300 dark:border-border-dark bg-white dark:bg-surface-dark text-slate-600 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-border-dark transition-colors disabled:opacity-50" disabled>Previous</button>
+<button class="px-3 py-1.5 text-sm font-medium rounded-lg border border-slate-300 dark:border-border-dark bg-white dark:bg-surface-dark text-slate-600 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-border-dark transition-colors">Next</button>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+ </main>
+ </div>
+    <div data-include="/shared/footer.html"></div>
+    <script src="/shared/include.js"></script>
+
+    </body></html>
