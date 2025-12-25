@@ -9,7 +9,7 @@
     return null;
   }
   function candidates(url){
-    const clean = url.startsWith('/') ? url : '/' + url;
+    const clean = url.startsWith('/') ? url : './' + url;
     return [clean, clean.replace(/^\//,''), '../' + clean.replace(/^\//,''), '../../' + clean.replace(/^\//,'')];
   }
   async function loadIncludes(){
