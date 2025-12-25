@@ -1,4 +1,52 @@
 (function(){
+  /**
+   * Detects the correct site base path and builds component URLs robustly.
+   * Avoids hardcoded origins and fixes case sensitivity issues (Finveda vs finveda).
+   */
+  function detectBasePath() {
+    // Prefer <base href="...">
+    const baseEl = document.querySelector('base[href]');
+    if (baseEl) {
+      try {
+        const href = baseEl.getAttribute('href');
+        const u = new URL(href, window.location.origin);
+        return u.pathname.endsWith('/') ? u.pathname : u.pathname + '/';
+      } catch (_) {}
+    }
+
+    // Try to infer from the current location (case-insensitive match)
+    const segments = window.location.pathname.split('/').filter(Boolean);
+    const idx = segments.findIndex(s => s.toLowerCase() === 'finveda');
+    if (idx >= 0) {
+      return `/${segments[idx].toLowerCase()}/`;
+    }
+
+    // Fallback to root
+    return '/';
+  }
+
+  function buildURL(relativePath) {
+    const basePath = detectBasePath();
+    return new URL(relativePath, window.location.origin + basePath).toString();
+  }
+
+  // Example: include header/footer (adjust selectors as needed)
+  async function includeFragment(targetSelector, relativePath) {
+    const url = buildURL(relativePath);
+    try {
+      const res = await fetch(url, { credentials: 'same-origin' });
+      if (!res.ok) {
+        throw new Error(`HTTP ${res.status} ${res.statusText}`);
+      }
+      const html = await res.text();
+      const el = document.querySelector(targetSelector);
+      if (el) el.innerHTML = html;
+      else console.warn(`[include.js] Target not found: ${targetSelector}`);
+    } catch (err) {
+      console.error(`[include.js] Failed to load "${url}": ${err.message}`);
+    }
+  }
+
   function getBasePath(){
     const p = window.location.pathname || '/';
     const firstSeg = (p.replace(/^\/+/,'').split('/')[0] || '').trim();
@@ -50,8 +98,27 @@
     return null;
   }
   function candidates(url){
-    const clean = url.startsWith('/') ? url : './' + url;
-    return [clean, clean.replace(/^\//,''), '../' + clean.replace(/^\//,''), '../../' + clean.replace(/^\//,'')];
+    // Normalize leading ./ and remove redundant prefixes
+    const norm = url.replace(/^\.\/+/,'');
+    const relClean = url.startsWith('/') ? url : './' + url;
+    const underBase = BASE + norm.replace(/^\//,'');
+
+    const list = [
+      // Absolute under detected base
+      underBase,
+      // Canonical casing variants for case-sensitive hosts
+      '/FinVeda/' + norm.replace(/^\//,''),
+      '/finveda/' + norm.replace(/^\//,''),
+      // Root absolute (no base)
+      '/' + norm.replace(/^\//,''),
+      // Relative fallbacks (browser resolves against current page)
+      relClean,
+      relClean.replace(/^\//,''),
+      '../' + relClean.replace(/^\//,''),
+      '../../' + relClean.replace(/^\//,'')
+    ];
+    // De-duplicate while preserving order
+    return Array.from(new Set(list));
   }
   async function loadIncludes(){
     const nodes = document.querySelectorAll('[data-include]');
@@ -61,6 +128,11 @@
       if(html){
         node.innerHTML = html;
         applyBase(node);
+      } else {
+        // Helpful error to surface exact attempted resolutions
+        try {
+          console.error('[include.js] Failed to resolve include for', url, 'from', window.location.pathname);
+        } catch(_) {}
       }
     }
     // Also apply to existing markup in case includes aren't used
