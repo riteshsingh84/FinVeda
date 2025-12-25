@@ -15,7 +15,23 @@
     // Links with data-path
     root.querySelectorAll('[data-path]').forEach(el => {
       const rel = el.getAttribute('data-path');
-      if(rel){ el.setAttribute('href', BASE + rel.replace(/^\//,'')); }
+      if(!rel) return;
+      const target = BASE + rel.replace(/^\//,'');
+      if(el.tagName && el.tagName.toLowerCase() === 'a'){
+        el.setAttribute('href', target);
+      } else {
+        // Avoid binding multiple times if applyBase runs again
+        if(!el.__fvBound){
+          el.__fvBound = true;
+          el.addEventListener('click', () => { window.location.href = target; });
+          // Improve accessibility if element is not inherently clickable
+          if(!('tabIndex' in el)) el.tabIndex = 0;
+          el.setAttribute('role', el.getAttribute('role') || 'button');
+          el.addEventListener('keydown', (e) => {
+            if(e.key === 'Enter' || e.key === ' ') { e.preventDefault(); window.location.href = target; }
+          });
+        }
+      }
     });
     // Images with data-src
     root.querySelectorAll('img[data-src]').forEach(img => {
