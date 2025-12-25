@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Education Screen - FinTech Pro</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#06bcf9",
+                        "background-light": "#f5f8f8",
+                        "background-dark": "#0f1e23",
+                        "card-dark": "#19252b",
+                        "input-dark": "#27353a",
+                        "text-secondary": "#9bb3bb",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0f1e23; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #27353a; 
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #3a4e55; 
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-gray-900 dark:text-white font-display overflow-hidden h-screen flex">
+<aside class="w-[280px] shrink-0 h-full bg-[#111618] border-r border-[#27353a] flex flex-col justify-between p-4 overflow-y-auto hidden md:flex">
+<div class="flex flex-col gap-6">
+<div class="flex items-center gap-3 px-2">
+<div class="bg-center bg-no-repeat bg-cover rounded-full size-10" data-alt="FinTech Pro Logo Abstract" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBvGiq2OtH6-tw_aGXMOW-8UIhDfsCBIavQdkF8TxxSkxl-mE5BzprCZMAsFB6dQX0wNSemTPJ_bqgmkIcpmeEfcp7Ff1XbmRfi6Xwv26JJBmkdBrg0lqz5iUqWOa5x-S_uml46dt9pleLLMy-ii4hlOpRXsO3fPjMzHLdpTobinK-Nwh-oeoG4YqlzIsDJIA7F9YpnxeXSdMbLstyQoa-OvAWrcouBI6z0ir8tF8tpWP15Bd5JUuGCcsjWm6cOrm7zXHouFg6FvZE");'></div>
+<h1 class="text-white text-lg font-bold leading-normal tracking-tight">FinTech Pro</h1>
+</div>
+<nav class="flex flex-col gap-6">
+<div class="flex flex-col gap-1">
+<div class="px-3 mb-1">
+<p class="text-xs font-bold text-[#5f747c] uppercase tracking-wider">Overview</p>
+</div>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-[#27353a] transition-colors group" href="#">
+<span class="material-symbols-outlined text-[#9bb3bb] group-hover:text-white transition-colors">dashboard</span>
+<span class="text-[#9bb3bb] group-hover:text-white text-sm font-medium leading-normal transition-colors">Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-[#27353a] transition-colors group" href="#">
+<span class="material-symbols-outlined text-[#9bb3bb] group-hover:text-white transition-colors">pie_chart</span>
+<span class="text-[#9bb3bb] group-hover:text-white text-sm font-medium leading-normal transition-colors">Portfolio</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-[#27353a] transition-colors group" href="#">
+<span class="material-symbols-outlined text-[#9bb3bb] group-hover:text-white transition-colors">receipt_long</span>
+<span class="text-[#9bb3bb] group-hover:text-white text-sm font-medium leading-normal transition-colors">Transactions</span>
+</a>
+</div>
+<div class="flex flex-col gap-1">
+<div class="px-3 mb-1">
+<p class="text-xs font-bold text-[#5f747c] uppercase tracking-wider">Intelligence</p>
+</div>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-[#27353a] transition-colors group" href="#">
+<span class="material-symbols-outlined text-[#9bb3bb] group-hover:text-white transition-colors">psychology</span>
+<span class="text-[#9bb3bb] group-hover:text-white text-sm font-medium leading-normal transition-colors">Behavioral Finance</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-[#27353a] transition-colors group" href="#">
+<span class="material-symbols-outlined text-[#9bb3bb] group-hover:text-white transition-colors">trending_up</span>
+<span class="text-[#9bb3bb] group-hover:text-white text-sm font-medium leading-normal transition-colors">Projections</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-[#27353a] transition-colors group" href="#">
+<span class="material-symbols-outlined text-[#9bb3bb] group-hover:text-white transition-colors">shield</span>
+<span class="text-[#9bb3bb] group-hover:text-white text-sm font-medium leading-normal transition-colors">Risk Profiling</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-[#27353a] transition-colors group" href="#">
+<span class="material-symbols-outlined text-[#9bb3bb] group-hover:text-white transition-colors">account_balance</span>
+<span class="text-[#9bb3bb] group-hover:text-white text-sm font-medium leading-normal transition-colors">Tax Optimization</span>
+</a>
+</div>
+<div class="flex flex-col gap-1">
+<div class="px-3 mb-1">
+<p class="text-xs font-bold text-[#5f747c] uppercase tracking-wider">Market &amp; Plan</p>
+</div>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-[#27353a] transition-colors group" href="#">
+<span class="material-symbols-outlined text-[#9bb3bb] group-hover:text-white transition-colors">flag</span>
+<span class="text-[#9bb3bb] group-hover:text-white text-sm font-medium leading-normal transition-colors">Goals</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-[#27353a] transition-colors group" href="#">
+<span class="material-symbols-outlined text-[#9bb3bb] group-hover:text-white transition-colors">article</span>
+<span class="text-[#9bb3bb] group-hover:text-white text-sm font-medium leading-normal transition-colors">News Feed</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-[#27353a] transition-colors group" href="#">
+<span class="material-symbols-outlined text-[#9bb3bb] group-hover:text-white transition-colors">notifications</span>
+<span class="text-[#9bb3bb] group-hover:text-white text-sm font-medium leading-normal transition-colors">Alerts</span>
+</a>
+</div>
+<div class="flex flex-col gap-1">
+<div class="px-3 mb-1">
+<p class="text-xs font-bold text-[#5f747c] uppercase tracking-wider">Resources</p>
+</div>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg bg-primary/10 border-l-4 border-primary" href="#">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">school</span>
+<span class="text-white text-sm font-bold leading-normal">Education</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-[#27353a] transition-colors group" href="#">
+<span class="material-symbols-outlined text-[#9bb3bb] group-hover:text-white transition-colors">support_agent</span>
+<span class="text-[#9bb3bb] group-hover:text-white text-sm font-medium leading-normal transition-colors">Support</span>
+</a>
+</div>
+</nav>
+</div>
+<div class="flex flex-col gap-4 mt-8">
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-[#27353a] transition-colors group" href="#">
+<span class="material-symbols-outlined text-[#9bb3bb] group-hover:text-white transition-colors">settings</span>
+<span class="text-[#9bb3bb] group-hover:text-white text-sm font-medium leading-normal transition-colors">User Settings</span>
+</a>
+<button class="flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-[#27353a] hover:bg-[#34464d] text-white text-sm font-bold leading-normal tracking-[0.015em] transition-colors">
+<span class="truncate">Log Out</span>
+</button>
+</div>
+</aside>
+<main class="flex-1 h-full overflow-y-auto bg-background-dark relative">
+<div class="max-w-[1200px] mx-auto px-6 py-8 flex flex-col gap-8">
+<header class="flex flex-col gap-6">
+<div class="flex flex-col gap-2">
+<h1 class="text-white text-4xl font-extrabold leading-tight tracking-[-0.02em]">Education Center</h1>
+<p class="text-text-secondary text-base font-normal">Level up your investment game with our curated resources.</p>
+</div>
+<div class="border-b border-[#3a4e55]">
+<div class="flex gap-8">
+<a class="flex flex-col items-center justify-center border-b-[3px] border-b-primary text-white pb-3 pt-2" href="#">
+<p class="text-sm font-bold tracking-[0.015em]">Browse Library</p>
+</a>
+<a class="flex flex-col items-center justify-center border-b-[3px] border-b-transparent text-text-secondary hover:text-white pb-3 pt-2 transition-colors" href="#">
+<p class="text-sm font-bold tracking-[0.015em]">My Learning</p>
+</a>
+<a class="flex flex-col items-center justify-center border-b-[3px] border-b-transparent text-text-secondary hover:text-white pb-3 pt-2 transition-colors" href="#">
+<p class="text-sm font-bold tracking-[0.015em]">Saved Resources</p>
+</a>
+</div>
+</div>
+</header>
+<section class="flex flex-col gap-4">
+<div class="relative w-full">
+<div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-text-secondary">search</span>
+</div>
+<input class="block w-full h-12 pl-12 pr-4 bg-input-dark border-none rounded-xl text-white placeholder-text-secondary focus:ring-2 focus:ring-primary focus:bg-[#2f4046] transition-all" placeholder="Search for articles, videos, tutorials..." type="text"/>
+</div>
+<div class="flex flex-wrap gap-3">
+<button class="flex h-8 items-center justify-center gap-x-2 rounded-lg bg-input-dark hover:bg-[#34464d] px-3 transition-colors">
+<span class="text-white text-xs font-medium">Format: All</span>
+<span class="material-symbols-outlined text-white text-sm">expand_more</span>
+</button>
+<button class="flex h-8 items-center justify-center gap-x-2 rounded-lg bg-input-dark hover:bg-[#34464d] px-3 transition-colors">
+<span class="text-white text-xs font-medium">Level: Beginner</span>
+<span class="material-symbols-outlined text-white text-sm">expand_more</span>
+</button>
+<button class="flex h-8 items-center justify-center gap-x-2 rounded-lg bg-input-dark hover:bg-[#34464d] px-3 transition-colors">
+<span class="text-white text-xs font-medium">Topic: Analysis</span>
+<span class="material-symbols-outlined text-white text-sm">expand_more</span>
+</button>
+<button class="flex h-8 items-center justify-center gap-x-2 rounded-lg bg-input-dark hover:bg-[#34464d] px-3 transition-colors">
+<span class="text-white text-xs font-medium">Duration</span>
+<span class="material-symbols-outlined text-white text-sm">expand_more</span>
+</button>
+<div class="ml-auto">
+<button class="text-primary text-sm font-bold hover:underline">Clear all</button>
+</div>
+</div>
+</section>
+<section class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+<div class="lg:col-span-2 relative h-[340px] rounded-2xl overflow-hidden group cursor-pointer shadow-lg shadow-black/20">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Abstract digital financial waves data visualization" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAfwgVaD1oiWpjQZdQjjGxipBK4kQe-2DG3uouZpWCzbpgv4QrK2LTGrN0yRL6_WQvFdzc-DQDJIIi9l5rqGJSZwd76sVApjTmXmtZiedKEWKm2YJU0TM4qgTo8zwL0T5BUHF9Wk35tAIB9Y5MP0ARQ7CVNlHas5nWWRoExi0Dl-KE3jZafctB5JBWoOQU_h8nynOqYcaUHq3e2HHaw_wjAh94_XW_Z7091wiMo9UMn9-_HU4wPoNYdU-2JVKr_h5p5l5DSKmb0Drw");'></div>
+<div class="absolute inset-0 bg-gradient-to-t from-[#0f1e23] via-[#0f1e23]/60 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-8 flex flex-col items-start gap-4 max-w-lg">
+<span class="px-2 py-1 bg-primary text-[#0f1e23] text-xs font-bold uppercase tracking-wider rounded">Featured Course</span>
+<h2 class="text-3xl font-bold text-white leading-tight">Mastering Market Volatility</h2>
+<p class="text-gray-200 text-sm line-clamp-2">Learn advanced strategies to protect your portfolio and identify opportunities during uncertain market conditions.</p>
+<div class="flex items-center gap-4 mt-2">
+<button class="flex items-center gap-2 bg-white text-[#0f1e23] px-5 py-2.5 rounded-lg font-bold hover:bg-gray-100 transition-colors">
+<span class="material-symbols-outlined" style="font-size: 20px; font-variation-settings: 'FILL' 1;">play_arrow</span>
+                                Start Lesson
+                            </button>
+<span class="text-white text-sm font-medium flex items-center gap-1">
+<span class="material-symbols-outlined text-base">schedule</span> 45 min
+                            </span>
+</div>
+</div>
+</div>
+<div class="bg-card-dark rounded-2xl p-6 flex flex-col gap-4 border border-[#27353a]">
+<div class="flex items-center justify-between">
+<h3 class="text-lg font-bold text-white">Continue Learning</h3>
+<a class="text-primary text-xs font-bold hover:underline" href="#">View All</a>
+</div>
+<div class="flex flex-col gap-2 p-3 rounded-xl hover:bg-[#27353a] transition-colors cursor-pointer group">
+<div class="flex gap-3">
+<div class="size-12 rounded-lg bg-cover bg-center shrink-0" data-alt="Bitcoin chart abstract" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCfWCPiWAkG6Lo3N1cHQqHjBY0HPz0fA1X9C80y8ZqdS8rJeaLdYaf5buMhS7uGFPMCLfiAnoWuafrm4auqsRrkzj1PIc0tiG_C8vsrZDQgzK_-l35qjJY4zDAqHOenZEHrkRacg07-g1EU6CCVAS2_FWfkCS2m0ofyBs7CkMdjh0ZSRrxy2qarTPIDtnN_V4iMjOYH9IA8fE6Nq_7jjVRm9AkV-AlVOPtQk83drJZWYoHIzgk4L1PBUt5YxjPcQKk7cSxgYDIzaS4");'></div>
+<div class="flex flex-col justify-center overflow-hidden">
+<h4 class="text-white text-sm font-bold truncate group-hover:text-primary transition-colors">Crypto Fundamentals</h4>
+<p class="text-text-secondary text-xs">Module 3/5 • 12 min left</p>
+</div>
+</div>
+<div class="w-full bg-[#3a4e55] h-1.5 rounded-full mt-1">
+<div class="bg-primary h-1.5 rounded-full" style="width: 60%"></div>
+</div>
+</div>
+<div class="flex flex-col gap-2 p-3 rounded-xl hover:bg-[#27353a] transition-colors cursor-pointer group">
+<div class="flex gap-3">
+<div class="size-12 rounded-lg bg-cover bg-center shrink-0" data-alt="Stock market growth arrow" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBFpSx0FqdWgMsRW9mbOoSp9Y_YA6Zous63QXqydtx5_-66aQUirsj5-jnFqW6J1XtfueWO5-GzeDDKfNjgFsz46dZiS5WT5S6VpQBxxTuREH1H4BFEX2YDx03foYkChN0UVjejBGbo3HW3ouMnrPyn1rjBgmmrCo79DxQxGQkDkkzArZscU-UB1bymcfQUxDjGsnP1qEhaIaiQiBpR8cTGLE7Y6sUfDs_duxFgqHBaEPDN_3EwSCZziCoD0CD7Ia-Le9N9Ity5dSQ");'></div>
+<div class="flex flex-col justify-center overflow-hidden">
+<h4 class="text-white text-sm font-bold truncate group-hover:text-primary transition-colors">Technical Analysis 101</h4>
+<p class="text-text-secondary text-xs">Module 1/4 • 25 min left</p>
+</div>
+</div>
+<div class="w-full bg-[#3a4e55] h-1.5 rounded-full mt-1">
+<div class="bg-primary h-1.5 rounded-full" style="width: 25%"></div>
+</div>
+</div>
+</div>
+</section>
+<section class="flex flex-col gap-4">
+<div class="flex items-center justify-between px-1">
+<h3 class="text-xl font-bold text-white">Recommended for you</h3>
+<div class="flex gap-2">
+<button class="size-8 rounded-full border border-[#27353a] flex items-center justify-center text-text-secondary hover:bg-[#27353a] hover:text-white transition-colors">
+<span class="material-symbols-outlined text-lg">chevron_left</span>
+</button>
+<button class="size-8 rounded-full border border-[#27353a] flex items-center justify-center text-text-secondary hover:bg-[#27353a] hover:text-white transition-colors">
+<span class="material-symbols-outlined text-lg">chevron_right</span>
+</button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+<article class="flex flex-col gap-3 group cursor-pointer">
+<div class="relative aspect-video rounded-xl overflow-hidden bg-[#27353a]">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="Abstract neon geometric shapes" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuASjmSOffj0EGWomoNp6LxgT2y7uGKAxA9zbaDB04XkbwFT_wQhHgguuk63m1pw0XnlbEzAvs-E1ouJHB538lHWRmhRXgtHATqVcFqz5HQxjysDM39E-dQeBdk0Q9WSYyWx0mstjXo_p49hi_DrPHglALla6MJvS2CvzuFL6Gd1ejrBhS9oS9DZJwZw_pHrI1j4PhD3dtCDwJkXD1C_v4w1Rvh-WC_iC6t9m5cEdIxu-ON6i-HG4Ygzo5tSoOCEHyH0ilM0OnM56QE");'></div>
+<div class="absolute top-2 right-2 bg-black/60 backdrop-blur-sm px-2 py-1 rounded text-white text-xs font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">videocam</span> 12:40
+                            </div>
+<div class="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+<div class="size-10 bg-primary/90 rounded-full flex items-center justify-center shadow-lg transform scale-90 group-hover:scale-100 transition-transform">
+<span class="material-symbols-outlined text-white" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="text-xs font-bold text-primary uppercase">Strategy</span>
+<button class="text-text-secondary hover:text-white"><span class="material-symbols-outlined text-lg">bookmark</span></button>
+</div>
+<h4 class="text-white font-bold leading-snug group-hover:text-primary transition-colors">Diversification Strategies for 2024</h4>
+<p class="text-text-secondary text-xs mt-1 line-clamp-2">Why putting all your eggs in one basket is a risky move in today's market.</p>
+</div>
+</article>
+<article class="flex flex-col gap-3 group cursor-pointer">
+<div class="relative aspect-video rounded-xl overflow-hidden bg-[#27353a]">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="Candlestick charts on screen" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCmDT42-ziEZh3rE0Hh-l_r2a-dTSX7g0qs_Z1skLupXN7bQHkG32TcPqjGnRU2Bgx9Lynj0RHrFXS02rxRDmDUnGNYMMqL2lO1GmQqCRazLVOePCsvVkk-TBjeKLBYOt9spZsx2jcnOnfESnXqaqudjZx1x_4gNHqGAOYzyD7NN8eqsiemZmKlvfvkX3WqKC_S9nAv8ipqSmJLt8CST28jp20pH5JXwlh83iAyqjyFFSWyUvZdjucxx19jS6LHGA_G8e-Y8LVbq7g");'></div>
+<div class="absolute top-2 right-2 bg-black/60 backdrop-blur-sm px-2 py-1 rounded text-white text-xs font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">article</span> 5 min read
+                            </div>
+</div>
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="text-xs font-bold text-[#b894ff] uppercase">Basics</span>
+<button class="text-text-secondary hover:text-white"><span class="material-symbols-outlined text-lg">bookmark</span></button>
+</div>
+<h4 class="text-white font-bold leading-snug group-hover:text-primary transition-colors">Reading Candlestick Patterns</h4>
+<p class="text-text-secondary text-xs mt-1 line-clamp-2">A beginner's guide to understanding price action through Japanese candlesticks.</p>
+</div>
+</article>
+<article class="flex flex-col gap-3 group cursor-pointer">
+<div class="relative aspect-video rounded-xl overflow-hidden bg-[#27353a]">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="Laptop with financial dashboard" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCfmw595oJH6e_SOHtTCNGT-omQOwdF8wZDJXvLz8L0884V4g1zZ92CZrFAhK_FFMoIodEz4eTl71MzMymd9RnmC0lEW_mPWvxedw39kc8_lXUHa_9f63tHUjtzzwOIuLqCxDLOj-629wNTCRw3QXRqiVx1DuRvIVdg9wgQsG2ehmPkbsbzbg_ZuBKYE9OqAkbU6QhkJAQHwNLDQ1Z8dfovYsoSLpBG3MezX0zvQ7m_BjxsgR89lSNeQbjGbJtUlD49gCCxBHjFamk");'></div>
+<div class="absolute top-2 right-2 bg-black/60 backdrop-blur-sm px-2 py-1 rounded text-white text-xs font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">videocam</span> 08:15
+                            </div>
+<div class="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+<div class="size-10 bg-primary/90 rounded-full flex items-center justify-center shadow-lg transform scale-90 group-hover:scale-100 transition-transform">
+<span class="material-symbols-outlined text-white" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="text-xs font-bold text-teal-400 uppercase">Platform</span>
+<button class="text-text-secondary hover:text-white"><span class="material-symbols-outlined text-lg">bookmark</span></button>
+</div>
+<h4 class="text-white font-bold leading-snug group-hover:text-primary transition-colors">Dashboard Features Walkthrough</h4>
+<p class="text-text-secondary text-xs mt-1 line-clamp-2">Get the most out of FinTech Pro with this comprehensive tour.</p>
+</div>
+</article>
+<article class="flex flex-col gap-3 group cursor-pointer">
+<div class="relative aspect-video rounded-xl overflow-hidden bg-[#27353a]">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="Global map connections dark theme" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBDfl9lqIjjCP9CflLTHxqbdJs_UvDWRWQsdss3Gw-Ym_kHtQ2lOZaDa_4E6Sj-VSU78mtFPv0w3B4ob5ny8iS9C4yyDZHZhL3jW3xoZ0QzGEk35jZqdEJiSt2K89WuIDMtnTM6VwTXehKF3UfronkDygjWsp6Di90OJ3UhNY5tPbI_HBY2uf2KYWYxe9AZdhZHdKMzKcHjrd7tPhx2eLAGudVoQfhBmbyZfbUYRDzknqcUGlukyxkiPDwiPhjJ7gYnxNT8BaJNO5g");'></div>
+<div class="absolute top-2 right-2 bg-black/60 backdrop-blur-sm px-2 py-1 rounded text-white text-xs font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">article</span> 8 min read
+                            </div>
+</div>
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="text-xs font-bold text-orange-400 uppercase">Analysis</span>
+<button class="text-text-secondary hover:text-white"><span class="material-symbols-outlined text-lg">bookmark</span></button>
+</div>
+<h4 class="text-white font-bold leading-snug group-hover:text-primary transition-colors">Global Economic Outlook Q4</h4>
+<p class="text-text-secondary text-xs mt-1 line-clamp-2">Expert analysis on inflation, interest rates, and global trade shifts.</p>
+</div>
+</article>
+</div>
+</section>
+<section class="flex flex-col gap-4 pb-10">
+<div class="flex items-center justify-between px-1">
+<h3 class="text-xl font-bold text-white">Beginner Investing</h3>
+<a class="text-sm font-bold text-primary hover:underline" href="#">View All</a>
+</div>
+<div class="flex flex-col gap-3">
+<div class="bg-card-dark rounded-xl p-4 flex flex-col md:flex-row gap-4 items-start md:items-center hover:bg-[#1f2d33] transition-colors border border-transparent hover:border-[#27353a] group cursor-pointer">
+<div class="w-full md:w-48 aspect-video rounded-lg bg-cover bg-center shrink-0" data-alt="Person holding calculator and pen" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC_tkLg-OdrIEl_241ETAbegUEtnr6GpVKV0Bwoy82iYxkd8rVlVtyowfABrFNqJxxlJSVNDkZc1QAm7cogQjgAoifuGgltf-lP2iFctwQdwP-TpEPNDBTmGDl7rX2izXJaMPwx0jdmKlop-pueBtOOxZlzDGyMM-jRkZWyX1_GqiZciWUpLhxq3Vple84J7iBDMExBjU0RBMBiaqoPHL71N_0WV938QEsWF7bEAyuGvxZC4G_Qy0W4j7RhZXnnTb2XxeKouiYqCg4");'></div>
+<div class="flex-1 flex flex-col gap-1">
+<div class="flex gap-2 mb-1">
+<span class="px-2 py-0.5 bg-[#27353a] text-white text-[10px] font-bold uppercase tracking-wider rounded">Guide</span>
+</div>
+<h4 class="text-white font-bold text-lg group-hover:text-primary transition-colors">How to Create a Personal Budget</h4>
+<p class="text-text-secondary text-sm line-clamp-1">The first step to investing is managing your cash flow effectively.</p>
+<div class="flex items-center gap-3 mt-2 text-text-secondary text-xs">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">schedule</span> 10 min read</span>
+<span class="w-1 h-1 rounded-full bg-[#3a4e55]"></span>
+<span>Updated 2 days ago</span>
+</div>
+</div>
+<button class="shrink-0 p-2 text-text-secondary hover:text-white rounded-full hover:bg-[#27353a] transition-colors self-start md:self-center">
+<span class="material-symbols-outlined">bookmark_add</span>
+</button>
+</div>
+<div class="bg-card-dark rounded-xl p-4 flex flex-col md:flex-row gap-4 items-start md:items-center hover:bg-[#1f2d33] transition-colors border border-transparent hover:border-[#27353a] group cursor-pointer">
+<div class="w-full md:w-48 aspect-video rounded-lg bg-cover bg-center shrink-0" data-alt="Financial stocks graph on mobile" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDuREuaYgjh6h21p9bzoaN47vGYiWz9mKGnSZYWzzE4MDBAdwu1tyH6vKjUsNr0o6OMmSzz17xz9-Oy3Co43PAb2BqlVZbii9JKQD79wdQzpS3VYbROPazEvNLTstH9BYxV61J2JXu-bh60LAY_C1EIRAIEHBsCk_sQ9PUu0NGym_jPxzzDY0v-snHyMjE4ORPAwuQnoJQkW0_ICryXLeHol3Fqm3fRpPRjD98aRfRaJr2xStkO65Q0ZJp8ebO9XmUA2JKBHX0n_q0");'></div>
+<div class="flex-1 flex flex-col gap-1">
+<div class="flex gap-2 mb-1">
+<span class="px-2 py-0.5 bg-[#27353a] text-white text-[10px] font-bold uppercase tracking-wider rounded">Video</span>
+</div>
+<h4 class="text-white font-bold text-lg group-hover:text-primary transition-colors">Understanding ETFs vs Mutual Funds</h4>
+<p class="text-text-secondary text-sm line-clamp-1">Which investment vehicle is right for your long-term goals?</p>
+<div class="flex items-center gap-3 mt-2 text-text-secondary text-xs">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">videocam</span> 18:30</span>
+<span class="w-1 h-1 rounded-full bg-[#3a4e55]"></span>
+<span>Updated 1 week ago</span>
+</div>
+</div>
+<button class="shrink-0 p-2 text-text-secondary hover:text-white rounded-full hover:bg-[#27353a] transition-colors self-start md:self-center">
+<span class="material-symbols-outlined">bookmark_add</span>
+</button>
+</div>
+</div>
+</section>
+</div>
+</main>
+
+</body></html>

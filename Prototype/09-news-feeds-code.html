@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>FinTech Pro - News Feed</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#06bcf9",
+                        "background-light": "#f5f8f8",
+                        "background-dark": "#0f1e23", // Deep charcoal/black
+                        "card-dark": "#1b2427", // Slightly lighter for cards
+                        "secondary-text": "#9bb3bb",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #111618;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #27353a;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #364950;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .icon-filled {
+            font-variation-settings: 'FILL' 1;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white font-display overflow-x-hidden antialiased selection:bg-primary selection:text-black">
+<div class="flex h-screen w-full overflow-hidden">
+<aside class="flex w-64 flex-col border-r border-[#27353a] bg-[#111618] shrink-0 transition-all duration-300 hidden md:flex h-full">
+<div class="flex h-full flex-col p-4">
+<div class="flex items-center gap-3 px-2 py-2 shrink-0 mb-2">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 shadow-lg shadow-primary/10" data-alt="Abstract geometric logo in blue and dark tones" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB96Ff3RfguVcMeKRpDMCaqQGl5UJPM3GWPX9Choc4Xe7cnkAKGKTmq1qTrJ5bNi9YbVn_sAG01Ezeeclhcv-KMYEpuM01qwe3_CfxX1hLqe0G1XMRtwMPOBESPQTMSZ7cjNUphR3jiKDYyORtcdOqkeA_uQN0r6ePo9j2_TovR6zdYhvsca9a-EwAUHyP0pYfSwtA0HU2a7teBR9jMRZZFhueyCN3-ysW_hh-hCpSo7TLYh11Sdmfr6y90lOW8-C5E53Ya_lF3wg4");'></div>
+<div class="flex flex-col">
+<h1 class="text-white text-base font-bold leading-normal tracking-wide">FinTech Pro</h1>
+<p class="text-secondary-text text-xs font-normal leading-normal">Investment Dashboard</p>
+</div>
+</div>
+<div class="flex-1 overflow-y-auto -mx-2 px-2 custom-scrollbar">
+<nav class="flex flex-col gap-1 mt-2 pb-4">
+<div class="px-3 mt-4 mb-2 text-[10px] font-bold text-secondary-text/50 uppercase tracking-widest">Overview</div>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-[#27353a] transition-colors group" href="#">
+<span class="material-symbols-outlined text-secondary-text group-hover:text-white text-[20px]">dashboard</span>
+<p class="text-secondary-text group-hover:text-white text-sm font-medium leading-normal">Dashboard</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-[#27353a] transition-colors group" href="#">
+<span class="material-symbols-outlined text-secondary-text group-hover:text-white text-[20px]">pie_chart</span>
+<p class="text-secondary-text group-hover:text-white text-sm font-medium leading-normal">Portfolio</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-[#27353a] transition-colors group" href="#">
+<span class="material-symbols-outlined text-secondary-text group-hover:text-white text-[20px]">receipt_long</span>
+<p class="text-secondary-text group-hover:text-white text-sm font-medium leading-normal">Transactions</p>
+</a>
+<div class="px-3 mt-4 mb-2 text-[10px] font-bold text-secondary-text/50 uppercase tracking-widest">Intelligence</div>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-[#27353a] transition-colors group" href="#">
+<span class="material-symbols-outlined text-secondary-text group-hover:text-white text-[20px]">psychology</span>
+<p class="text-secondary-text group-hover:text-white text-sm font-medium leading-normal">Behavioral Finance</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-[#27353a] transition-colors group" href="#">
+<span class="material-symbols-outlined text-secondary-text group-hover:text-white text-[20px]">ssid_chart</span>
+<p class="text-secondary-text group-hover:text-white text-sm font-medium leading-normal">Projections</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-[#27353a] transition-colors group" href="#">
+<span class="material-symbols-outlined text-secondary-text group-hover:text-white text-[20px]">shield</span>
+<p class="text-secondary-text group-hover:text-white text-sm font-medium leading-normal">Risk Profiling</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-[#27353a] transition-colors group" href="#">
+<span class="material-symbols-outlined text-secondary-text group-hover:text-white text-[20px]">calculate</span>
+<p class="text-secondary-text group-hover:text-white text-sm font-medium leading-normal">Tax Optimization</p>
+</a>
+<div class="px-3 mt-4 mb-2 text-[10px] font-bold text-secondary-text/50 uppercase tracking-widest">Market &amp; Plan</div>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-[#27353a] transition-colors group" href="#">
+<span class="material-symbols-outlined text-secondary-text group-hover:text-white text-[20px]">track_changes</span>
+<p class="text-secondary-text group-hover:text-white text-sm font-medium leading-normal">Goals</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg bg-primary/10 border-l-2 border-primary" href="#">
+<span class="material-symbols-outlined text-primary icon-filled text-[20px]">newspaper</span>
+<p class="text-white text-sm font-bold leading-normal">News Feed</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-[#27353a] transition-colors group" href="#">
+<span class="material-symbols-outlined text-secondary-text group-hover:text-white text-[20px]">notifications_active</span>
+<p class="text-secondary-text group-hover:text-white text-sm font-medium leading-normal">Alerts</p>
+</a>
+<div class="px-3 mt-4 mb-2 text-[10px] font-bold text-secondary-text/50 uppercase tracking-widest">Resources</div>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-[#27353a] transition-colors group" href="#">
+<span class="material-symbols-outlined text-secondary-text group-hover:text-white text-[20px]">school</span>
+<p class="text-secondary-text group-hover:text-white text-sm font-medium leading-normal">Education</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-[#27353a] transition-colors group" href="#">
+<span class="material-symbols-outlined text-secondary-text group-hover:text-white text-[20px]">support_agent</span>
+<p class="text-secondary-text group-hover:text-white text-sm font-medium leading-normal">Support</p>
+</a>
+<div class="px-3 mt-4 mb-2 text-[10px] font-bold text-secondary-text/50 uppercase tracking-widest">User Settings</div>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-[#27353a] transition-colors group" href="#">
+<span class="material-symbols-outlined text-secondary-text group-hover:text-white text-[20px]">settings</span>
+<p class="text-secondary-text group-hover:text-white text-sm font-medium leading-normal">Settings</p>
+</a>
+</nav>
+</div>
+<div class="flex items-center gap-3 px-3 py-4 border-t border-[#27353a] shrink-0 mt-2">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-8" data-alt="User profile photo showing a smiling professional" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC75mK4Vz8AGWEzuknx3vkCYhcDL9f-pi7-4dBjzWMDQgnoRTlC-vsHUut1rMhLdcYLeU8jk3mxz0brhIkz9MGYxd1C1BnICKUUc1wQQgAWj5bkw5XNqs97wMO-aUIzCLz-Ta0jV-13SEnxLaqifNqJ7_hx5RnsFVtvwIIgrl1r_PJCVIGTWN2kAzx9CIrjl_8NB84-Eb_IiG3vS7TWhIyBEDIjN18lm0DimB1OnOKWHK1U2p5t0-Lhx8lYv8vaPmgJw6XXfymDQFA");'></div>
+<div class="flex flex-col">
+<p class="text-white text-sm font-medium">Alex Morgan</p>
+<p class="text-secondary-text text-xs">Premium Plan</p>
+</div>
+</div>
+</div>
+</aside>
+<main class="flex-1 flex flex-col h-full relative overflow-hidden">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-[#27353a] bg-[#111618]/95 backdrop-blur-md px-6 py-3 sticky top-0 z-10">
+<div class="flex items-center gap-4">
+<button class="md:hidden text-white">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<h2 class="text-white text-lg font-bold leading-tight hidden sm:block">Market Intelligence</h2>
+</div>
+<div class="flex flex-1 justify-end items-center gap-4 sm:gap-6">
+<label class="flex flex-col min-w-[200px] sm:w-96 max-w-lg h-10">
+<div class="flex w-full flex-1 items-stretch rounded-lg h-full bg-[#1b2427] focus-within:ring-1 focus-within:ring-primary/50 transition-all">
+<div class="text-secondary-text flex items-center justify-center pl-3">
+<span class="material-symbols-outlined text-[20px]">search</span>
+</div>
+<input class="w-full bg-transparent border-none text-white placeholder:text-secondary-text px-3 text-sm focus:outline-none focus:ring-0" placeholder="Search headlines, tickers, or topics..."/>
+</div>
+</label>
+<div class="flex items-center gap-4">
+<button class="text-secondary-text hover:text-white transition-colors relative">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute top-0 right-0 size-2 bg-primary rounded-full"></span>
+</button>
+<button class="text-secondary-text hover:text-white transition-colors">
+<span class="material-symbols-outlined">help</span>
+</button>
+</div>
+</div>
+</header>
+<div class="flex-1 overflow-y-auto bg-background-dark scroll-smooth">
+<div class="flex flex-col lg:flex-row h-full">
+<div class="flex-1 flex flex-col p-4 md:p-6 lg:p-8 max-w-[1000px] mx-auto w-full gap-6">
+<div class="flex flex-col gap-2">
+<h1 class="text-white text-3xl font-black tracking-tight">News Feed</h1>
+<p class="text-secondary-text text-sm">Real-time financial news, market trends, and economic indicators impacting your portfolio.</p>
+</div>
+<div class="flex gap-3 overflow-x-auto pb-2 scrollbar-hide">
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-primary text-[#111618] px-4 shadow-[0_0_10px_rgba(6,188,249,0.3)] hover:brightness-110 transition-all">
+<span class="material-symbols-outlined text-[18px]">newspaper</span>
+<span class="text-sm font-bold">All News</span>
+</button>
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-[#27353a] hover:bg-[#364950] px-4 transition-all group">
+<span class="material-symbols-outlined text-secondary-text group-hover:text-white text-[18px]">currency_bitcoin</span>
+<span class="text-secondary-text group-hover:text-white text-sm font-medium">Crypto</span>
+</button>
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-[#27353a] hover:bg-[#364950] px-4 transition-all group">
+<span class="material-symbols-outlined text-secondary-text group-hover:text-white text-[18px]">trending_up</span>
+<span class="text-secondary-text group-hover:text-white text-sm font-medium">Stocks</span>
+</button>
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-[#27353a] hover:bg-[#364950] px-4 transition-all group">
+<span class="material-symbols-outlined text-secondary-text group-hover:text-white text-[18px]">public</span>
+<span class="text-secondary-text group-hover:text-white text-sm font-medium">Forex</span>
+</button>
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-[#27353a] hover:bg-[#364950] px-4 transition-all group">
+<span class="material-symbols-outlined text-secondary-text group-hover:text-white text-[18px]">account_balance</span>
+<span class="text-secondary-text group-hover:text-white text-sm font-medium">Economy</span>
+</button>
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-[#27353a] hover:bg-[#364950] px-4 transition-all group">
+<span class="material-symbols-outlined text-secondary-text group-hover:text-white text-[18px]">bolt</span>
+<span class="text-secondary-text group-hover:text-white text-sm font-medium">Energy</span>
+</button>
+</div>
+<div class="@container">
+<div class="flex flex-col items-stretch justify-start rounded-xl @xl:flex-row @xl:items-stretch overflow-hidden bg-card-dark border border-primary/30 relative group cursor-pointer shadow-lg hover:shadow-primary/5 transition-all">
+<div class="absolute top-0 left-0 w-1 h-full bg-primary z-10"></div>
+<div class="w-full @xl:w-2/5 bg-center bg-no-repeat bg-cover min-h-[200px]" data-alt="Close up of stock market chart with digital overlay" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuClwl914v12qtL4fQsundOCSLO8Xgt21azuIUatGO8B780n9UTRrvrB_72ldDPfN89LwJ-VGhmEf74BfwXb8l0aPYZ5NK4IMS32uVCp3rYc6hP_ZlJNFX26GM9daglv6O4y31n0ytRN7O9JrOOvUouGR2VCLtFCS7c-BM2-tgVxPchEzBMpndGad9iAIKjLXqztLguWA2v4FFW88oOnbYzd1xklBiwqpFenmdY7Ren5i5hey4N7rvxDRcaVc4XZ0lw-AJ1NY7KPXHI");'>
+<div class="w-full h-full bg-gradient-to-t from-black/80 via-transparent to-transparent @xl:bg-gradient-to-r @xl:from-transparent @xl:to-card-dark/90"></div>
+</div>
+<div class="flex w-full grow flex-col justify-center gap-3 p-5 relative z-0">
+<div class="flex items-center gap-2 mb-1">
+<span class="bg-red-500/20 text-red-400 px-2 py-0.5 rounded text-xs font-bold uppercase tracking-wider animate-pulse border border-red-500/30">Breaking</span>
+<span class="text-secondary-text text-xs">Economy • 12m ago</span>
+</div>
+<h3 class="text-white text-xl md:text-2xl font-bold leading-tight group-hover:text-primary transition-colors">Fed Announces Surprise Interest Rate Pause</h3>
+<p class="text-secondary-text text-sm md:text-base leading-relaxed line-clamp-2">
+                                    Global markets rally as the Federal Reserve signals a potential end to the current rate hike cycle, citing cooling inflation data and stable employment figures.
+                                </p>
+<div class="flex items-center gap-4 mt-2">
+<button class="flex items-center gap-2 text-primary text-sm font-bold hover:underline">
+                                        Read Full Analysis <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-4">
+<h3 class="text-white text-lg font-bold mb-2 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">rss_feed</span> Latest Updates
+                        </h3>
+<article class="@container bg-card-dark hover:bg-[#202b2e] rounded-lg p-4 transition-colors cursor-pointer border border-[#27353a] hover:border-[#364950]">
+<div class="flex flex-col @sm:flex-row gap-4">
+<div class="w-full @sm:w-32 @sm:h-24 h-48 shrink-0 rounded-lg bg-cover bg-center" data-alt="Bitcoin golden coin with digital background" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDCnqdwzLLk7JfjjBLlx9JEyoqp3DK3NgR-xweOHVAD4M-aBuQfatCYCEkJx8mpi4SLpIS7OagNcfIYz3KxzNXjpaAXGHtQRP7iC9Hga2nuVcRcurUwiujJsgiyERvgFMuBkp49Yp5oWE5qjqkrVbbZJZK1npgA8lgdtAG66qKCV1nWWkcMDGnM3V46xBy_2ekT2lfSFTb2_Tdby9hCU_ur359Vkh3IcSuXqZ7IDvIv5m7HtN0Lml6hVAW0JytPoKt7guc4vDmjsVs");'></div>
+<div class="flex flex-col justify-between flex-1 gap-2">
+<div>
+<div class="flex justify-between items-start">
+<h4 class="text-white text-base font-bold leading-tight line-clamp-2 mb-1 group-hover:text-primary">Bitcoin Surges Past $65k Amidst ETF Speculation</h4>
+<span class="hidden @sm:flex bg-green-500/10 text-green-400 text-xs px-2 py-1 rounded border border-green-500/20 whitespace-nowrap">Bullish</span>
+</div>
+<p class="text-secondary-text text-sm line-clamp-2">Leading cryptocurrency sees massive volume intake as major institutions prepare for potential ETF approvals next month.</p>
+</div>
+<div class="flex items-center justify-between mt-1">
+<div class="flex items-center gap-2 text-xs text-secondary-text">
+<span class="font-medium text-white">CryptoDaily</span>
+<span>•</span>
+<span>45m ago</span>
+</div>
+<div class="flex gap-3">
+<button class="text-secondary-text hover:text-primary"><span class="material-symbols-outlined text-[18px]">bookmark</span></button>
+<button class="text-secondary-text hover:text-primary"><span class="material-symbols-outlined text-[18px]">share</span></button>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="@container bg-card-dark hover:bg-[#202b2e] rounded-lg p-4 transition-colors cursor-pointer border border-[#27353a] hover:border-[#364950]">
+<div class="flex flex-col @sm:flex-row gap-4">
+<div class="w-full @sm:w-32 @sm:h-24 h-48 shrink-0 rounded-lg bg-cover bg-center" data-alt="Modern electric car charging station" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAHacNr7h4b7w5mpWlevPwWCVnguxxBEMxv0OsfcHx7cH9JpSSUH6x3jMhR__JlRYUqB0cv-3KvXXKrHALmnY78Wa_x9tA7m2aHCT5ItjBBpR0oNSLSErA7DgoDwcrj2SBOJKYK0aOvbeY_zyasjAayGIYk4HDxNu-OS4je2Aoto6R-SlDLnADtYKm5pL77kfBR2DQ2id5HEwg1sk22z1xyOnUxJ4XzHPNi_ad42hyQTJutms_E9vPqCb--N_2pFChA5kn9DJJeqsQ");'></div>
+<div class="flex flex-col justify-between flex-1 gap-2">
+<div>
+<div class="flex justify-between items-start">
+<h4 class="text-white text-base font-bold leading-tight line-clamp-2 mb-1 group-hover:text-primary">Tesla Q4 Earnings Beat Expectations, Stock Up 4%</h4>
+<span class="hidden @sm:flex bg-green-500/10 text-green-400 text-xs px-2 py-1 rounded border border-green-500/20 whitespace-nowrap">Bullish</span>
+</div>
+<p class="text-secondary-text text-sm line-clamp-2">Revenue hits record highs driven by strong Model Y sales and improved margins in the energy sector.</p>
+</div>
+<div class="flex items-center justify-between mt-1">
+<div class="flex items-center gap-2 text-xs text-secondary-text">
+<span class="font-medium text-white">Bloomberg</span>
+<span>•</span>
+<span>1h ago</span>
+</div>
+<div class="flex gap-3">
+<button class="text-secondary-text hover:text-primary"><span class="material-symbols-outlined text-[18px]">bookmark</span></button>
+<button class="text-secondary-text hover:text-primary"><span class="material-symbols-outlined text-[18px]">share</span></button>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="@container bg-card-dark hover:bg-[#202b2e] rounded-lg p-4 transition-colors cursor-pointer border border-[#27353a] hover:border-[#364950]">
+<div class="flex flex-col @sm:flex-row gap-4">
+<div class="w-full @sm:w-32 @sm:h-24 h-48 shrink-0 rounded-lg bg-cover bg-center" data-alt="Oil rigs in the ocean during sunset" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD-Eo7ngRjKsVHSP4ZG6AM47A45TGEaLe6k2aQHTGhrQaAAZzMsGPars0gbklhXa5dec7HrjCwXZhUmqKV1FSPwfzVuKISNmpikG9OvrEz50u6bVNUHR_IxJc4Qyf60Io7CBToH_I7KYWV5m-dzqh4McYq5LM45erwYDbPtfGgZBq5AZTEVJU4T3n6jtrYfOxTUKUg6MkM7XtK9hQlZkje4RFIN2o3iniRwDDLa7AiigtcDJjQNb_Tdb7g4bPlmyCdMF2BhQjVtKdA");'></div>
+<div class="flex flex-col justify-between flex-1 gap-2">
+<div>
+<div class="flex justify-between items-start">
+<h4 class="text-white text-base font-bold leading-tight line-clamp-2 mb-1 group-hover:text-primary">Oil Prices Slip as Supply Concerns Ease</h4>
+<span class="hidden @sm:flex bg-red-500/10 text-red-400 text-xs px-2 py-1 rounded border border-red-500/20 whitespace-nowrap">Bearish</span>
+</div>
+<p class="text-secondary-text text-sm line-clamp-2">Brent crude falls below $80 a barrel following reports of increased production from non-OPEC countries.</p>
+</div>
+<div class="flex items-center justify-between mt-1">
+<div class="flex items-center gap-2 text-xs text-secondary-text">
+<span class="font-medium text-white">Reuters</span>
+<span>•</span>
+<span>2h ago</span>
+</div>
+<div class="flex gap-3">
+<button class="text-secondary-text hover:text-primary"><span class="material-symbols-outlined text-[18px]">bookmark</span></button>
+<button class="text-secondary-text hover:text-primary"><span class="material-symbols-outlined text-[18px]">share</span></button>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="@container bg-card-dark hover:bg-[#202b2e] rounded-lg p-4 transition-colors cursor-pointer border border-[#27353a] hover:border-[#364950]">
+<div class="flex flex-col @sm:flex-row gap-4">
+<div class="w-full @sm:w-32 @sm:h-24 h-48 shrink-0 rounded-lg bg-cover bg-center" data-alt="Corporate handshake in a meeting room" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDkIYTaoGWV7tWPlD5AGKJdlGZW-mcFS0N6YBGQfy_CAZC9ys7B_OnCZu9jxqGwpp6MYKQ9bUlzcVwoyUQUl-MC4zsCEZi8I9oP1aRZTAdtiH0YtmipULJVB-g5FWUCwsvnlJxuqdKaP0zrrdfzKy3ZtHsqA5PDiZxl_4vXPUN_CGfqeKUo9KmKJrIqc4EjPL4ZphRo-tdmxULF-lXVjp4q0X_PMvh0fcEmeTUuKeHQ8z0pzIRzW9bVNKmp5t0do9L8v_gvhzRJDao");'></div>
+<div class="flex flex-col justify-between flex-1 gap-2">
+<div>
+<div class="flex justify-between items-start">
+<h4 class="text-white text-base font-bold leading-tight line-clamp-2 mb-1 group-hover:text-primary">Tech Merger Talks Stall Between Giant Corps</h4>
+<span class="hidden @sm:flex bg-yellow-500/10 text-yellow-400 text-xs px-2 py-1 rounded border border-yellow-500/20 whitespace-nowrap">Neutral</span>
+</div>
+<p class="text-secondary-text text-sm line-clamp-2">Regulatory scrutiny increases, causing delays in the proposed $40B acquisition deal.</p>
+</div>
+<div class="flex items-center justify-between mt-1">
+<div class="flex items-center gap-2 text-xs text-secondary-text">
+<span class="font-medium text-white">WSJ</span>
+<span>•</span>
+<span>3h ago</span>
+</div>
+<div class="flex gap-3">
+<button class="text-secondary-text hover:text-primary"><span class="material-symbols-outlined text-[18px]">bookmark</span></button>
+<button class="text-secondary-text hover:text-primary"><span class="material-symbols-outlined text-[18px]">share</span></button>
+</div>
+</div>
+</div>
+</div>
+</article>
+</div>
+</div>
+<aside class="w-full lg:w-80 border-t lg:border-t-0 lg:border-l border-[#27353a] bg-[#111618] p-6 flex flex-col gap-6 shrink-0">
+<div>
+<div class="flex items-center justify-between mb-4">
+<h3 class="text-white font-bold text-lg">Market Pulse</h3>
+<button class="text-primary text-xs font-bold hover:underline">View All</button>
+</div>
+<div class="flex flex-col gap-3">
+<div class="flex items-center justify-between p-3 rounded-lg bg-[#27353a] hover:bg-[#364950] transition-colors cursor-pointer group">
+<div class="flex items-center gap-3">
+<div class="bg-white/10 p-1.5 rounded text-white group-hover:bg-primary group-hover:text-black transition-colors">
+<span class="material-symbols-outlined text-[20px]">currency_bitcoin</span>
+</div>
+<div>
+<p class="text-white font-bold text-sm">BTC/USD</p>
+<p class="text-secondary-text text-xs">Bitcoin</p>
+</div>
+</div>
+<div class="text-right">
+<p class="text-white font-bold text-sm">$65,230</p>
+<p class="text-green-400 text-xs flex items-center justify-end gap-0.5">
+<span class="material-symbols-outlined text-[14px]">arrow_drop_up</span> 2.4%
+                                    </p>
+</div>
+</div>
+<div class="flex items-center justify-between p-3 rounded-lg bg-[#27353a] hover:bg-[#364950] transition-colors cursor-pointer group">
+<div class="flex items-center gap-3">
+<div class="bg-white/10 p-1.5 rounded text-white group-hover:bg-primary group-hover:text-black transition-colors">
+<span class="material-symbols-outlined text-[20px]">show_chart</span>
+</div>
+<div>
+<p class="text-white font-bold text-sm">SPX</p>
+<p class="text-secondary-text text-xs">S&amp;P 500</p>
+</div>
+</div>
+<div class="text-right">
+<p class="text-white font-bold text-sm">4,780</p>
+<p class="text-green-400 text-xs flex items-center justify-end gap-0.5">
+<span class="material-symbols-outlined text-[14px]">arrow_drop_up</span> 0.8%
+                                    </p>
+</div>
+</div>
+<div class="flex items-center justify-between p-3 rounded-lg bg-[#27353a] hover:bg-[#364950] transition-colors cursor-pointer group">
+<div class="flex items-center gap-3">
+<div class="bg-white/10 p-1.5 rounded text-white group-hover:bg-primary group-hover:text-black transition-colors">
+<span class="material-symbols-outlined text-[20px]">water_drop</span>
+</div>
+<div>
+<p class="text-white font-bold text-sm">CL=F</p>
+<p class="text-secondary-text text-xs">Crude Oil</p>
+</div>
+</div>
+<div class="text-right">
+<p class="text-white font-bold text-sm">$78.40</p>
+<p class="text-red-400 text-xs flex items-center justify-end gap-0.5">
+<span class="material-symbols-outlined text-[14px]">arrow_drop_down</span> 1.2%
+                                    </p>
+</div>
+</div>
+<div class="flex items-center justify-between p-3 rounded-lg bg-[#27353a] hover:bg-[#364950] transition-colors cursor-pointer group">
+<div class="flex items-center gap-3">
+<div class="bg-white/10 p-1.5 rounded text-white group-hover:bg-primary group-hover:text-black transition-colors">
+<span class="material-symbols-outlined text-[20px]">euro_symbol</span>
+</div>
+<div>
+<p class="text-white font-bold text-sm">EUR/USD</p>
+<p class="text-secondary-text text-xs">Euro</p>
+</div>
+</div>
+<div class="text-right">
+<p class="text-white font-bold text-sm">1.09</p>
+<p class="text-secondary-text text-xs flex items-center justify-end gap-0.5">
+<span class="material-symbols-outlined text-[14px]">remove</span> 0.0%
+                                    </p>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-gradient-to-br from-primary/20 to-transparent p-5 rounded-xl border border-primary/20 mt-2">
+<div class="flex flex-col gap-3">
+<span class="bg-primary text-[#111618] text-xs font-bold px-2 py-1 rounded w-fit">Premium</span>
+<h4 class="text-white font-bold text-lg leading-tight">Unlock AI Insights</h4>
+<p class="text-secondary-text text-sm mb-2">Get sentiment analysis and predictive market trends powered by our AI.</p>
+<button class="w-full bg-primary hover:bg-primary/90 text-[#111618] font-bold py-2 rounded-lg transition-colors text-sm">Upgrade Now</button>
+</div>
+</div>
+</aside>
+</div>
+</div>
+</main>
+</div>
+
+</body></html>

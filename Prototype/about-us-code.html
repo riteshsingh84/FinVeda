@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>FinTechPrime - About Us</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#06a8f9",
+                        "background-light": "#f5f7f8",
+                        "background-dark": "#0f1c23",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-[#111618] text-white font-display overflow-x-hidden">
+<div class="relative flex min-h-screen w-full flex-col group/design-root">
+<!-- Main Layout Container -->
+<div class="layout-container flex h-full grow flex-col">
+<!-- Navbar -->
+<div class="w-full flex justify-center sticky top-0 z-50 bg-[#111618]/90 backdrop-blur-md border-b border-solid border-b-[#27343a]">
+<div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+<header class="flex items-center justify-between whitespace-nowrap px-4 md:px-10 py-3">
+<div class="flex items-center gap-4 text-white">
+<div class="size-8 text-primary">
+<svg class="w-full h-full" fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M39.5563 34.1455V13.8546C39.5563 15.708 36.8773 17.3437 32.7927 18.3189C30.2914 18.916 27.263 19.2655 24 19.2655C20.737 19.2655 17.7086 18.916 15.2073 18.3189C11.1227 17.3437 8.44365 15.708 8.44365 13.8546V34.1455C8.44365 35.9988 11.1227 37.6346 15.2073 38.6098C17.7086 39.2069 20.737 39.5564 24 39.5564C27.263 39.5564 30.2914 39.2069 32.7927 38.6098C36.8773 37.6346 39.5563 35.9988 39.5563 34.1455Z" fill="currentColor"></path>
+<path clip-rule="evenodd" d="M10.4485 13.8519C10.4749 13.9271 10.6203 14.246 11.379 14.7361C12.298 15.3298 13.7492 15.9145 15.6717 16.3735C18.0007 16.9296 20.8712 17.2655 24 17.2655C27.1288 17.2655 29.9993 16.9296 32.3283 16.3735C34.2508 15.9145 35.702 15.3298 36.621 14.7361C37.3796 14.246 37.5251 13.9271 37.5515 13.8519C37.5287 13.7876 37.4333 13.5973 37.0635 13.2931C36.5266 12.8516 35.6288 12.3647 34.343 11.9175C31.79 11.0295 28.1333 10.4437 24 10.4437C19.8667 10.4437 16.2099 11.0295 13.657 11.9175C12.3712 12.3647 11.4734 12.8516 10.9365 13.2931C10.5667 13.5973 10.4713 13.7876 10.4485 13.8519ZM37.5563 18.7877C36.3176 19.3925 34.8502 19.8839 33.2571 20.2642C30.5836 20.9025 27.3973 21.2655 24 21.2655C20.6027 21.2655 17.4164 20.9025 14.7429 20.2642C13.1498 19.8839 11.6824 19.3925 10.4436 18.7877V34.1275C10.4515 34.1545 10.5427 34.4867 11.379 35.027C12.298 35.6207 13.7492 36.2054 15.6717 36.6644C18.0007 37.2205 20.8712 37.5564 24 37.5564C27.1288 37.5564 29.9993 37.2205 32.3283 36.6644C34.2508 36.2054 35.702 35.6207 36.621 35.027C37.4573 34.4867 37.5485 34.1546 37.5563 34.1275V18.7877ZM41.5563 13.8546V34.1455C41.5563 36.1078 40.158 37.5042 38.7915 38.3869C37.3498 39.3182 35.4192 40.0389 33.2571 40.5551C30.5836 41.1934 27.3973 41.5564 24 41.5564C20.6027 41.5564 17.4164 41.1934 14.7429 40.5551C12.5808 40.0389 10.6502 39.3182 9.20848 38.3869C7.84205 37.5042 6.44365 36.1078 6.44365 34.1455L6.44365 13.8546C6.44365 12.2684 7.37223 11.0454 8.39581 10.2036C9.43325 9.3505 10.8137 8.67141 12.343 8.13948C15.4203 7.06909 19.5418 6.44366 24 6.44366C28.4582 6.44366 32.5797 7.06909 35.657 8.13948C37.1863 8.67141 38.5667 9.3505 39.6042 10.2036C40.6278 11.0454 41.5563 12.2684 41.5563 13.8546Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+<h2 class="text-white text-lg font-bold leading-tight tracking-[-0.015em]">FinTechPrime</h2>
+</div>
+<div class="hidden md:flex flex-1 justify-end gap-8">
+<div class="flex items-center gap-9">
+<a class="text-white/70 hover:text-white text-sm font-medium leading-normal transition-colors" href="#">Dashboard</a>
+<a class="text-white/70 hover:text-white text-sm font-medium leading-normal transition-colors" href="#">Portfolio</a>
+<a class="text-white/70 hover:text-white text-sm font-medium leading-normal transition-colors" href="#">Markets</a>
+<a class="text-white/70 hover:text-white text-sm font-medium leading-normal transition-colors" href="#">Settings</a>
+</div>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary hover:bg-primary/90 transition-colors text-white text-sm font-bold leading-normal tracking-[0.015em]">
+<span class="truncate">Sign Out</span>
+</button>
+</div>
+<div class="md:hidden text-white">
+<span class="material-symbols-outlined">menu</span>
+</div>
+</header>
+</div>
+</div>
+<div class="w-full flex justify-center py-5">
+<div class="layout-content-container flex flex-col max-w-[960px] flex-1 px-4 md:px-10">
+<!-- Hero Section -->
+<div class="@container mb-12">
+<div class="">
+<div class="flex min-h-[480px] flex-col gap-6 bg-cover bg-center bg-no-repeat rounded-xl items-center justify-center p-8 md:p-12 relative overflow-hidden" data-alt="Abstract digital financial network with glowing blue nodes and data streams" style='background-image: linear-gradient(rgba(17, 22, 24, 0.7) 0%, rgba(17, 22, 24, 0.4) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuANaqEHvdRghRyG-YyUF-PPkF6MxRHTtDIImqx6vH2ZZ5ov5BAPSSeY9HI2WqgZTEDBADwxY7OOazIwaca8eUahJ3cbAXD4Lv5p4x-p1m6JkpS2-RzBaS9HOWoDbhdkkN3ZjJr5NwoCpVStnbaYxvjjLtO3xAjabjAE1xWnblDRWWi2Ss7OuYhdGDWcm78qufpmdnv0eS5guPytSb_dZzfqtAPTRXspU3AIUe9cMUbaGgFfP9D50xH7jlSgjhaDaJA1qGEwSD_HoGw");'>
+<div class="absolute inset-0 bg-gradient-to-t from-[#111618] via-transparent to-transparent opacity-90"></div>
+<div class="flex flex-col gap-4 text-center z-10 max-w-2xl">
+<h1 class="text-white text-4xl md:text-6xl font-black leading-tight tracking-[-0.033em]">
+                                        Democratizing Institutional-Grade Investing
+                                    </h1>
+<h2 class="text-white/90 text-base md:text-lg font-normal leading-relaxed">
+                                        We bridge the gap between retail investors and professional-grade financial technology using AI-driven insights to unlock your portfolio's true potential.
+                                    </h2>
+</div>
+<button class="z-10 mt-4 flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-8 bg-primary hover:bg-primary/90 transition-all text-white text-base font-bold leading-normal tracking-[0.015em] shadow-lg shadow-primary/20">
+<span class="truncate">View Open Positions</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Stats / Milestones -->
+<div class="flex flex-wrap gap-4 mb-16">
+<div class="flex min-w-[158px] flex-1 flex-col gap-2 rounded-lg p-6 bg-[#1b2327] border border-[#27343a] hover:border-primary/30 transition-colors">
+<p class="text-[#9bb0bb] text-sm font-medium uppercase tracking-wider">Assets Monitored</p>
+<p class="text-white tracking-tight text-3xl font-bold leading-tight">$5B+</p>
+</div>
+<div class="flex min-w-[158px] flex-1 flex-col gap-2 rounded-lg p-6 bg-[#1b2327] border border-[#27343a] hover:border-primary/30 transition-colors">
+<p class="text-[#9bb0bb] text-sm font-medium uppercase tracking-wider">Global Reach</p>
+<p class="text-white tracking-tight text-3xl font-bold leading-tight">150+ Countries</p>
+</div>
+<div class="flex min-w-[158px] flex-1 flex-col gap-2 rounded-lg p-6 bg-[#1b2327] border border-[#27343a] hover:border-primary/30 transition-colors">
+<p class="text-[#9bb0bb] text-sm font-medium uppercase tracking-wider">Since</p>
+<p class="text-white tracking-tight text-3xl font-bold leading-tight">2021</p>
+</div>
+<div class="flex min-w-[158px] flex-1 flex-col gap-2 rounded-lg p-6 bg-[#1b2327] border border-[#27343a] hover:border-primary/30 transition-colors">
+<p class="text-[#9bb0bb] text-sm font-medium uppercase tracking-wider">Active Users</p>
+<p class="text-white tracking-tight text-3xl font-bold leading-tight">85k+</p>
+</div>
+</div>
+<!-- Mission & Vision -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
+<div class="flex flex-1 gap-4 rounded-xl border border-[#3a4c55] bg-gradient-to-br from-[#1b2327] to-[#111618] p-8 flex-col relative overflow-hidden group">
+<div class="absolute top-0 right-0 w-32 h-32 bg-primary/10 rounded-full blur-3xl -mr-16 -mt-16 transition-opacity opacity-50 group-hover:opacity-100"></div>
+<div class="w-12 h-12 rounded-lg bg-primary/20 flex items-center justify-center text-primary mb-2">
+<span class="material-symbols-outlined text-[28px]">flag</span>
+</div>
+<div class="flex flex-col gap-3 relative z-10">
+<h2 class="text-white text-2xl font-bold leading-tight">Our Mission</h2>
+<p class="text-[#9bb0bb] text-base font-normal leading-relaxed">
+                                    To empower every individual investor with the same algorithmic tools, data transparency, and execution speed used by Wall Street giants, leveling the playing field for everyone.
+                                </p>
+</div>
+</div>
+<div class="flex flex-1 gap-4 rounded-xl border border-[#3a4c55] bg-gradient-to-br from-[#1b2327] to-[#111618] p-8 flex-col relative overflow-hidden group">
+<div class="absolute top-0 right-0 w-32 h-32 bg-primary/10 rounded-full blur-3xl -mr-16 -mt-16 transition-opacity opacity-50 group-hover:opacity-100"></div>
+<div class="w-12 h-12 rounded-lg bg-primary/20 flex items-center justify-center text-primary mb-2">
+<span class="material-symbols-outlined text-[28px]">visibility</span>
+</div>
+<div class="flex flex-col gap-3 relative z-10">
+<h2 class="text-white text-2xl font-bold leading-tight">Our Vision</h2>
+<p class="text-[#9bb0bb] text-base font-normal leading-relaxed">
+                                    A world where financial freedom is accessible to all through transparent, data-driven decision making, removing emotion from the investment process entirely.
+                                </p>
+</div>
+</div>
+</div>
+<!-- Philosophy Section -->
+<div class="flex flex-col items-center text-center mb-16 gap-6">
+<div class="inline-flex items-center justify-center px-3 py-1 rounded-full border border-primary/30 bg-primary/10 text-primary text-xs font-bold uppercase tracking-wider">
+                            Core Values
+                        </div>
+<h1 class="text-white tracking-tight text-3xl md:text-5xl font-bold leading-tight max-w-3xl">
+                            Our Philosophy: <span class="text-primary">Data over Intuition</span>
+</h1>
+<p class="text-[#9bb0bb] text-lg max-w-2xl leading-relaxed">
+                            We believe that markets are patterns waiting to be decoded. By prioritizing quantitative analysis over speculative guessing, we provide a clearer path to wealth generation. Speed, accuracy, and neutrality are the pillars of our platform.
+                        </p>
+</div>
+<!-- Team Section -->
+<div class="flex flex-col gap-8 mb-20">
+<div class="flex items-center justify-between">
+<h2 class="text-white text-2xl font-bold">Meet the Team</h2>
+<a class="text-primary text-sm font-medium hover:text-primary/80 flex items-center gap-1" href="#">
+                                View all <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+<!-- Member 1 -->
+<div class="group flex flex-col gap-4 rounded-lg bg-[#1b2327] p-4 border border-transparent hover:border-[#3a4c55] transition-all">
+<div class="w-full aspect-square rounded-lg bg-cover bg-center grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="Portrait of Sarah Chen, CEO" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCMPVawWCfBGkoVrALJATe3Vhb-cSC1M57MD1A-TX6zSSbxK5dnwOo2mjPd4V0TB9_wIatQGVYMoC9ML9JI4BmLjre_b6DiB0bMhNXoyS03ULQAzXWMyzUY8pU52HcwuBBDEMWKhj1j4oti4ZIljk_mbN4w6_g1l1tAMFStYpnrN746F9Ry56-Fy2kPqoyZNNc9GPLM3WIGhneML55krJ8PKMXA3KtHEjJ1dW8oV7Zks9HxXrDA3cmbspXn9JySluMhWs8HL-052lU');"></div>
+<div class="flex flex-col">
+<h3 class="text-white text-lg font-bold">Sarah Chen</h3>
+<p class="text-primary text-sm font-medium">CEO &amp; Founder</p>
+<p class="text-[#9bb0bb] text-xs mt-2 leading-normal">Ex-Goldman quant trader with a passion for democratizing finance.</p>
+</div>
+</div>
+<!-- Member 2 -->
+<div class="group flex flex-col gap-4 rounded-lg bg-[#1b2327] p-4 border border-transparent hover:border-[#3a4c55] transition-all">
+<div class="w-full aspect-square rounded-lg bg-cover bg-center grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="Portrait of Marcus Thorne, CTO" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDbYIyjvSh736sIEkGxi92csj8sGT8xp_cPzR8icbS1sZ32TFjuKyWqqfXupOu8SxLJPuYPWPpB679fjNAvnbeKiIcbDIJ26pJSBWGyKhyRaFRhnrtEBnJRlwHnmSSzNZoA_4aYKD5DLNrOd7T7V8Bl2NUbm9_jh-q1LojaCNDmzbikLBuKe9s9KUcVwuKZihD51q1M4-B4JZqV61DMuVfMB9p095OCut3QOacjsbVYXmipoijhSE-A7okTDSPKPbUNsJ5MTCuol3w');"></div>
+<div class="flex flex-col">
+<h3 class="text-white text-lg font-bold">Marcus Thorne</h3>
+<p class="text-primary text-sm font-medium">CTO</p>
+<p class="text-[#9bb0bb] text-xs mt-2 leading-normal">AI specialist with 15 years experience building HFT systems.</p>
+</div>
+</div>
+<!-- Member 3 -->
+<div class="group flex flex-col gap-4 rounded-lg bg-[#1b2327] p-4 border border-transparent hover:border-[#3a4c55] transition-all">
+<div class="w-full aspect-square rounded-lg bg-cover bg-center grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="Portrait of Elena Rodriguez, Head of Product" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBqbLsGJo9deRd02Y9ypXszaUQBU3qOdd9VPgrbD6lkuG45WG5SMRe1KIvDXFGzw_6iDt3z8Sfc8qQMvVrb7m2MuDgpPOvVCnqyQ5QY2YGKV98pgKpnhbJP6ZbwCcVivh8zgzOW5sh3s-W0Xckyc3xjoDB_nsM4bRmksFgzhrL-VNQNeXvYxO1Ot6JUgJiy902V4BgRDsiMRWPl0Ni0ZeaC4vwSCsc96Fn9m2adqB8DxbjTtpyE70J6okX94KvQYpg0fJmkHrl6RaE');"></div>
+<div class="flex flex-col">
+<h3 class="text-white text-lg font-bold">Elena Rodriguez</h3>
+<p class="text-primary text-sm font-medium">Head of Product</p>
+<p class="text-[#9bb0bb] text-xs mt-2 leading-normal">Focused on translating complex data into intuitive UI.</p>
+</div>
+</div>
+<!-- Member 4 -->
+<div class="group flex flex-col gap-4 rounded-lg bg-[#1b2327] p-4 border border-transparent hover:border-[#3a4c55] transition-all">
+<div class="w-full aspect-square rounded-lg bg-cover bg-center grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="Portrait of David Kim, Chief Analyst" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAWNKEyQHJgG-3pCJMb7oaiJYQRuaX19Cj0JFwrLFSCAQhRLFr_sWzbO9Q9iombpBW7FLsPWwWjwl2pq8ke7ntyJ0gBmJ6YVnybwED33sRHd6mJTHa9BmEUzUGFr7D11gBwWQx0Ko6vLutzA2ekuPWHJDWtSx8M-c403DdvtZWWTw1B0EzXTpcn6bYt2i1KzFgg1g2Ls63UGRqb4aMasfq9hH272Jn142J9xPsJ3LdZD0f_fb5vgl504Z8GFNbdknccxJzJnpZ_erE');"></div>
+<div class="flex flex-col">
+<h3 class="text-white text-lg font-bold">David Kim</h3>
+<p class="text-primary text-sm font-medium">Chief Analyst</p>
+<p class="text-[#9bb0bb] text-xs mt-2 leading-normal">Expert in macro-economic trends and crypto markets.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer -->
+<footer class="mt-auto border-t border-[#27343a] pt-8 pb-12">
+<div class="flex flex-col md:flex-row justify-between items-center gap-6 text-[#9bb0bb]">
+<div class="flex items-center gap-2">
+<div class="size-5 text-[#9bb0bb]">
+<svg class="w-full h-full opacity-50" fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M39.5563 34.1455V13.8546C39.5563 15.708 36.8773 17.3437 32.7927 18.3189C30.2914 18.916 27.263 19.2655 24 19.2655C20.737 19.2655 17.7086 18.916 15.2073 18.3189C11.1227 17.3437 8.44365 15.708 8.44365 13.8546V34.1455C8.44365 35.9988 11.1227 37.6346 15.2073 38.6098C17.7086 39.2069 20.737 39.5564 24 39.5564C27.263 39.5564 30.2914 39.2069 32.7927 38.6098C36.8773 37.6346 39.5563 35.9988 39.5563 34.1455Z" fill="currentColor"></path>
+</svg>
+</div>
+<p class="text-sm">© 2024 FinTechPrime. All rights reserved.</p>
+</div>
+<div class="flex gap-8">
+<a class="text-sm hover:text-white transition-colors" href="#">Privacy Policy</a>
+<a class="text-sm hover:text-white transition-colors" href="#">Terms of Service</a>
+<a class="text-sm hover:text-white transition-colors" href="#">Cookie Settings</a>
+</div>
+</div>
+</footer>
+</div>
+</div>
+</div>
+</div>
+</body></html>
