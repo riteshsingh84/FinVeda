@@ -5,16 +5,46 @@
 <title>Projections - FinVeda</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="../css/main.css"/>
 </head>
 <body class="bg-[#0f1e23] text-white font-[Manrope]">
 <div data-include="./shared/header.html"></div>
-<div class="min-h-screen p-8">
-<h1 class="text-3xl font-extrabold">AI Projections</h1>
-<p class="text-[#9bb3bb] mt-2">Forecasts and simulations based on your portfolio.</p>
-<div class="mt-6">
-<a class="text-sm font-bold text-[#06bcf9] hover:underline" href="dashboard.html">Back to Dashboard</a>
-</div>
-</div>
+<main class="min-h-screen px-6 py-10">
+	<div class="max-w-[1200px] mx-auto flex flex-col gap-8">
+		<header>
+			<h1 class="text-3xl font-extrabold">AI Projections</h1>
+			<p class="text-[#9bb3bb] mt-1">Forecasts and simulations based on your portfolio.</p>
+		</header>
+		<section class="rounded-xl border border-[#27353a] bg-[#18282e] p-6">
+			<div class="flex items-center justify-between mb-4">
+				<h3 class="text-lg font-bold flex items-center gap-2"><span class="material-symbols-outlined text-[#06bcf9]">query_stats</span> Wealth Projection</h3>
+				<div class="flex bg-[#111618] rounded-lg p-1 border border-[#27353a]">
+					<button class="px-3 py-1 rounded text-xs font-bold text-[#9bb3bb] hover:text-white">1M</button>
+					<button class="px-3 py-1 rounded text-xs font-bold text-[#0f1e23] bg-[#06bcf9]">1Y</button>
+					<button class="px-3 py-1 rounded text-xs font-bold text-[#9bb3bb] hover:text-white">5Y</button>
+				</div>
+			</div>
+			<div class="w-full h-64 relative">
+				<svg class="w-full h-full" viewBox="0 0 800 256" preserveAspectRatio="none">
+					<defs>
+						<linearGradient id="projGrad" x1="0" x2="0" y1="0" y2="1">
+							<stop offset="0%" stop-color="#06bcf9" stop-opacity="0.2"/>
+							<stop offset="100%" stop-color="#06bcf9" stop-opacity="0"/>
+						</linearGradient>
+					</defs>
+					<line x1="0" y1="220" x2="800" y2="220" stroke="#27353a"/>
+					<path d="M0,220 C120,210 180,180 280,160 S380,170 480,110 S580,90 640,70 V220 H0 Z" fill="url(#projGrad)"/>
+					<path d="M0,220 C120,210 180,180 280,160 S380,170 480,110 S580,90 640,70" stroke="#06bcf9" stroke-width="3" fill="none"/>
+					<circle cx="640" cy="70" r="6" fill="#06bcf9" stroke="#fff" stroke-width="2"/>
+				</svg>
+			</div>
+		</section>
+		<div>
+			<a class="text-sm font-bold text-[#06bcf9] hover:underline" href="dashboard.html">Back to Dashboard</a>
+		</div>
+	</div>
+</main>
 <div data-include="./shared/footer.html"></div>
 <script src="../shared/include.js"></script>
 </body>

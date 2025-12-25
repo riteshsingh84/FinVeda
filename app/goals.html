@@ -5,6 +5,8 @@
 <title>Goals - FinVeda</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="../css/main.css"/>
 </head>
 <body class="bg-[#0f1e23] text-white font-[Manrope]">
 <div data-include="./shared/header.html"></div>
@@ -14,7 +16,45 @@
 <div class="mt-6">
 <a class="text-sm font-bold text-[#06bcf9] hover:underline" href="dashboard.html">Back to Dashboard</a>
 </div>
-</div>
+<main class="min-h-screen px-6 py-10">
+	<div class="max-w-[1200px] mx-auto flex flex-col gap-8">
+		<header>
+			<h1 class="text-3xl font-extrabold">Financial Goals</h1>
+			<p class="text-[#9bb3bb] mt-1">Track progress toward your objectives.</p>
+		</header>
+		<section class="grid grid-cols-1 md:grid-cols-2 gap-6">
+			<div class="rounded-xl border border-[#27353a] bg-[#18282e] p-6">
+				<div class="flex justify-between items-end mb-2">
+					<div class="flex items-center gap-2">
+						<div class="bg-[#27353a] p-1.5 rounded-lg text-white"><span class="material-symbols-outlined">beach_access</span></div>
+						<div>
+							<p class="text-sm font-bold">Retirement Fund</p>
+							<p class="text-xs text-[#9bb3bb]">Target: $1.2M by 2045</p>
+						</div>
+					</div>
+					<p class="text-sm font-bold text-[#06bcf9]">68%</p>
+				</div>
+				<div class="w-full bg-[#111618] rounded-full h-2 overflow-hidden"><div class="bg-[#06bcf9] h-2 rounded-full" style="width:68%"></div></div>
+			</div>
+			<div class="rounded-xl border border-[#27353a] bg-[#18282e] p-6">
+				<div class="flex justify-between items-end mb-2">
+					<div class="flex items-center gap-2">
+						<div class="bg-[#27353a] p-1.5 rounded-lg text-white"><span class="material-symbols-outlined">house</span></div>
+						<div>
+							<p class="text-sm font-bold">New Home Downpayment</p>
+							<p class="text-xs text-[#9bb3bb]">Target: $150k by 2026</p>
+						</div>
+					</div>
+					<p class="text-sm font-bold text-emerald-400">42%</p>
+				</div>
+				<div class="w-full bg-[#111618] rounded-full h-2 overflow-hidden"><div class="bg-emerald-400 h-2 rounded-full" style="width:42%"></div></div>
+			</div>
+		</section>
+		<div>
+			<a class="text-sm font-bold text-[#06bcf9] hover:underline" href="dashboard.html">Back to Dashboard</a>
+		</div>
+	</div>
+</main>
 </div>
 <div data-include="./shared/footer.html"></div>
 <script src="../shared/include.js"></script>

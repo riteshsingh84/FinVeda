@@ -5,16 +5,40 @@
 <title>Tax Optimization - FinVeda</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="../css/main.css"/>
 </head>
 <body class="bg-[#0f1e23] text-white font-[Manrope]">
 <div data-include="./shared/header.html"></div>
-<div class="min-h-screen p-8">
-<h1 class="text-3xl font-extrabold">Tax Optimization</h1>
-<p class="text-[#9bb3bb] mt-2">Strategies to reduce tax impact on gains.</p>
-<div class="mt-6">
-<a class="text-sm font-bold text-[#06bcf9] hover:underline" href="dashboard.html">Back to Dashboard</a>
-</div>
-</div>
+<main class="min-h-screen px-6 py-10">
+	<div class="max-w-[1200px] mx-auto flex flex-col gap-8">
+		<header>
+			<h1 class="text-3xl font-extrabold">Tax Optimization</h1>
+			<p class="text-[#9bb3bb] mt-1">Strategies to reduce tax impact on gains.</p>
+		</header>
+		<section class="grid grid-cols-1 md:grid-cols-2 gap-6">
+			<div class="rounded-xl border border-[#27353a] bg-[#18282e] p-6 relative overflow-hidden">
+				<div class="absolute top-0 left-0 w-1 h-full bg-[#06bcf9]"></div>
+				<div class="flex items-start justify-between mb-3">
+					<h3 class="text-lg font-bold flex items-center gap-2"><span class="material-symbols-outlined text-[#06bcf9]">savings</span> Harvesting Opportunity</h3>
+					<span class="text-xs bg-[#06bcf9]/10 text-[#06bcf9] px-2 py-1 rounded font-bold">Action Needed</span>
+				</div>
+				<p class="text-sm text-[#9bb3bb]">AI detected a tax-loss harvesting opportunity. Potential offset: <span class="text-white font-bold">$320</span>.</p>
+				<button class="mt-4 w-full py-2 rounded-lg bg-[#27353a] hover:bg-[#324248] text-white text-sm font-bold">Review Suggestions</button>
+			</div>
+			<div class="rounded-xl border border-[#27353a] bg-[#18282e] p-6">
+				<h3 class="text-lg font-bold mb-3">Recent Actions</h3>
+				<ul class="space-y-2 text-sm">
+					<li class="flex items-start gap-2"><span class="material-symbols-outlined text-emerald-400">check_circle</span> Sold underperforming ETF to realize loss</li>
+					<li class="flex items-start gap-2"><span class="material-symbols-outlined text-emerald-400">check_circle</span> Reallocated to similar asset (wash-sale safe)</li>
+				</ul>
+			</div>
+		</section>
+		<div>
+			<a class="text-sm font-bold text-[#06bcf9] hover:underline" href="dashboard.html">Back to Dashboard</a>
+		</div>
+	</div>
+</main>
 <div data-include="./shared/footer.html"></div>
 <script src="../shared/include.js"></script>
 </body>

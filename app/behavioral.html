@@ -5,16 +5,40 @@
 <title>Behavioral Finance - FinVeda</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="../css/main.css"/>
 </head>
 <body class="bg-[#0f1e23] text-white font-[Manrope]">
 <div data-include="./shared/header.html"></div>
-<div class="min-h-screen p-8">
-<h1 class="text-3xl font-extrabold">Behavioral Finance</h1>
-<p class="text-[#9bb3bb] mt-2">Insights into investor behavior and discipline.</p>
-<div class="mt-6">
-<a class="text-sm font-bold text-[#06bcf9] hover:underline" href="dashboard.html">Back to Dashboard</a>
-</div>
-</div>
+<main class="min-h-screen px-6 py-10">
+	<div class="max-w-[1200px] mx-auto flex flex-col gap-8">
+		<header class="flex flex-col gap-2">
+			<h1 class="text-3xl font-extrabold">Behavioral Finance</h1>
+			<p class="text-[#9bb3bb]">Insights into investor behavior and discipline.</p>
+		</header>
+		<section class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+			<div class="lg:col-span-2 rounded-xl border border-[#27353a] bg-[#18282e] p-6">
+				<h3 class="text-lg font-bold mb-2 flex items-center gap-2"><span class="material-symbols-outlined text-[#06bcf9]">psychology</span> Weekly Insight</h3>
+				<p class="text-sm text-[#9bb3bb]">You're exhibiting high discipline: held volatile positions without reactive selling this week.</p>
+				<div class="mt-4 flex gap-2">
+					<span class="text-[10px] font-bold uppercase tracking-wider bg-[#27353a] text-[#9bb3bb] px-2 py-1 rounded">Discipline +4</span>
+					<span class="text-[10px] font-bold uppercase tracking-wider bg-[#27353a] text-[#9bb3bb] px-2 py-1 rounded">Focus +2</span>
+				</div>
+			</div>
+			<aside class="rounded-xl border border-[#27353a] bg-[#18282e] p-6">
+				<h4 class="font-bold mb-3">Behavioral Metrics</h4>
+				<div class="space-y-3 text-sm">
+					<div class="flex justify-between"><span>Discipline Score</span><span class="font-bold text-white">78</span></div>
+					<div class="flex justify-between"><span>Overconfidence Risk</span><span class="font-bold text-white">Low</span></div>
+					<div class="flex justify-between"><span>Loss Aversion</span><span class="font-bold text-white">Moderate</span></div>
+				</div>
+			</aside>
+		</section>
+		<div class="mt-4">
+			<a class="text-sm font-bold text-[#06bcf9] hover:underline" href="dashboard.html">Back to Dashboard</a>
+		</div>
+	</div>
+</main>
 </div>
 <div data-include="./shared/footer.html"></div>
 <script src="../shared/include.js"></script>

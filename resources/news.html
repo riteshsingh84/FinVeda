@@ -4,21 +4,85 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>FinVeda Resources - News</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link rel="stylesheet" href="../css/main.css"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
 </head>
 <body class="font-[Manrope] bg-[#0f1e23] text-white">
 <div class="min-h-screen flex flex-col">
 <div data-include="./shared/header.html"></div>
-<main class="flex-1 p-8">
-<h2 class="text-2xl font-extrabold mb-2">Market News</h2>
-<p class="text-[#9bb3bb] mb-6">Latest headlines and curated market updates.</p>
-<div class="space-y-3 text-sm text-[#cbd5e1]">
-<p>• Stocks rally as AI chipmakers beat earnings.</p>
-<p>• Fed signals steady rates into next quarter.</p>
-<p>• Crypto adoption rises among institutional funds.</p>
-</div>
+<main class="flex-1 px-6 py-10">
+	<div class="max-w-[1200px] mx-auto flex flex-col gap-8">
+		<div class="flex flex-col gap-2">
+			<h2 class="text-3xl font-extrabold">News Feed</h2>
+			<p class="text-[#9bb3bb] text-sm">Real-time financial news, market trends, and economic indicators.</p>
+		</div>
+		<div class="flex gap-3 overflow-x-auto pb-2">
+			<button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-[#06bcf9] text-[#111618] px-4 shadow-[0_0_10px_rgba(6,188,249,0.3)] hover:brightness-110 transition-all">
+				<span class="material-symbols-outlined text-[18px]">newspaper</span>
+				<span class="text-sm font-bold">All News</span>
+			</button>
+			<button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-[#27353a] hover:bg-[#364950] px-4 transition-all group">
+				<span class="material-symbols-outlined text-[#9bb3bb] group-hover:text-white text-[18px]">currency_bitcoin</span>
+				<span class="text-[#9bb3bb] group-hover:text-white text-sm">Crypto</span>
+			</button>
+			<button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-[#27353a] hover:bg-[#364950] px-4 transition-all group">
+				<span class="material-symbols-outlined text-[#9bb3bb] group-hover:text-white text-[18px]">trending_up</span>
+				<span class="text-[#9bb3bb] group-hover:text-white text-sm">Stocks</span>
+			</button>
+			<button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-[#27353a] hover:bg-[#364950] px-4 transition-all group">
+				<span class="material-symbols-outlined text-[#9bb3bb] group-hover:text-white text-[18px]">public</span>
+				<span class="text-[#9bb3bb] group-hover:text-white text-sm">Forex</span>
+			</button>
+			<button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-[#27353a] hover:bg-[#364950] px-4 transition-all group">
+				<span class="material-symbols-outlined text-[#9bb3bb] group-hover:text-white text-[18px]">account_balance</span>
+				<span class="text-[#9bb3bb] group-hover:text-white text-sm">Economy</span>
+			</button>
+		</div>
+		<div>
+			<div class="flex flex-col items-stretch rounded-xl overflow-hidden bg-[#1b2427] border border-[#06bcf9]/30 relative shadow-lg">
+				<div class="absolute top-0 left-0 w-1 h-full bg-[#06bcf9]"></div>
+				<div class="w-full bg-center bg-no-repeat bg-cover min-h-[200px]" style="background-image:url('https://lh3.googleusercontent.com/aida-public/AB6AXuClwl914v12qtL4fQsundOCSLO8Xgt21azuIUatGO8B780n9UTRrvrB_72ldDPfN89LwJ-VGhmEf74BfwXb8l0aPYZ5NK4IMS32uVCp3rYc6hP_ZlJNFX26GM9daglv6O4y31n0ytRN7O9JrOOvUouGR2VCLtFCS7c-BM2-tgVxPchEzBMpndGad9iAIKjLXqztLguWA2v4FFW88oOnbYzd1xklBiwqpFenmdY7Ren5i5hey4N7rvxDRcaVc4XZ0lw-AJ1NY7KPXHI');">
+					<div class="w-full h-full bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+				</div>
+				<div class="flex w-full grow flex-col justify-center gap-3 p-5">
+					<div class="flex items-center gap-2 mb-1">
+						<span class="bg-red-500/20 text-red-400 px-2 py-0.5 rounded text-xs font-bold uppercase tracking-wider border border-red-500/30">Breaking</span>
+						<span class="text-[#9bb3bb] text-xs">Economy • 12m ago</span>
+					</div>
+					<h3 class="text-xl md:text-2xl font-bold">Fed Announces Surprise Interest Rate Pause</h3>
+					<p class="text-[#9bb3bb] text-sm md:text-base">Global markets rally as the Federal Reserve signals a potential end to the current hike cycle.</p>
+					<div class="flex items-center gap-4 mt-2">
+						<button class="flex items-center gap-2 text-[#06bcf9] text-sm font-bold hover:underline">
+							Read Full Analysis <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<section class="flex flex-col gap-3">
+			<h4 class="text-lg font-bold flex items-center gap-2">
+				<span class="material-symbols-outlined text-[#06bcf9]">rss_feed</span>
+				Latest Updates
+			</h4>
+			<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+				<article class="p-4 rounded-lg bg-[#19252b] border border-[#27353a] hover:bg-[#1f2d33] transition-colors">
+					<h5 class="font-bold">Stocks rally as AI chipmakers beat earnings</h5>
+					<p class="text-[#9bb3bb] text-sm">Semiconductor leaders posted strong quarters driven by data center demand.</p>
+				</article>
+				<article class="p-4 rounded-lg bg-[#19252b] border border-[#27353a] hover:bg-[#1f2d33] transition-colors">
+					<h5 class="font-bold">Fed signals steady rates into next quarter</h5>
+					<p class="text-[#9bb3bb] text-sm">Policy remains data-dependent as inflation cools and employment stabilizes.</p>
+				</article>
+				<article class="p-4 rounded-lg bg-[#19252b] border border-[#27353a] hover:bg-[#1f2d33] transition-colors">
+					<h5 class="font-bold">Crypto adoption rises among institutional funds</h5>
+					<p class="text-[#9bb3bb] text-sm">ETF flows and custody solutions drive broader market participation.</p>
+				</article>
+			</div>
+		</section>
+	</div>
 </main>
 <div data-include="./shared/footer.html"></div>
 </div>

@@ -5,17 +5,47 @@
 <title>Risk Profiling - FinVeda</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="../css/main.css"/>
 </head>
 <body class="bg-[#0f1e23] text-white font-[Manrope]">
 <div data-include="./shared/header.html"></div>
-<div class="min-h-screen p-8">
-<h1 class="text-3xl font-extrabold">Risk Profiling</h1>
-<p class="text-[#9bb3bb] mt-2">Assess and adjust your risk tolerance dynamically.</p>
-<div class="mt-6">
-<a class="text-sm font-bold text-[#06bcf9] hover:underline" href="dashboard.html">Back to Dashboard</a>
-</div>
-</div>
-</div>
+<main class="min-h-screen px-6 py-10">
+	<div class="max-w-[1200px] mx-auto flex flex-col gap-8">
+		<header>
+			<h1 class="text-3xl font-extrabold">Risk Profiling</h1>
+			<p class="text-[#9bb3bb] mt-1">Assess and adjust your risk tolerance dynamically.</p>
+		</header>
+		<section class="grid grid-cols-1 md:grid-cols-2 gap-6">
+			<div class="rounded-xl border border-[#27353a] bg-[#18282e] p-6">
+				<h3 class="text-lg font-bold mb-3 flex items-center gap-2"><span class="material-symbols-outlined text-[#06bcf9]">speed</span> Current Profile</h3>
+				<div class="flex items-center gap-6">
+					<div class="relative w-32 h-32">
+						<svg class="w-full h-full -rotate-90" viewBox="0 0 36 36">
+							<path d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" stroke="#27353a" stroke-width="4" fill="none"/>
+							<path d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" stroke="#06bcf9" stroke-width="4" stroke-dasharray="65,100" fill="none"/>
+						</svg>
+						<div class="absolute inset-0 flex items-center justify-center"><span class="font-bold">Balanced</span></div>
+					</div>
+					<div class="flex-1">
+						<p class="text-sm text-[#9bb3bb]">Your tolerance aligns with balanced growth and moderate volatility.</p>
+					</div>
+				</div>
+			</div>
+			<div class="rounded-xl border border-[#27353a] bg-[#18282e] p-6">
+				<h3 class="text-lg font-bold mb-3">Adjustments</h3>
+				<div class="space-y-3 text-sm">
+					<div class="flex justify-between"><span>Equities</span><span class="font-bold text-white">+5%</span></div>
+					<div class="flex justify-between"><span>Bonds</span><span class="font-bold text-white">-3%</span></div>
+					<div class="flex justify-between"><span>Cash</span><span class="font-bold text-white">-2%</span></div>
+				</div>
+			</div>
+		</section>
+		<div>
+			<a class="text-sm font-bold text-[#06bcf9] hover:underline" href="dashboard.html">Back to Dashboard</a>
+		</div>
+	</div>
+</main>
 <div data-include="./shared/footer.html"></div>
 <script src="../shared/include.js"></script>
 </body>
