@@ -266,7 +266,7 @@
     if(!header) return;
     function apply(){
       const h = header.offsetHeight || 0;
-      document.querySelectorAll('.fv-pad-footer').forEach(el => { el.style.paddingTop = h + 'px'; });
+      document.querySelectorAll('.fv-pad-header').forEach(el => { el.style.paddingTop = h + 'px'; });
     }
     apply();
     let t;
