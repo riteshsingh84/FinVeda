@@ -141,3 +141,26 @@ body::-webkit-scrollbar-thumb:hover {
   margin-top: 30px;
   margin-bottom: 50px;
 }
+
+ input[type=range]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            height: 16px;
+            width: 16px;
+            border-radius: 50%;
+            background: #06bcf9;
+            cursor: pointer;
+            margin-top: -6px;
+            box-shadow: 0 0 10px rgba(6, 188, 249, 0.5);
+        }
+
+        input[type=range]::-webkit-slider-runnable-track {
+            width: 100%;
+            height: 4px;
+            cursor: pointer;
+            background: #27353a;
+            border-radius: 2px;
+        }
+
+        .scrollbar-hide::-webkit-scrollbar {
+            display: none;
+        }

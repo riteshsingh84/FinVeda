@@ -1,14 +1,19 @@
 <!DOCTYPE html>
-<html class="dark" lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>FinTech Pro - Projections</title>
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<script id="tailwind-config">
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>FinTech Pro - Projections</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
         tailwind.config = {
             darkMode: "class",
             theme: {
@@ -26,12 +31,13 @@
                     fontFamily: {
                         "display": ["Manrope", "sans-serif"]
                     },
-                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
                 },
             },
         }
     </script>
-<style>input[type=range]::-webkit-slider-thumb {
+    <style>
+        input[type=range]::-webkit-slider-thumb {
             -webkit-appearance: none;
             height: 16px;
             width: 16px;
@@ -41,6 +47,7 @@
             margin-top: -6px;
             box-shadow: 0 0 10px rgba(6, 188, 249, 0.5);
         }
+
         input[type=range]::-webkit-slider-runnable-track {
             width: 100%;
             height: 4px;
@@ -48,274 +55,351 @@
             background: #27353a;
             border-radius: 2px;
         }
+
         .scrollbar-hide::-webkit-scrollbar {
             display: none;
         }
     </style>
 </head>
+
 <body class="bg-background-light dark:bg-background-dark text-white font-display h-screen flex overflow-hidden">
-<aside class="flex w-72 flex-col justify-between border-r border-[#27353a] bg-[#111618] p-4 hidden md:flex overflow-y-auto">
-<div class="flex flex-col gap-6">
-<div class="flex gap-3 items-center mb-2">
-<div class="bg-center bg-no-repeat bg-cover rounded-full size-12 border-2 border-[#27353a]" data-alt="User profile picture showing a professional headshot" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCdToYJqXt0IVp3-Hj9g2atNMdhGtdOdXSbhyT8al88wPJR4TJjx3fdc2WxDcXEL9kAubmr72Ed7mgWWH5ra72ttCneCOWMC-FmAOaPupGEUYxiUoy3z_gnwuPxTHl93rigpS7v1n2v9GFnJjpCfiLaaJsEq_myqj5U1BA8NZr9hu74FEuqFkibi8k169NXJrbrvanR7qoKIHAUl3KOprtnZmfrVTqfPcWt-WFz2K4f9MSF-PAkFEwtjO1JIVfLfBtLb2RaGuGb6Eg");'>
-</div>
-<div class="flex flex-col">
-<h1 class="text-white text-base font-bold leading-normal">FinTech Pro</h1>
-<p class="text-text-secondary text-sm font-normal leading-normal">Pro Investor</p>
-</div>
-</div>
-<nav class="flex flex-col gap-6">
-<div class="flex flex-col gap-1">
-<p class="px-3 text-xs font-bold text-text-secondary/50 uppercase tracking-wider mb-2">Overview</p>
-<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-[#27353a] transition-colors group" href="#">
-<span class="material-symbols-outlined text-[20px] text-text-secondary group-hover:text-white">dashboard</span>
-<p class="text-text-secondary group-hover:text-white text-sm font-medium leading-normal">Dashboard</p>
-</a>
-<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-[#27353a] transition-colors group" href="#">
-<span class="material-symbols-outlined text-[20px] text-text-secondary group-hover:text-white">pie_chart</span>
-<p class="text-text-secondary group-hover:text-white text-sm font-medium leading-normal">Portfolio</p>
-</a>
-<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-[#27353a] transition-colors group" href="#">
-<span class="material-symbols-outlined text-[20px] text-text-secondary group-hover:text-white">sync_alt</span>
-<p class="text-text-secondary group-hover:text-white text-sm font-medium leading-normal">Transactions</p>
-</a>
-</div>
-<div class="flex flex-col gap-1">
-<p class="px-3 text-xs font-bold text-text-secondary/50 uppercase tracking-wider mb-2">Intelligence</p>
-<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-[#27353a] transition-colors group" href="#">
-<span class="material-symbols-outlined text-[20px] text-text-secondary group-hover:text-white">psychology</span>
-<p class="text-text-secondary group-hover:text-white text-sm font-medium leading-normal">Behavioral Finance</p>
-</a>
-<a class="flex items-center gap-3 px-3 py-2 rounded-lg bg-primary/10 border-l-2 border-primary transition-colors shadow-[0_0_15px_rgba(6,188,249,0.1)]" href="#">
-<span class="material-symbols-outlined text-[20px] text-primary">show_chart</span>
-<p class="text-white text-sm font-bold leading-normal">Projections</p>
-</a>
-<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-[#27353a] transition-colors group" href="#">
-<span class="material-symbols-outlined text-[20px] text-text-secondary group-hover:text-white">health_and_safety</span>
-<p class="text-text-secondary group-hover:text-white text-sm font-medium leading-normal">Risk Profiling</p>
-</a>
-<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-[#27353a] transition-colors group" href="#">
-<span class="material-symbols-outlined text-[20px] text-text-secondary group-hover:text-white">account_balance</span>
-<p class="text-text-secondary group-hover:text-white text-sm font-medium leading-normal">Tax Optimization</p>
-</a>
-</div>
-<div class="flex flex-col gap-1">
-<p class="px-3 text-xs font-bold text-text-secondary/50 uppercase tracking-wider mb-2">Market &amp; Plan</p>
-<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-[#27353a] transition-colors group" href="#">
-<span class="material-symbols-outlined text-[20px] text-text-secondary group-hover:text-white">flag</span>
-<p class="text-text-secondary group-hover:text-white text-sm font-medium leading-normal">Goals</p>
-</a>
-<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-[#27353a] transition-colors group" href="#">
-<span class="material-symbols-outlined text-[20px] text-text-secondary group-hover:text-white">newspaper</span>
-<p class="text-text-secondary group-hover:text-white text-sm font-medium leading-normal">News Feed</p>
-</a>
-<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-[#27353a] transition-colors group" href="#">
-<span class="material-symbols-outlined text-[20px] text-text-secondary group-hover:text-white">notifications</span>
-<p class="text-text-secondary group-hover:text-white text-sm font-medium leading-normal">Alerts</p>
-</a>
-</div>
-<div class="flex flex-col gap-1">
-<p class="px-3 text-xs font-bold text-text-secondary/50 uppercase tracking-wider mb-2">Resources</p>
-<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-[#27353a] transition-colors group" href="#">
-<span class="material-symbols-outlined text-[20px] text-text-secondary group-hover:text-white">school</span>
-<p class="text-text-secondary group-hover:text-white text-sm font-medium leading-normal">Education</p>
-</a>
-<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-[#27353a] transition-colors group" href="#">
-<span class="material-symbols-outlined text-[20px] text-text-secondary group-hover:text-white">support_agent</span>
-<p class="text-text-secondary group-hover:text-white text-sm font-medium leading-normal">Support</p>
-</a>
-</div>
-<div class="flex flex-col gap-1 pt-2 border-t border-[#27353a]">
-<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-[#27353a] transition-colors group" href="#">
-<span class="material-symbols-outlined text-[20px] text-text-secondary group-hover:text-white">settings</span>
-<p class="text-text-secondary group-hover:text-white text-sm font-medium leading-normal">User Settings</p>
-</a>
-</div>
-</nav>
-</div>
-<div class="flex flex-col gap-1 mt-auto pt-6">
-<a class="flex items-center gap-3 px-3 py-3 rounded-lg hover:bg-[#27353a] transition-colors group" href="#">
-<span class="material-symbols-outlined text-text-secondary group-hover:text-white">logout</span>
-<p class="text-text-secondary group-hover:text-white text-sm font-medium leading-normal">Log Out</p>
-</a>
-</div>
-</aside>
-<main class="flex-1 flex flex-col h-full overflow-y-auto bg-background-dark relative">
-<div class="absolute top-0 right-0 w-1/3 h-64 bg-primary/5 rounded-full blur-[100px] pointer-events-none"></div>
-<div class="flex flex-col max-w-[1280px] w-full mx-auto p-4 md:p-8 gap-6 md:gap-8">
-<header class="flex flex-wrap justify-between items-end gap-4 border-b border-[#27353a] pb-6">
-<div class="flex min-w-72 flex-col gap-2">
-<h1 class="text-white text-3xl md:text-4xl font-black leading-tight tracking-[-0.033em]">Portfolio Projections</h1>
-<p class="text-text-secondary text-base font-normal leading-normal max-w-2xl">
-                        Simulate your wealth accumulation based on variable market conditions. Adjust contributions and risk to see potential outcomes.
+    <aside
+        class="flex w-72 flex-col justify-between border-r border-[#27353a] bg-[#111618] p-4 hidden md:flex overflow-y-auto">
+        <div class="flex flex-col gap-6">
+            <div class="flex gap-3 items-center mb-2">
+                <div class="bg-center bg-no-repeat bg-cover rounded-full size-12 border-2 border-[#27353a]"
+                    data-alt="User profile picture showing a professional headshot"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCdToYJqXt0IVp3-Hj9g2atNMdhGtdOdXSbhyT8al88wPJR4TJjx3fdc2WxDcXEL9kAubmr72Ed7mgWWH5ra72ttCneCOWMC-FmAOaPupGEUYxiUoy3z_gnwuPxTHl93rigpS7v1n2v9GFnJjpCfiLaaJsEq_myqj5U1BA8NZr9hu74FEuqFkibi8k169NXJrbrvanR7qoKIHAUl3KOprtnZmfrVTqfPcWt-WFz2K4f9MSF-PAkFEwtjO1JIVfLfBtLb2RaGuGb6Eg");'>
+                </div>
+                <div class="flex flex-col">
+                    <h1 class="text-white text-base font-bold leading-normal">FinTech Pro</h1>
+                    <p class="text-text-secondary text-sm font-normal leading-normal">Pro Investor</p>
+                </div>
+            </div>
+            <nav class="flex flex-col gap-6">
+                <div class="flex flex-col gap-1">
+                    <p class="px-3 text-xs font-bold text-text-secondary/50 uppercase tracking-wider mb-2">Overview</p>
+                    <a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-[#27353a] transition-colors group"
+                        href="#">
+                        <span
+                            class="material-symbols-outlined text-[20px] text-text-secondary group-hover:text-white">dashboard</span>
+                        <p class="text-text-secondary group-hover:text-white text-sm font-medium leading-normal">
+                            Dashboard</p>
+                    </a>
+                    <a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-[#27353a] transition-colors group"
+                        href="#">
+                        <span
+                            class="material-symbols-outlined text-[20px] text-text-secondary group-hover:text-white">pie_chart</span>
+                        <p class="text-text-secondary group-hover:text-white text-sm font-medium leading-normal">
+                            Portfolio</p>
+                    </a>
+                    <a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-[#27353a] transition-colors group"
+                        href="#">
+                        <span
+                            class="material-symbols-outlined text-[20px] text-text-secondary group-hover:text-white">sync_alt</span>
+                        <p class="text-text-secondary group-hover:text-white text-sm font-medium leading-normal">
+                            Transactions</p>
+                    </a>
+                </div>
+                <div class="flex flex-col gap-1">
+                    <p class="px-3 text-xs font-bold text-text-secondary/50 uppercase tracking-wider mb-2">Intelligence
                     </p>
-</div>
-<div class="flex gap-2">
-<button class="flex items-center gap-2 bg-[#27353a] hover:bg-[#32434a] text-white px-4 py-2 rounded-lg transition-colors font-medium text-sm">
-<span class="material-symbols-outlined text-[20px]">file_download</span>
+                    <a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-[#27353a] transition-colors group"
+                        href="#">
+                        <span
+                            class="material-symbols-outlined text-[20px] text-text-secondary group-hover:text-white">psychology</span>
+                        <p class="text-text-secondary group-hover:text-white text-sm font-medium leading-normal">
+                            Behavioral Finance</p>
+                    </a>
+                    <a class="flex items-center gap-3 px-3 py-2 rounded-lg bg-primary/10 border-l-2 border-primary transition-colors shadow-[0_0_15px_rgba(6,188,249,0.1)]"
+                        href="#">
+                        <span class="material-symbols-outlined text-[20px] text-primary">show_chart</span>
+                        <p class="text-white text-sm font-bold leading-normal">Projections</p>
+                    </a>
+                    <a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-[#27353a] transition-colors group"
+                        href="#">
+                        <span
+                            class="material-symbols-outlined text-[20px] text-text-secondary group-hover:text-white">health_and_safety</span>
+                        <p class="text-text-secondary group-hover:text-white text-sm font-medium leading-normal">Risk
+                            Profiling</p>
+                    </a>
+                    <a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-[#27353a] transition-colors group"
+                        href="#">
+                        <span
+                            class="material-symbols-outlined text-[20px] text-text-secondary group-hover:text-white">account_balance</span>
+                        <p class="text-text-secondary group-hover:text-white text-sm font-medium leading-normal">Tax
+                            Optimization</p>
+                    </a>
+                </div>
+                <div class="flex flex-col gap-1">
+                    <p class="px-3 text-xs font-bold text-text-secondary/50 uppercase tracking-wider mb-2">Market &amp;
+                        Plan</p>
+                    <a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-[#27353a] transition-colors group"
+                        href="#">
+                        <span
+                            class="material-symbols-outlined text-[20px] text-text-secondary group-hover:text-white">flag</span>
+                        <p class="text-text-secondary group-hover:text-white text-sm font-medium leading-normal">Goals
+                        </p>
+                    </a>
+                    <a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-[#27353a] transition-colors group"
+                        href="#">
+                        <span
+                            class="material-symbols-outlined text-[20px] text-text-secondary group-hover:text-white">newspaper</span>
+                        <p class="text-text-secondary group-hover:text-white text-sm font-medium leading-normal">News
+                            Feed</p>
+                    </a>
+                    <a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-[#27353a] transition-colors group"
+                        href="#">
+                        <span
+                            class="material-symbols-outlined text-[20px] text-text-secondary group-hover:text-white">notifications</span>
+                        <p class="text-text-secondary group-hover:text-white text-sm font-medium leading-normal">Alerts
+                        </p>
+                    </a>
+                </div>
+                <div class="flex flex-col gap-1">
+                    <p class="px-3 text-xs font-bold text-text-secondary/50 uppercase tracking-wider mb-2">Resources</p>
+                    <a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-[#27353a] transition-colors group"
+                        href="#">
+                        <span
+                            class="material-symbols-outlined text-[20px] text-text-secondary group-hover:text-white">school</span>
+                        <p class="text-text-secondary group-hover:text-white text-sm font-medium leading-normal">
+                            Education</p>
+                    </a>
+                    <a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-[#27353a] transition-colors group"
+                        href="#">
+                        <span
+                            class="material-symbols-outlined text-[20px] text-text-secondary group-hover:text-white">support_agent</span>
+                        <p class="text-text-secondary group-hover:text-white text-sm font-medium leading-normal">Support
+                        </p>
+                    </a>
+                </div>
+                <div class="flex flex-col gap-1 pt-2 border-t border-[#27353a]">
+                    <a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-[#27353a] transition-colors group"
+                        href="#">
+                        <span
+                            class="material-symbols-outlined text-[20px] text-text-secondary group-hover:text-white">settings</span>
+                        <p class="text-text-secondary group-hover:text-white text-sm font-medium leading-normal">User
+                            Settings</p>
+                    </a>
+                </div>
+            </nav>
+        </div>
+        <div class="flex flex-col gap-1 mt-auto pt-6">
+            <a class="flex items-center gap-3 px-3 py-3 rounded-lg hover:bg-[#27353a] transition-colors group" href="#">
+                <span class="material-symbols-outlined text-text-secondary group-hover:text-white">logout</span>
+                <p class="text-text-secondary group-hover:text-white text-sm font-medium leading-normal">Log Out</p>
+            </a>
+        </div>
+    </aside>
+    <main class="flex-1 flex flex-col h-full overflow-y-auto bg-background-dark relative">
+        <div class="absolute top-0 right-0 w-1/3 h-64 bg-primary/5 rounded-full blur-[100px] pointer-events-none"></div>
+        <div class="flex flex-col max-w-[1280px] w-full mx-auto p-4 md:p-8 gap-6 md:gap-8">
+            <header class="flex flex-wrap justify-between items-end gap-4 border-b border-[#27353a] pb-6">
+                <div class="flex min-w-72 flex-col gap-2">
+                    <h1 class="text-white text-3xl md:text-4xl font-black leading-tight tracking-[-0.033em]">Portfolio
+                        Projections</h1>
+                    <p class="text-text-secondary text-base font-normal leading-normal max-w-2xl">
+                        Simulate your wealth accumulation based on variable market conditions. Adjust contributions and
+                        risk to see potential outcomes.
+                    </p>
+                </div>
+                <div class="flex gap-2">
+                    <button
+                        class="flex items-center gap-2 bg-[#27353a] hover:bg-[#32434a] text-white px-4 py-2 rounded-lg transition-colors font-medium text-sm">
+                        <span class="material-symbols-outlined text-[20px]">file_download</span>
                         Export Report
                     </button>
-<button class="flex items-center gap-2 bg-primary hover:bg-primary-dark text-background-dark px-4 py-2 rounded-lg transition-colors font-bold text-sm shadow-[0_0_15px_rgba(6,188,249,0.3)]">
-<span class="material-symbols-outlined text-[20px]">save</span>
+                    <button
+                        class="flex items-center gap-2 bg-primary hover:bg-primary-dark text-background-dark px-4 py-2 rounded-lg transition-colors font-bold text-sm shadow-[0_0_15px_rgba(6,188,249,0.3)]">
+                        <span class="material-symbols-outlined text-[20px]">save</span>
                         Save Scenario
                     </button>
-</div>
-</header>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-<div class="flex flex-col gap-2 rounded-xl p-6 bg-card-dark border border-[#27353a] hover:border-[#3a4e55] transition-colors relative overflow-hidden group">
-<div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
-<span class="material-symbols-outlined text-6xl text-accent-green">trending_up</span>
-</div>
-<p class="text-text-secondary text-sm font-semibold uppercase tracking-wider">Optimistic Outcome</p>
-<div class="flex items-baseline gap-3">
-<p class="text-white tracking-tight text-3xl font-bold leading-tight">$1.5M</p>
-<span class="bg-accent-green/10 text-accent-green text-xs font-bold px-2 py-1 rounded-full">+15% vs Avg</span>
-</div>
-<p class="text-text-secondary text-sm mt-1">Based on bull market conditions</p>
-</div>
-<div class="flex flex-col gap-2 rounded-xl p-6 bg-[#1a2529] border border-primary/30 shadow-[0_4px_20px_-4px_rgba(6,188,249,0.1)] relative overflow-hidden">
-<div class="absolute top-0 left-0 w-1 h-full bg-primary"></div>
-<div class="absolute top-0 right-0 p-4 opacity-10">
-<span class="material-symbols-outlined text-6xl text-primary">show_chart</span>
-</div>
-<p class="text-primary text-sm font-bold uppercase tracking-wider">Realistic Outcome</p>
-<div class="flex items-baseline gap-3">
-<p class="text-white tracking-tight text-3xl font-bold leading-tight">$1.2M</p>
-<span class="bg-primary/10 text-primary text-xs font-bold px-2 py-1 rounded-full">+8% Avg Rtn</span>
-</div>
-<p class="text-text-secondary text-sm mt-1">Weighted historical average</p>
-</div>
-<div class="flex flex-col gap-2 rounded-xl p-6 bg-card-dark border border-[#27353a] hover:border-[#3a4e55] transition-colors relative overflow-hidden group">
-<div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
-<span class="material-symbols-outlined text-6xl text-accent-orange">trending_down</span>
-</div>
-<p class="text-text-secondary text-sm font-semibold uppercase tracking-wider">Pessimistic Outcome</p>
-<div class="flex items-baseline gap-3">
-<p class="text-white tracking-tight text-3xl font-bold leading-tight">$980k</p>
-<span class="bg-accent-orange/10 text-accent-orange text-xs font-bold px-2 py-1 rounded-full">-4% vs Avg</span>
-</div>
-<p class="text-text-secondary text-sm mt-1">Recession adjustment active</p>
-</div>
-</div>
-<div class="grid grid-cols-1 lg:grid-cols-3 gap-6 h-full min-h-[500px]">
-<div class="lg:col-span-2 flex flex-col bg-card-dark rounded-xl border border-[#27353a] p-6 relative">
-<div class="flex justify-between items-start mb-6">
-<div>
-<h3 class="text-white text-lg font-bold">Projected Growth Paths</h3>
-<p class="text-text-secondary text-sm">20 Year Outlook</p>
-</div>
-<div class="flex gap-4">
-<div class="flex items-center gap-2">
-<span class="w-3 h-3 rounded-full bg-accent-green"></span>
-<span class="text-xs text-text-secondary">Bull</span>
-</div>
-<div class="flex items-center gap-2">
-<span class="w-3 h-3 rounded-full bg-primary shadow-[0_0_8px_#06bcf9]"></span>
-<span class="text-xs text-white font-medium">Base</span>
-</div>
-<div class="flex items-center gap-2">
-<span class="w-3 h-3 rounded-full bg-accent-orange"></span>
-<span class="text-xs text-text-secondary">Bear</span>
-</div>
-</div>
-</div>
-<div class="relative flex-1 w-full min-h-[300px] flex items-end px-2 pb-8">
-<div class="absolute inset-0 flex flex-col justify-between pointer-events-none px-2 pb-12 pt-4">
-<div class="w-full h-px bg-[#27353a]/50"></div>
-<div class="w-full h-px bg-[#27353a]/50"></div>
-<div class="w-full h-px bg-[#27353a]/50"></div>
-<div class="w-full h-px bg-[#27353a]/50"></div>
-<div class="w-full h-px bg-[#27353a]/50"></div>
-</div>
-<svg class="w-full h-full z-10" fill="none" preserveAspectRatio="none" viewBox="0 0 472 150" xmlns="http://www.w3.org/2000/svg">
-<defs>
-<linearGradient gradientUnits="userSpaceOnUse" id="primaryGradient" x1="236" x2="236" y1="25" y2="150">
-<stop stop-color="#06bcf9" stop-opacity="0.2"></stop>
-<stop offset="1" stop-color="#06bcf9" stop-opacity="0"></stop>
-</linearGradient>
-</defs>
-<path d="M0 130 C40 130, 80 120, 120 115 C180 108, 240 105, 300 100 C360 95, 420 90, 472 85" opacity="0.6" stroke="#fa5f38" stroke-dasharray="4 4" stroke-width="2"></path>
-<path d="M0 130 C50 120, 100 80, 150 70 C220 56, 300 40, 380 20 C420 10, 450 5, 472 2" opacity="0.6" stroke="#0bda57" stroke-dasharray="4 4" stroke-width="2"></path>
-<path d="M0 130 C60 125, 120 110, 180 95 C240 80, 300 65, 360 50 C400 40, 440 30, 472 25 V150 H0 V130 Z" fill="url(#primaryGradient)"></path>
-<path d="M0 130 C60 125, 120 110, 180 95 C240 80, 300 65, 360 50 C400 40, 440 30, 472 25" stroke="#06bcf9" stroke-linecap="round" stroke-width="3"></path>
-<circle cx="472" cy="25" fill="#111618" r="4" stroke="#06bcf9" stroke-width="3"></circle>
-</svg>
-<div class="absolute bottom-0 left-0 w-full flex justify-between text-text-secondary text-xs font-medium px-0">
-<span>2024</span>
-<span>2028</span>
-<span>2032</span>
-<span>2036</span>
-<span>2040</span>
-<span>2044</span>
-</div>
-</div>
-</div>
-<div class="flex flex-col gap-6">
-<div class="bg-card-dark rounded-xl border border-[#27353a] p-6 flex flex-col gap-6">
-<div class="flex items-center gap-2 border-b border-[#27353a] pb-4">
-<span class="material-symbols-outlined text-primary">tune</span>
-<h3 class="text-white text-lg font-bold">Adjust Variables</h3>
-</div>
-<div class="flex flex-col gap-3">
-<div class="flex justify-between items-center">
-<label class="text-text-secondary text-sm font-medium">Monthly Contribution</label>
-<div class="flex items-center bg-[#111618] border border-[#27353a] rounded px-3 py-1">
-<span class="text-text-secondary text-xs mr-1">$</span>
-<input class="bg-transparent text-white text-right w-16 text-sm font-bold focus:outline-none" type="text" value="500"/>
-</div>
-</div>
-<input class="w-full" max="5000" min="0" step="100" type="range" value="500"/>
-<div class="flex justify-between text-xs text-text-secondary/50">
-<span>$0</span>
-<span>$5k</span>
-</div>
-</div>
-<div class="flex flex-col gap-3">
-<div class="flex justify-between items-center">
-<label class="text-text-secondary text-sm font-medium">Time Horizon</label>
-<span class="text-white font-bold text-sm">20 Years</span>
-</div>
-<input class="w-full" max="40" min="1" type="range" value="20"/>
-<div class="flex justify-between text-xs text-text-secondary/50">
-<span>1y</span>
-<span>40y</span>
-</div>
-</div>
-<div class="flex flex-col gap-3">
-<div class="flex justify-between items-center">
-<label class="text-text-secondary text-sm font-medium">Risk Tolerance</label>
-<span class="text-accent-orange font-bold text-sm">Aggressive</span>
-</div>
-<div class="relative w-full h-8 flex items-center">
-<div class="absolute w-full h-2 bg-[#27353a] rounded-full overflow-hidden">
-<div class="h-full bg-gradient-to-r from-accent-green via-primary to-accent-orange w-3/4"></div>
-</div>
-<div class="absolute left-3/4 w-4 h-4 bg-white rounded-full shadow-[0_0_10px_rgba(255,255,255,0.5)] cursor-pointer transform -translate-x-2"></div>
-</div>
-<div class="flex justify-between text-xs text-text-secondary/50">
-<span>Conservative</span>
-<span>Aggressive</span>
-</div>
-</div>
-<button class="w-full mt-2 bg-[#27353a] hover:bg-primary/20 hover:text-primary text-text-secondary text-sm font-bold py-3 rounded-lg transition-all flex items-center justify-center gap-2 border border-transparent hover:border-primary/50">
-<span class="material-symbols-outlined text-[18px]">restart_alt</span>
+                </div>
+            </header>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div
+                    class="flex flex-col gap-2 rounded-xl p-6 bg-card-dark border border-[#27353a] hover:border-[#3a4e55] transition-colors relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+                        <span class="material-symbols-outlined text-6xl text-accent-green">trending_up</span>
+                    </div>
+                    <p class="text-text-secondary text-sm font-semibold uppercase tracking-wider">Optimistic Outcome</p>
+                    <div class="flex items-baseline gap-3">
+                        <p class="text-white tracking-tight text-3xl font-bold leading-tight">$1.5M</p>
+                        <span class="bg-accent-green/10 text-accent-green text-xs font-bold px-2 py-1 rounded-full">+15%
+                            vs Avg</span>
+                    </div>
+                    <p class="text-text-secondary text-sm mt-1">Based on bull market conditions</p>
+                </div>
+                <div
+                    class="flex flex-col gap-2 rounded-xl p-6 bg-[#1a2529] border border-primary/30 shadow-[0_4px_20px_-4px_rgba(6,188,249,0.1)] relative overflow-hidden">
+                    <div class="absolute top-0 left-0 w-1 h-full bg-primary"></div>
+                    <div class="absolute top-0 right-0 p-4 opacity-10">
+                        <span class="material-symbols-outlined text-6xl text-primary">show_chart</span>
+                    </div>
+                    <p class="text-primary text-sm font-bold uppercase tracking-wider">Realistic Outcome</p>
+                    <div class="flex items-baseline gap-3">
+                        <p class="text-white tracking-tight text-3xl font-bold leading-tight">$1.2M</p>
+                        <span class="bg-primary/10 text-primary text-xs font-bold px-2 py-1 rounded-full">+8% Avg
+                            Rtn</span>
+                    </div>
+                    <p class="text-text-secondary text-sm mt-1">Weighted historical average</p>
+                </div>
+                <div
+                    class="flex flex-col gap-2 rounded-xl p-6 bg-card-dark border border-[#27353a] hover:border-[#3a4e55] transition-colors relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+                        <span class="material-symbols-outlined text-6xl text-accent-orange">trending_down</span>
+                    </div>
+                    <p class="text-text-secondary text-sm font-semibold uppercase tracking-wider">Pessimistic Outcome
+                    </p>
+                    <div class="flex items-baseline gap-3">
+                        <p class="text-white tracking-tight text-3xl font-bold leading-tight">$980k</p>
+                        <span
+                            class="bg-accent-orange/10 text-accent-orange text-xs font-bold px-2 py-1 rounded-full">-4%
+                            vs Avg</span>
+                    </div>
+                    <p class="text-text-secondary text-sm mt-1">Recession adjustment active</p>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 h-full min-h-[500px]">
+                <div class="lg:col-span-2 flex flex-col bg-card-dark rounded-xl border border-[#27353a] p-6 relative">
+                    <div class="flex justify-between items-start mb-6">
+                        <div>
+                            <h3 class="text-white text-lg font-bold">Projected Growth Paths</h3>
+                            <p class="text-text-secondary text-sm">20 Year Outlook</p>
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="flex items-center gap-2">
+                                <span class="w-3 h-3 rounded-full bg-accent-green"></span>
+                                <span class="text-xs text-text-secondary">Bull</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <span class="w-3 h-3 rounded-full bg-primary shadow-[0_0_8px_#06bcf9]"></span>
+                                <span class="text-xs text-white font-medium">Base</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <span class="w-3 h-3 rounded-full bg-accent-orange"></span>
+                                <span class="text-xs text-text-secondary">Bear</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative flex-1 w-full min-h-[300px] flex items-end px-2 pb-8">
+                        <div class="absolute inset-0 flex flex-col justify-between pointer-events-none px-2 pb-12 pt-4">
+                            <div class="w-full h-px bg-[#27353a]/50"></div>
+                            <div class="w-full h-px bg-[#27353a]/50"></div>
+                            <div class="w-full h-px bg-[#27353a]/50"></div>
+                            <div class="w-full h-px bg-[#27353a]/50"></div>
+                            <div class="w-full h-px bg-[#27353a]/50"></div>
+                        </div>
+                        <svg class="w-full h-full z-10" fill="none" preserveAspectRatio="none" viewBox="0 0 472 150"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <linearGradient gradientUnits="userSpaceOnUse" id="primaryGradient" x1="236" x2="236"
+                                    y1="25" y2="150">
+                                    <stop stop-color="#06bcf9" stop-opacity="0.2"></stop>
+                                    <stop offset="1" stop-color="#06bcf9" stop-opacity="0"></stop>
+                                </linearGradient>
+                            </defs>
+                            <path d="M0 130 C40 130, 80 120, 120 115 C180 108, 240 105, 300 100 C360 95, 420 90, 472 85"
+                                opacity="0.6" stroke="#fa5f38" stroke-dasharray="4 4" stroke-width="2"></path>
+                            <path d="M0 130 C50 120, 100 80, 150 70 C220 56, 300 40, 380 20 C420 10, 450 5, 472 2"
+                                opacity="0.6" stroke="#0bda57" stroke-dasharray="4 4" stroke-width="2"></path>
+                            <path
+                                d="M0 130 C60 125, 120 110, 180 95 C240 80, 300 65, 360 50 C400 40, 440 30, 472 25 V150 H0 V130 Z"
+                                fill="url(#primaryGradient)"></path>
+                            <path d="M0 130 C60 125, 120 110, 180 95 C240 80, 300 65, 360 50 C400 40, 440 30, 472 25"
+                                stroke="#06bcf9" stroke-linecap="round" stroke-width="3"></path>
+                            <circle cx="472" cy="25" fill="#111618" r="4" stroke="#06bcf9" stroke-width="3"></circle>
+                        </svg>
+                        <div
+                            class="absolute bottom-0 left-0 w-full flex justify-between text-text-secondary text-xs font-medium px-0">
+                            <span>2024</span>
+                            <span>2028</span>
+                            <span>2032</span>
+                            <span>2036</span>
+                            <span>2040</span>
+                            <span>2044</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-6">
+                    <div class="bg-card-dark rounded-xl border border-[#27353a] p-6 flex flex-col gap-6">
+                        <div class="flex items-center gap-2 border-b border-[#27353a] pb-4">
+                            <span class="material-symbols-outlined text-primary">tune</span>
+                            <h3 class="text-white text-lg font-bold">Adjust Variables</h3>
+                        </div>
+                        <div class="flex flex-col gap-3">
+                            <div class="flex justify-between items-center">
+                                <label class="text-text-secondary text-sm font-medium">Monthly Contribution</label>
+                                <div class="flex items-center bg-[#111618] border border-[#27353a] rounded px-3 py-1">
+                                    <span class="text-text-secondary text-xs mr-1">$</span>
+                                    <input
+                                        class="bg-transparent text-white text-right w-16 text-sm font-bold focus:outline-none"
+                                        type="text" value="500" />
+                                </div>
+                            </div>
+                            <input class="w-full" max="5000" min="0" step="100" type="range" value="500" />
+                            <div class="flex justify-between text-xs text-text-secondary/50">
+                                <span>$0</span>
+                                <span>$5k</span>
+                            </div>
+                        </div>
+                        <div class="flex flex-col gap-3">
+                            <div class="flex justify-between items-center">
+                                <label class="text-text-secondary text-sm font-medium">Time Horizon</label>
+                                <span class="text-white font-bold text-sm">20 Years</span>
+                            </div>
+                            <input class="w-full" max="40" min="1" type="range" value="20" />
+                            <div class="flex justify-between text-xs text-text-secondary/50">
+                                <span>1y</span>
+                                <span>40y</span>
+                            </div>
+                        </div>
+                        <div class="flex flex-col gap-3">
+                            <div class="flex justify-between items-center">
+                                <label class="text-text-secondary text-sm font-medium">Risk Tolerance</label>
+                                <span class="text-accent-orange font-bold text-sm">Aggressive</span>
+                            </div>
+                            <div class="relative w-full h-8 flex items-center">
+                                <div class="absolute w-full h-2 bg-[#27353a] rounded-full overflow-hidden">
+                                    <div
+                                        class="h-full bg-gradient-to-r from-accent-green via-primary to-accent-orange w-3/4">
+                                    </div>
+                                </div>
+                                <div
+                                    class="absolute left-3/4 w-4 h-4 bg-white rounded-full shadow-[0_0_10px_rgba(255,255,255,0.5)] cursor-pointer transform -translate-x-2">
+                                </div>
+                            </div>
+                            <div class="flex justify-between text-xs text-text-secondary/50">
+                                <span>Conservative</span>
+                                <span>Aggressive</span>
+                            </div>
+                        </div>
+                        <button
+                            class="w-full mt-2 bg-[#27353a] hover:bg-primary/20 hover:text-primary text-text-secondary text-sm font-bold py-3 rounded-lg transition-all flex items-center justify-center gap-2 border border-transparent hover:border-primary/50">
+                            <span class="material-symbols-outlined text-[18px]">restart_alt</span>
                             Reset to Defaults
                         </button>
-</div>
-<div class="bg-gradient-to-br from-[#1a2c32] to-[#111618] rounded-xl border border-[#27353a] p-5 flex flex-col gap-3">
-<div class="flex items-center gap-2 text-primary">
-<span class="material-symbols-outlined text-[20px]">auto_awesome</span>
-<span class="text-xs font-bold uppercase tracking-wider">AI Insight</span>
-</div>
-<p class="text-sm text-white leading-relaxed">
-                            Increasing your monthly contribution by just <span class="text-primary font-bold">$150</span> could improve your Optimistic Outcome by <span class="text-accent-green font-bold">12%</span> over the next 10 years.
+                    </div>
+                    <div
+                        class="bg-gradient-to-br from-[#1a2c32] to-[#111618] rounded-xl border border-[#27353a] p-5 flex flex-col gap-3">
+                        <div class="flex items-center gap-2 text-primary">
+                            <span class="material-symbols-outlined text-[20px]">auto_awesome</span>
+                            <span class="text-xs font-bold uppercase tracking-wider">AI Insight</span>
+                        </div>
+                        <p class="text-sm text-white leading-relaxed">
+                            Increasing your monthly contribution by just <span
+                                class="text-primary font-bold">$150</span> could improve your Optimistic Outcome by
+                            <span class="text-accent-green font-bold">12%</span> over the next 10 years.
                         </p>
-</div>
-</div>
-</div>
-<footer class="text-center text-text-secondary text-xs py-4">
-<p>Projections are hypothetical and not guarantees of future performance. Market data provided by FinTech Pro API.</p>
-</footer>
-</div>
-</main>
-</body></html>
+                    </div>
+                </div>
+            </div>
+            <footer class="text-center text-text-secondary text-xs py-4">
+                <p>Projections are hypothetical and not guarantees of future performance. Market data provided by
+                    FinTech Pro API.</p>
+            </footer>
+        </div>
+    </main>
+</body>
+
+</html>
