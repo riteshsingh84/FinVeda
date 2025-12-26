@@ -267,11 +267,13 @@
     if(!header) return;
     function apply(){
       const h = header.offsetHeight || 0;
-      // Apply padding top to page regions except the sidebar/drawer to avoid creating extra gap
+      const isDesktop = window.matchMedia && window.matchMedia('(min-width: 1024px)').matches;
+      // Apply padding top to page regions, but avoid adding it to the mobile drawer when not desktop
       document.querySelectorAll('.fv-pad-header').forEach(el => {
         try {
-          if(el && el.tagName && el.tagName.toLowerCase() === 'aside') return;
-          if(el && el.classList && el.classList.contains('fv-nav-mobile')) return;
+          const tag = el && el.tagName && el.tagName.toLowerCase();
+          const isNavMobile = el && el.classList && el.classList.contains('fv-nav-mobile');
+          if((tag === 'aside' || isNavMobile) && !isDesktop) return; // skip only on mobile
         } catch(_) {}
         el.style.paddingTop = h + 'px';
       });
