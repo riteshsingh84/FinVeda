@@ -300,3 +300,26 @@ body::-webkit-scrollbar-thumb:hover {
         margin-right: 12px;
     }
 }
+
+/* Settings page mobile tweaks */
+@media (max-width: 420px) {
+    .fv-settings .profile-avatar {
+        width: 56px;
+        height: 56px;
+        ring-width: 2px;
+    }
+    .fv-settings .profile-name {
+        font-size: 1rem;
+    }
+    .fv-settings .profile-actions {
+        flex-direction: column;
+    }
+    .fv-settings .profile-actions button {
+        width: 100%;
+    }
+    /* Reduce spacing in header tabs to fit small screens */
+    .fv-settings .flex.gap-8.border-b a {
+        padding-left: 6px;
+        padding-right: 6px;
+    }
+}
