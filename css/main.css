@@ -4,6 +4,9 @@
     --border-dark: #27353a;
 }
 
+/* Utility alias to match Dashboard's Tailwind color key */
+.border-border-dark { border-color: var(--border-dark) !important; }
+
 .material-symbols-outlined {
     font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
 }
