@@ -267,7 +267,14 @@
     if(!header) return;
     function apply(){
       const h = header.offsetHeight || 0;
-      document.querySelectorAll('.fv-pad-header').forEach(el => { el.style.paddingTop = h + 'px'; });
+      // Apply padding top to page regions except the sidebar/drawer to avoid creating extra gap
+      document.querySelectorAll('.fv-pad-header').forEach(el => {
+        try {
+          if(el && el.tagName && el.tagName.toLowerCase() === 'aside') return;
+          if(el && el.classList && el.classList.contains('fv-nav-mobile')) return;
+        } catch(_) {}
+        el.style.paddingTop = h + 'px';
+      });
       // Expose header height as a CSS variable so CSS can size mobile nav correctly
       try{ document.documentElement.style.setProperty('--fv-header-height', h + 'px'); }catch(_){}
     }

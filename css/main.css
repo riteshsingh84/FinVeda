@@ -97,6 +97,18 @@
         white-space: nowrap;
     }
 }
+
+/* Reduce mobile nav top offset a bit to remove large empty gap on very small screens */
+@media (max-width: 480px) {
+    :root {
+        /* when JS sets --fv-header-height, use a slightly reduced value for visual tightness */
+        --fv-header-offset-adjust: clamp(44px, calc(var(--fv-header-height,56px) - 8px), 56px);
+    }
+    .fv-nav-mobile {
+        top: var(--fv-header-offset-adjust, var(--fv-header-height, 56px));
+        height: calc(100vh - var(--fv-header-offset-adjust, var(--fv-header-height, 56px)));
+    }
+}
 /* Prevent body scroll when drawer is open */
 .fv-no-scroll {
     overflow: hidden;
