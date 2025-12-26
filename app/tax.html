@@ -180,7 +180,7 @@
                             </div>
                         </div>
                         <div class="overflow-x-auto">
-                            <table class="w-full text-left border-collapse">
+                            <table class="w-full text-left border-collapse fv-mobile-cards">
                                 <thead>
                                     <tr
                                         class="bg-slate-50 dark:bg-[#111618] text-slate-500 dark:text-[#9bb3bb] text-xs uppercase tracking-wider font-semibold">
@@ -194,7 +194,7 @@
                                 </thead>
                                 <tbody class="divide-y divide-slate-200 dark:divide-[#27353a] text-sm">
                                     <tr class="hover:bg-slate-50 dark:hover:bg-[#202b30] transition-colors">
-                                        <td class="px-6 py-4 font-medium text-slate-900 dark:text-white">
+                                        <td class="px-6 py-4 font-medium text-slate-900 dark:text-white" data-label="Asset">
                                             <div class="flex items-center gap-3">
                                                 <div
                                                     class="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center text-xs font-bold text-white">
@@ -202,23 +202,23 @@
                                                 Tesla (TSLA)
                                             </div>
                                         </td>
-                                        <td class="px-6 py-4 text-slate-500 dark:text-[#9bb3bb]">Jan 15, 2023</td>
-                                        <td class="px-6 py-4 text-slate-500 dark:text-[#9bb3bb]">$18,500</td>
-                                        <td class="px-6 py-4 text-slate-500 dark:text-[#9bb3bb]">$18,100</td>
-                                        <td class="px-6 py-4">
+                                        <td class="px-6 py-4 text-slate-500 dark:text-[#9bb3bb]" data-label="Purchase Date">Jan 15, 2023</td>
+                                        <td class="px-6 py-4 text-slate-500 dark:text-[#9bb3bb]" data-label="Cost Basis">$18,500</td>
+                                        <td class="px-6 py-4 text-slate-500 dark:text-[#9bb3bb]" data-label="Current Value">$18,100</td>
+                                        <td class="px-6 py-4" data-label="Unrealized Loss">
                                             <span
                                                 class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-red-100 dark:bg-red-500/10 text-red-800 dark:text-red-400">
                                                 -$400
                                             </span>
                                         </td>
-                                        <td class="px-6 py-4 text-center">
+                                        <td class="px-6 py-4 text-center" data-label="Harvest">
                                             <input checked=""
                                                 class="rounded border-slate-300 dark:border-[#3a4e55] bg-transparent text-primary focus:ring-primary h-5 w-5 cursor-pointer"
                                                 type="checkbox" />
                                         </td>
                                     </tr>
                                     <tr class="hover:bg-slate-50 dark:hover:bg-[#202b30] transition-colors">
-                                        <td class="px-6 py-4 font-medium text-slate-900 dark:text-white">
+                                        <td class="px-6 py-4 font-medium text-slate-900 dark:text-white" data-label="Asset">
                                             <div class="flex items-center gap-3">
                                                 <div
                                                     class="w-8 h-8 rounded-full bg-orange-500 flex items-center justify-center text-xs font-bold text-white">
@@ -226,23 +226,23 @@
                                                 Bitcoin (BTC)
                                             </div>
                                         </td>
-                                        <td class="px-6 py-4 text-slate-500 dark:text-[#9bb3bb]">Mar 05, 2023</td>
-                                        <td class="px-6 py-4 text-slate-500 dark:text-[#9bb3bb]">$45,000</td>
-                                        <td class="px-6 py-4 text-slate-500 dark:text-[#9bb3bb]">$44,880</td>
-                                        <td class="px-6 py-4">
+                                        <td class="px-6 py-4 text-slate-500 dark:text-[#9bb3bb]" data-label="Purchase Date">Mar 05, 2023</td>
+                                        <td class="px-6 py-4 text-slate-500 dark:text-[#9bb3bb]" data-label="Cost Basis">$45,000</td>
+                                        <td class="px-6 py-4 text-slate-500 dark:text-[#9bb3bb]" data-label="Current Value">$44,880</td>
+                                        <td class="px-6 py-4" data-label="Unrealized Loss">
                                             <span
                                                 class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-red-100 dark:bg-red-500/10 text-red-800 dark:text-red-400">
                                                 -$120
                                             </span>
                                         </td>
-                                        <td class="px-6 py-4 text-center">
+                                        <td class="px-6 py-4 text-center" data-label="Harvest">
                                             <input checked=""
                                                 class="rounded border-slate-300 dark:border-[#3a4e55] bg-transparent text-primary focus:ring-primary h-5 w-5 cursor-pointer"
                                                 type="checkbox" />
                                         </td>
                                     </tr>
                                     <tr class="hover:bg-slate-50 dark:hover:bg-[#202b30] transition-colors">
-                                        <td class="px-6 py-4 font-medium text-slate-900 dark:text-white">
+                                        <td class="px-6 py-4 font-medium text-slate-900 dark:text-white" data-label="Asset">
                                             <div class="flex items-center gap-3">
                                                 <div
                                                     class="w-8 h-8 rounded-full bg-purple-600 flex items-center justify-center text-xs font-bold text-white">
@@ -250,16 +250,16 @@
                                                 ARK Innovation (ARKK)
                                             </div>
                                         </td>
-                                        <td class="px-6 py-4 text-slate-500 dark:text-[#9bb3bb]">Feb 10, 2023</td>
-                                        <td class="px-6 py-4 text-slate-500 dark:text-[#9bb3bb]">$5,200</td>
-                                        <td class="px-6 py-4 text-slate-500 dark:text-[#9bb3bb]">$4,520</td>
-                                        <td class="px-6 py-4">
+                                        <td class="px-6 py-4 text-slate-500 dark:text-[#9bb3bb]" data-label="Purchase Date">Feb 10, 2023</td>
+                                        <td class="px-6 py-4 text-slate-500 dark:text-[#9bb3bb]" data-label="Cost Basis">$5,200</td>
+                                        <td class="px-6 py-4 text-slate-500 dark:text-[#9bb3bb]" data-label="Current Value">$4,520</td>
+                                        <td class="px-6 py-4" data-label="Unrealized Loss">
                                             <span
                                                 class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-red-100 dark:bg-red-500/10 text-red-800 dark:text-red-400">
                                                 -$680
                                             </span>
                                         </td>
-                                        <td class="px-6 py-4 text-center">
+                                        <td class="px-6 py-4 text-center" data-label="Harvest">
                                             <input checked=""
                                                 class="rounded border-slate-300 dark:border-[#3a4e55] bg-transparent text-primary focus:ring-primary h-5 w-5 cursor-pointer"
                                                 type="checkbox" />
