@@ -47,7 +47,7 @@
         <div data-include="./shared/app-header.html"></div>
         <main class="flex-1 flex flex-col h-full overflow-hidden relative min-h-0">
             
-            <div class="flex-1 overflow-y-auto p-4 md:p-8 lg:px-12 scrollbar-thin scrollbar-thumb-slate-700 scrollbar-track-transparent fv-pad-header fv-pad-footer app-content-container">
+            <div class="flex-1 p-4 md:p-8 lg:px-12 scrollbar-thin scrollbar-thumb-slate-700 scrollbar-track-transparent fv-pad-header fv-pad-footer app-content-container">
                 <div class="mx-auto max-w-7xl flex flex-col gap-6">
                     <div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
                         <div class="flex flex-col gap-1">
@@ -62,6 +62,7 @@
                             <span>Export Data</span>
                         </button>
                     </div>
+
                     <div
                         class="bg-white dark:bg-surface-dark rounded-xl border border-slate-200 dark:border-border-dark p-4 shadow-sm">
                         <div class="flex flex-col lg:flex-row gap-4">
@@ -117,83 +118,243 @@
                                 </div>
                             </div>
                         </div>
-                        <div
-                            class="bg-white dark:bg-surface-dark rounded-xl border border-slate-200 dark:border-border-dark overflow-hidden shadow-sm">
-                            <div class="overflow-x-auto">
-                                <table class="w-full text-left border-collapse">
-                                    <thead>
-                                        <tr
-                                            class="bg-slate-50 dark:bg-background-dark border-b border-slate-200 dark:border-border-dark text-xs uppercase text-slate-500 dark:text-slate-400 font-semibold tracking-wider">
-                                            <th class="px-6 py-4 w-40">Date</th>
-                                            <th class="px-6 py-4 w-32">Type</th>
-                                            <th class="px-6 py-4 min-w-[200px]">Asset</th>
-                                            <th class="px-6 py-4 text-right">Qty</th>
-                                            <th class="px-6 py-4 text-right">Price</th>
-                                            <th class="px-6 py-4 text-right">Total Amount</th>
-                                            <th class="px-4 py-4 w-10"></th>
-                                        </tr>
-                                    </thead>
-                                    <tbody class="divide-y divide-slate-100 dark:divide-border-dark text-sm">
-                                        <tr
-                                            class="hover:bg-slate-50 dark:hover:bg-border-dark/30 transition-colors group">
-                                            <td
-                                                class="px-6 py-4 text-slate-500 dark:text-slate-400 font-medium whitespace-nowrap">
-                                                Oct 24, 2023</td>
-                                            <td class="px-6 py-4">
-                                                <span
-                                                    class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-bold bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20">
-                                                    <span
-                                                        class="material-symbols-outlined text-[14px]">arrow_downward</span>
-                                                    Buy
-                                                </span>
-                                            </td>
-                                            <td class="px-6 py-4">
-                                                <div class="flex items-center gap-3">
-                                                    <div
-                                                        class="size-8 rounded-full bg-white p-1 flex items-center justify-center shadow-sm">
-                                                        <img alt="Apple Inc. Logo" class="size-full object-contain"
-                                                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAH2jdh_pUvuA6GivO_HpdeRDf3LRJZi-BVc7XEPuNQkFvtotGfRdly9fZlEaoUz9osuf9suTElghM_mJfTpdxXrufWXHvCyRcNRCMgjTz3n3HRDCcY6YLSAsaipsQLiPc776JqNeNdYrbs6x16JYlya_wrA_odNJ489AK3m9Z5xAhjyNJbwNljjE1AjNjP3aLjrPglvMDpezJfVCBbURSqCY3EZFRWNYtRVCwhLrjV0blZprPk0Ih7DA1wITwhaqkm1fyKVlPEyz8" />
-                                                    </div>
-                                                    <div class="flex flex-col">
-                                                        <span
-                                                            class="font-bold text-slate-900 dark:text-white">AAPL</span>
-                                                        <span class="text-xs text-slate-500 dark:text-slate-400">Apple
-                                                            Inc.</span>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                            <td class="px-6 py-4 text-right text-slate-600 dark:text-slate-300">10.00
-                                            </td>
-                                            <td class="px-6 py-4 text-right text-slate-600 dark:text-slate-300">$173.00
-                                            </td>
-                                            <td class="px-6 py-4 text-right font-bold text-slate-900 dark:text-white">
-                                                $1,730.00</td>
-                                            <td class="px-4 py-4 text-center">
-                                                <button
-                                                    class="text-slate-400 hover:text-primary opacity-0 group-hover:opacity-100 transition-all">
-                                                    <span class="material-symbols-outlined">more_vert</span>
-                                                </button>
-                                            </td>
-                                        </tr>
-                                        <!-- more rows omitted for brevity -->
-                                    </tbody>
-                                </table>
-                            </div>
+                        <div class="flex flex-wrap gap-2 mt-4 pt-3 border-t border-slate-100 dark:border-border-dark">
+                            <span
+                                class="text-xs font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wider py-1">Active
+                                Filters:</span>
                             <div
-                                class="flex items-center justify-between px-6 py-4 bg-slate-50/50 dark:bg-black/20 border-t border-slate-200 dark:border-border-dark">
-                                <span class="text-sm text-slate-500 dark:text-slate-400">Showing <span
-                                        class="font-bold text-slate-900 dark:text-white">1-5</span> of <span
-                                        class="font-bold text-slate-900 dark:text-white">128</span> transactions</span>
-                                <div class="flex gap-2">
-                                    <button
-                                        class="px-3 py-1.5 text-sm font-medium rounded-lg border border-slate-300 dark:border-border-dark bg-white dark:bg-surface-dark text-slate-600 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-border-dark transition-colors disabled:opacity-50"
-                                        disabled>Previous</button>
-                                    <button
-                                        class="px-3 py-1.5 text-sm font-medium rounded-lg border border-slate-300 dark:border-border-dark bg-white dark:bg-surface-dark text-slate-600 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-border-dark transition-colors">Next</button>
-                                </div>
+                                class="flex items-center gap-1 pl-2 pr-1 py-1 bg-primary/10 border border-primary/20 rounded-md text-xs font-medium text-primary">
+                                Last 30 Days
+                                <button class="hover:text-red-400"><span
+                                        class="material-symbols-outlined text-[16px] align-middle">close</span></button>
+                            </div>
+                            <button
+                                class="text-xs text-slate-500 dark:text-slate-400 hover:text-primary underline decoration-dotted ml-auto">Clear
+                                all</button>
+                        </div>
+                    </div>
+                    <div
+                        class="bg-white dark:bg-surface-dark rounded-xl border border-slate-200 dark:border-border-dark overflow-hidden shadow-sm">
+                        <div class="overflow-x-auto">
+                            <table class="w-full text-left border-collapse">
+                                <thead>
+                                    <tr
+                                        class="bg-slate-50 dark:bg-background-dark border-b border-slate-200 dark:border-border-dark text-xs uppercase text-slate-500 dark:text-slate-400 font-semibold tracking-wider">
+                                        <th class="px-6 py-4 w-40">Date</th>
+                                        <th class="px-6 py-4 w-32">Type</th>
+                                        <th class="px-6 py-4 min-w-[200px]">Asset</th>
+                                        <th class="px-6 py-4 text-right">Qty</th>
+                                        <th class="px-6 py-4 text-right">Price</th>
+                                        <th class="px-6 py-4 text-right">Total Amount</th>
+                                        <th class="px-4 py-4 w-10"></th>
+                                    </tr>
+                                </thead>
+                                <tbody class="divide-y divide-slate-100 dark:divide-border-dark text-sm">
+                                    <tr class="hover:bg-slate-50 dark:hover:bg-border-dark/30 transition-colors group">
+                                        <td
+                                            class="px-6 py-4 text-slate-500 dark:text-slate-400 font-medium whitespace-nowrap">
+                                            Oct 24, 2023</td>
+                                        <td class="px-6 py-4">
+                                            <span
+                                                class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-bold bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20">
+                                                <span
+                                                    class="material-symbols-outlined text-[14px]">arrow_downward</span>
+                                                Buy
+                                            </span>
+                                        </td>
+                                        <td class="px-6 py-4">
+                                            <div class="flex items-center gap-3">
+                                                <div
+                                                    class="size-8 rounded-full bg-white p-1 flex items-center justify-center shadow-sm">
+                                                    <img alt="Apple Inc. Logo" class="size-full object-contain"
+                                                        data-alt="Apple Logo"
+                                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAH2jdh_pUvuA6GivO_HpdeRDf3LRJZi-BVc7XEPuNQkFvtotGfRdly9fZlEaoUz9osuf9suTElghM_mJfTpdxXrufWXHvCyRcNRCMgjTz3n3HRDCcY6YLSAsaipsQLiPc776JqNeNdYrbs6x16JYlya_wrA_odNJ489AK3m9Z5xAhjyNJbwNljjE1AjNjP3aLjrPglvMDpezJfVCBbURSqCY3EZFRWNYtRVCwhLrjV0blZprPk0Ih7DA1wITwhaqkm1fyKVlPEyz8" />
+                                                </div>
+                                                <div class="flex flex-col">
+                                                    <span class="font-bold text-slate-900 dark:text-white">AAPL</span>
+                                                    <span class="text-xs text-slate-500 dark:text-slate-400">Apple
+                                                        Inc.</span>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="px-6 py-4 text-right text-slate-600 dark:text-slate-300">10.00</td>
+                                        <td class="px-6 py-4 text-right text-slate-600 dark:text-slate-300">$173.00</td>
+                                        <td class="px-6 py-4 text-right font-bold text-slate-900 dark:text-white">
+                                            $1,730.00</td>
+                                        <td class="px-4 py-4 text-center">
+                                            <button
+                                                class="text-slate-400 hover:text-primary opacity-0 group-hover:opacity-100 transition-all">
+                                                <span class="material-symbols-outlined">more_vert</span>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr class="hover:bg-slate-50 dark:hover:bg-border-dark/30 transition-colors group">
+                                        <td
+                                            class="px-6 py-4 text-slate-500 dark:text-slate-400 font-medium whitespace-nowrap">
+                                            Oct 22, 2023</td>
+                                        <td class="px-6 py-4">
+                                            <span
+                                                class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-bold bg-rose-500/10 text-rose-600 dark:text-rose-400 border border-rose-500/20">
+                                                <span class="material-symbols-outlined text-[14px]">arrow_upward</span>
+                                                Sell
+                                            </span>
+                                        </td>
+                                        <td class="px-6 py-4">
+                                            <div class="flex items-center gap-3">
+                                                <div
+                                                    class="size-8 rounded-full bg-white p-1 flex items-center justify-center shadow-sm">
+                                                    <img alt="Tesla Logo" class="size-full object-contain"
+                                                        data-alt="Tesla Logo"
+                                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDAHvsmlUxcS9d5FaNkrKcelUf9JLKkz7mYVCEHLw8f6z6kYhlUUq1MYCIdlpVTnPgYrC6coS3HeUQfXiUhLOp2p4POdIWHfhUq8EEXkOaEdp5ENsTnoCqCoEDqS-g7llq7sHwwmv1SNDMGMfil_whRH8SAd0Q4eKLs_tIQWoFVZpD-7-yqVRuku5Q3LRdj6sgtuHuTBGSyBC8JApap7xjstvt0IUlH_z65g3mtAC5zlPScujRjwgJHx28xvA7vufhSigE977RCWdY" />
+                                                </div>
+                                                <div class="flex flex-col">
+                                                    <span class="font-bold text-slate-900 dark:text-white">TSLA</span>
+                                                    <span class="text-xs text-slate-500 dark:text-slate-400">Tesla
+                                                        Inc.</span>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="px-6 py-4 text-right text-slate-600 dark:text-slate-300">5.00</td>
+                                        <td class="px-6 py-4 text-right text-slate-600 dark:text-slate-300">$215.00</td>
+                                        <td class="px-6 py-4 text-right font-bold text-slate-900 dark:text-white">
+                                            $1,075.00</td>
+                                        <td class="px-4 py-4 text-center">
+                                            <button
+                                                class="text-slate-400 hover:text-primary opacity-0 group-hover:opacity-100 transition-all">
+                                                <span class="material-symbols-outlined">more_vert</span>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr class="hover:bg-slate-50 dark:hover:bg-border-dark/30 transition-colors group">
+                                        <td
+                                            class="px-6 py-4 text-slate-500 dark:text-slate-400 font-medium whitespace-nowrap">
+                                            Oct 20, 2023</td>
+                                        <td class="px-6 py-4">
+                                            <span
+                                                class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-bold bg-primary/10 text-primary border border-primary/20">
+                                                <span class="material-symbols-outlined text-[14px]">paid</span> Dividend
+                                            </span>
+                                        </td>
+                                        <td class="px-6 py-4">
+                                            <div class="flex items-center gap-3">
+                                                <div
+                                                    class="size-8 rounded-full bg-white p-1 flex items-center justify-center shadow-sm">
+                                                    <img alt="Coca Cola Logo" class="size-full object-contain"
+                                                        data-alt="Coca Cola Logo"
+                                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuC7wmGmZH3g8BTKEy7T67ACacs6Rg0rM-7ud5prdMBTJU2s7-VwZsiU38G_dnkwN1kLo8DquNmCYLbtbQU4enh_pfWYdnY3YVc942DdjMxUkFCtEAW25CakbpXefomTqwTEFH6lLI_8kcdUUz8JMRscuGKckoVC3633G-u-_m5i5S2xc9JSuaApB9EdUxZH0sXXnpc2sL626ib1HhJKiBFHRrsPTglKhyL_3uFNktv50q3a59_pLP4NkzMSfLeH3FhDk6n6K8uYPBs" />
+                                                </div>
+                                                <div class="flex flex-col">
+                                                    <span class="font-bold text-slate-900 dark:text-white">KO</span>
+                                                    <span class="text-xs text-slate-500 dark:text-slate-400">The
+                                                        Coca-Cola Company</span>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="px-6 py-4 text-right text-slate-400">-</td>
+                                        <td class="px-6 py-4 text-right text-slate-400">-</td>
+                                        <td class="px-6 py-4 text-right font-bold text-slate-900 dark:text-white">$45.00
+                                        </td>
+                                        <td class="px-4 py-4 text-center">
+                                            <button
+                                                class="text-slate-400 hover:text-primary opacity-0 group-hover:opacity-100 transition-all">
+                                                <span class="material-symbols-outlined">more_vert</span>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr class="hover:bg-slate-50 dark:hover:bg-border-dark/30 transition-colors group">
+                                        <td
+                                            class="px-6 py-4 text-slate-500 dark:text-slate-400 font-medium whitespace-nowrap">
+                                            Oct 18, 2023</td>
+                                        <td class="px-6 py-4">
+                                            <span
+                                                class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-bold bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20">
+                                                <span
+                                                    class="material-symbols-outlined text-[14px]">arrow_downward</span>
+                                                Buy
+                                            </span>
+                                        </td>
+                                        <td class="px-6 py-4">
+                                            <div class="flex items-center gap-3">
+                                                <div
+                                                    class="size-8 rounded-full bg-white p-1 flex items-center justify-center shadow-sm">
+                                                    <img alt="Microsoft Logo" class="size-full object-contain"
+                                                        data-alt="Microsoft Logo"
+                                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBfxK3sb1TQTf4LKxbQ9bKLJgDPpmtunVM4Ls9iiuzcp7nR0ezk2uLdfPDyqpYuqwbqtFLvGv7W-UAWeq-RtrL-ljATSrZNwC0kKn0OVGmarJ_me2mW-Ener2IQ6DFoBnZ4RJ_kYH8rEfedYIVNO5SjoYwCEfKAhYQxa1-mEj_0dmEMeNAIwCCacmYcoxzAPCUo4wj0HhkFc5D1-OuJBzZiD-aKS_2_W2s6ijO7_t22i9mhwWFWBDf9AsDt_njR6erCRW4YS2cZ5-8" />
+                                                </div>
+                                                <div class="flex flex-col">
+                                                    <span class="font-bold text-slate-900 dark:text-white">MSFT</span>
+                                                    <span class="text-xs text-slate-500 dark:text-slate-400">Microsoft
+                                                        Corp</span>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="px-6 py-4 text-right text-slate-600 dark:text-slate-300">15.00</td>
+                                        <td class="px-6 py-4 text-right text-slate-600 dark:text-slate-300">$330.00</td>
+                                        <td class="px-6 py-4 text-right font-bold text-slate-900 dark:text-white">
+                                            $4,950.00</td>
+                                        <td class="px-4 py-4 text-center">
+                                            <button
+                                                class="text-slate-400 hover:text-primary opacity-0 group-hover:opacity-100 transition-all">
+                                                <span class="material-symbols-outlined">more_vert</span>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr class="hover:bg-slate-50 dark:hover:bg-border-dark/30 transition-colors group">
+                                        <td
+                                            class="px-6 py-4 text-slate-500 dark:text-slate-400 font-medium whitespace-nowrap">
+                                            Oct 15, 2023</td>
+                                        <td class="px-6 py-4">
+                                            <span
+                                                class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-bold bg-violet-500/10 text-violet-600 dark:text-violet-400 border border-violet-500/20">
+                                                <span
+                                                    class="material-symbols-outlined text-[14px]">account_balance_wallet</span>
+                                                Deposit
+                                            </span>
+                                        </td>
+                                        <td class="px-6 py-4">
+                                            <div class="flex items-center gap-3">
+                                                <div
+                                                    class="size-8 rounded-full bg-slate-100 dark:bg-border-dark p-1.5 flex items-center justify-center">
+                                                    <span
+                                                        class="material-symbols-outlined text-slate-500 dark:text-slate-300">attach_money</span>
+                                                </div>
+                                                <div class="flex flex-col">
+                                                    <span class="font-bold text-slate-900 dark:text-white">USD
+                                                        Cash</span>
+                                                    <span class="text-xs text-slate-500 dark:text-slate-400">Wire
+                                                        Transfer</span>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="px-6 py-4 text-right text-slate-400">-</td>
+                                        <td class="px-6 py-4 text-right text-slate-400">-</td>
+                                        <td class="px-6 py-4 text-right font-bold text-slate-900 dark:text-white">
+                                            $10,000.00</td>
+                                        <td class="px-4 py-4 text-center">
+                                            <button
+                                                class="text-slate-400 hover:text-primary opacity-0 group-hover:opacity-100 transition-all">
+                                                <span class="material-symbols-outlined">more_vert</span>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div
+                            class="flex items-center justify-between px-6 py-4 bg-slate-50/50 dark:bg-black/20 border-t border-slate-200 dark:border-border-dark">
+                            <span class="text-sm text-slate-500 dark:text-slate-400">Showing <span
+                                    class="font-bold text-slate-900 dark:text-white">1-5</span> of <span
+                                    class="font-bold text-slate-900 dark:text-white">128</span> transactions</span>
+                            <div class="flex gap-2">
+                                <button
+                                    class="px-3 py-1.5 text-sm font-medium rounded-lg border border-slate-300 dark:border-border-dark bg-white dark:bg-surface-dark text-slate-600 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-border-dark transition-colors disabled:opacity-50"
+                                    disabled="">Previous</button>
+                                <button
+                                    class="px-3 py-1.5 text-sm font-medium rounded-lg border border-slate-300 dark:border-border-dark bg-white dark:bg-surface-dark text-slate-600 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-border-dark transition-colors">Next</button>
                             </div>
                         </div>
                     </div>
+
                 </div>
         </main>
     </div>
