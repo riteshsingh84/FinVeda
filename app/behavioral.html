@@ -7,40 +7,286 @@
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
 <link rel="stylesheet" href="../css/main.css"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#06bcf9",
+                        "background-light": "#f5f8f8",
+                        "background-dark": "#111618",
+                        "surface-dark": "#1a2428",
+                        "surface-light": "#ffffff",
+                        "border-dark": "#3a4e55",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+
 </head>
 <body class="bg-[#0f1e23] text-white font-[Manrope]">
 <div class="flex h-screen w-full min-h-0">
 	<div data-include="./shared/app-nav.html"></div>
 	<div data-include="./shared/app-header.html"></div>
-	<main class="flex-1 flex flex-col h-full relative overflow-hidden min-h-0">
+	<main class="flex-1 flex flex-col h-full relative min-h-0">
 
-	<div class="flex-1 overflow-y-auto px-6 py-10 fv-pad-header fv-pad-footer app-content-container">
-	<div class="max-w-[1200px] mx-auto flex flex-col gap-8">
-		<header class="flex flex-col gap-2">
-			<h1 class="text-3xl font-extrabold">Behavioral Finance</h1>
-			<p class="text-[#9bb3bb]">Insights into investor behavior and discipline.</p>
-		</header>
-		<section class="grid grid-cols-1 lg:grid-cols-3 gap-6">
-			<div class="lg:col-span-2 rounded-xl border border-border-dark bg-[#18282e] p-6">
-				<h3 class="text-lg font-bold mb-2 flex items-center gap-2"><span class="material-symbols-outlined text-[#06bcf9]">psychology</span> Weekly Insight</h3>
-				<p class="text-sm text-[#9bb3bb]">You're exhibiting high discipline: held volatile positions without reactive selling this week.</p>
-				<div class="mt-4 flex gap-2">
-					<span class="text-[10px] font-bold uppercase tracking-wider bg-[#27353a] text-[#9bb3bb] px-2 py-1 rounded">Discipline +4</span>
-					<span class="text-[10px] font-bold uppercase tracking-wider bg-[#27353a] text-[#9bb3bb] px-2 py-1 rounded">Focus +2</span>
-				</div>
-			</div>
-			<aside class="rounded-xl border border-border-dark bg-[#18282e] p-6">
-				<h4 class="font-bold mb-3">Behavioral Metrics</h4>
-				<div class="space-y-3 text-sm">
-					<div class="flex justify-between"><span>Discipline Score</span><span class="font-bold text-white">78</span></div>
-					<div class="flex justify-between"><span>Overconfidence Risk</span><span class="font-bold text-white">Low</span></div>
-					<div class="flex justify-between"><span>Loss Aversion</span><span class="font-bold text-white">Moderate</span></div>
-				</div>
-			</aside>
-		</section>
-	
-	</div>
-	</div>
+		<div  class="flex-1 p-4 lg:p-8 scroll-smooth fv-pad-header fv-pad-footer app-content-container">
+		<div class="max-w-[1200px] mx-auto flex flex-col gap-8">
+			<header class="flex flex-col gap-2">
+				<h1 class="text-3xl font-extrabold">Behavioral Finance</h1>
+				<p class="text-[#9bb3bb]">Analyze your investment psychology and mitigate subconscious biases.</p>
+			</header>
+
+			 <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div
+                            class="p-6 rounded-xl bg-white dark:bg-surface-dark border border-slate-200 dark:border-border-dark shadow-sm relative overflow-hidden group">
+                            <div
+                                class="absolute right-0 top-0 h-full w-1 bg-gradient-to-b from-primary to-transparent opacity-50">
+                            </div>
+                            <div class="flex items-start justify-between mb-4">
+                                <div class="flex flex-col">
+                                    <p class="text-sm font-medium text-slate-500 dark:text-slate-400">Rationality Score
+                                    </p>
+                                    <h3 class="text-3xl font-bold text-slate-900 dark:text-white mt-1">78<span
+                                            class="text-lg text-slate-400 font-normal">/100</span></h3>
+                                </div>
+                                <span
+                                    class="material-symbols-outlined text-primary p-2 bg-primary/10 rounded-lg">psychology_alt</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <span
+                                    class="px-2 py-0.5 rounded text-xs font-bold bg-green-500/20 text-green-600 dark:text-green-400">+5%</span>
+                                <span class="text-xs text-slate-500 dark:text-slate-500">vs last month</span>
+                            </div>
+                        </div>
+                        <div
+                            class="p-6 rounded-xl bg-white dark:bg-surface-dark border border-slate-200 dark:border-border-dark shadow-sm">
+                            <div class="flex items-start justify-between mb-4">
+                                <div class="flex flex-col">
+                                    <p class="text-sm font-medium text-slate-500 dark:text-slate-400">Emotional Trades
+                                    </p>
+                                    <h3 class="text-3xl font-bold text-slate-900 dark:text-white mt-1">12%</h3>
+                                </div>
+                                <span
+                                    class="material-symbols-outlined text-orange-500 p-2 bg-orange-500/10 rounded-lg">mood_bad</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <span
+                                    class="px-2 py-0.5 rounded text-xs font-bold bg-green-500/20 text-green-600 dark:text-green-400">-3%</span>
+                                <span class="text-xs text-slate-500 dark:text-slate-500">Frequency decreased</span>
+                            </div>
+                        </div>
+                        <div
+                            class="p-6 rounded-xl bg-white dark:bg-surface-dark border border-slate-200 dark:border-border-dark shadow-sm">
+                            <div class="flex items-start justify-between mb-4">
+                                <div class="flex flex-col">
+                                    <p class="text-sm font-medium text-slate-500 dark:text-slate-400">Potential Savings
+                                    </p>
+                                    <h3 class="text-3xl font-bold text-slate-900 dark:text-white mt-1">+$2.4k</h3>
+                                </div>
+                                <span
+                                    class="material-symbols-outlined text-emerald-500 p-2 bg-emerald-500/10 rounded-lg">savings</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <span
+                                    class="px-2 py-0.5 rounded text-xs font-bold bg-emerald-500/20 text-emerald-600 dark:text-emerald-400">Projected</span>
+                                <span class="text-xs text-slate-500 dark:text-slate-500">by reducing bias</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                        <div
+                            class="col-span-1 lg:col-span-2 p-6 rounded-xl bg-white dark:bg-surface-dark border border-slate-200 dark:border-border-dark shadow-sm flex flex-col">
+                            <div class="flex justify-between items-start mb-6">
+                                <div>
+                                    <h3 class="text-lg font-bold text-slate-900 dark:text-white">Bias Radar Profile</h3>
+                                    <p class="text-sm text-slate-500 dark:text-slate-400">Visualizing your psychological
+                                        tendencies across 5 axes.</p>
+                                </div>
+                                <button class="text-primary text-sm font-semibold hover:underline">View History</button>
+                            </div>
+                            <div class="flex-1 flex flex-col items-center justify-center relative min-h-[300px]">
+                                <svg class="w-full h-full max-h-[300px]" preserveAspectRatio="xMidYMid meet"
+                                    viewBox="0 0 400 300">
+                                    <path class="dark:opacity-50 opacity-20"
+                                        d="M200 40 L340 110 L290 260 L110 260 L60 110 Z" fill="none" stroke="#3a4e55"
+                                        stroke-dasharray="4 4" stroke-width="1"></path>
+                                    <path class="dark:opacity-50 opacity-20"
+                                        d="M200 80 L290 125 L260 220 L140 220 L110 125 Z" fill="none" stroke="#3a4e55"
+                                        stroke-dasharray="4 4" stroke-width="1"></path>
+                                    <path class="dark:opacity-50 opacity-20"
+                                        d="M200 120 L240 140 L230 180 L170 180 L160 140 Z" fill="none" stroke="#3a4e55"
+                                        stroke-dasharray="4 4" stroke-width="1"></path>
+                                    <line class="dark:opacity-30 opacity-10" stroke="#3a4e55" stroke-width="1" x1="200"
+                                        x2="200" y1="150" y2="40"></line>
+                                    <line class="dark:opacity-30 opacity-10" stroke="#3a4e55" stroke-width="1" x1="200"
+                                        x2="340" y1="150" y2="110"></line>
+                                    <line class="dark:opacity-30 opacity-10" stroke="#3a4e55" stroke-width="1" x1="200"
+                                        x2="290" y1="150" y2="260"></line>
+                                    <line class="dark:opacity-30 opacity-10" stroke="#3a4e55" stroke-width="1" x1="200"
+                                        x2="110" y1="150" y2="260"></line>
+                                    <line class="dark:opacity-30 opacity-10" stroke="#3a4e55" stroke-width="1" x1="200"
+                                        x2="60" y1="150" y2="110"></line>
+                                    <path d="M200 70 L300 120 L240 230 L150 190 L90 115 Z" fill="rgba(6, 188, 249, 0.2)"
+                                        stroke="#06bcf9" stroke-width="3"></path>
+                                    <circle cx="200" cy="70" fill="#06bcf9" r="4"></circle>
+                                    <circle cx="300" cy="120" fill="#06bcf9" r="4"></circle>
+                                    <circle cx="240" cy="230" fill="#06bcf9" r="4"></circle>
+                                    <circle cx="150" cy="190" fill="#06bcf9" r="4"></circle>
+                                    <circle cx="90" cy="115" fill="#06bcf9" r="4"></circle>
+                                    <text class="fill-slate-500 dark:fill-slate-400 text-xs font-bold"
+                                        text-anchor="middle" x="200" y="30">Loss Aversion</text>
+                                    <text class="fill-slate-500 dark:fill-slate-400 text-xs font-bold"
+                                        text-anchor="start" x="350" y="110">Overconfidence</text>
+                                    <text class="fill-slate-500 dark:fill-slate-400 text-xs font-bold"
+                                        text-anchor="middle" x="300" y="275">Anchoring</text>
+                                    <text class="fill-slate-500 dark:fill-slate-400 text-xs font-bold"
+                                        text-anchor="middle" x="100" y="275">Herding</text>
+                                    <text class="fill-slate-500 dark:fill-slate-400 text-xs font-bold" text-anchor="end"
+                                        x="50" y="110">Recency</text>
+                                </svg>
+                            </div>
+                        </div>
+                        <div
+                            class="col-span-1 p-6 rounded-xl bg-primary/5 dark:bg-[#152025] border border-primary/20 flex flex-col gap-4">
+                            <div class="flex items-center gap-2 mb-2">
+                                <span class="material-symbols-outlined text-primary">lightbulb</span>
+                                <h3 class="text-lg font-bold text-slate-900 dark:text-white">Active Recommendations</h3>
+                            </div>
+                            <div
+                                class="flex gap-3 p-3 rounded-lg bg-white dark:bg-surface-dark border border-slate-200 dark:border-border-dark shadow-sm">
+                                <div class="mt-1 shrink-0">
+                                    <span class="material-symbols-outlined text-orange-500 text-[20px]">warning</span>
+                                </div>
+                                <div>
+                                    <p class="text-sm font-bold text-slate-900 dark:text-white">High Loss Aversion
+                                        Detected</p>
+                                    <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">You hold losing positions
+                                        3x longer than winning ones.</p>
+                                    <button class="mt-2 text-xs font-bold text-primary hover:text-primary/80">Set Auto
+                                        Stop-Loss →</button>
+                                </div>
+                            </div>
+                            <div
+                                class="flex gap-3 p-3 rounded-lg bg-white dark:bg-surface-dark border border-slate-200 dark:border-border-dark shadow-sm">
+                                <div class="mt-1 shrink-0">
+                                    <span
+                                        class="material-symbols-outlined text-emerald-500 text-[20px]">check_circle</span>
+                                </div>
+                                <div>
+                                    <p class="text-sm font-bold text-slate-900 dark:text-white">Good Discipline</p>
+                                    <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Herding bias is low. You
+                                        are making independent decisions.</p>
+                                </div>
+                            </div>
+                            <div class="mt-auto pt-4">
+                                <button
+                                    class="w-full py-2 rounded-lg bg-slate-200 dark:bg-border-dark text-slate-700 dark:text-slate-300 text-sm font-bold hover:bg-slate-300 dark:hover:bg-opacity-80 transition-colors">
+                                    View All Strategies
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-4">
+                        <div class="flex items-center justify-between">
+                            <h3 class="text-xl font-bold text-slate-900 dark:text-white">Deep Dive: Anchoring Bias</h3>
+                            <div class="flex gap-2">
+                                <span
+                                    class="px-3 py-1 rounded-full text-xs font-bold bg-yellow-500/20 text-yellow-600 dark:text-yellow-400 border border-yellow-500/20">Moderate
+                                    Severity</span>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div
+                                class="p-6 rounded-xl bg-white dark:bg-surface-dark border border-slate-200 dark:border-border-dark">
+                                <div class="flex gap-4 items-start">
+                                    <div
+                                        class="size-12 rounded-full bg-blue-500/10 flex items-center justify-center shrink-0 text-blue-500">
+                                        <span class="material-symbols-outlined">anchor</span>
+                                    </div>
+                                    <div>
+                                        <h4 class="text-base font-bold text-slate-900 dark:text-white">What is
+                                            Anchoring?</h4>
+                                        <p class="text-sm text-slate-500 dark:text-slate-400 mt-2 leading-relaxed">
+                                            Anchoring occurs when you rely too heavily on the first piece of information
+                                            offered (the "anchor") when making decisions. In trading, this often means
+                                            fixating on your purchase price rather than the current market value.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="mt-6 pt-6 border-t border-slate-100 dark:border-border-dark">
+                                    <h5 class="text-sm font-bold text-slate-900 dark:text-white mb-3">Recent Example
+                                        from Your Portfolio</h5>
+                                    <div
+                                        class="flex items-center gap-4 p-3 rounded-lg bg-slate-50 dark:bg-background-dark border border-slate-200 dark:border-border-dark">
+                                        <div
+                                            class="size-10 rounded-full bg-slate-200 dark:bg-surface-dark flex items-center justify-center font-bold text-xs">
+                                            AAPL</div>
+                                        <div class="flex-1">
+                                            <div class="flex justify-between">
+                                                <span class="text-sm font-semibold text-slate-900 dark:text-white">Apple
+                                                    Inc. Trade</span>
+                                                <span class="text-xs text-slate-400">Oct 12</span>
+                                            </div>
+                                            <div class="text-xs text-slate-500 dark:text-slate-400 mt-1">
+                                                Held 15 days past optimal exit.
+                                                <span class="text-red-500 font-medium">Missed $450 profit.</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                class="p-6 rounded-xl bg-white dark:bg-surface-dark border border-slate-200 dark:border-border-dark flex flex-col justify-between">
+                                <div>
+                                    <h4 class="text-base font-bold text-slate-900 dark:text-white mb-4">Mitigation
+                                        Strategies</h4>
+                                    <ul class="space-y-3">
+                                        <li class="flex items-start gap-3">
+                                            <div class="mt-0.5 text-primary">
+                                                <span
+                                                    class="material-symbols-outlined text-[18px]">check_box_outline_blank</span>
+                                            </div>
+                                            <p class="text-sm text-slate-600 dark:text-slate-300">Set exit targets based
+                                                on technical indicators, not your entry price.</p>
+                                        </li>
+                                        <li class="flex items-start gap-3">
+                                            <div class="mt-0.5 text-primary">
+                                                <span
+                                                    class="material-symbols-outlined text-[18px]">check_box_outline_blank</span>
+                                            </div>
+                                            <p class="text-sm text-slate-600 dark:text-slate-300">Review historical
+                                                volatility to set realistic stop-loss margins.</p>
+                                        </li>
+                                        <li class="flex items-start gap-3">
+                                            <div class="mt-0.5 text-primary">
+                                                <span
+                                                    class="material-symbols-outlined text-[18px]">check_box_outline_blank</span>
+                                            </div>
+                                            <p class="text-sm text-slate-600 dark:text-slate-300">Use trailing stop
+                                                orders to lock in profits automatically.</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="mt-6">
+                                    <button
+                                        class="flex items-center justify-center gap-2 w-full py-2.5 rounded-lg bg-primary text-background-dark font-bold text-sm hover:bg-primary/90 transition-colors">
+                                        <span class="material-symbols-outlined text-[18px]">play_arrow</span>
+                                        Apply "Volatility Exit" Strategy
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+		
+		</div>
+		</div>
 	</main>
 </div>
 <div data-include="./shared/app-footer.html"></div>
