@@ -352,4 +352,50 @@ body::-webkit-scrollbar-thumb:hover {
         padding-left: 6px;
         padding-right: 6px;
     }
+
+    /* Prevent accidental horizontal overflow on very small screens for settings */
+    .fv-settings {
+        overflow-x: hidden;
+    }
+
+    /* Ensure the centered max-width container can't exceed viewport width */
+    .fv-settings .max-w-\[1200px\] {
+        max-width: 100% !important;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+        box-sizing: border-box;
+    }
+
+    /* Make sure form controls and large elements respect the viewport */
+    .fv-settings input,
+    .fv-settings select,
+    .fv-settings button {
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+}
+
+/* Broader small-screen safeguards for settings page (covers more device widths) */
+.fv-settings {
+    overflow-x: hidden; /* ensure no horizontal scroll from any child */
+}
+
+@media (max-width: 640px) {
+    /* make profile actions wrap earlier to avoid long button rows */
+    .fv-settings .profile-actions {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+    .fv-settings .profile-actions button {
+        flex: 1 1 auto;
+        min-width: 0; /* allow buttons to shrink below intrinsic width */
+    }
+
+    /* ensure the centered container doesn't exceed viewport on small screens */
+    .fv-settings .max-w-\[1200px\] {
+        max-width: 100% !important;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        box-sizing: border-box;
+    }
 }
