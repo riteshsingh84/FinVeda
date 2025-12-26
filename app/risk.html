@@ -1,54 +1,264 @@
 <!DOCTYPE html>
-<html class="dark" lang="en"><head>
-<meta charset="utf-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Risk Profiling - FinVeda</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
-<link rel="stylesheet" href="../css/main.css"/>
+<html class="dark" lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Risk Profiling - FinVeda</title>
+	<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+	<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+		rel="stylesheet" />
+	<link rel="stylesheet" href="../css/main.css" />
+
+	<script id="tailwind-config">
+		tailwind.config = {
+			darkMode: "class",
+			theme: {
+				extend: {
+					colors: {
+						"primary": "#06bcf9",
+						"background-light": "#f5f8f8",
+						"background-dark": "#0f1e23",
+						"surface-dark": "#18282e",
+						"surface-dark-lighter": "#203239",
+					},
+					fontFamily: {
+						"display": ["Manrope", "sans-serif"]
+					},
+					borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+				},
+			},
+		}
+	</script>
+
 </head>
+
 <body class="bg-[#0f1e23] text-white font-[Manrope]">
-<div class="flex h-screen w-full min-h-0">
-	<div data-include="./shared/app-nav.html"></div>
-	<div data-include="./shared/app-header.html"></div>
-	<main class="flex-1 flex flex-col h-full relative overflow-hidden min-h-0">
-	<div class="flex-1 overflow-y-auto px-6 py-10 fv-pad-header fv-pad-footer app-content-container">
-	<div class="max-w-[1200px] mx-auto flex flex-col gap-8">
-		<header>
-			<h1 class="text-3xl font-extrabold">Risk Profiling</h1>
-			<p class="text-[#9bb3bb] mt-1">Assess and adjust your risk tolerance dynamically.</p>
-		</header>
-		<section class="grid grid-cols-1 md:grid-cols-2 gap-6">
-			<div class="rounded-xl border border-border-dark bg-[#18282e] p-6">
-				<h3 class="text-lg font-bold mb-3 flex items-center gap-2"><span class="material-symbols-outlined text-[#06bcf9]">speed</span> Current Profile</h3>
-				<div class="flex items-center gap-6">
-					<div class="relative w-32 h-32">
-						<svg class="w-full h-full -rotate-90" viewBox="0 0 36 36">
-							<path d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" stroke="#27353a" stroke-width="4" fill="none"/>
-							<path d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" stroke="#06bcf9" stroke-width="4" stroke-dasharray="65,100" fill="none"/>
-						</svg>
-						<div class="absolute inset-0 flex items-center justify-center"><span class="font-bold">Balanced</span></div>
-					</div>
-					<div class="flex-1">
-						<p class="text-sm text-[#9bb3bb]">Your tolerance aligns with balanced growth and moderate volatility.</p>
+	<div class="flex h-screen w-full min-h-0">
+		<div data-include="./shared/app-nav.html"></div>
+		<div data-include="./shared/app-header.html"></div>
+		<main class="flex-1 flex flex-col h-full relative overflow-visible min-h-0">
+
+			<div class="flex-1 px-6 py-10 fv-pad-header fv-pad-footer app-content-container">
+				
+				<div class="max-w-[1200px] mx-auto flex flex-col gap-8">
+
+					<header class="flex flex-wrap justify-between items-end gap-4 border-b border-[#27353a] pb-6">
+					
+						<div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+							<div class="flex flex-col gap-2">
+								<h1 class="text-white text-3xl md:text-4xl font-black tracking-tight">Risk Profiling
+								</h1>
+								<p class="text-[#9bb3bb] text-base font-normal max-w-2xl">Assess your investment comfort
+									level
+									to get tailored portfolio recommendations. Your answers help our AI customize your
+									strategy.
+								</p>
+							</div>
+							<div class="flex gap-3">
+								<span
+									class="px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-bold border border-primary/20">Step
+									2 of 5</span>
+							</div>
+						</div>
+					</header>
+					<div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+						<div class="lg:col-span-8 flex flex-col gap-6">
+							<div class="flex flex-col gap-2">
+								<div class="flex justify-between items-end">
+									<span class="text-white text-sm font-semibold">Assessment Progress</span>
+									<span class="text-primary text-sm font-bold">40%</span>
+								</div>
+								<div class="h-2 w-full bg-[#1f2b30] rounded-full overflow-hidden">
+									<div class="h-full bg-primary rounded-full transition-all duration-500 ease-out"
+										style="width: 40%"></div>
+								</div>
+							</div>
+							<div class="bg-surface-dark rounded-xl border border-[#2d3b42] overflow-hidden">
+								<div class="p-6 md:p-8 border-b border-[#2d3b42]">
+									<div class="flex flex-col md:flex-row gap-6 items-start">
+										<div class="w-full md:w-1/3 aspect-video md:aspect-square bg-cover bg-center rounded-lg relative overflow-hidden group"
+											data-alt="Abstract visualization of stock market volatility with neon blue and red graph lines"
+											style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBdGx6AvkbPWH-clmIuJBzB9aiN1PdCAJsvHxWabyOBGcFvIWbycUX_INtg482DMw1R-uVoYRKZ1VfkzxlzXiJNJQxsQy-1sNNbxzrbhBkuDdcVuJzD2PZ3n2uuQgSh_U_8Ovn470WewdNdVDk4eciNly84prFy8bFReIkBud0r2yhRosuGB_CWmfy1Gj8YYgllbkpTTd2tpTs8h5pqWpDLdIBHIDOqYZExEIe9f8LUY9wWpHggSzHV9h04caHwKEBK8EEKF0QL5jU");'>
+											<div
+												class="absolute inset-0 bg-primary/10 group-hover:bg-primary/5 transition-colors">
+											</div>
+										</div>
+										<div class="flex-1 flex flex-col gap-3">
+											<span
+												class="text-primary text-xs font-bold uppercase tracking-wider">Question
+												2: Volatility</span>
+											<h2 class="text-white text-xl md:text-2xl font-bold leading-tight">Market
+												Downturn Reaction</h2>
+											<p class="text-[#9bb3bb] leading-relaxed">Imagine your portfolio loses 20%
+												of
+												its value in a single month due to a market correction. This represents
+												a
+												significant paper loss. How would you react instinctively?</p>
+										</div>
+									</div>
+								</div>
+								<div class="p-6 md:p-8 bg-surface-dark-lighter/30">
+									<div class="flex flex-col gap-3"
+										style="--radio-dot-svg: url('data:image/svg+xml,%3csvg viewBox=%270 0 16 16%27 fill=%27rgb(6,188,249)%27 xmlns=%27http://www.w3.org/2000/svg%27%3e%3ccircle cx=%278%27 cy=%278%27 r=%273%27/%3e%3c/svg%3e');">
+										<label
+											class="group relative flex items-center gap-4 rounded-lg border border-[#3a4e55] p-4 cursor-pointer hover:border-primary/50 hover:bg-primary/5 transition-all">
+											<input
+												class="peer h-5 w-5 border-2 border-[#546b74] bg-transparent text-primary checked:border-primary checked:bg-[image:--radio-dot-svg] focus:ring-0 focus:ring-offset-0 transition-all"
+												name="risk_q2" type="radio" />
+											<div class="flex flex-col">
+												<p
+													class="text-white font-medium group-hover:text-primary transition-colors">
+													Sell everything immediately</p>
+												<span class="text-[#9bb3bb] text-xs mt-1">Prevent further losses and
+													move to
+													cash.</span>
+											</div>
+											<div
+												class="absolute inset-0 rounded-lg border-2 border-primary opacity-0 peer-checked:opacity-100 pointer-events-none transition-opacity">
+											</div>
+										</label>
+										<label
+											class="group relative flex items-center gap-4 rounded-lg border border-[#3a4e55] p-4 cursor-pointer hover:border-primary/50 hover:bg-primary/5 transition-all">
+											<input
+												class="peer h-5 w-5 border-2 border-[#546b74] bg-transparent text-primary checked:border-primary checked:bg-[image:--radio-dot-svg] focus:ring-0 focus:ring-offset-0 transition-all"
+												name="risk_q2" type="radio" />
+											<div class="flex flex-col">
+												<p
+													class="text-white font-medium group-hover:text-primary transition-colors">
+													Sell some assets to cut losses</p>
+												<span class="text-[#9bb3bb] text-xs mt-1">Reduce exposure but stay
+													partially
+													invested.</span>
+											</div>
+											<div
+												class="absolute inset-0 rounded-lg border-2 border-primary opacity-0 peer-checked:opacity-100 pointer-events-none transition-opacity">
+											</div>
+										</label>
+										<label
+											class="group relative flex items-center gap-4 rounded-lg border border-[#3a4e55] p-4 cursor-pointer hover:border-primary/50 hover:bg-primary/5 transition-all">
+											<input checked=""
+												class="peer h-5 w-5 border-2 border-[#546b74] bg-transparent text-primary checked:border-primary checked:bg-[image:--radio-dot-svg] focus:ring-0 focus:ring-offset-0 transition-all"
+												name="risk_q2" type="radio" />
+											<div class="flex flex-col">
+												<p
+													class="text-white font-medium group-hover:text-primary transition-colors">
+													Do nothing and wait it out</p>
+												<span class="text-[#9bb3bb] text-xs mt-1">Trust in the long-term
+													recovery of
+													the market.</span>
+											</div>
+											<div
+												class="absolute inset-0 rounded-lg border-2 border-primary opacity-0 peer-checked:opacity-100 pointer-events-none transition-opacity">
+											</div>
+										</label>
+										<label
+											class="group relative flex items-center gap-4 rounded-lg border border-[#3a4e55] p-4 cursor-pointer hover:border-primary/50 hover:bg-primary/5 transition-all">
+											<input
+												class="peer h-5 w-5 border-2 border-[#546b74] bg-transparent text-primary checked:border-primary checked:bg-[image:--radio-dot-svg] focus:ring-0 focus:ring-offset-0 transition-all"
+												name="risk_q2" type="radio" />
+											<div class="flex flex-col">
+												<p
+													class="text-white font-medium group-hover:text-primary transition-colors">
+													Buy more while prices are low</p>
+												<span class="text-[#9bb3bb] text-xs mt-1">See volatility as a buying
+													opportunity.</span>
+											</div>
+											<div
+												class="absolute inset-0 rounded-lg border-2 border-primary opacity-0 peer-checked:opacity-100 pointer-events-none transition-opacity">
+											</div>
+										</label>
+									</div>
+								</div>
+								<div
+									class="p-6 border-t border-[#2d3b42] flex justify-between items-center bg-[#18282e]">
+									<button
+										class="text-[#9bb3bb] hover:text-white font-bold text-sm px-4 py-2 rounded-lg hover:bg-[#2d3b42] transition-colors flex items-center gap-2">
+										<span class="material-symbols-outlined text-lg">arrow_back</span>
+										Previous
+									</button>
+									<button
+										class="bg-primary hover:bg-primary/90 text-[#111618] font-bold text-sm px-8 py-3 rounded-lg shadow-[0_0_15px_rgba(6,188,249,0.3)] transition-all flex items-center gap-2">
+										Next Question
+										<span class="material-symbols-outlined text-lg">arrow_forward</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="lg:col-span-4 flex flex-col gap-6">
+							<div class="bg-surface-dark rounded-xl border border-[#2d3b42] p-6 flex flex-col gap-4">
+								<div class="flex items-center gap-3">
+									<div class="size-10 rounded-full bg-primary/10 flex items-center justify-center">
+										<span class="material-symbols-outlined text-primary">analytics</span>
+									</div>
+									<h3 class="text-white font-bold text-lg">Why we ask this</h3>
+								</div>
+								<p class="text-[#9bb3bb] text-sm leading-relaxed">
+									Market volatility is the biggest test of an investor's resolve. Understanding your
+									emotional response to loss helps us construct a portfolio that you can stick with
+									during
+									tough times.
+								</p>
+								<div class="h-px w-full bg-[#2d3b42]"></div>
+								<div
+									class="flex items-center gap-2 text-primary text-sm font-bold cursor-pointer hover:underline">
+									<span>Learn more about volatility</span>
+									<span class="material-symbols-outlined text-sm">open_in_new</span>
+								</div>
+							</div>
+							<div
+								class="bg-surface-dark rounded-xl border border-[#2d3b42] p-6 relative overflow-hidden">
+								<div
+									class="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full blur-3xl -mr-10 -mt-10 pointer-events-none">
+								</div>
+								<h3 class="text-white font-bold text-lg mb-4">Projected Profile</h3>
+								<div class="relative h-32 flex items-end justify-center mb-2">
+									<svg class="w-full h-full" viewBox="0 0 200 100">
+										<path d="M 20 100 A 80 80 0 0 1 180 100" fill="none" stroke="#2d3b42"
+											stroke-linecap="round" stroke-width="12"></path>
+										<path class="drop-shadow-[0_0_8px_rgba(6,188,249,0.5)]"
+											d="M 20 100 A 80 80 0 0 1 130 35" fill="none" stroke="#06bcf9"
+											stroke-linecap="round" stroke-width="12"></path>
+									</svg>
+									<div class="absolute bottom-0 flex flex-col items-center">
+										<span class="text-3xl font-black text-white">65<span
+												class="text-lg text-[#9bb3bb] font-medium">/100</span></span>
+									</div>
+								</div>
+								<div
+									class="flex justify-between text-xs text-[#9bb3bb] font-medium uppercase tracking-wider mb-6 px-4">
+									<span>Conservative</span>
+									<span class="text-primary">Moderate</span>
+									<span>Aggressive</span>
+								</div>
+								<div class="bg-[#203239] rounded-lg p-3 border border-[#2d3b42]">
+									<div class="flex gap-2 mb-2">
+										<span class="material-symbols-outlined text-primary text-sm">info</span>
+										<span class="text-white text-xs font-bold uppercase">Current Analysis</span>
+									</div>
+									<p class="text-[#9bb3bb] text-sm">Based on your answers so far, you lean towards a
+										<strong>Growth</strong> strategy with moderate risk tolerance.
+									</p>
+								</div>
+							</div>
+							<div
+								class="bg-gradient-to-br from-primary/20 to-surface-dark rounded-xl border border-primary/20 p-6">
+								<h3 class="text-white font-bold text-lg mb-2">Need Help?</h3>
+								<p class="text-[#9bb3bb] text-sm mb-4">Not sure how to answer? Speak with one of our
+									financial advisors.</p>
+								<button
+									class="w-full bg-[#111618] hover:bg-black text-white text-sm font-bold py-2 rounded-lg transition-colors border border-[#2d3b42]">Chat
+									with Advisor</button>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
-			<div class="rounded-xl border border-border-dark bg-[#18282e] p-6">
-				<h3 class="text-lg font-bold mb-3">Adjustments</h3>
-				<div class="space-y-3 text-sm">
-					<div class="flex justify-between"><span>Equities</span><span class="font-bold text-white">+5%</span></div>
-					<div class="flex justify-between"><span>Bonds</span><span class="font-bold text-white">-3%</span></div>
-					<div class="flex justify-between"><span>Cash</span><span class="font-bold text-white">-2%</span></div>
-				</div>
-			</div>
-		</section>	
+		</main>
 	</div>
-	</div>
-	</main>
-</div>
-<div data-include="./shared/app-footer.html"></div>
-<script src="../shared/include.js"></script>
+	<div data-include="./shared/app-footer.html"></div>
+	<script src="../shared/include.js"></script>
 </body>
+
 </html>
