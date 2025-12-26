@@ -79,6 +79,52 @@
     overflow: hidden;
 }
 
+/* Header mobile menu panel */
+.fv-header-panel {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 56px; /* will be adjusted dynamically to real header height */
+    z-index: 60;
+    background: #ffffff;
+    color: #111618;
+    border-top: 1px solid #eee;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    transform: translateY(-8px);
+    opacity: 0;
+    pointer-events: none;
+    transition: transform 160ms ease, opacity 160ms ease;
+}
+.dark .fv-header-panel {
+    background: #111618;
+    color: #ffffff;
+    border-top-color: var(--border-dark);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+}
+.fv-header-panel.fv-open {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+}
+.fv-header-links {
+    display: grid;
+    gap: 8px;
+    padding: 12px 16px;
+}
+.fv-header-links a {
+    display: block;
+    padding: 12px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: inherit;
+}
+.fv-header-links a:hover {
+    background: #f4f4f4;
+}
+.dark .fv-header-links a:hover {
+    background: #18282e;
+}
+
 /* Global scrollbar styling */
 html::-webkit-scrollbar,
 body::-webkit-scrollbar {

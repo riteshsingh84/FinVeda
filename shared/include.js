@@ -142,6 +142,7 @@
     try { updateHeaderTitle(); } catch(e) {}
     try { markActiveNav(); } catch(e) {}
     try { setupMobileNav(); } catch(e) {}
+    try { setupHeaderMenu(); } catch(e) {}
     try { adjustFooterPadding(); } catch(e) {}
     try { adjustHeaderPadding(); } catch(e) {}
   }
@@ -272,5 +273,106 @@
     let t;
     const onResize = () => { clearTimeout(t); t = setTimeout(apply, 100); };
     window.addEventListener('resize', onResize);
+  }
+
+  // Header mobile menu (hamburger) setup
+  function setupHeaderMenu(){
+    const header = document.querySelector('.fv-fixed-header');
+    const toggleBtn = document.querySelector('#fv-header-menu-toggle');
+    if(!header || !toggleBtn) return;
+
+    // Reuse global overlay if present or create one
+    let overlay = document.querySelector('.fv-overlay');
+    if(!overlay){
+      overlay = document.createElement('div');
+      overlay.className = 'fv-overlay';
+      overlay.setAttribute('aria-hidden','true');
+      document.body.appendChild(overlay);
+    }
+
+    // Create header menu panel if not present
+    let panel = document.querySelector('#fv-header-mobile-menu');
+    if(!panel){
+      panel = document.createElement('div');
+      panel.id = 'fv-header-mobile-menu';
+      panel.className = 'fv-header-panel';
+
+      const linksWrap = document.createElement('nav');
+      linksWrap.className = 'fv-header-links';
+
+      // Clone desktop header links
+      const desktopNav = header.querySelector('nav');
+      const anchors = desktopNav ? Array.from(desktopNav.querySelectorAll('a')) : [];
+      if(anchors.length){
+        anchors.forEach(a => {
+          const clone = document.createElement('a');
+          // Prefer data-path for consistent BASE handling
+          const rel = a.getAttribute('data-path');
+          const href = a.getAttribute('href');
+          if(rel){ clone.setAttribute('data-path', rel); }
+          else if(href){ clone.setAttribute('href', href); }
+          clone.textContent = a.textContent || '';
+          linksWrap.appendChild(clone);
+        });
+      }
+
+      panel.appendChild(linksWrap);
+      document.body.appendChild(panel);
+
+      // Apply base bindings to clones
+      applyBase(panel);
+    }
+
+    // Utility: set panel top equal to header height
+    function positionPanel(){
+      const h = header.offsetHeight || 56;
+      panel.style.top = h + 'px';
+    }
+    positionPanel();
+    window.addEventListener('resize', () => { positionPanel(); });
+
+    // Open/close helpers
+    function setOpen(open){
+      overlay.classList.toggle('fv-show', open);
+      panel.classList.toggle('fv-open', open);
+      document.body.classList.toggle('fv-no-scroll', open);
+      toggleBtn.setAttribute('aria-expanded', String(open));
+      const icon = toggleBtn.querySelector('.material-symbols-outlined');
+      if(icon){ icon.textContent = open ? 'close' : 'menu'; }
+      toggleBtn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+      if(open){
+        const first = panel.querySelector('.fv-header-links a');
+        if(first) try{ first.focus({preventScroll:true}); }catch(_){ first.focus(); }
+      } else {
+        try{ toggleBtn.focus({preventScroll:true}); }catch(_){ toggleBtn.focus(); }
+      }
+    }
+
+    function isDesktop(){
+      // Match md breakpoint (~768px). Our header uses md classes to hide button on desktop.
+      return window.matchMedia('(min-width: 768px)').matches;
+    }
+
+    // Click to toggle
+    toggleBtn.addEventListener('click', () => {
+      if(isDesktop()){ return; }
+      const open = panel.classList.contains('fv-open');
+      setOpen(!open);
+    });
+
+    // Close on overlay click
+    overlay.addEventListener('click', () => { setOpen(false); });
+
+    // Close on Escape
+    document.addEventListener('keydown', (e) => { if(e.key === 'Escape') setOpen(false); });
+
+    // Close when clicking a link
+    panel.addEventListener('click', (e) => {
+      const a = e.target && e.target.closest('a');
+      if(a) setOpen(false);
+    });
+
+    // Ensure correct state on breakpoint changes
+    window.matchMedia('(min-width: 768px)').addEventListener('change', () => { setOpen(false); });
   }
 })();
