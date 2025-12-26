@@ -7,36 +7,376 @@
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
 <link rel="stylesheet" href="../css/main.css"/>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#06bcf9",
+                        "background-light": "#f5f8f8",
+                        "background-dark": "#0f1e23",
+                        "surface-dark": "#111618",
+                        "surface-light": "#1b2427",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
 </head>
 <body class="bg-[#0f1e23] text-white font-[Manrope]">
 <div class="flex h-screen w-full min-h-0">
 	<div data-include="./shared/app-nav.html"></div>
 	<div data-include="./shared/app-header.html"></div>
-	<main class="flex-1 flex flex-col h-full relative overflow-hidden min-h-0">
-	<div class="flex-1 overflow-y-auto px-6 py-10 fv-pad-header fv-pad-footer app-content-container">
+	<main class="flex-1 flex flex-col h-full relative overflow-visible min-h-0">
+	<div class="flex-1 px-6 py-10 fv-pad-header fv-pad-footer app-content-container">
 	<div class="max-w-[1200px] mx-auto flex flex-col gap-8">
+		
 		<header>
-			<h1 class="text-3xl font-extrabold">Tax Optimization</h1>
-			<p class="text-[#9bb3bb] mt-1">Strategies to reduce tax impact on gains.</p>
+			<div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+                <div class="flex flex-col gap-1">
+                    <h1
+                        class="text-3xl font-black text-slate-900 dark:text-white tracking-tight flex items-center gap-3">
+                        Tax Optimization
+                        <span
+                            class="px-2 py-0.5 rounded text-xs font-bold bg-primary/20 text-primary border border-primary/20">BETA</span>
+                    </h1>
+                    <p class="text-slate-500 dark:text-[#9bb3bb]">AI-driven strategies to maximize your after-tax
+                        returns.</p>
+                </div>
+                <div class="flex items-center gap-3">
+                    <button
+                        class="px-4 py-2 rounded-lg border border-slate-200 dark:border-[#3a4e55] text-slate-700 dark:text-[#9bb3bb] text-sm font-medium hover:bg-slate-100 dark:hover:bg-[#27353a] transition-colors flex items-center gap-2">
+                        <span class="material-symbols-outlined" style="font-size: 18px;">download</span>
+                        Export Report
+                    </button>
+                    <button
+                        class="px-4 py-2 rounded-lg bg-primary text-black text-sm font-bold hover:bg-[#33c9fc] transition-colors flex items-center gap-2 shadow-[0_0_15px_rgba(6,188,249,0.4)]">
+                        <span class="material-symbols-outlined" style="font-size: 18px;">auto_awesome</span>
+                        Apply All Suggestions
+                    </button>
+                </div>
+            </div>
 		</header>
-		<section class="grid grid-cols-1 md:grid-cols-2 gap-6">
-			<div class="rounded-xl border border-border-dark bg-[#18282e] p-6 relative overflow-hidden">
-				<div class="absolute top-0 left-0 w-1 h-full bg-[#06bcf9]"></div>
-				<div class="flex items-start justify-between mb-3">
-					<h3 class="text-lg font-bold flex items-center gap-2"><span class="material-symbols-outlined text-[#06bcf9]">savings</span> Harvesting Opportunity</h3>
-					<span class="text-xs bg-[#06bcf9]/10 text-[#06bcf9] px-2 py-1 rounded font-bold">Action Needed</span>
-				</div>
-				<p class="text-sm text-[#9bb3bb]">AI detected a tax-loss harvesting opportunity. Potential offset: <span class="text-white font-bold">$320</span>.</p>
-				<button class="mt-4 w-full py-2 rounded-lg bg-[#27353a] hover:bg-[#324248] text-white text-sm font-bold">Review Suggestions</button>
-			</div>
-			<div class="rounded-xl border border-border-dark bg-[#18282e] p-6">
-				<h3 class="text-lg font-bold mb-3">Recent Actions</h3>
-				<ul class="space-y-2 text-sm">
-					<li class="flex items-start gap-2"><span class="material-symbols-outlined text-emerald-400">check_circle</span> Sold underperforming ETF to realize loss</li>
-					<li class="flex items-start gap-2"><span class="material-symbols-outlined text-emerald-400">check_circle</span> Reallocated to similar asset (wash-sale safe)</li>
-				</ul>
-			</div>
-		</section>
+
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div
+                    class="bg-white dark:bg-[#1b2427] p-6 rounded-xl border border-slate-200 dark:border-[#27353a] relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 p-4 group-hover:opacity-20 transition-opacity">
+                        <span class="material-symbols-outlined text-primary" style="font-size: 48px;">savings</span>
+                    </div>
+                    <p class="text-slate-500 dark:text-[#9bb3bb] text-sm font-medium mb-1">Total Projected Savings</p>
+                    <p class="text-3xl font-bold text-slate-900 dark:text-white tracking-tight">$4,250</p>
+                    <div class="mt-4 flex items-center gap-2">
+                        <span
+                            class="text-emerald-500 bg-emerald-500/10 px-1.5 py-0.5 rounded text-xs font-bold flex items-center gap-1">
+                            <span class="material-symbols-outlined" style="font-size: 14px;">trending_up</span>
+                            +12%
+                        </span>
+                        <span class="text-xs text-slate-400 dark:text-[#6b7280]">vs last month</span>
+                    </div>
+                </div>
+                <div
+                    class="bg-white dark:bg-[#1b2427] p-6 rounded-xl border border-slate-200 dark:border-[#27353a] relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 p-4 group-hover:opacity-20 transition-opacity">
+                        <span class="material-symbols-outlined text-rose-500"
+                            style="font-size: 48px;">trending_down</span>
+                    </div>
+                    <p class="text-slate-500 dark:text-[#9bb3bb] text-sm font-medium mb-1">Harvestable Losses</p>
+                    <p class="text-3xl font-bold text-slate-900 dark:text-white tracking-tight">$1,200</p>
+                    <div class="mt-4 flex items-center gap-2">
+                        <span class="text-xs text-slate-400 dark:text-[#6b7280]">3 assets available for
+                            harvesting</span>
+                    </div>
+                </div>
+                <div
+                    class="bg-white dark:bg-[#1b2427] p-6 rounded-xl border border-slate-200 dark:border-[#27353a] relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 p-4 group-hover:opacity-20 transition-opacity">
+                        <span class="material-symbols-outlined text-primary" style="font-size: 48px;">grade</span>
+                    </div>
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <p class="text-slate-500 dark:text-[#9bb3bb] text-sm font-medium mb-1">Tax Efficiency Score
+                            </p>
+                            <p class="text-3xl font-bold text-slate-900 dark:text-white tracking-tight">94<span
+                                    class="text-lg text-slate-400 dark:text-[#6b7280] font-normal">/100</span></p>
+                        </div>
+                        <div class="relative w-12 h-12 rounded-full border-4 border-[#27353a] flex items-center justify-center"
+                            style="border-right-color: #06bcf9; border-top-color: #06bcf9; border-left-color: #06bcf9; transform: rotate(45deg);">
+                        </div>
+                    </div>
+                    <div class="mt-4">
+                        <p class="text-xs text-slate-400 dark:text-[#6b7280]">Your portfolio is highly optimized.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                <div class="lg:col-span-2 flex flex-col gap-6">
+                    <div
+                        class="bg-white dark:bg-[#1b2427] rounded-xl border border-slate-200 dark:border-[#27353a] p-6">
+                        <div class="flex justify-between items-center mb-6">
+                            <h3 class="text-lg font-bold text-slate-900 dark:text-white">Tax Liability Projection</h3>
+                            <div class="flex bg-slate-100 dark:bg-[#111618] rounded-lg p-1">
+                                <button
+                                    class="px-3 py-1 rounded text-xs font-medium bg-white dark:bg-[#27353a] text-slate-900 dark:text-white shadow-sm">1Y</button>
+                                <button
+                                    class="px-3 py-1 rounded text-xs font-medium text-slate-500 dark:text-[#9bb3bb] hover:text-slate-900 dark:hover:text-white">3Y</button>
+                                <button
+                                    class="px-3 py-1 rounded text-xs font-medium text-slate-500 dark:text-[#9bb3bb] hover:text-slate-900 dark:hover:text-white">5Y</button>
+                            </div>
+                        </div>
+                        <div class="h-64 w-full relative">
+                            <div class="absolute inset-0 flex flex-col justify-between text-xs text-[#586e75]">
+                                <div class="border-b border-dashed border-[#27353a] w-full h-0"></div>
+                                <div class="border-b border-dashed border-[#27353a] w-full h-0"></div>
+                                <div class="border-b border-dashed border-[#27353a] w-full h-0"></div>
+                                <div class="border-b border-dashed border-[#27353a] w-full h-0"></div>
+                            </div>
+                            <div class="absolute bottom-0 left-0 w-full h-full flex items-end px-2">
+                                <div class="w-full h-full relative">
+                                    <svg class="w-full h-full overflow-visible" preserveAspectRatio="none"
+                                        viewBox="0 0 100 50">
+                                        <path d="M0,45 C20,40 50,30 100,10" fill="none" stroke="#64748b"
+                                            stroke-dasharray="4,4" stroke-width="2"></path>
+                                        <path d="M0,45 C20,42 50,40 100,35" fill="none" stroke="#06bcf9"
+                                            stroke-width="3"></path>
+                                        <circle cx="100" cy="10" fill="#64748b" r="3"></circle>
+                                        <circle cx="100" cy="35" fill="#06bcf9" r="3"></circle>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="absolute top-0 right-0 flex flex-col gap-2 text-xs">
+                                <div class="flex items-center gap-2">
+                                    <div class="w-3 h-0.5 bg-slate-500 border-t border-dashed border-slate-500"></div>
+                                    <span class="text-[#9bb3bb]">Current Strategy</span>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <div class="w-3 h-1 bg-primary rounded-full"></div>
+                                    <span class="text-white font-medium">Optimized Strategy</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="bg-white dark:bg-[#1b2427] rounded-xl border border-slate-200 dark:border-[#27353a] overflow-hidden">
+                        <div
+                            class="p-6 border-b border-slate-200 dark:border-[#27353a] flex justify-between items-center">
+                            <div>
+                                <h3 class="text-lg font-bold text-slate-900 dark:text-white flex items-center gap-2">
+                                    <span class="material-symbols-outlined text-primary"
+                                        style="font-size: 24px;">content_cut</span>
+                                    Tax-Loss Harvesting Opportunities
+                                </h3>
+                                <p class="text-sm text-slate-500 dark:text-[#9bb3bb] mt-1">Review and harvest losses to
+                                    offset capital gains.</p>
+                            </div>
+                            <div class="text-right">
+                                <p class="text-xs text-[#9bb3bb] uppercase font-bold tracking-wide">Selected Savings</p>
+                                <p class="text-xl font-bold text-white">$1,200.00</p>
+                            </div>
+                        </div>
+                        <div class="overflow-x-auto">
+                            <table class="w-full text-left border-collapse">
+                                <thead>
+                                    <tr
+                                        class="bg-slate-50 dark:bg-[#111618] text-slate-500 dark:text-[#9bb3bb] text-xs uppercase tracking-wider font-semibold">
+                                        <th class="px-6 py-4">Asset</th>
+                                        <th class="px-6 py-4">Purchase Date</th>
+                                        <th class="px-6 py-4">Cost Basis</th>
+                                        <th class="px-6 py-4">Current Value</th>
+                                        <th class="px-6 py-4">Unrealized Loss</th>
+                                        <th class="px-6 py-4 text-center">Harvest</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="divide-y divide-slate-200 dark:divide-[#27353a] text-sm">
+                                    <tr class="hover:bg-slate-50 dark:hover:bg-[#202b30] transition-colors">
+                                        <td class="px-6 py-4 font-medium text-slate-900 dark:text-white">
+                                            <div class="flex items-center gap-3">
+                                                <div
+                                                    class="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center text-xs font-bold text-white">
+                                                    TS</div>
+                                                Tesla (TSLA)
+                                            </div>
+                                        </td>
+                                        <td class="px-6 py-4 text-slate-500 dark:text-[#9bb3bb]">Jan 15, 2023</td>
+                                        <td class="px-6 py-4 text-slate-500 dark:text-[#9bb3bb]">$18,500</td>
+                                        <td class="px-6 py-4 text-slate-500 dark:text-[#9bb3bb]">$18,100</td>
+                                        <td class="px-6 py-4">
+                                            <span
+                                                class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-red-100 dark:bg-red-500/10 text-red-800 dark:text-red-400">
+                                                -$400
+                                            </span>
+                                        </td>
+                                        <td class="px-6 py-4 text-center">
+                                            <input checked=""
+                                                class="rounded border-slate-300 dark:border-[#3a4e55] bg-transparent text-primary focus:ring-primary h-5 w-5 cursor-pointer"
+                                                type="checkbox" />
+                                        </td>
+                                    </tr>
+                                    <tr class="hover:bg-slate-50 dark:hover:bg-[#202b30] transition-colors">
+                                        <td class="px-6 py-4 font-medium text-slate-900 dark:text-white">
+                                            <div class="flex items-center gap-3">
+                                                <div
+                                                    class="w-8 h-8 rounded-full bg-orange-500 flex items-center justify-center text-xs font-bold text-white">
+                                                    BT</div>
+                                                Bitcoin (BTC)
+                                            </div>
+                                        </td>
+                                        <td class="px-6 py-4 text-slate-500 dark:text-[#9bb3bb]">Mar 05, 2023</td>
+                                        <td class="px-6 py-4 text-slate-500 dark:text-[#9bb3bb]">$45,000</td>
+                                        <td class="px-6 py-4 text-slate-500 dark:text-[#9bb3bb]">$44,880</td>
+                                        <td class="px-6 py-4">
+                                            <span
+                                                class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-red-100 dark:bg-red-500/10 text-red-800 dark:text-red-400">
+                                                -$120
+                                            </span>
+                                        </td>
+                                        <td class="px-6 py-4 text-center">
+                                            <input checked=""
+                                                class="rounded border-slate-300 dark:border-[#3a4e55] bg-transparent text-primary focus:ring-primary h-5 w-5 cursor-pointer"
+                                                type="checkbox" />
+                                        </td>
+                                    </tr>
+                                    <tr class="hover:bg-slate-50 dark:hover:bg-[#202b30] transition-colors">
+                                        <td class="px-6 py-4 font-medium text-slate-900 dark:text-white">
+                                            <div class="flex items-center gap-3">
+                                                <div
+                                                    class="w-8 h-8 rounded-full bg-purple-600 flex items-center justify-center text-xs font-bold text-white">
+                                                    AR</div>
+                                                ARK Innovation (ARKK)
+                                            </div>
+                                        </td>
+                                        <td class="px-6 py-4 text-slate-500 dark:text-[#9bb3bb]">Feb 10, 2023</td>
+                                        <td class="px-6 py-4 text-slate-500 dark:text-[#9bb3bb]">$5,200</td>
+                                        <td class="px-6 py-4 text-slate-500 dark:text-[#9bb3bb]">$4,520</td>
+                                        <td class="px-6 py-4">
+                                            <span
+                                                class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-red-100 dark:bg-red-500/10 text-red-800 dark:text-red-400">
+                                                -$680
+                                            </span>
+                                        </td>
+                                        <td class="px-6 py-4 text-center">
+                                            <input checked=""
+                                                class="rounded border-slate-300 dark:border-[#3a4e55] bg-transparent text-primary focus:ring-primary h-5 w-5 cursor-pointer"
+                                                type="checkbox" />
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div
+                            class="p-4 border-t border-slate-200 dark:border-[#27353a] bg-slate-50 dark:bg-[#111618] flex justify-end">
+                            <button
+                                class="px-4 py-2 rounded-lg bg-primary text-black text-sm font-bold hover:bg-[#33c9fc] transition-colors shadow-lg shadow-primary/20">
+                                Execute Selected Trades
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-6">
+                    <div
+                        class="bg-gradient-to-br from-[#1b2427] to-[#111618] rounded-xl border border-primary/30 p-6 relative overflow-hidden">
+                        <div
+                            class="absolute top-0 right-0 w-32 h-32 bg-primary/10 rounded-full blur-3xl -mr-16 -mt-16 pointer-events-none">
+                        </div>
+                        <h3 class="text-lg font-bold text-white flex items-center gap-2 mb-4 relative z-10">
+                            <span class="material-symbols-outlined text-primary"
+                                style="font-variation-settings: 'FILL' 1;">psychology</span>
+                            AI Recommendation
+                        </h3>
+                        <div class="flex flex-col gap-4 relative z-10">
+                            <div class="p-3 rounded-lg bg-[#27353a]/50 border border-[#3a4e55]">
+                                <div class="flex items-center gap-2 mb-2">
+                                    <span class="text-xs font-bold text-primary uppercase tracking-wider">Action</span>
+                                    <span
+                                        class="px-1.5 py-0.5 rounded text-[10px] bg-primary/20 text-primary border border-primary/20">High
+                                        Confidence</span>
+                                </div>
+                                <p class="text-sm text-white mb-2">Move <span class="font-bold">$5,000</span> from
+                                    High-Yield Savings to Muni Bonds.</p>
+                                <p class="text-xs text-[#9bb3bb]">This reallocation could improve your tax-equivalent
+                                    yield by <span class="text-emerald-400">1.2%</span>.</p>
+                            </div>
+                            <div class="p-3 rounded-lg bg-[#27353a]/50 border border-[#3a4e55]">
+                                <div class="flex items-center gap-2 mb-2">
+                                    <span
+                                        class="text-xs font-bold text-primary uppercase tracking-wider">Strategy</span>
+                                </div>
+                                <p class="text-sm text-white mb-2">Consider a "Mega Backdoor" Roth conversion.</p>
+                                <p class="text-xs text-[#9bb3bb]">Based on your income bracket, this could save ~$2k in
+                                    future liabilities.</p>
+                            </div>
+                        </div>
+                        <button
+                            class="w-full mt-4 py-2 text-sm text-primary font-medium hover:text-white transition-colors flex items-center justify-center gap-1 group">
+                            View All Suggestions
+                            <span class="material-symbols-outlined transition-transform group-hover:translate-x-1"
+                                style="font-size: 16px;">arrow_forward</span>
+                        </button>
+                    </div>
+                    <div class="bg-[#1b2427] rounded-xl border border-orange-500/30 p-6">
+                        <h3 class="text-lg font-bold text-white flex items-center gap-2 mb-4">
+                            <span class="material-symbols-outlined text-orange-500">warning</span>
+                            Wash Sale Watch
+                        </h3>
+                        <p class="text-sm text-[#9bb3bb] mb-4">You recently sold <span
+                                class="text-white font-medium">NVDA</span> at a loss. Repurchasing before <span
+                                class="text-white font-medium">Nov 12</span> will disallow the tax deduction.</p>
+                        <div class="w-full bg-[#111618] rounded-full h-2 mb-2 overflow-hidden">
+                            <div class="bg-orange-500 h-full rounded-full" style="width: 70%"></div>
+                        </div>
+                        <div class="flex justify-between text-xs text-[#586e75]">
+                            <span>Sale Date</span>
+                            <span>Safe Date: Nov 12</span>
+                        </div>
+                    </div>
+                    <div
+                        class="bg-white dark:bg-[#1b2427] rounded-xl border border-slate-200 dark:border-[#27353a] p-6">
+                        <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-4">Efficient Swaps</h3>
+                        <div class="flex flex-col gap-3">
+                            <div
+                                class="flex items-center justify-between p-3 rounded-lg bg-slate-50 dark:bg-[#111618] border border-slate-200 dark:border-[#27353a]">
+                                <div class="flex items-center gap-3">
+                                    <div
+                                        class="w-8 h-8 rounded bg-[#27353a] flex items-center justify-center text-xs font-bold text-white">
+                                        SPY</div>
+                                    <span class="material-symbols-outlined text-slate-400"
+                                        style="font-size: 16px;">arrow_right_alt</span>
+                                    <div
+                                        class="w-8 h-8 rounded bg-[#27353a] flex items-center justify-center text-xs font-bold text-white">
+                                        VOO</div>
+                                </div>
+                                <div class="text-right">
+                                    <p class="text-xs text-[#9bb3bb]">Expense Ratio</p>
+                                    <p class="text-sm font-medium text-emerald-400">-0.06%</p>
+                                </div>
+                            </div>
+                            <div
+                                class="flex items-center justify-between p-3 rounded-lg bg-slate-50 dark:bg-[#111618] border border-slate-200 dark:border-[#27353a]">
+                                <div class="flex items-center gap-3">
+                                    <div
+                                        class="w-8 h-8 rounded bg-[#27353a] flex items-center justify-center text-xs font-bold text-white">
+                                        GLD</div>
+                                    <span class="material-symbols-outlined text-slate-400"
+                                        style="font-size: 16px;">arrow_right_alt</span>
+                                    <div
+                                        class="w-8 h-8 rounded bg-[#27353a] flex items-center justify-center text-xs font-bold text-white">
+                                        IAU</div>
+                                </div>
+                                <div class="text-right">
+                                    <p class="text-xs text-[#9bb3bb]">Tax Savings</p>
+                                    <p class="text-sm font-medium text-emerald-400">High</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
 	</div>
 	</div>
 	</main>
