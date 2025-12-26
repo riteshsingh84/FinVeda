@@ -55,12 +55,15 @@
     position: fixed;
     top: 0;
     left: 0;
-    height: 100vh;
+    /* Allow CSS to size from header height variable set by JS; fallback to 100vh */
+    top: var(--fv-header-height, 0);
+    height: calc(100vh - var(--fv-header-height, 56px));
     width: 18rem; /* 72 * 0.25rem */
     z-index: 60;
     transform: translateX(-100%);
     transition: transform 200ms ease-in-out;
     box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+    overflow-y: auto; /* make nav scrollable when content exceeds available space */
 }
 .fv-mobile-open {
     transform: translateX(0);
@@ -78,6 +81,21 @@
 .fv-overlay.fv-show {
     opacity: 1;
     pointer-events: auto;
+}
+
+/* Tidy mobile nav content spacing */
+@media (max-width: 1023px) {
+    aside.fv-nav-mobile {
+        padding-top: 8px;
+        padding-bottom: 8px;
+    }
+    aside.fv-nav-mobile .flex-1 {
+        display: block; /* allow content to flow naturally */
+        height: auto;
+    }
+    aside.fv-nav-mobile .truncate {
+        white-space: nowrap;
+    }
 }
 /* Prevent body scroll when drawer is open */
 .fv-no-scroll {

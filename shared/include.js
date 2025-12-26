@@ -268,6 +268,8 @@
     function apply(){
       const h = header.offsetHeight || 0;
       document.querySelectorAll('.fv-pad-header').forEach(el => { el.style.paddingTop = h + 'px'; });
+      // Expose header height as a CSS variable so CSS can size mobile nav correctly
+      try{ document.documentElement.style.setProperty('--fv-header-height', h + 'px'); }catch(_){}
     }
     apply();
     let t;
