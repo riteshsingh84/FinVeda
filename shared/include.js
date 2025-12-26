@@ -141,6 +141,7 @@
     // After includes load, set dynamic page title in the app header
     try { updateHeaderTitle(); } catch(e) {}
     try { markActiveNav(); } catch(e) {}
+    try { setupMobileNav(); } catch(e) {}
   }
   document.addEventListener('DOMContentLoaded', loadIncludes);
   
@@ -191,5 +192,55 @@
         a.classList.add('fv-active');
       }
     });
+  }
+
+  // Mobile sidebar toggle (drawer) setup
+  function setupMobileNav(){
+    const aside = document.querySelector('aside');
+    const toggleBtn = document.querySelector('[data-nav-toggle]');
+    if(!aside || !toggleBtn) return;
+
+    // Create overlay
+    let overlay = document.querySelector('.fv-overlay');
+    if(!overlay){
+      overlay = document.createElement('div');
+      overlay.className = 'fv-overlay';
+      overlay.setAttribute('aria-hidden','true');
+      document.body.appendChild(overlay);
+    }
+
+    const mq = window.matchMedia('(min-width: 1024px)');
+    function close(){
+      aside.classList.remove('fv-mobile-open');
+      overlay.classList.remove('fv-show');
+      document.body.classList.remove('fv-no-scroll');
+    }
+    function open(){
+      aside.classList.add('fv-mobile-open');
+      overlay.classList.add('fv-show');
+      document.body.classList.add('fv-no-scroll');
+    }
+
+    function applyMode(){
+      if(mq.matches){
+        // Desktop: ensure drawer behavior disabled, sidebar shown via lg:flex
+        aside.classList.remove('fv-nav-mobile');
+        close();
+      } else {
+        // Mobile: enable drawer, remove hidden to allow off-canvas
+        aside.classList.add('fv-nav-mobile');
+        aside.classList.remove('hidden');
+      }
+    }
+    applyMode();
+
+    toggleBtn.addEventListener('click', () => {
+      if(mq.matches){ return; }
+      const isOpen = aside.classList.contains('fv-mobile-open');
+      isOpen ? close() : open();
+    });
+    overlay.addEventListener('click', close);
+    document.addEventListener('keydown', (e) => { if(e.key === 'Escape') close(); });
+    mq.addEventListener('change', applyMode);
   }
 })();
