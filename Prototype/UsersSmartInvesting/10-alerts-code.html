@@ -1,14 +1,19 @@
 <!DOCTYPE html>
-<html class="dark" lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>FinTech Pro - Alerts</title>
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<script id="tailwind-config">
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>FinTech Pro - Alerts</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
         tailwind.config = {
             darkMode: "class",
             theme: {
@@ -23,344 +28,443 @@
                     fontFamily: {
                         "display": ["Manrope", "sans-serif"]
                     },
-                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
                 },
             },
         }
     </script>
-<style>::-webkit-scrollbar {
+    <style>
+        ::-webkit-scrollbar {
             width: 8px;
             height: 8px;
         }
+
         ::-webkit-scrollbar-track {
-            background: #0f1e23; 
+            background: #0f1e23;
         }
+
         ::-webkit-scrollbar-thumb {
-            background: #1e3037; 
+            background: #1e3037;
             border-radius: 4px;
         }
+
         ::-webkit-scrollbar-thumb:hover {
-            background: #2a4049; 
+            background: #2a4049;
         }
     </style>
 </head>
+
 <body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white font-display overflow-hidden">
-<div class="flex h-screen w-full overflow-hidden">
-<div class="hidden lg:flex flex-col w-72 bg-card-dark border-r border-slate-800 flex-shrink-0">
-<div class="p-6 flex flex-col gap-6 h-full">
-<div class="flex items-center gap-3 flex-shrink-0">
-<div class="bg-center bg-no-repeat bg-cover rounded-full size-12 ring-2 ring-primary/20" data-alt="User profile picture showing a professional headshot" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD5vyoKKcxnd9niLgewnB2jYGbzSA3XZy-Pf3VBSILVBGCWASo_XhZR2i87mv8rsA1wD_GoyrxMyKcSHpxC_-a03JWVsxltKFh4TpvVXyjO3HV32QANI_uAB1UFFO1xcUTx6GdDsjsngIOd_yW3kK8CU_UzGSpPPTGQSoVAwWid8b8jodfE4ORhSDOfsCsZfeEyCUl-33NsuZjyijgBFFTrThBsncrmnK4RVBc4RacE1vM1ADJ6rqLvhPSuou06pDPlMVutOXiH580");'>
-</div>
-<div class="flex flex-col">
-<h1 class="text-white text-lg font-bold leading-tight">FinTech Pro</h1>
-<p class="text-primary text-xs font-medium uppercase tracking-wider">Pro Investor</p>
-</div>
-</div>
-<div class="flex flex-col gap-1 flex-1 overflow-y-auto pr-2 -mr-2">
-<div class="px-4 mt-2 mb-2 text-xs font-bold text-slate-500 uppercase tracking-wider">Overview</div>
-<a class="flex items-center gap-3 px-4 py-2.5 rounded-lg text-slate-400 hover:text-white hover:bg-white/5 transition-colors" href="#">
-<span class="material-symbols-outlined text-[20px]">dashboard</span>
-<span class="text-sm font-medium">Dashboard</span>
-</a>
-<a class="flex items-center gap-3 px-4 py-2.5 rounded-lg text-slate-400 hover:text-white hover:bg-white/5 transition-colors" href="#">
-<span class="material-symbols-outlined text-[20px]">pie_chart</span>
-<span class="text-sm font-medium">Portfolio</span>
-</a>
-<a class="flex items-center gap-3 px-4 py-2.5 rounded-lg text-slate-400 hover:text-white hover:bg-white/5 transition-colors" href="#">
-<span class="material-symbols-outlined text-[20px]">receipt_long</span>
-<span class="text-sm font-medium">Transactions</span>
-</a>
-<div class="px-4 mt-6 mb-2 text-xs font-bold text-slate-500 uppercase tracking-wider">Intelligence</div>
-<a class="flex items-center gap-3 px-4 py-2.5 rounded-lg text-slate-400 hover:text-white hover:bg-white/5 transition-colors" href="#">
-<span class="material-symbols-outlined text-[20px]">psychology</span>
-<span class="text-sm font-medium">Behavioral Finance</span>
-</a>
-<a class="flex items-center gap-3 px-4 py-2.5 rounded-lg text-slate-400 hover:text-white hover:bg-white/5 transition-colors" href="#">
-<span class="material-symbols-outlined text-[20px]">ssid_chart</span>
-<span class="text-sm font-medium">Projections</span>
-</a>
-<a class="flex items-center gap-3 px-4 py-2.5 rounded-lg text-slate-400 hover:text-white hover:bg-white/5 transition-colors" href="#">
-<span class="material-symbols-outlined text-[20px]">shield</span>
-<span class="text-sm font-medium">Risk Profiling</span>
-</a>
-<a class="flex items-center gap-3 px-4 py-2.5 rounded-lg text-slate-400 hover:text-white hover:bg-white/5 transition-colors" href="#">
-<span class="material-symbols-outlined text-[20px]">account_balance_wallet</span>
-<span class="text-sm font-medium">Tax Optimization</span>
-</a>
-<div class="px-4 mt-6 mb-2 text-xs font-bold text-slate-500 uppercase tracking-wider">Market &amp; Plan</div>
-<a class="flex items-center gap-3 px-4 py-2.5 rounded-lg text-slate-400 hover:text-white hover:bg-white/5 transition-colors" href="#">
-<span class="material-symbols-outlined text-[20px]">flag</span>
-<span class="text-sm font-medium">Goals</span>
-</a>
-<a class="flex items-center gap-3 px-4 py-2.5 rounded-lg text-slate-400 hover:text-white hover:bg-white/5 transition-colors" href="#">
-<span class="material-symbols-outlined text-[20px]">newspaper</span>
-<span class="text-sm font-medium">News Feed</span>
-</a>
-<a class="flex items-center gap-3 px-4 py-2.5 rounded-lg bg-primary/10 text-primary border-l-2 border-primary" href="#">
-<span class="material-symbols-outlined text-[20px] fill-1">notifications_active</span>
-<span class="text-sm font-bold">Alerts</span>
-</a>
-<div class="px-4 mt-6 mb-2 text-xs font-bold text-slate-500 uppercase tracking-wider">Resources</div>
-<a class="flex items-center gap-3 px-4 py-2.5 rounded-lg text-slate-400 hover:text-white hover:bg-white/5 transition-colors" href="#">
-<span class="material-symbols-outlined text-[20px]">school</span>
-<span class="text-sm font-medium">Education</span>
-</a>
-<a class="flex items-center gap-3 px-4 py-2.5 rounded-lg text-slate-400 hover:text-white hover:bg-white/5 transition-colors" href="#">
-<span class="material-symbols-outlined text-[20px]">headset_mic</span>
-<span class="text-sm font-medium">Support</span>
-</a>
-</div>
-<div class="mt-auto border-t border-slate-800 pt-4 flex-shrink-0">
-<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-slate-400 hover:text-white hover:bg-white/5 transition-colors" href="#">
-<span class="material-symbols-outlined text-[22px]">manage_accounts</span>
-<span class="text-sm font-medium">User Settings</span>
-</a>
-</div>
-</div>
-</div>
-<main class="flex-1 flex flex-col h-full relative overflow-y-auto">
-<div class="lg:hidden flex items-center justify-between p-4 bg-card-dark border-b border-slate-800 sticky top-0 z-20">
-<span class="text-lg font-bold text-white">Alerts</span>
-<button class="text-white material-symbols-outlined">menu</button>
-</div>
-<div class="max-w-[1440px] w-full mx-auto p-4 md:p-8 lg:p-10 flex flex-col gap-8">
-<div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
-<div class="flex flex-col gap-2">
-<h1 class="text-white text-4xl font-black leading-tight tracking-tight">Alerts</h1>
-<p class="text-slate-400 text-base font-medium max-w-xl">
-                            Stay ahead of the market. Manage your notifications and configure custom triggers for your portfolio.
+    <div class="flex h-screen w-full overflow-hidden">
+        <div class="hidden lg:flex flex-col w-72 bg-card-dark border-r border-slate-800 flex-shrink-0">
+            <div class="p-6 flex flex-col gap-6 h-full">
+                <div class="flex items-center gap-3 flex-shrink-0">
+                    <div class="bg-center bg-no-repeat bg-cover rounded-full size-12 ring-2 ring-primary/20"
+                        data-alt="User profile picture showing a professional headshot"
+                        style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD5vyoKKcxnd9niLgewnB2jYGbzSA3XZy-Pf3VBSILVBGCWASo_XhZR2i87mv8rsA1wD_GoyrxMyKcSHpxC_-a03JWVsxltKFh4TpvVXyjO3HV32QANI_uAB1UFFO1xcUTx6GdDsjsngIOd_yW3kK8CU_UzGSpPPTGQSoVAwWid8b8jodfE4ORhSDOfsCsZfeEyCUl-33NsuZjyijgBFFTrThBsncrmnK4RVBc4RacE1vM1ADJ6rqLvhPSuou06pDPlMVutOXiH580");'>
+                    </div>
+                    <div class="flex flex-col">
+                        <h1 class="text-white text-lg font-bold leading-tight">FinTech Pro</h1>
+                        <p class="text-primary text-xs font-medium uppercase tracking-wider">Pro Investor</p>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-1 flex-1 overflow-y-auto pr-2 -mr-2">
+                    <div class="px-4 mt-2 mb-2 text-xs font-bold text-slate-500 uppercase tracking-wider">Overview</div>
+                    <a class="flex items-center gap-3 px-4 py-2.5 rounded-lg text-slate-400 hover:text-white hover:bg-white/5 transition-colors"
+                        href="#">
+                        <span class="material-symbols-outlined text-[20px]">dashboard</span>
+                        <span class="text-sm font-medium">Dashboard</span>
+                    </a>
+                    <a class="flex items-center gap-3 px-4 py-2.5 rounded-lg text-slate-400 hover:text-white hover:bg-white/5 transition-colors"
+                        href="#">
+                        <span class="material-symbols-outlined text-[20px]">pie_chart</span>
+                        <span class="text-sm font-medium">Portfolio</span>
+                    </a>
+                    <a class="flex items-center gap-3 px-4 py-2.5 rounded-lg text-slate-400 hover:text-white hover:bg-white/5 transition-colors"
+                        href="#">
+                        <span class="material-symbols-outlined text-[20px]">receipt_long</span>
+                        <span class="text-sm font-medium">Transactions</span>
+                    </a>
+                    <div class="px-4 mt-6 mb-2 text-xs font-bold text-slate-500 uppercase tracking-wider">Intelligence
+                    </div>
+                    <a class="flex items-center gap-3 px-4 py-2.5 rounded-lg text-slate-400 hover:text-white hover:bg-white/5 transition-colors"
+                        href="#">
+                        <span class="material-symbols-outlined text-[20px]">psychology</span>
+                        <span class="text-sm font-medium">Behavioral Finance</span>
+                    </a>
+                    <a class="flex items-center gap-3 px-4 py-2.5 rounded-lg text-slate-400 hover:text-white hover:bg-white/5 transition-colors"
+                        href="#">
+                        <span class="material-symbols-outlined text-[20px]">ssid_chart</span>
+                        <span class="text-sm font-medium">Projections</span>
+                    </a>
+                    <a class="flex items-center gap-3 px-4 py-2.5 rounded-lg text-slate-400 hover:text-white hover:bg-white/5 transition-colors"
+                        href="#">
+                        <span class="material-symbols-outlined text-[20px]">shield</span>
+                        <span class="text-sm font-medium">Risk Profiling</span>
+                    </a>
+                    <a class="flex items-center gap-3 px-4 py-2.5 rounded-lg text-slate-400 hover:text-white hover:bg-white/5 transition-colors"
+                        href="#">
+                        <span class="material-symbols-outlined text-[20px]">account_balance_wallet</span>
+                        <span class="text-sm font-medium">Tax Optimization</span>
+                    </a>
+                    <div class="px-4 mt-6 mb-2 text-xs font-bold text-slate-500 uppercase tracking-wider">Market &amp;
+                        Plan</div>
+                    <a class="flex items-center gap-3 px-4 py-2.5 rounded-lg text-slate-400 hover:text-white hover:bg-white/5 transition-colors"
+                        href="#">
+                        <span class="material-symbols-outlined text-[20px]">flag</span>
+                        <span class="text-sm font-medium">Goals</span>
+                    </a>
+                    <a class="flex items-center gap-3 px-4 py-2.5 rounded-lg text-slate-400 hover:text-white hover:bg-white/5 transition-colors"
+                        href="#">
+                        <span class="material-symbols-outlined text-[20px]">newspaper</span>
+                        <span class="text-sm font-medium">News Feed</span>
+                    </a>
+                    <a class="flex items-center gap-3 px-4 py-2.5 rounded-lg bg-primary/10 text-primary border-l-2 border-primary"
+                        href="#">
+                        <span class="material-symbols-outlined text-[20px] fill-1">notifications_active</span>
+                        <span class="text-sm font-bold">Alerts</span>
+                    </a>
+                    <div class="px-4 mt-6 mb-2 text-xs font-bold text-slate-500 uppercase tracking-wider">Resources
+                    </div>
+                    <a class="flex items-center gap-3 px-4 py-2.5 rounded-lg text-slate-400 hover:text-white hover:bg-white/5 transition-colors"
+                        href="#">
+                        <span class="material-symbols-outlined text-[20px]">school</span>
+                        <span class="text-sm font-medium">Education</span>
+                    </a>
+                    <a class="flex items-center gap-3 px-4 py-2.5 rounded-lg text-slate-400 hover:text-white hover:bg-white/5 transition-colors"
+                        href="#">
+                        <span class="material-symbols-outlined text-[20px]">headset_mic</span>
+                        <span class="text-sm font-medium">Support</span>
+                    </a>
+                </div>
+                <div class="mt-auto border-t border-slate-800 pt-4 flex-shrink-0">
+                    <a class="flex items-center gap-3 px-4 py-3 rounded-lg text-slate-400 hover:text-white hover:bg-white/5 transition-colors"
+                        href="#">
+                        <span class="material-symbols-outlined text-[22px]">manage_accounts</span>
+                        <span class="text-sm font-medium">User Settings</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <main class="flex-1 flex flex-col h-full relative overflow-y-auto">
+            <div
+                class="lg:hidden flex items-center justify-between p-4 bg-card-dark border-b border-slate-800 sticky top-0 z-20">
+                <span class="text-lg font-bold text-white">Alerts</span>
+                <button class="text-white material-symbols-outlined">menu</button>
+            </div>
+            <div class="max-w-[1440px] w-full mx-auto p-4 md:p-8 lg:p-10 flex flex-col gap-8">
+                <div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+                    <div class="flex flex-col gap-2">
+                        <h1 class="text-white text-4xl font-black leading-tight tracking-tight">Alerts</h1>
+                        <p class="text-slate-400 text-base font-medium max-w-xl">
+                            Stay ahead of the market. Manage your notifications and configure custom triggers for your
+                            portfolio.
                         </p>
-</div>
-<button class="flex items-center justify-center gap-2 rounded-lg h-10 px-5 bg-card-dark-lighter hover:bg-white/10 text-white text-sm font-bold border border-slate-700 transition-colors">
-<span class="material-symbols-outlined text-[18px]">done_all</span>
-<span>Mark all as read</span>
-</button>
-</div>
-<div class="flex flex-wrap gap-3">
-<button class="group flex h-9 items-center justify-center gap-x-2 rounded-full bg-primary text-background-dark pl-3 pr-4 transition-all">
-<span class="material-symbols-outlined text-[18px]">list</span>
-<span class="text-sm font-bold">All Alerts</span>
-</button>
-<button class="group flex h-9 items-center justify-center gap-x-2 rounded-full bg-card-dark-lighter hover:bg-card-dark text-slate-300 hover:text-white pl-3 pr-4 border border-transparent hover:border-slate-700 transition-all">
-<span class="material-symbols-outlined text-[18px] text-red-400">error</span>
-<span class="text-sm font-medium">Critical</span>
-</button>
-<button class="group flex h-9 items-center justify-center gap-x-2 rounded-full bg-card-dark-lighter hover:bg-card-dark text-slate-300 hover:text-white pl-3 pr-4 border border-transparent hover:border-slate-700 transition-all">
-<span class="material-symbols-outlined text-[18px] text-yellow-400">warning</span>
-<span class="text-sm font-medium">Warning</span>
-</button>
-<button class="group flex h-9 items-center justify-center gap-x-2 rounded-full bg-card-dark-lighter hover:bg-card-dark text-slate-300 hover:text-white pl-3 pr-4 border border-transparent hover:border-slate-700 transition-all">
-<span class="material-symbols-outlined text-[18px] text-primary">info</span>
-<span class="text-sm font-medium">Info</span>
-</button>
-</div>
-<div class="grid grid-cols-1 xl:grid-cols-12 gap-6">
-<div class="xl:col-span-8 flex flex-col gap-4">
-<div class="rounded-xl border border-slate-800 bg-card-dark overflow-hidden shadow-lg">
-<div class="px-6 py-4 border-b border-slate-800 flex justify-between items-center">
-<h2 class="text-white text-lg font-bold">Active Alerts</h2>
-<span class="text-xs font-semibold text-slate-500 uppercase tracking-wider">3 New</span>
-</div>
-<div class="overflow-x-auto">
-<table class="w-full text-left border-collapse">
-<thead>
-<tr class="bg-card-dark-lighter/50 border-b border-slate-800 text-xs text-slate-400 uppercase tracking-wider">
-<th class="px-6 py-4 font-semibold w-24">Severity</th>
-<th class="px-6 py-4 font-semibold w-32">Asset</th>
-<th class="px-6 py-4 font-semibold">Trigger Message</th>
-<th class="px-6 py-4 font-semibold w-32">Time</th>
-<th class="px-6 py-4 font-semibold w-32 text-right">Actions</th>
-</tr>
-</thead>
-<tbody class="divide-y divide-slate-800">
-<tr class="group hover:bg-white/[0.02] transition-colors">
-<td class="px-6 py-4">
-<div class="flex items-center justify-center size-8 rounded-full bg-red-500/10 text-red-500">
-<span class="material-symbols-outlined text-[20px]">trending_down</span>
-</div>
-</td>
-<td class="px-6 py-4">
-<span class="text-white font-bold">AAPL</span>
-</td>
-<td class="px-6 py-4">
-<p class="text-slate-300 text-sm">Price dropped by <span class="text-red-400 font-bold">5%</span> in last hour</p>
-</td>
-<td class="px-6 py-4">
-<span class="text-slate-500 text-sm">10m ago</span>
-</td>
-<td class="px-6 py-4 text-right">
-<div class="flex justify-end gap-2 opacity-60 group-hover:opacity-100 transition-opacity">
-<button class="size-8 rounded hover:bg-white/10 flex items-center justify-center text-slate-400 hover:text-primary transition-colors" title="Snooze">
-<span class="material-symbols-outlined text-[18px]">schedule</span>
-</button>
-<button class="size-8 rounded hover:bg-white/10 flex items-center justify-center text-slate-400 hover:text-red-400 transition-colors" title="Dismiss">
-<span class="material-symbols-outlined text-[18px]">close</span>
-</button>
-</div>
-</td>
-</tr>
-<tr class="group hover:bg-white/[0.02] transition-colors">
-<td class="px-6 py-4">
-<div class="flex items-center justify-center size-8 rounded-full bg-green-500/10 text-green-500">
-<span class="material-symbols-outlined text-[20px]">emoji_events</span>
-</div>
-</td>
-<td class="px-6 py-4">
-<span class="text-white font-bold">Portfolio</span>
-</td>
-<td class="px-6 py-4">
-<p class="text-slate-300 text-sm">Tech Growth reached <span class="text-green-400 font-bold">$10,000</span> milestone</p>
-</td>
-<td class="px-6 py-4">
-<span class="text-slate-500 text-sm">2h ago</span>
-</td>
-<td class="px-6 py-4 text-right">
-<div class="flex justify-end gap-2 opacity-60 group-hover:opacity-100 transition-opacity">
-<button class="size-8 rounded hover:bg-white/10 flex items-center justify-center text-slate-400 hover:text-primary transition-colors" title="Snooze">
-<span class="material-symbols-outlined text-[18px]">schedule</span>
-</button>
-<button class="size-8 rounded hover:bg-white/10 flex items-center justify-center text-slate-400 hover:text-red-400 transition-colors" title="Dismiss">
-<span class="material-symbols-outlined text-[18px]">close</span>
-</button>
-</div>
-</td>
-</tr>
-<tr class="group hover:bg-white/[0.02] transition-colors">
-<td class="px-6 py-4">
-<div class="flex items-center justify-center size-8 rounded-full bg-blue-500/10 text-primary">
-<span class="material-symbols-outlined text-[20px]">newspaper</span>
-</div>
-</td>
-<td class="px-6 py-4">
-<span class="text-white font-bold">TSLA</span>
-</td>
-<td class="px-6 py-4">
-<p class="text-slate-300 text-sm">New SEC filing released. High volatility expected.</p>
-</td>
-<td class="px-6 py-4">
-<span class="text-slate-500 text-sm">5h ago</span>
-</td>
-<td class="px-6 py-4 text-right">
-<div class="flex justify-end gap-2 opacity-60 group-hover:opacity-100 transition-opacity">
-<button class="size-8 rounded hover:bg-white/10 flex items-center justify-center text-slate-400 hover:text-primary transition-colors" title="Snooze">
-<span class="material-symbols-outlined text-[18px]">schedule</span>
-</button>
-<button class="size-8 rounded hover:bg-white/10 flex items-center justify-center text-slate-400 hover:text-red-400 transition-colors" title="Dismiss">
-<span class="material-symbols-outlined text-[18px]">close</span>
-</button>
-</div>
-</td>
-</tr>
-<tr class="group hover:bg-white/[0.02] transition-colors">
-<td class="px-6 py-4">
-<div class="flex items-center justify-center size-8 rounded-full bg-yellow-500/10 text-yellow-500">
-<span class="material-symbols-outlined text-[20px]">warning</span>
-</div>
-</td>
-<td class="px-6 py-4">
-<span class="text-white font-bold">ETH</span>
-</td>
-<td class="px-6 py-4">
-<p class="text-slate-300 text-sm">Approaching resistance level at $2,100</p>
-</td>
-<td class="px-6 py-4">
-<span class="text-slate-500 text-sm">1d ago</span>
-</td>
-<td class="px-6 py-4 text-right">
-<div class="flex justify-end gap-2 opacity-60 group-hover:opacity-100 transition-opacity">
-<button class="size-8 rounded hover:bg-white/10 flex items-center justify-center text-slate-400 hover:text-primary transition-colors" title="Snooze">
-<span class="material-symbols-outlined text-[18px]">schedule</span>
-</button>
-<button class="size-8 rounded hover:bg-white/10 flex items-center justify-center text-slate-400 hover:text-red-400 transition-colors" title="Dismiss">
-<span class="material-symbols-outlined text-[18px]">close</span>
-</button>
-</div>
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="px-6 py-4 border-t border-slate-800 bg-card-dark flex justify-center">
-<button class="text-sm font-bold text-primary hover:text-primary/80 transition-colors flex items-center gap-1">
-                                    View Alert History <span class="material-symbols-outlined text-sm">arrow_forward</span>
-</button>
-</div>
-</div>
-</div>
-<div class="xl:col-span-4 flex flex-col h-full">
-<div class="sticky top-6 bg-card-dark rounded-xl border border-slate-800 p-6 shadow-xl flex flex-col gap-6">
-<div class="flex items-center gap-3">
-<div class="size-10 rounded-lg bg-primary/20 flex items-center justify-center text-primary">
-<span class="material-symbols-outlined">add_alert</span>
-</div>
-<h2 class="text-white text-xl font-bold">Create New Alert</h2>
-</div>
-<div class="grid grid-cols-3 p-1 bg-card-dark-lighter rounded-lg">
-<button class="py-2 text-sm font-bold text-background-dark bg-primary rounded shadow-sm">Price</button>
-<button class="py-2 text-sm font-medium text-slate-400 hover:text-white transition-colors">News</button>
-<button class="py-2 text-sm font-medium text-slate-400 hover:text-white transition-colors">Events</button>
-</div>
-<form class="flex flex-col gap-5">
-<div class="flex flex-col gap-2">
-<label class="text-sm font-semibold text-slate-400">Select Asset</label>
-<div class="relative group">
-<span class="absolute left-3 top-1/2 -translate-y-1/2 material-symbols-outlined text-slate-500 group-focus-within:text-primary transition-colors">search</span>
-<input class="w-full bg-background-dark border border-slate-700 text-white text-sm rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent block pl-10 p-3 placeholder-slate-600 transition-all shadow-inner" placeholder="e.g. BTC, AAPL" type="text"/>
-</div>
-</div>
-<div class="flex flex-col gap-2">
-<label class="text-sm font-semibold text-slate-400">Condition</label>
-<div class="grid grid-cols-2 gap-3">
-<select class="bg-background-dark border border-slate-700 text-white text-sm rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent block w-full p-3">
-<option>Rise above</option>
-<option>Fall below</option>
-<option>% Increase</option>
-<option>% Decrease</option>
-</select>
-<div class="relative">
-<span class="absolute left-3 top-1/2 -translate-y-1/2 text-slate-500 font-bold">$</span>
-<input class="w-full bg-background-dark border border-slate-700 text-white text-sm rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent block pl-8 p-3 placeholder-slate-600 transition-all shadow-inner" placeholder="0.00" type="number"/>
-</div>
-</div>
-</div>
-<div class="flex flex-col gap-2">
-<label class="text-sm font-semibold text-slate-400">Note (Optional)</label>
-<textarea class="w-full bg-background-dark border border-slate-700 text-white text-sm rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent block p-3 placeholder-slate-600 transition-all shadow-inner resize-none" placeholder="Reminder for myself..." rows="2"></textarea>
-</div>
-<div class="flex flex-col gap-3 pt-2">
-<label class="text-sm font-semibold text-slate-400">Delivery Method</label>
-<label class="flex items-center justify-between cursor-pointer group">
-<div class="flex items-center gap-3">
-<span class="material-symbols-outlined text-slate-500 group-hover:text-white transition-colors">notifications_active</span>
-<span class="text-sm font-medium text-slate-300 group-hover:text-white transition-colors">In-app Notification</span>
-</div>
-<input checked="" class="w-5 h-5 rounded border-slate-600 bg-background-dark text-primary focus:ring-primary focus:ring-offset-background-dark" type="checkbox"/>
-</label>
-<label class="flex items-center justify-between cursor-pointer group">
-<div class="flex items-center gap-3">
-<span class="material-symbols-outlined text-slate-500 group-hover:text-white transition-colors">mail</span>
-<span class="text-sm font-medium text-slate-300 group-hover:text-white transition-colors">Email Alert</span>
-</div>
-<input class="w-5 h-5 rounded border-slate-600 bg-background-dark text-primary focus:ring-primary focus:ring-offset-background-dark" type="checkbox"/>
-</label>
-<label class="flex items-center justify-between cursor-pointer group">
-<div class="flex items-center gap-3">
-<span class="material-symbols-outlined text-slate-500 group-hover:text-white transition-colors">sms</span>
-<span class="text-sm font-medium text-slate-300 group-hover:text-white transition-colors">SMS</span>
-</div>
-<input class="w-5 h-5 rounded border-slate-700 bg-slate-800 text-slate-500 cursor-not-allowed" disabled="" type="checkbox"/>
-</label>
-</div>
-<button class="mt-2 w-full bg-primary hover:bg-primary/90 text-background-dark font-extrabold py-3.5 rounded-lg transition-all shadow-lg hover:shadow-primary/20 flex items-center justify-center gap-2" type="button">
-<span class="material-symbols-outlined">add_circle</span>
+                    </div>
+                    <button
+                        class="flex items-center justify-center gap-2 rounded-lg h-10 px-5 bg-card-dark-lighter hover:bg-white/10 text-white text-sm font-bold border border-slate-700 transition-colors">
+                        <span class="material-symbols-outlined text-[18px]">done_all</span>
+                        <span>Mark all as read</span>
+                    </button>
+                </div>
+                <div class="flex flex-wrap gap-3">
+                    <button
+                        class="group flex h-9 items-center justify-center gap-x-2 rounded-full bg-primary text-background-dark pl-3 pr-4 transition-all">
+                        <span class="material-symbols-outlined text-[18px]">list</span>
+                        <span class="text-sm font-bold">All Alerts</span>
+                    </button>
+                    <button
+                        class="group flex h-9 items-center justify-center gap-x-2 rounded-full bg-card-dark-lighter hover:bg-card-dark text-slate-300 hover:text-white pl-3 pr-4 border border-transparent hover:border-slate-700 transition-all">
+                        <span class="material-symbols-outlined text-[18px] text-red-400">error</span>
+                        <span class="text-sm font-medium">Critical</span>
+                    </button>
+                    <button
+                        class="group flex h-9 items-center justify-center gap-x-2 rounded-full bg-card-dark-lighter hover:bg-card-dark text-slate-300 hover:text-white pl-3 pr-4 border border-transparent hover:border-slate-700 transition-all">
+                        <span class="material-symbols-outlined text-[18px] text-yellow-400">warning</span>
+                        <span class="text-sm font-medium">Warning</span>
+                    </button>
+                    <button
+                        class="group flex h-9 items-center justify-center gap-x-2 rounded-full bg-card-dark-lighter hover:bg-card-dark text-slate-300 hover:text-white pl-3 pr-4 border border-transparent hover:border-slate-700 transition-all">
+                        <span class="material-symbols-outlined text-[18px] text-primary">info</span>
+                        <span class="text-sm font-medium">Info</span>
+                    </button>
+                </div>
+                <div class="grid grid-cols-1 xl:grid-cols-12 gap-6">
+                    <div class="xl:col-span-8 flex flex-col gap-4">
+                        <div class="rounded-xl border border-slate-800 bg-card-dark overflow-hidden shadow-lg">
+                            <div class="px-6 py-4 border-b border-slate-800 flex justify-between items-center">
+                                <h2 class="text-white text-lg font-bold">Active Alerts</h2>
+                                <span class="text-xs font-semibold text-slate-500 uppercase tracking-wider">3 New</span>
+                            </div>
+                            <div class="overflow-x-auto">
+                                <table class="w-full text-left border-collapse">
+                                    <thead>
+                                        <tr
+                                            class="bg-card-dark-lighter/50 border-b border-slate-800 text-xs text-slate-400 uppercase tracking-wider">
+                                            <th class="px-6 py-4 font-semibold w-24">Severity</th>
+                                            <th class="px-6 py-4 font-semibold w-32">Asset</th>
+                                            <th class="px-6 py-4 font-semibold">Trigger Message</th>
+                                            <th class="px-6 py-4 font-semibold w-32">Time</th>
+                                            <th class="px-6 py-4 font-semibold w-32 text-right">Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="divide-y divide-slate-800">
+                                        <tr class="group hover:bg-white/[0.02] transition-colors">
+                                            <td class="px-6 py-4">
+                                                <div
+                                                    class="flex items-center justify-center size-8 rounded-full bg-red-500/10 text-red-500">
+                                                    <span
+                                                        class="material-symbols-outlined text-[20px]">trending_down</span>
+                                                </div>
+                                            </td>
+                                            <td class="px-6 py-4">
+                                                <span class="text-white font-bold">AAPL</span>
+                                            </td>
+                                            <td class="px-6 py-4">
+                                                <p class="text-slate-300 text-sm">Price dropped by <span
+                                                        class="text-red-400 font-bold">5%</span> in last hour</p>
+                                            </td>
+                                            <td class="px-6 py-4">
+                                                <span class="text-slate-500 text-sm">10m ago</span>
+                                            </td>
+                                            <td class="px-6 py-4 text-right">
+                                                <div
+                                                    class="flex justify-end gap-2 opacity-60 group-hover:opacity-100 transition-opacity">
+                                                    <button
+                                                        class="size-8 rounded hover:bg-white/10 flex items-center justify-center text-slate-400 hover:text-primary transition-colors"
+                                                        title="Snooze">
+                                                        <span
+                                                            class="material-symbols-outlined text-[18px]">schedule</span>
+                                                    </button>
+                                                    <button
+                                                        class="size-8 rounded hover:bg-white/10 flex items-center justify-center text-slate-400 hover:text-red-400 transition-colors"
+                                                        title="Dismiss">
+                                                        <span class="material-symbols-outlined text-[18px]">close</span>
+                                                    </button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="group hover:bg-white/[0.02] transition-colors">
+                                            <td class="px-6 py-4">
+                                                <div
+                                                    class="flex items-center justify-center size-8 rounded-full bg-green-500/10 text-green-500">
+                                                    <span
+                                                        class="material-symbols-outlined text-[20px]">emoji_events</span>
+                                                </div>
+                                            </td>
+                                            <td class="px-6 py-4">
+                                                <span class="text-white font-bold">Portfolio</span>
+                                            </td>
+                                            <td class="px-6 py-4">
+                                                <p class="text-slate-300 text-sm">Tech Growth reached <span
+                                                        class="text-green-400 font-bold">$10,000</span> milestone</p>
+                                            </td>
+                                            <td class="px-6 py-4">
+                                                <span class="text-slate-500 text-sm">2h ago</span>
+                                            </td>
+                                            <td class="px-6 py-4 text-right">
+                                                <div
+                                                    class="flex justify-end gap-2 opacity-60 group-hover:opacity-100 transition-opacity">
+                                                    <button
+                                                        class="size-8 rounded hover:bg-white/10 flex items-center justify-center text-slate-400 hover:text-primary transition-colors"
+                                                        title="Snooze">
+                                                        <span
+                                                            class="material-symbols-outlined text-[18px]">schedule</span>
+                                                    </button>
+                                                    <button
+                                                        class="size-8 rounded hover:bg-white/10 flex items-center justify-center text-slate-400 hover:text-red-400 transition-colors"
+                                                        title="Dismiss">
+                                                        <span class="material-symbols-outlined text-[18px]">close</span>
+                                                    </button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="group hover:bg-white/[0.02] transition-colors">
+                                            <td class="px-6 py-4">
+                                                <div
+                                                    class="flex items-center justify-center size-8 rounded-full bg-blue-500/10 text-primary">
+                                                    <span class="material-symbols-outlined text-[20px]">newspaper</span>
+                                                </div>
+                                            </td>
+                                            <td class="px-6 py-4">
+                                                <span class="text-white font-bold">TSLA</span>
+                                            </td>
+                                            <td class="px-6 py-4">
+                                                <p class="text-slate-300 text-sm">New SEC filing released. High
+                                                    volatility expected.</p>
+                                            </td>
+                                            <td class="px-6 py-4">
+                                                <span class="text-slate-500 text-sm">5h ago</span>
+                                            </td>
+                                            <td class="px-6 py-4 text-right">
+                                                <div
+                                                    class="flex justify-end gap-2 opacity-60 group-hover:opacity-100 transition-opacity">
+                                                    <button
+                                                        class="size-8 rounded hover:bg-white/10 flex items-center justify-center text-slate-400 hover:text-primary transition-colors"
+                                                        title="Snooze">
+                                                        <span
+                                                            class="material-symbols-outlined text-[18px]">schedule</span>
+                                                    </button>
+                                                    <button
+                                                        class="size-8 rounded hover:bg-white/10 flex items-center justify-center text-slate-400 hover:text-red-400 transition-colors"
+                                                        title="Dismiss">
+                                                        <span class="material-symbols-outlined text-[18px]">close</span>
+                                                    </button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="group hover:bg-white/[0.02] transition-colors">
+                                            <td class="px-6 py-4">
+                                                <div
+                                                    class="flex items-center justify-center size-8 rounded-full bg-yellow-500/10 text-yellow-500">
+                                                    <span class="material-symbols-outlined text-[20px]">warning</span>
+                                                </div>
+                                            </td>
+                                            <td class="px-6 py-4">
+                                                <span class="text-white font-bold">ETH</span>
+                                            </td>
+                                            <td class="px-6 py-4">
+                                                <p class="text-slate-300 text-sm">Approaching resistance level at $2,100
+                                                </p>
+                                            </td>
+                                            <td class="px-6 py-4">
+                                                <span class="text-slate-500 text-sm">1d ago</span>
+                                            </td>
+                                            <td class="px-6 py-4 text-right">
+                                                <div
+                                                    class="flex justify-end gap-2 opacity-60 group-hover:opacity-100 transition-opacity">
+                                                    <button
+                                                        class="size-8 rounded hover:bg-white/10 flex items-center justify-center text-slate-400 hover:text-primary transition-colors"
+                                                        title="Snooze">
+                                                        <span
+                                                            class="material-symbols-outlined text-[18px]">schedule</span>
+                                                    </button>
+                                                    <button
+                                                        class="size-8 rounded hover:bg-white/10 flex items-center justify-center text-slate-400 hover:text-red-400 transition-colors"
+                                                        title="Dismiss">
+                                                        <span class="material-symbols-outlined text-[18px]">close</span>
+                                                    </button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="px-6 py-4 border-t border-slate-800 bg-card-dark flex justify-center">
+                                <button
+                                    class="text-sm font-bold text-primary hover:text-primary/80 transition-colors flex items-center gap-1">
+                                    View Alert History <span
+                                        class="material-symbols-outlined text-sm">arrow_forward</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="xl:col-span-4 flex flex-col h-full">
+                        <div
+                            class="sticky top-6 bg-card-dark rounded-xl border border-slate-800 p-6 shadow-xl flex flex-col gap-6">
+                            <div class="flex items-center gap-3">
+                                <div
+                                    class="size-10 rounded-lg bg-primary/20 flex items-center justify-center text-primary">
+                                    <span class="material-symbols-outlined">add_alert</span>
+                                </div>
+                                <h2 class="text-white text-xl font-bold">Create New Alert</h2>
+                            </div>
+                            <div class="grid grid-cols-3 p-1 bg-card-dark-lighter rounded-lg">
+                                <button
+                                    class="py-2 text-sm font-bold text-background-dark bg-primary rounded shadow-sm">Price</button>
+                                <button
+                                    class="py-2 text-sm font-medium text-slate-400 hover:text-white transition-colors">News</button>
+                                <button
+                                    class="py-2 text-sm font-medium text-slate-400 hover:text-white transition-colors">Events</button>
+                            </div>
+                            <form class="flex flex-col gap-5">
+                                <div class="flex flex-col gap-2">
+                                    <label class="text-sm font-semibold text-slate-400">Select Asset</label>
+                                    <div class="relative group">
+                                        <span
+                                            class="absolute left-3 top-1/2 -translate-y-1/2 material-symbols-outlined text-slate-500 group-focus-within:text-primary transition-colors">search</span>
+                                        <input
+                                            class="w-full bg-background-dark border border-slate-700 text-white text-sm rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent block pl-10 p-3 placeholder-slate-600 transition-all shadow-inner"
+                                            placeholder="e.g. BTC, AAPL" type="text" />
+                                    </div>
+                                </div>
+                                <div class="flex flex-col gap-2">
+                                    <label class="text-sm font-semibold text-slate-400">Condition</label>
+                                    <div class="grid grid-cols-2 gap-3">
+                                        <select
+                                            class="bg-background-dark border border-slate-700 text-white text-sm rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent block w-full p-3">
+                                            <option>Rise above</option>
+                                            <option>Fall below</option>
+                                            <option>% Increase</option>
+                                            <option>% Decrease</option>
+                                        </select>
+                                        <div class="relative">
+                                            <span
+                                                class="absolute left-3 top-1/2 -translate-y-1/2 text-slate-500 font-bold">$</span>
+                                            <input
+                                                class="w-full bg-background-dark border border-slate-700 text-white text-sm rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent block pl-8 p-3 placeholder-slate-600 transition-all shadow-inner"
+                                                placeholder="0.00" type="number" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flex flex-col gap-2">
+                                    <label class="text-sm font-semibold text-slate-400">Note (Optional)</label>
+                                    <textarea
+                                        class="w-full bg-background-dark border border-slate-700 text-white text-sm rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent block p-3 placeholder-slate-600 transition-all shadow-inner resize-none"
+                                        placeholder="Reminder for myself..." rows="2"></textarea>
+                                </div>
+                                <div class="flex flex-col gap-3 pt-2">
+                                    <label class="text-sm font-semibold text-slate-400">Delivery Method</label>
+                                    <label class="flex items-center justify-between cursor-pointer group">
+                                        <div class="flex items-center gap-3">
+                                            <span
+                                                class="material-symbols-outlined text-slate-500 group-hover:text-white transition-colors">notifications_active</span>
+                                            <span
+                                                class="text-sm font-medium text-slate-300 group-hover:text-white transition-colors">In-app
+                                                Notification</span>
+                                        </div>
+                                        <input checked=""
+                                            class="w-5 h-5 rounded border-slate-600 bg-background-dark text-primary focus:ring-primary focus:ring-offset-background-dark"
+                                            type="checkbox" />
+                                    </label>
+                                    <label class="flex items-center justify-between cursor-pointer group">
+                                        <div class="flex items-center gap-3">
+                                            <span
+                                                class="material-symbols-outlined text-slate-500 group-hover:text-white transition-colors">mail</span>
+                                            <span
+                                                class="text-sm font-medium text-slate-300 group-hover:text-white transition-colors">Email
+                                                Alert</span>
+                                        </div>
+                                        <input
+                                            class="w-5 h-5 rounded border-slate-600 bg-background-dark text-primary focus:ring-primary focus:ring-offset-background-dark"
+                                            type="checkbox" />
+                                    </label>
+                                    <label class="flex items-center justify-between cursor-pointer group">
+                                        <div class="flex items-center gap-3">
+                                            <span
+                                                class="material-symbols-outlined text-slate-500 group-hover:text-white transition-colors">sms</span>
+                                            <span
+                                                class="text-sm font-medium text-slate-300 group-hover:text-white transition-colors">SMS</span>
+                                        </div>
+                                        <input
+                                            class="w-5 h-5 rounded border-slate-700 bg-slate-800 text-slate-500 cursor-not-allowed"
+                                            disabled="" type="checkbox" />
+                                    </label>
+                                </div>
+                                <button
+                                    class="mt-2 w-full bg-primary hover:bg-primary/90 text-background-dark font-extrabold py-3.5 rounded-lg transition-all shadow-lg hover:shadow-primary/20 flex items-center justify-center gap-2"
+                                    type="button">
+                                    <span class="material-symbols-outlined">add_circle</span>
                                     Set Alert
                                 </button>
-</form>
-</div>
-</div>
-</div>
-</div>
-</main>
-</div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
 
-</body></html>
+</body>
+
+</html>
