@@ -44,6 +44,11 @@
     padding-bottom: 96px; /* approximate footer height */
 }
 
+/* Ensure content clears the fixed header (fallback before JS adjusts exact height) */
+.fv-pad-header {
+    padding-top: 64px; /* approximate header height */
+}
+
 /* Mobile drawer styles */
 .fv-nav-mobile {
     /* Only affects small screens; desktop remains lg:flex via Tailwind */
@@ -210,3 +215,12 @@ body::-webkit-scrollbar-thumb:hover {
         .scrollbar-hide::-webkit-scrollbar {
             display: none;
         }
+
+/* Hide scrollbars for horizontally scrollable chips/rows */
+.no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none;    /* Firefox */
+}
+.no-scrollbar::-webkit-scrollbar {
+    display: none;            /* Chrome, Safari */
+}
