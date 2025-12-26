@@ -224,3 +224,79 @@ body::-webkit-scrollbar-thumb:hover {
 .no-scrollbar::-webkit-scrollbar {
     display: none;            /* Chrome, Safari */
 }
+
+/* Mobile card view for tables */
+@media (max-width: 640px) {
+    .fv-mobile-cards {
+        border-collapse: separate; /* allow rounded row cards */
+        border-spacing: 0;
+    }
+    .fv-mobile-cards thead {
+        display: none; /* hide table header on mobile */
+    }
+    .fv-mobile-cards tbody tr {
+        display: block; /* stack as cards */
+        margin: 12px;
+        padding: 12px;
+        border: 1px solid var(--border-dark);
+        border-radius: 12px;
+        background: transparent; /* keep theme background */
+    }
+    .fv-mobile-cards tbody tr:hover {
+        background: rgba(39, 53, 58, 0.4); /* subtle hover in dark */
+    }
+    .fv-mobile-cards tbody tr td {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 8px 0;
+    }
+    .fv-mobile-cards tbody tr td:first-child {
+        padding-top: 0;
+        padding-bottom: 12px;
+        margin-bottom: 4px;
+        border-bottom: 1px dashed var(--border-dark);
+    }
+    .fv-mobile-cards tbody tr td:last-child {
+        text-align: right;
+    }
+    /* Generic labels via data attributes */
+    .fv-mobile-cards tbody tr td[data-label]::before {
+        content: attr(data-label);
+        color: #9bb3bb;
+        font-weight: 600;
+        margin-right: 12px;
+    }
+
+    /* Labels for asset table using nth-child mapping (scoped to .fv-assets) */
+    .fv-mobile-cards.fv-assets tbody tr td:nth-child(2)::before {
+        content: 'Price';
+        color: #9bb3bb;
+        font-weight: 600;
+        margin-right: 12px;
+    }
+    .fv-mobile-cards.fv-assets tbody tr td:nth-child(3)::before {
+        content: 'Balance';
+        color: #9bb3bb;
+        font-weight: 600;
+        margin-right: 12px;
+    }
+    .fv-mobile-cards.fv-assets tbody tr td:nth-child(4)::before {
+        content: 'Value';
+        color: #9bb3bb;
+        font-weight: 600;
+        margin-right: 12px;
+    }
+    .fv-mobile-cards.fv-assets tbody tr td:nth-child(5)::before {
+        content: '24h Change';
+        color: #9bb3bb;
+        font-weight: 600;
+        margin-right: 12px;
+    }
+    .fv-mobile-cards.fv-assets tbody tr td:nth-child(6)::before {
+        content: 'P/L';
+        color: #9bb3bb;
+        font-weight: 600;
+        margin-right: 12px;
+    }
+}

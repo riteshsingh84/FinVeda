@@ -136,7 +136,7 @@
                     <div
                         class="bg-white dark:bg-surface-dark rounded-xl border border-slate-200 dark:border-border-dark overflow-hidden shadow-sm">
                         <div class="overflow-x-auto">
-                            <table class="w-full text-left border-collapse">
+                            <table class="w-full text-left border-collapse fv-mobile-cards">
                                 <thead>
                                     <tr
                                         class="bg-slate-50 dark:bg-background-dark border-b border-slate-200 dark:border-border-dark text-xs uppercase text-slate-500 dark:text-slate-400 font-semibold tracking-wider">
@@ -154,7 +154,7 @@
                                         <td
                                             class="px-6 py-4 text-slate-500 dark:text-slate-400 font-medium whitespace-nowrap">
                                             Oct 24, 2023</td>
-                                        <td class="px-6 py-4">
+                                        <td class="px-6 py-4" data-label="Type">
                                             <span
                                                 class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-bold bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20">
                                                 <span
@@ -162,7 +162,7 @@
                                                 Buy
                                             </span>
                                         </td>
-                                        <td class="px-6 py-4">
+                                        <td class="px-6 py-4" data-label="Asset">
                                             <div class="flex items-center gap-3">
                                                 <div
                                                     class="size-8 rounded-full bg-white p-1 flex items-center justify-center shadow-sm">
@@ -177,11 +177,11 @@
                                                 </div>
                                             </div>
                                         </td>
-                                        <td class="px-6 py-4 text-right text-slate-600 dark:text-slate-300">10.00</td>
-                                        <td class="px-6 py-4 text-right text-slate-600 dark:text-slate-300">$173.00</td>
-                                        <td class="px-6 py-4 text-right font-bold text-slate-900 dark:text-white">
+                                        <td class="px-6 py-4 text-right text-slate-600 dark:text-slate-300" data-label="Qty">10.00</td>
+                                        <td class="px-6 py-4 text-right text-slate-600 dark:text-slate-300" data-label="Price">$173.00</td>
+                                        <td class="px-6 py-4 text-right font-bold text-slate-900 dark:text-white" data-label="Total Amount">
                                             $1,730.00</td>
-                                        <td class="px-4 py-4 text-center">
+                                        <td class="px-4 py-4 text-center" data-label="Actions">
                                             <button
                                                 class="text-slate-400 hover:text-primary opacity-0 group-hover:opacity-100 transition-all">
                                                 <span class="material-symbols-outlined">more_vert</span>
@@ -192,14 +192,14 @@
                                         <td
                                             class="px-6 py-4 text-slate-500 dark:text-slate-400 font-medium whitespace-nowrap">
                                             Oct 22, 2023</td>
-                                        <td class="px-6 py-4">
+                                        <td class="px-6 py-4" data-label="Type">
                                             <span
                                                 class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-bold bg-rose-500/10 text-rose-600 dark:text-rose-400 border border-rose-500/20">
                                                 <span class="material-symbols-outlined text-[14px]">arrow_upward</span>
                                                 Sell
                                             </span>
                                         </td>
-                                        <td class="px-6 py-4">
+                                        <td class="px-6 py-4" data-label="Asset">
                                             <div class="flex items-center gap-3">
                                                 <div
                                                     class="size-8 rounded-full bg-white p-1 flex items-center justify-center shadow-sm">
@@ -214,11 +214,11 @@
                                                 </div>
                                             </div>
                                         </td>
-                                        <td class="px-6 py-4 text-right text-slate-600 dark:text-slate-300">5.00</td>
-                                        <td class="px-6 py-4 text-right text-slate-600 dark:text-slate-300">$215.00</td>
-                                        <td class="px-6 py-4 text-right font-bold text-slate-900 dark:text-white">
+                                        <td class="px-6 py-4 text-right text-slate-600 dark:text-slate-300" data-label="Qty">5.00</td>
+                                        <td class="px-6 py-4 text-right text-slate-600 dark:text-slate-300" data-label="Price">$215.00</td>
+                                        <td class="px-6 py-4 text-right font-bold text-slate-900 dark:text-white" data-label="Total Amount">
                                             $1,075.00</td>
-                                        <td class="px-4 py-4 text-center">
+                                        <td class="px-4 py-4 text-center" data-label="Actions">
                                             <button
                                                 class="text-slate-400 hover:text-primary opacity-0 group-hover:opacity-100 transition-all">
                                                 <span class="material-symbols-outlined">more_vert</span>
@@ -229,13 +229,13 @@
                                         <td
                                             class="px-6 py-4 text-slate-500 dark:text-slate-400 font-medium whitespace-nowrap">
                                             Oct 20, 2023</td>
-                                        <td class="px-6 py-4">
+                                        <td class="px-6 py-4" data-label="Type">
                                             <span
                                                 class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-bold bg-primary/10 text-primary border border-primary/20">
                                                 <span class="material-symbols-outlined text-[14px]">paid</span> Dividend
                                             </span>
                                         </td>
-                                        <td class="px-6 py-4">
+                                        <td class="px-6 py-4" data-label="Asset">
                                             <div class="flex items-center gap-3">
                                                 <div
                                                     class="size-8 rounded-full bg-white p-1 flex items-center justify-center shadow-sm">
@@ -250,11 +250,11 @@
                                                 </div>
                                             </div>
                                         </td>
-                                        <td class="px-6 py-4 text-right text-slate-400">-</td>
-                                        <td class="px-6 py-4 text-right text-slate-400">-</td>
-                                        <td class="px-6 py-4 text-right font-bold text-slate-900 dark:text-white">$45.00
+                                        <td class="px-6 py-4 text-right text-slate-400" data-label="Qty">-</td>
+                                        <td class="px-6 py-4 text-right text-slate-400" data-label="Price">-</td>
+                                        <td class="px-6 py-4 text-right font-bold text-slate-900 dark:text-white" data-label="Total Amount">$45.00
                                         </td>
-                                        <td class="px-4 py-4 text-center">
+                                        <td class="px-4 py-4 text-center" data-label="Actions">
                                             <button
                                                 class="text-slate-400 hover:text-primary opacity-0 group-hover:opacity-100 transition-all">
                                                 <span class="material-symbols-outlined">more_vert</span>
@@ -265,7 +265,7 @@
                                         <td
                                             class="px-6 py-4 text-slate-500 dark:text-slate-400 font-medium whitespace-nowrap">
                                             Oct 18, 2023</td>
-                                        <td class="px-6 py-4">
+                                        <td class="px-6 py-4" data-label="Type">
                                             <span
                                                 class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-bold bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20">
                                                 <span
@@ -273,7 +273,7 @@
                                                 Buy
                                             </span>
                                         </td>
-                                        <td class="px-6 py-4">
+                                        <td class="px-6 py-4" data-label="Asset">
                                             <div class="flex items-center gap-3">
                                                 <div
                                                     class="size-8 rounded-full bg-white p-1 flex items-center justify-center shadow-sm">
@@ -288,11 +288,11 @@
                                                 </div>
                                             </div>
                                         </td>
-                                        <td class="px-6 py-4 text-right text-slate-600 dark:text-slate-300">15.00</td>
-                                        <td class="px-6 py-4 text-right text-slate-600 dark:text-slate-300">$330.00</td>
-                                        <td class="px-6 py-4 text-right font-bold text-slate-900 dark:text-white">
+                                        <td class="px-6 py-4 text-right text-slate-600 dark:text-slate-300" data-label="Qty">15.00</td>
+                                        <td class="px-6 py-4 text-right text-slate-600 dark:text-slate-300" data-label="Price">$330.00</td>
+                                        <td class="px-6 py-4 text-right font-bold text-slate-900 dark:text-white" data-label="Total Amount">
                                             $4,950.00</td>
-                                        <td class="px-4 py-4 text-center">
+                                        <td class="px-4 py-4 text-center" data-label="Actions">
                                             <button
                                                 class="text-slate-400 hover:text-primary opacity-0 group-hover:opacity-100 transition-all">
                                                 <span class="material-symbols-outlined">more_vert</span>
@@ -303,7 +303,7 @@
                                         <td
                                             class="px-6 py-4 text-slate-500 dark:text-slate-400 font-medium whitespace-nowrap">
                                             Oct 15, 2023</td>
-                                        <td class="px-6 py-4">
+                                        <td class="px-6 py-4" data-label="Type">
                                             <span
                                                 class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-bold bg-violet-500/10 text-violet-600 dark:text-violet-400 border border-violet-500/20">
                                                 <span
@@ -311,7 +311,7 @@
                                                 Deposit
                                             </span>
                                         </td>
-                                        <td class="px-6 py-4">
+                                        <td class="px-6 py-4" data-label="Asset">
                                             <div class="flex items-center gap-3">
                                                 <div
                                                     class="size-8 rounded-full bg-slate-100 dark:bg-border-dark p-1.5 flex items-center justify-center">
@@ -326,11 +326,11 @@
                                                 </div>
                                             </div>
                                         </td>
-                                        <td class="px-6 py-4 text-right text-slate-400">-</td>
-                                        <td class="px-6 py-4 text-right text-slate-400">-</td>
-                                        <td class="px-6 py-4 text-right font-bold text-slate-900 dark:text-white">
+                                        <td class="px-6 py-4 text-right text-slate-400" data-label="Qty">-</td>
+                                        <td class="px-6 py-4 text-right text-slate-400" data-label="Price">-</td>
+                                        <td class="px-6 py-4 text-right font-bold text-slate-900 dark:text-white" data-label="Total Amount">
                                             $10,000.00</td>
-                                        <td class="px-4 py-4 text-center">
+                                        <td class="px-4 py-4 text-center" data-label="Actions">
                                             <button
                                                 class="text-slate-400 hover:text-primary opacity-0 group-hover:opacity-100 transition-all">
                                                 <span class="material-symbols-outlined">more_vert</span>
