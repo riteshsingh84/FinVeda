@@ -1,59 +1,349 @@
 <!DOCTYPE html>
-<html class="dark" lang="en"><head>
-<meta charset="utf-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Goals - FinVeda</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
-<link rel="stylesheet" href="../css/main.css"/>
+<html class="dark" lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Goals - FinVeda</title>
+	<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+	<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+		rel="stylesheet" />
+	<link rel="stylesheet" href="../css/main.css" />
+
+	<script id="tailwind-config">
+		tailwind.config = {
+			darkMode: "class",
+			theme: {
+				extend: {
+					colors: {
+						"primary": "#06bcf9",
+						"background-light": "#f5f8f8",
+						"background-dark": "#0f1e23",
+						"surface-dark": "#18282e",
+						"surface-border": "#3a4e55",
+					},
+					fontFamily: {
+						"display": ["Manrope", "sans-serif"]
+					},
+					borderRadius: {
+						"DEFAULT": "0.25rem",
+						"lg": "0.5rem",
+						"xl": "0.75rem",
+						"full": "9999px"
+					},
+				},
+			},
+		}
+	</script>
+
 </head>
+
 <body class="bg-[#0f1e23] text-white font-[Manrope]">
-<div class="flex h-screen w-full min-h-0">
-	<div data-include="./shared/app-nav.html"></div>
-	<div data-include="./shared/app-header.html"></div>
-	<main class="flex-1 flex flex-col h-full relative overflow-hidden min-h-0">
-		
-		<div class="flex-1 overflow-y-auto px-6 py-10 fv-pad-header fv-pad-footer app-content-container">
-		<div class="max-w-[1200px] mx-auto flex flex-col gap-8">
-			<header>
-				<h1 class="text-3xl font-extrabold">Financial Goals</h1>
-				<p class="text-[#9bb3bb] mt-1">Track progress toward your objectives.</p>
-			</header>
-		<section class="grid grid-cols-1 md:grid-cols-2 gap-6">
-			<div class="rounded-xl border border-border-dark bg-[#18282e] p-6">
-				<div class="flex justify-between items-end mb-2">
-					<div class="flex items-center gap-2">
-						<div class="bg-[#27353a] p-1.5 rounded-lg text-white"><span class="material-symbols-outlined">beach_access</span></div>
-						<div>
-							<p class="text-sm font-bold">Retirement Fund</p>
-							<p class="text-xs text-[#9bb3bb]">Target: $1.2M by 2045</p>
+	<div class="flex h-screen w-full min-h-0">
+		<div data-include="./shared/app-nav.html"></div>
+		<div data-include="./shared/app-header.html"></div>
+		<main class="flex-1 flex flex-col h-full relative overflow-visible min-h-0">
+
+			<div class="flex-1 px-6 py-10 fv-pad-header fv-pad-footer app-content-container">
+				<div class="max-w-[1200px] mx-auto flex flex-col gap-8">
+				
+					<header>
+						<div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+							<div class="flex flex-col gap-2">
+								<h1 class="text-3xl md:text-4xl font-black tracking-tight text-white">Financial Goals
+								</h1>
+								<p class="text-[#9bb3bb] mt-1">Track, manage, and accelerate your progress towardsfinancial freedom.</p>
+							</div>
+							<button
+								class="group flex items-center gap-2 h-11 px-6 bg-primary hover:bg-primary/90 text-black text-sm font-bold rounded-lg transition-all active:scale-95 shadow-[0_0_20px_rgba(6,188,249,0.3)]">
+								<span class="material-symbols-outlined text-lg">add_circle</span>
+								<span>Add New Goal</span>
+							</button>
 						</div>
-					</div>
-					<p class="text-sm font-bold text-[#06bcf9]">68%</p>
+					</header>
+					
+					 <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div
+                        class="relative overflow-hidden rounded-xl border border-surface-border bg-surface-dark p-6 group hover:border-primary/50 transition-colors">
+                        <div class="absolute right-0 top-0 p-4 group-hover:opacity-20 transition-opacity">
+                            <span class="material-symbols-outlined text-6xl text-primary">account_balance_wallet</span>
+                        </div>
+                        <p class="text-slate-400 text-sm font-medium mb-2">Total Goal Assets</p>
+                        <div class="flex items-baseline gap-2">
+                            <h2 class="text-3xl font-bold text-white">$145,000</h2>
+                            <span class="text-primary text-sm font-bold bg-primary/10 px-2 py-0.5 rounded">+12%</span>
+                        </div>
+                        <div class="mt-4 h-1.5 w-full bg-slate-800 rounded-full overflow-hidden">
+                            <div class="h-full bg-primary w-[45%] rounded-full shadow-[0_0_10px_#06bcf9]"></div>
+                        </div>
+                        <p class="text-xs text-slate-500 mt-2">Target: $320,000</p>
+                    </div>
+                    <div
+                        class="relative overflow-hidden rounded-xl border border-surface-border bg-surface-dark p-6 group hover:border-primary/50 transition-colors">
+                        <div class="absolute right-0 top-0 p-4 group-hover:opacity-20 transition-opacity">
+                            <span class="material-symbols-outlined text-6xl text-primary">donut_large</span>
+                        </div>
+                        <p class="text-slate-400 text-sm font-medium mb-2">Overall Completion</p>
+                        <div class="flex items-baseline gap-2">
+                            <h2 class="text-3xl font-bold text-white">45%</h2>
+                            <span class="text-primary text-sm font-bold bg-primary/10 px-2 py-0.5 rounded">+2.4%</span>
+                        </div>
+                        <div class="mt-4 flex items-center gap-2">
+                            <span class="size-2 rounded-full bg-primary animate-pulse"></span>
+                            <p class="text-xs text-slate-400">On track to meet yearly targets</p>
+                        </div>
+                    </div>
+                    <div
+                        class="relative overflow-hidden rounded-xl border border-surface-border bg-surface-dark p-6 group hover:border-primary/50 transition-colors">
+                        <div class="absolute right-0 top-0 p-4 group-hover:opacity-20 transition-opacity">
+                            <span class="material-symbols-outlined text-6xl text-primary">flag</span>
+                        </div>
+                        <p class="text-slate-400 text-sm font-medium mb-2">Next Milestone</p>
+                        <div class="flex flex-col">
+                            <h2 class="text-xl font-bold text-white truncate">New Car Purchase</h2>
+                            <p class="text-primary text-lg font-bold">Dec 2024</p>
+                        </div>
+                        <div class="mt-3 flex items-center gap-2">
+                            <span class="material-symbols-outlined text-slate-500 text-base">calendar_clock</span>
+                            <p class="text-xs text-slate-500">4 months remaining</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                    <div
+                        class="lg:col-span-2 rounded-xl border border-surface-border bg-surface-dark p-6 flex flex-col">
+                        <div class="flex justify-between items-start mb-6">
+                            <div>
+                                <h3 class="text-white text-lg font-bold">Portfolio Projection</h3>
+                                <p class="text-slate-400 text-sm">Estimated growth vs. Goal Targets</p>
+                            </div>
+                            <div class="flex gap-2">
+                                <button class="px-3 py-1 text-xs font-bold rounded bg-primary text-black">10Y</button>
+                                <button
+                                    class="px-3 py-1 text-xs font-bold rounded bg-slate-800 text-slate-400 hover:text-white">20Y</button>
+                                <button
+                                    class="px-3 py-1 text-xs font-bold rounded bg-slate-800 text-slate-400 hover:text-white">ALL</button>
+                            </div>
+                        </div>
+                        <div class="flex-1 min-h-[250px] relative w-full">
+                            <svg class="w-full h-full" preserveAspectRatio="none" viewBox="0 0 800 300">
+                                <defs>
+                                    <linearGradient id="chartGradient" x1="0" x2="0" y1="0" y2="1">
+                                        <stop offset="0%" stop-color="#06bcf9" stop-opacity="0.2"></stop>
+                                        <stop offset="100%" stop-color="#06bcf9" stop-opacity="0"></stop>
+                                    </linearGradient>
+                                </defs>
+                                <line stroke="#3a4e55" stroke-dasharray="4 4" stroke-width="1" x1="0" x2="800" y1="250"
+                                    y2="250"></line>
+                                <line stroke="#3a4e55" stroke-dasharray="4 4" stroke-width="1" x1="0" x2="800" y1="175"
+                                    y2="175"></line>
+                                <line stroke="#3a4e55" stroke-dasharray="4 4" stroke-width="1" x1="0" x2="800" y1="100"
+                                    y2="100"></line>
+                                <line stroke="#3a4e55" stroke-dasharray="4 4" stroke-width="1" x1="0" x2="800" y1="25"
+                                    y2="25"></line>
+                                <path
+                                    d="M0,250 C100,245 200,230 300,200 C400,170 500,120 600,90 C700,60 750,40 800,25 V250 H0 Z"
+                                    fill="url(#chartGradient)"></path>
+                                <path d="M0,250 C100,245 200,230 300,200 C400,170 500,120 600,90 C700,60 750,40 800,25"
+                                    fill="none" stroke="#06bcf9" stroke-width="3"></path>
+                                <path d="M0,250 L800,50" fill="none" opacity="0.5" stroke="#ffffff"
+                                    stroke-dasharray="8 8" stroke-width="2"></path>
+                                <circle cx="300" cy="200" fill="#0f1e23" r="4" stroke="#06bcf9" stroke-width="2">
+                                </circle>
+                                <circle cx="600" cy="90" fill="#0f1e23" r="4" stroke="#06bcf9" stroke-width="2">
+                                </circle>
+                            </svg>
+                            <div class="flex justify-between text-xs text-slate-500 mt-2 font-mono">
+                                <span>2024</span>
+                                <span>2028</span>
+                                <span>2032</span>
+                                <span>2036</span>
+                                <span>2040</span>
+                                <span>2045</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="lg:col-span-1 rounded-xl border border-surface-border bg-surface-dark p-6 flex flex-col gap-4">
+                        <div class="flex items-center gap-2 mb-2">
+                            <span class="material-symbols-outlined text-primary">auto_fix_high</span>
+                            <h3 class="text-white text-lg font-bold">Smart Tips</h3>
+                        </div>
+                        <div
+                            class="p-4 rounded-lg bg-background-dark border border-surface-border hover:border-primary/30 transition-colors">
+                            <div class="flex justify-between items-start mb-2">
+                                <span class="text-xs font-bold text-primary uppercase tracking-wider">Dream Home</span>
+                                <span
+                                    class="material-symbols-outlined text-slate-500 text-sm cursor-pointer hover:text-white">close</span>
+                            </div>
+                            <p class="text-sm text-slate-300 mb-3">Increase monthly deposit by <span
+                                    class="text-white font-bold">$150</span> to reach your target by Dec 2026.</p>
+                            <button
+                                class="w-full py-2 rounded bg-primary/10 text-primary hover:bg-primary hover:text-black text-xs font-bold transition-colors">Apply
+                                Adjustment</button>
+                        </div>
+                        <div
+                            class="p-4 rounded-lg bg-background-dark border border-surface-border hover:border-primary/30 transition-colors">
+                            <div class="flex justify-between items-start mb-2">
+                                <span
+                                    class="text-xs font-bold text-orange-400 uppercase tracking-wider">Retirement</span>
+                            </div>
+                            <p class="text-sm text-slate-300 mb-3">Consider rebalancing your portfolio. Equity exposure
+                                is lower than recommended.</p>
+                            <button
+                                class="w-full py-2 rounded bg-surface-border text-white hover:bg-white hover:text-black text-xs font-bold transition-colors">View
+                                Portfolio</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-4">
+                    <div class="flex items-center justify-between">
+                        <h2 class="text-xl font-bold text-white">Your Active Goals</h2>
+                        <button class="text-primary text-sm font-bold hover:underline">View Archived</button>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4">
+                        <div
+                            class="flex flex-col gap-4 p-5 rounded-xl border border-surface-border bg-surface-dark hover:border-primary/50 transition-all shadow-lg shadow-transparent hover:shadow-primary/5 group">
+                            <div class="flex justify-between items-start">
+                                <div class="bg-blue-500/10 p-2.5 rounded-lg text-blue-400">
+                                    <span class="material-symbols-outlined">beach_access</span>
+                                </div>
+                                <div
+                                    class="px-2 py-1 rounded-full bg-green-500/10 border border-green-500/20 text-green-400 text-[10px] font-bold uppercase tracking-wide">
+                                    On Track
+                                </div>
+                            </div>
+                            <div>
+                                <h3 class="text-white font-bold text-lg">Retirement 2045</h3>
+                                <p class="text-slate-400 text-xs">Target: $2.5M</p>
+                            </div>
+                            <div class="flex flex-col gap-1.5">
+                                <div class="flex justify-between text-xs">
+                                    <span class="text-white font-bold">$1.62M</span>
+                                    <span class="text-primary font-bold">65%</span>
+                                </div>
+                                <div class="w-full bg-slate-800 rounded-full h-2 overflow-hidden">
+                                    <div class="bg-primary h-full rounded-full" style="width: 65%"></div>
+                                </div>
+                            </div>
+                            <div class="pt-4 border-t border-surface-border flex gap-2 mt-auto">
+                                <button
+                                    class="flex-1 py-2 text-xs font-bold rounded bg-surface-border hover:bg-white hover:text-black text-white transition-colors">Edit</button>
+                                <button
+                                    class="flex-1 py-2 text-xs font-bold rounded bg-primary/20 text-primary hover:bg-primary hover:text-black transition-colors">Contribute</button>
+                            </div>
+                        </div>
+                        <div
+                            class="flex flex-col gap-4 p-5 rounded-xl border border-surface-border bg-surface-dark hover:border-orange-400/50 transition-all shadow-lg shadow-transparent hover:shadow-orange-500/5 group">
+                            <div class="flex justify-between items-start">
+                                <div class="bg-orange-500/10 p-2.5 rounded-lg text-orange-400">
+                                    <span class="material-symbols-outlined">house</span>
+                                </div>
+                                <div
+                                    class="px-2 py-1 rounded-full bg-orange-500/10 border border-orange-500/20 text-orange-400 text-[10px] font-bold uppercase tracking-wide">
+                                    At Risk
+                                </div>
+                            </div>
+                            <div>
+                                <h3 class="text-white font-bold text-lg">Dream Home</h3>
+                                <p class="text-slate-400 text-xs">Target: $200k</p>
+                            </div>
+                            <div class="flex flex-col gap-1.5">
+                                <div class="flex justify-between text-xs">
+                                    <span class="text-white font-bold">$60,000</span>
+                                    <span class="text-orange-400 font-bold">30%</span>
+                                </div>
+                                <div class="w-full bg-slate-800 rounded-full h-2 overflow-hidden">
+                                    <div class="bg-orange-400 h-full rounded-full" style="width: 30%"></div>
+                                </div>
+                            </div>
+                            <div class="pt-4 border-t border-surface-border flex gap-2 mt-auto">
+                                <button
+                                    class="flex-1 py-2 text-xs font-bold rounded bg-surface-border hover:bg-white hover:text-black text-white transition-colors">Edit</button>
+                                <button
+                                    class="flex-1 py-2 text-xs font-bold rounded bg-primary/20 text-primary hover:bg-primary hover:text-black transition-colors">Contribute</button>
+                            </div>
+                        </div>
+                        <div
+                            class="flex flex-col gap-4 p-5 rounded-xl border border-surface-border bg-surface-dark hover:border-green-400/50 transition-all shadow-lg shadow-transparent hover:shadow-green-500/5 group opacity-75 hover:opacity-100">
+                            <div class="flex justify-between items-start">
+                                <div class="bg-green-500/10 p-2.5 rounded-lg text-green-400">
+                                    <span class="material-symbols-outlined">shield</span>
+                                </div>
+                                <div
+                                    class="px-2 py-1 rounded-full bg-green-500/10 border border-green-500/20 text-green-400 text-[10px] font-bold uppercase tracking-wide">
+                                    Completed
+                                </div>
+                            </div>
+                            <div>
+                                <h3 class="text-white font-bold text-lg">Emergency Fund</h3>
+                                <p class="text-slate-400 text-xs">Target: $20k</p>
+                            </div>
+                            <div class="flex flex-col gap-1.5">
+                                <div class="flex justify-between text-xs">
+                                    <span class="text-white font-bold">$20,500</span>
+                                    <span class="text-green-400 font-bold">100%</span>
+                                </div>
+                                <div class="w-full bg-slate-800 rounded-full h-2 overflow-hidden">
+                                    <div class="bg-green-400 h-full rounded-full" style="width: 100%"></div>
+                                </div>
+                            </div>
+                            <div class="pt-4 border-t border-surface-border flex gap-2 mt-auto">
+                                <button
+                                    class="w-full py-2 text-xs font-bold rounded bg-surface-border hover:bg-white hover:text-black text-white transition-colors">View
+                                    Details</button>
+                            </div>
+                        </div>
+                        <div
+                            class="flex flex-col gap-4 p-5 rounded-xl border border-surface-border bg-surface-dark hover:border-primary/50 transition-all shadow-lg shadow-transparent hover:shadow-primary/5 group">
+                            <div class="flex justify-between items-start">
+                                <div class="bg-purple-500/10 p-2.5 rounded-lg text-purple-400">
+                                    <span class="material-symbols-outlined">directions_car</span>
+                                </div>
+                                <div
+                                    class="px-2 py-1 rounded-full bg-slate-700/50 border border-slate-600 text-slate-300 text-[10px] font-bold uppercase tracking-wide">
+                                    Started
+                                </div>
+                            </div>
+                            <div>
+                                <h3 class="text-white font-bold text-lg">Tesla Model Y</h3>
+                                <p class="text-slate-400 text-xs">Target: $55k</p>
+                            </div>
+                            <div class="flex flex-col gap-1.5">
+                                <div class="flex justify-between text-xs">
+                                    <span class="text-white font-bold">$8,250</span>
+                                    <span class="text-purple-400 font-bold">15%</span>
+                                </div>
+                                <div class="w-full bg-slate-800 rounded-full h-2 overflow-hidden">
+                                    <div class="bg-purple-400 h-full rounded-full" style="width: 15%"></div>
+                                </div>
+                            </div>
+                            <div class="pt-4 border-t border-surface-border flex gap-2 mt-auto">
+                                <button
+                                    class="flex-1 py-2 text-xs font-bold rounded bg-surface-border hover:bg-white hover:text-black text-white transition-colors">Edit</button>
+                                <button
+                                    class="flex-1 py-2 text-xs font-bold rounded bg-primary/20 text-primary hover:bg-primary hover:text-black transition-colors">Contribute</button>
+                            </div>
+                        </div>
+                        <div
+                            class="flex flex-col gap-4 p-5 rounded-xl border-2 border-dashed border-surface-border hover:border-primary hover:bg-primary/5 transition-all cursor-pointer items-center justify-center min-h-[220px]">
+                            <div
+                                class="size-12 rounded-full bg-surface-border flex items-center justify-center group-hover:bg-primary group-hover:text-black transition-colors">
+                                <span class="material-symbols-outlined text-slate-400 group-hover:text-black">add</span>
+                            </div>
+                            <p class="text-sm font-bold text-slate-400 group-hover:text-primary transition-colors">
+                                Create New Goal</p>
+                        </div>
+                    </div>
+                </div>
+
 				</div>
-				<div class="w-full bg-[#111618] rounded-full h-2 overflow-hidden"><div class="bg-[#06bcf9] h-2 rounded-full" style="width:68%"></div></div>
 			</div>
-			<div class="rounded-xl border border-border-dark bg-[#18282e] p-6">
-				<div class="flex justify-between items-end mb-2">
-					<div class="flex items-center gap-2">
-						<div class="bg-[#27353a] p-1.5 rounded-lg text-white"><span class="material-symbols-outlined">house</span></div>
-						<div>
-							<p class="text-sm font-bold">New Home Downpayment</p>
-							<p class="text-xs text-[#9bb3bb]">Target: $150k by 2026</p>
-						</div>
-					</div>
-					<p class="text-sm font-bold text-emerald-400">42%</p>
-				</div>
-				<div class="w-full bg-[#111618] rounded-full h-2 overflow-hidden"><div class="bg-emerald-400 h-2 rounded-full" style="width:42%"></div></div>
-			</div>
-		</section>
-	
-		</div>
-		</div>
-	</main>
-</div>
-<div data-include="./shared/app-footer.html"></div>
-<script src="../shared/include.js"></script>
+		</main>
+	</div>
+	<div data-include="./shared/app-footer.html"></div>
+	<script src="../shared/include.js"></script>
 </body>
+
 </html>
