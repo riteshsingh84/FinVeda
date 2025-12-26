@@ -9,10 +9,11 @@
 <link rel="stylesheet" href="../css/main.css"/>
 </head>
 <body class="bg-[#0f1e23] text-white font-[Manrope]">
-<div data-include="./shared/app-header.html"></div>
 <div class="flex h-screen w-full min-h-0">
 	<div data-include="./shared/app-nav.html"></div>
-	<main class="flex-1 min-h-screen px-6 py-10 overflow-y-auto fv-pad-header fv-pad-footer">
+	<main class="flex-1 flex flex-col h-full relative overflow-hidden min-h-0">
+	<div data-include="./shared/app-header.html"></div>
+	<div class="flex-1 overflow-y-auto px-6 py-10 fv-pad-header fv-pad-footer">
 	<div class="max-w-[1200px] mx-auto flex flex-col gap-8">
 		<header>
 			<h1 class="text-3xl font-extrabold">Risk Profiling</h1>
@@ -46,6 +47,7 @@
 		<div>
 			<a class="text-sm font-bold text-[#06bcf9] hover:underline" href="dashboard.html">Back to Dashboard</a>
 		</div>
+	</div>
 	</div>
 	</main>
 </div>
