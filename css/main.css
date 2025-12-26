@@ -136,3 +136,8 @@ body::-webkit-scrollbar-thumb:hover {
 .team-photo-4 {
     background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAWNKEyQHJgG-3pCJMb7oaiJYQRuaX19Cj0JFwrLFSCAQhRLFr_sWzbO9Q9iombpBW7FLsPWwWjwl2pq8ke7ntyJ0gBmJ6YVnybwED33sRHd6mJTHa9BmEUzUGFr7D11gBwWQx0Ko6vLutzA2ekuPWHJDWtSx8M-c403DdvtZWWTw1B0EzXTpcn6bYt2i1KzFgg1g2Ls63UGRqb4aMasfq9hH272Jn142J9xPsJ3LdZD0f_fb5vgl504Z8GFNbdknccxJzJnpZ_erE');
 }
+
+.app-content-container {
+  margin-top: 30px;
+  margin-bottom: 50px;
+}

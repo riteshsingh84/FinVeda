@@ -1,12 +1,18 @@
 <!DOCTYPE html>
-<html class="dark" lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>FinTech Dashboard</title>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;family=Noto+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<script id="tailwind-config">
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>FinTech Dashboard</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;family=Noto+Sans:wght@400;500;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
         tailwind.config = {
             darkMode: "class",
             theme: {
@@ -23,223 +29,281 @@
                         "display": ["Manrope", "sans-serif"],
                         "body": ["Noto Sans", "sans-serif"]
                     },
-                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
                 },
             },
         }
     </script>
-<!-- Page styles moved to /css/main.css -->
-<link rel="stylesheet" href="../css/main.css"/>
+    <!-- Page styles moved to /css/main.css -->
+    <link rel="stylesheet" href="../css/main.css" />
 </head>
+
 <body class="bg-background-light dark:bg-background-dark text-[#111618] dark:text-white font-display overflow-x-hidden selection:bg-primary selection:text.black">
-<div class="flex h.screen w.full min-h-0">
-<div data-include="./shared/app-nav.html"></div>
-<main class="flex flex-col flex-1 overflow-hidden relative min-h-0">
-<div data-include="./shared/app-header.html"></div>
-<div class="flex-1 overflow-y-auto p-4 lg:p-8 scroll-smooth fv-pad-header fv-pad-footer">
-<div class="max-w-7xl mx-auto flex flex-col gap-6">
-<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-<div class="flex flex-col gap-2 rounded-xl p-5 border border-border-dark bg-card-dark relative overflow-hidden group">
-<div class="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition-opacity">
-<span class="material-symbols-outlined text-6xl text-white">account_balance_wallet</span>
-</div>
-<div class="flex items-center gap-2">
-<p class="text-secondary-text text-sm font-medium uppercase tracking-wider">Total Portfolio Value</p>
-<span class="material-symbols-outlined text-secondary-text text-sm" title="Real-time value">info</span>
-</div>
-<p class="text-white tracking-tight text-3xl font-bold leading-tight">$142,593.00</p>
-<div class="flex items-center gap-2 mt-1">
-<span class="flex items-center gap-1 text-[#0bda57] bg-[#0bda57]/10 px-2 py-0.5 rounded text-xs font-bold">
-<span class="material-symbols-outlined text-xs">trending_up</span>
+   
+    <div class="flex h.screen w.full min-h-0">
+
+        <div data-include="./shared/app-nav.html"></div>
+        
+        <div data-include="./shared/app-header.html"></div>
+
+        <main class="flex flex-col flex-1 overflow-hidden relative min-h-0">
+          
+            <div class="flex-1 overflow-y-auto p-4 lg:p-8 scroll-smooth fv-pad-header fv-pad-footer app-content-container">
+                <div class="max-w-7xl mx-auto flex flex-col gap-6">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                        <div
+                            class="flex flex-col gap-2 rounded-xl p-5 border border-border-dark bg-card-dark relative overflow-hidden group">
+                            <div class="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition-opacity">
+                                <span
+                                    class="material-symbols-outlined text-6xl text-white">account_balance_wallet</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <p class="text-secondary-text text-sm font-medium uppercase tracking-wider">Total
+                                    Portfolio Value</p>
+                                <span class="material-symbols-outlined text-secondary-text text-sm"
+                                    title="Real-time value">info</span>
+                            </div>
+                            <p class="text-white tracking-tight text-3xl font-bold leading-tight">$142,593.00</p>
+                            <div class="flex items-center gap-2 mt-1">
+                                <span
+                                    class="flex items-center gap-1 text-[#0bda57] bg-[#0bda57]/10 px-2 py-0.5 rounded text-xs font-bold">
+                                    <span class="material-symbols-outlined text-xs">trending_up</span>
                                     +1.8%
                                 </span>
-<span class="text-secondary-text text-xs">vs yesterday</span>
-</div>
-</div>
-<div class="flex flex-col gap-2 rounded-xl p-5 border border-border-dark bg-card-dark relative overflow-hidden group">
-<div class="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition-opacity">
-<span class="material-symbols-outlined text-6xl text-white">show_chart</span>
-</div>
-<p class="text-secondary-text text-sm font-medium uppercase tracking-wider">Today's Return</p>
-<p class="text-white tracking-tight text-3xl font-bold leading-tight">+$2,431.20</p>
-<div class="flex items-center gap-2 mt-1">
-<span class="flex items-center gap-1 text-[#0bda57] bg-[#0bda57]/10 px-2 py-0.5 rounded text-xs font-bold">
-<span class="material-symbols-outlined text-xs">arrow_upward</span>
+                                <span class="text-secondary-text text-xs">vs yesterday</span>
+                            </div>
+                        </div>
+                        <div
+                            class="flex flex-col gap-2 rounded-xl p-5 border border-border-dark bg-card-dark relative overflow-hidden group">
+                            <div class="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition-opacity">
+                                <span class="material-symbols-outlined text-6xl text-white">show_chart</span>
+                            </div>
+                            <p class="text-secondary-text text-sm font-medium uppercase tracking-wider">Today's Return
+                            </p>
+                            <p class="text-white tracking-tight text-3xl font-bold leading-tight">+$2,431.20</p>
+                            <div class="flex items-center gap-2 mt-1">
+                                <span
+                                    class="flex items-center gap-1 text-[#0bda57] bg-[#0bda57]/10 px-2 py-0.5 rounded text-xs font-bold">
+                                    <span class="material-symbols-outlined text-xs">arrow_upward</span>
                                     +2.1%
                                 </span>
-<span class="text-secondary-text text-xs">daily gain</span>
-</div>
-</div>
-<div class="flex flex-col gap-2 rounded-xl p-5 border border-border-dark bg-card-dark relative overflow-hidden group">
-<div class="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition-opacity">
-<span class="material-symbols-outlined text-6xl text-white">payments</span>
-</div>
-<p class="text-secondary-text text-sm font-medium uppercase tracking-wider">Buying Power</p>
-<p class="text-white tracking.tight text-3xl font-bold leading-tight">$15,000.00</p>
-<div class="flex items-center gap-2 mt-1">
-<span class="text-secondary-text text-xs">Available for trade</span>
-<button class="ml-auto text-primary text-xs font-bold hover:underline">Deposit Now</button>
-</div>
-</div>
-</div>
-<div class="grid grid-cols-1 xl:grid-cols-3 gap-6">
-<div class="xl:col-span-2 flex flex-col gap-2 rounded-xl border border-border-dark bg-card-dark p-6">
-<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-4">
-<div>
-<h3 class="text-white text-lg font-bold leading-normal flex items-center gap-2">
+                                <span class="text-secondary-text text-xs">daily gain</span>
+                            </div>
+                        </div>
+                        <div
+                            class="flex flex-col gap-2 rounded-xl p-5 border border-border-dark bg-card-dark relative overflow-hidden group">
+                            <div class="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition-opacity">
+                                <span class="material-symbols-outlined text-6xl text-white">payments</span>
+                            </div>
+                            <p class="text-secondary-text text-sm font-medium uppercase tracking-wider">Buying Power</p>
+                            <p class="text-white tracking.tight text-3xl font-bold leading-tight">$15,000.00</p>
+                            <div class="flex items-center gap-2 mt-1">
+                                <span class="text-secondary-text text-xs">Available for trade</span>
+                                <button class="ml-auto text-primary text-xs font-bold hover:underline">Deposit
+                                    Now</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-1 xl:grid-cols-3 gap-6">
+                        <div
+                            class="xl:col-span-2 flex flex-col gap-2 rounded-xl border border-border-dark bg-card-dark p-6">
+                            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-4">
+                                <div>
+                                    <h3 class="text-white text-lg font-bold leading-normal flex items-center gap-2">
                                         Wealth Projection &amp; AI Forecast
-                                        <span class="bg-primary/20 text-primary text-[10px] font-bold px-2 py-0.5 rounded-full border border-primary/30">AI BETA</span>
-</h3>
-<p class="text-secondary-text text-sm">Projected growth based on current portfolio allocation.</p>
-</div>
-<div class="flex bg-[#111618] rounded-lg p-1 border border-border-dark self-start">
-<button class="px-3 py-1 rounded text-xs font-bold text-secondary-text hover:text-white transition-colors">1M</button>
-<button class="px-3 py-1 rounded text-xs font-bold text-[#111618] bg-primary shadow-sm">1Y</button>
-<button class="px-3 py-1 rounded text-xs font-bold text-secondary-text hover:text-white transition-colors">5Y</button>
-<button class="px-3 py-1 rounded text-xs font-bold text-secondary-text hover:text-white transition-colors">ALL</button>
-</div>
-</div>
-<div class="w-full h-[280px] relative mt-2">
-<svg class="w-full h-full" fill="none" preserveAspectRatio="none" viewBox="0 0 800 280" xmlns="http://www.w3.org/2000/svg">
-<defs>
-<linearGradient id="chartGradient" x1="0" x2="0" y1="0" y2="1">
-<stop offset="0%" stop-color="#06bcf9" stop-opacity="0.2"></stop>
-<stop offset="100%" stop-color="#06bcf9" stop-opacity="0"></stop>
-</linearGradient>
-<pattern height="4" id="diagonalHatch" patternUnits="userSpaceOnUse" width="4">
-<path d="M-1,1 l2,-2
+                                        <span
+                                            class="bg-primary/20 text-primary text-[10px] font-bold px-2 py-0.5 rounded-full border border-primary/30">AI
+                                            BETA</span>
+                                    </h3>
+                                    <p class="text-secondary-text text-sm">Projected growth based on current portfolio
+                                        allocation.</p>
+                                </div>
+                                <div class="flex bg-[#111618] rounded-lg p-1 border border-border-dark self-start">
+                                    <button
+                                        class="px-3 py-1 rounded text-xs font-bold text-secondary-text hover:text-white transition-colors">1M</button>
+                                    <button
+                                        class="px-3 py-1 rounded text-xs font-bold text-[#111618] bg-primary shadow-sm">1Y</button>
+                                    <button
+                                        class="px-3 py-1 rounded text-xs font-bold text-secondary-text hover:text-white transition-colors">5Y</button>
+                                    <button
+                                        class="px-3 py-1 rounded text-xs font-bold text-secondary-text hover:text-white transition-colors">ALL</button>
+                                </div>
+                            </div>
+                            <div class="w-full h-[280px] relative mt-2">
+                                <svg class="w-full h-full" fill="none" preserveAspectRatio="none" viewBox="0 0 800 280"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <defs>
+                                        <linearGradient id="chartGradient" x1="0" x2="0" y1="0" y2="1">
+                                            <stop offset="0%" stop-color="#06bcf9" stop-opacity="0.2"></stop>
+                                            <stop offset="100%" stop-color="#06bcf9" stop-opacity="0"></stop>
+                                        </linearGradient>
+                                        <pattern height="4" id="diagonalHatch" patternUnits="userSpaceOnUse" width="4">
+                                            <path d="M-1,1 l2,-2
                                                      M0,4 l4,-4
                                                      M3,5 l2,-2" style="stroke:#27353a; stroke-width:1"></path>
-</pattern>
-</defs>
-<line stroke="#27353a" stroke-width="1" x1="0" x2="800" y1="240" y2="240"></line>
-<line stroke="#27353a" stroke-dasharray="4 4" stroke-width="1" x1="0" x2="800" y1="180" y2="180"></line>
-<line stroke="#27353a" stroke-dasharray="4 4" stroke-width="1" x1="0" x2="800" y1="120" y2="120"></line>
-<line stroke="#27353a" stroke-dasharray="4 4" stroke-width="1" x1="0" x2="800" y1="60" y2="60"></line>
-<path d="M0,240 C100,230 150,200 250,180 S350,190 450,120 S550,100 600,80 V240 H0 Z" fill="url(#chartGradient)"></path>
-<path d="M0,240 C100,230 150,200 250,180 S350,190 450,120 S550,100 600,80" fill="none" stroke="#06bcf9" stroke-linecap="round" stroke-width="3"></path>
-<path d="M600,80 C650,60 700,40 800,20" fill="none" stroke="#9bb3bb" stroke-dasharray="6 6" stroke-linecap="round" stroke-width="3"></path>
-<circle cx="600" cy="80" fill="#06bcf9" r="6" stroke="#fff" stroke-width="2"></circle>
-<g transform="translate(520, 30)">
-<rect fill="#18282e" height="40" rx="6" stroke="#27353a" width="140"></rect>
-<text fill="#9bb3bb" font-family="Manrope" font-size="10" text-anchor="middle" x="70" y="18">Current Projection</text>
-<text fill="#fff" font-family="Manrope" font-size="14" font-weight="bold" text-anchor="middle" x="70" y="32">$158,200</text>
-</g>
-</svg>
-<div class="flex justify-between mt-2 px-2">
-<span class="text-xs font-medium text-secondary-text">Jan</span>
-<span class="text-xs font-medium text-secondary-text">Mar</span>
-<span class="text-xs font-medium text-secondary-text">May</span>
-<span class="text-xs font-medium text-secondary-text">Jul</span>
-<span class="text-xs font-medium text-secondary-text">Sep</span>
-<span class="text-xs font-medium text-white font-bold">Today</span>
-<span class="text-xs font-medium text-secondary-text border-t border-dashed border-secondary-text pt-1">2025 (Proj)</span>
-</div>
-</div>
-</div>
-<div class="flex flex-col gap-4">
-<div class="rounded-xl border border-border-dark bg-card-dark p-5 shadow-lg relative overflow-hidden">
-<div class="absolute top-0 left-0 w-1 h-full bg-primary"></div>
-<div class="flex justify-between items-start mb-3">
-<div class="flex items-center gap-2">
-<span class="material-symbols-outlined text-primary">savings</span>
-<h4 class="text-white font-bold text-sm">Tax Optimization</h4>
-</div>
-<span class="text-xs bg-primary/10 text-primary px-2 py-1 rounded font-bold">Action Needed</span>
-</div>
-<p class="text-secondary-text text-xs leading-relaxed mb-4">AI detected a tax-loss harvesting opportunity. You could offset <span class="text-white font-bold">$320</span> in gains.</p>
-<button class="w-full py-2 rounded-lg bg-[#27353a] hover:bg[#2f3e44] text.white text-xs font-bold transition-colors">Review Suggestions</button>
-</div>
-<div class="flex-1 rounded-xl border border-border-dark bg-card.dark p-5 flex flex-col justify-between">
-<div class="flex justify-between items-center mb-2">
-<h4 class="text-white font-bold text-sm flex items-center gap-2">
-<span class="material-symbols-outlined text-secondary-text text-lg">speed</span>
+                                        </pattern>
+                                    </defs>
+                                    <line stroke="#27353a" stroke-width="1" x1="0" x2="800" y1="240" y2="240"></line>
+                                    <line stroke="#27353a" stroke-dasharray="4 4" stroke-width="1" x1="0" x2="800"
+                                        y1="180" y2="180"></line>
+                                    <line stroke="#27353a" stroke-dasharray="4 4" stroke-width="1" x1="0" x2="800"
+                                        y1="120" y2="120"></line>
+                                    <line stroke="#27353a" stroke-dasharray="4 4" stroke-width="1" x1="0" x2="800"
+                                        y1="60" y2="60"></line>
+                                    <path d="M0,240 C100,230 150,200 250,180 S350,190 450,120 S550,100 600,80 V240 H0 Z"
+                                        fill="url(#chartGradient)"></path>
+                                    <path d="M0,240 C100,230 150,200 250,180 S350,190 450,120 S550,100 600,80"
+                                        fill="none" stroke="#06bcf9" stroke-linecap="round" stroke-width="3"></path>
+                                    <path d="M600,80 C650,60 700,40 800,20" fill="none" stroke="#9bb3bb"
+                                        stroke-dasharray="6 6" stroke-linecap="round" stroke-width="3"></path>
+                                    <circle cx="600" cy="80" fill="#06bcf9" r="6" stroke="#fff" stroke-width="2">
+                                    </circle>
+                                    <g transform="translate(520, 30)">
+                                        <rect fill="#18282e" height="40" rx="6" stroke="#27353a" width="140"></rect>
+                                        <text fill="#9bb3bb" font-family="Manrope" font-size="10" text-anchor="middle"
+                                            x="70" y="18">Current Projection</text>
+                                        <text fill="#fff" font-family="Manrope" font-size="14" font-weight="bold"
+                                            text-anchor="middle" x="70" y="32">$158,200</text>
+                                    </g>
+                                </svg>
+                                <div class="flex justify-between mt-2 px-2">
+                                    <span class="text-xs font-medium text-secondary-text">Jan</span>
+                                    <span class="text-xs font-medium text-secondary-text">Mar</span>
+                                    <span class="text-xs font-medium text-secondary-text">May</span>
+                                    <span class="text-xs font-medium text-secondary-text">Jul</span>
+                                    <span class="text-xs font-medium text-secondary-text">Sep</span>
+                                    <span class="text-xs font-medium text-white font-bold">Today</span>
+                                    <span
+                                        class="text-xs font-medium text-secondary-text border-t border-dashed border-secondary-text pt-1">2025
+                                        (Proj)</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex flex-col gap-4">
+                            <div
+                                class="rounded-xl border border-border-dark bg-card-dark p-5 shadow-lg relative overflow-hidden">
+                                <div class="absolute top-0 left-0 w-1 h-full bg-primary"></div>
+                                <div class="flex justify-between items-start mb-3">
+                                    <div class="flex items-center gap-2">
+                                        <span class="material-symbols-outlined text-primary">savings</span>
+                                        <h4 class="text-white font-bold text-sm">Tax Optimization</h4>
+                                    </div>
+                                    <span class="text-xs bg-primary/10 text-primary px-2 py-1 rounded font-bold">Action
+                                        Needed</span>
+                                </div>
+                                <p class="text-secondary-text text-xs leading-relaxed mb-4">AI detected a tax-loss
+                                    harvesting opportunity. You could offset <span
+                                        class="text-white font-bold">$320</span> in gains.</p>
+                                <button
+                                    class="w-full py-2 rounded-lg bg-[#27353a] hover:bg[#2f3e44] text.white text-xs font-bold transition-colors">Review
+                                    Suggestions</button>
+                            </div>
+                            <div
+                                class="flex-1 rounded-xl border border-border-dark bg-card.dark p-5 flex flex-col justify-between">
+                                <div class="flex justify-between items-center mb-2">
+                                    <h4 class="text-white font-bold text-sm flex items-center gap-2">
+                                        <span class="material-symbols-outlined text-secondary-text text-lg">speed</span>
                                         Risk Profile
                                     </h4>
-<span class="text-secondary-text text-xs">Updated today</span>
-</div>
-<div class="flex items-center gap-4 my-2">
-<div class="relative size-16 shrink-0">
-<svg class="size-full -rotate-90" viewBox="0 0 36 36">
-<path class="text-[#27353a]" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-width="4"></path>
-<path class="text-primary" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-dasharray="75, 100" stroke-width="4"></path>
-</svg>
-<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center">
-<span class="text-xs font-bold text-white">7.5</span>
-</div>
-</div>
-<div>
-<p class="text-white font-bold text-sm">Aggressive Growth</p>
-<p class="text-[10px] text-secondary-text leading-tight mt-1">Your behavior indicates a higher tolerance for volatility this month.</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 pb-6">
-<div class="lg:col-span-2 rounded-xl border border-border-dark bg-card-dark p-6">
-<div class="flex justify-between items-center mb-6">
-<h3 class="text-white text-lg font-bold">Goal-Based Investing</h3>
-<button class="text-primary text-xs font-bold flex items-center gap-1 hover:underline">
+                                    <span class="text-secondary-text text-xs">Updated today</span>
+                                </div>
+                                <div class="flex items-center gap-4 my-2">
+                                    <div class="relative size-16 shrink-0">
+                                        <svg class="size-full -rotate-90" viewBox="0 0 36 36">
+                                            <path class="text-[#27353a]"
+                                                d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
+                                                fill="none" stroke="currentColor" stroke-width="4"></path>
+                                            <path class="text-primary"
+                                                d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
+                                                fill="none" stroke="currentColor" stroke-dasharray="75, 100"
+                                                stroke-width="4"></path>
+                                        </svg>
+                                        <div
+                                            class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center">
+                                            <span class="text-xs font-bold text-white">7.5</span>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <p class="text-white font-bold text-sm">Aggressive Growth</p>
+                                        <p class="text-[10px] text-secondary-text leading-tight mt-1">Your behavior
+                                            indicates a higher tolerance for volatility this month.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 pb-6">
+                        <div class="lg:col-span-2 rounded-xl border border-border-dark bg-card-dark p-6">
+                            <div class="flex justify-between items-center mb-6">
+                                <h3 class="text-white text-lg font-bold">Goal-Based Investing</h3>
+                                <button class="text-primary text-xs font-bold flex items-center gap-1 hover:underline">
                                     View All <span class="material-symbols-outlined text-xs">arrow_forward</span>
-</button>
-</div>
-<div class="space-y-6">
-<div>
-<div class="flex justify-between items-end mb-2">
-<div class="flex items-center gap-2">
-<div class="bg-[#27353a] p-1.5 rounded-lg text-white">
-<span class="material-symbols-outlined text-lg">beach_access</span>
-</div>
-<div>
-<p class="text-sm font-bold text-white">Retirement Fund</p>
-<p class="text-xs text-secondary-text">Target: $1.2M by 2045</p>
-</div>
-</div>
-<p class="text-sm font-bold text-primary">68%</p>
-</div>
-<div class="w-full bg-[#111618] rounded-full h-2 overflow-hidden">
-<div class="bg-primary h-2 rounded-full" style="width: 68%"></div>
-</div>
-</div>
-<div>
-<div class="flex justify-between items-end mb-2">
-<div class="flex items-center gap-2">
-<div class="bg[#27353a] p-1.5 rounded-lg text-white">
-<span class="material-symbols-outlined text-lg">house</span>
-</div>
-<div>
-<p class="text-sm font-bold text-white">New Home Downpayment</p>
-<p class="text-xs text-secondary-text">Target: $150k by 2026</p>
-</div>
-</div>
-<p class="text-sm font-bold text-[#0bda57]">42%</p>
-</div>
-<div class="w-full bg-[#111618] rounded-full h-2 overflow-hidden">
-<div class="bg-[#0bda57] h-2 rounded-full" style="width: 42%"></div>
-</div>
-</div>
-</div>
-<div class="rounded-xl border border-border-dark bg-gradient-to-b from-[#1a2529] to-[#111618] p-6 flex flex-col">
-<h3 class="text-white text-lg font-bold mb-4 flex items-center gap-2">
-<span class="material-symbols-outlined text-yellow-500">lightbulb</span>
-                                Behavioral Insight
-                            </h3>
-<div class="flex-1 flex flex-col justify-center">
-<p class="text-white font-medium text-sm mb-2">"Diamond Hands" Detected</p>
-<p class="text-secondary-text text-sm leading-relaxed mb-4">
-                                    You've successfully held <span class="text-white font-bold">TSLA</span> through a 12% dip without panic selling. This improves your long-term stability score.
-                                </p>
-<div class="mt-auto flex gap-2">
-<span class="text-[10px] font-bold uppercase tracking-wider bg[#27353a] text-secondary-text px-2 py-1 rounded">Discipline +5</span>
-<span class="text-[10px] font-bold uppercase tracking-wider bg[#27353a] text-secondary-text px-2 py-1 rounded">Strategy +2</span>
-</div>
-</div>
-</div>
-</div>
-</div>
-</main>
-</div>
-<div data-include="./shared/app-footer.html"></div>
-<script src="../shared/include.js"></script>
-</body></html>
+                                </button>
+                            </div>
+                            <div class="space-y-6">
+                                <div>
+                                    <div class="flex justify-between items-end mb-2">
+                                        <div class="flex items-center gap-2">
+                                            <div class="bg-[#27353a] p-1.5 rounded-lg text-white">
+                                                <span class="material-symbols-outlined text-lg">beach_access</span>
+                                            </div>
+                                            <div>
+                                                <p class="text-sm font-bold text-white">Retirement Fund</p>
+                                                <p class="text-xs text-secondary-text">Target: $1.2M by 2045</p>
+                                            </div>
+                                        </div>
+                                        <p class="text-sm font-bold text-primary">68%</p>
+                                    </div>
+                                    <div class="w-full bg-[#111618] rounded-full h-2 overflow-hidden">
+                                        <div class="bg-primary h-2 rounded-full" style="width: 68%"></div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="flex justify-between items-end mb-2">
+                                        <div class="flex items-center gap-2">
+                                            <div class="bg[#27353a] p-1.5 rounded-lg text-white">
+                                                <span class="material-symbols-outlined text-lg">house</span>
+                                            </div>
+                                            <div>
+                                                <p class="text-sm font-bold text-white">New Home Downpayment</p>
+                                                <p class="text-xs text-secondary-text">Target: $150k by 2026</p>
+                                            </div>
+                                        </div>
+                                        <p class="text-sm font-bold text-[#0bda57]">42%</p>
+                                    </div>
+                                    <div class="w-full bg-[#111618] rounded-full h-2 overflow-hidden">
+                                        <div class="bg-[#0bda57] h-2 rounded-full" style="width: 42%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                class="rounded-xl border border-border-dark bg-gradient-to-b from-[#1a2529] to-[#111618] p-6 flex flex-col">
+                                <h3 class="text-white text-lg font-bold mb-4 flex items-center gap-2">
+                                    <span class="material-symbols-outlined text-yellow-500">lightbulb</span>
+                                    Behavioral Insight
+                                </h3>
+                                <div class="flex-1 flex flex-col justify-center">
+                                    <p class="text-white font-medium text-sm mb-2">"Diamond Hands" Detected</p>
+                                    <p class="text-secondary-text text-sm leading-relaxed mb-4">
+                                        You've successfully held <span class="text-white font-bold">TSLA</span> through
+                                        a 12% dip without panic selling. This improves your long-term stability score.
+                                    </p>
+                                    <div class="mt-auto flex gap-2">
+                                        <span
+                                            class="text-[10px] font-bold uppercase tracking-wider bg[#27353a] text-secondary-text px-2 py-1 rounded">Discipline
+                                            +5</span>
+                                        <span
+                                            class="text-[10px] font-bold uppercase tracking-wider bg[#27353a] text-secondary-text px-2 py-1 rounded">Strategy
+                                            +2</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+        </main>
+    </div>
+    <div data-include="./shared/app-footer.html"></div>
+    <script src="../shared/include.js"></script>
+</body>
+
+</html>
