@@ -142,6 +142,7 @@
     try { updateHeaderTitle(); } catch(e) {}
     try { markActiveNav(); } catch(e) {}
     try { setupMobileNav(); } catch(e) {}
+    try { adjustFooterPadding(); } catch(e) {}
   }
   document.addEventListener('DOMContentLoaded', loadIncludes);
   
@@ -242,5 +243,19 @@
     overlay.addEventListener('click', close);
     document.addEventListener('keydown', (e) => { if(e.key === 'Escape') close(); });
     mq.addEventListener('change', applyMode);
+  }
+
+  // Ensure content clears the fixed footer by applying actual footer height as padding
+  function adjustFooterPadding(){
+    const footer = document.querySelector('.fv-fixed-footer');
+    if(!footer) return;
+    function apply(){
+      const h = footer.offsetHeight || 0;
+      document.querySelectorAll('.fv-pad-footer').forEach(el => { el.style.paddingBottom = h + 'px'; });
+    }
+    apply();
+    let t;
+    const onResize = () => { clearTimeout(t); t = setTimeout(apply, 100); };
+    window.addEventListener('resize', onResize);
   }
 })();

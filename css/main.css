@@ -36,6 +36,11 @@
     color: var(--color-primary);
 }
 
+/* Ensure content doesn't hide behind fixed footer */
+.fv-pad-footer {
+    padding-bottom: 96px; /* approximate footer height */
+}
+
 /* Mobile drawer styles */
 .fv-nav-mobile {
     /* Only affects small screens; desktop remains lg:flex via Tailwind */
