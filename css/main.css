@@ -16,6 +16,26 @@
     width: 70px;
 }
 
+/* Active nav styling for app sidebar */
+.fv-active {
+    position: relative;
+}
+.fv-active::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 4px;
+    height: 100%;
+    background: var(--color-primary);
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+    box-shadow: 0 0 8px rgba(6, 188, 249, 0.35);
+}
+.fv-active .material-symbols-outlined {
+    color: var(--color-primary);
+}
+
 /* Global scrollbar styling */
 html::-webkit-scrollbar,
 body::-webkit-scrollbar {

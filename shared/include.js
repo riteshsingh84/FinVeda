@@ -184,9 +184,11 @@
       baseClasses.forEach(c => a.classList.add(c));
       // Remove any previous active styling
       a.classList.remove('bg-[#27353a]','text-white','border','border-[#2f3e44]');
+      a.classList.remove('fv-active');
       // Apply active styling when matched
       if(isActive){
         a.classList.add('bg-[#27353a]','text-white','border','border-[#2f3e44]');
+        a.classList.add('fv-active');
       }
     });
   }
