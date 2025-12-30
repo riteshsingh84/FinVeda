@@ -145,6 +145,8 @@
     try { setupHeaderMenu(); } catch(e) {}
     try { adjustFooterPadding(); } catch(e) {}
     try { adjustHeaderPadding(); } catch(e) {}
+    try { enableSmoothScrolling(); } catch(e) {}
+    try { loadAboutContent(); } catch(e) {}
   }
   document.addEventListener('DOMContentLoaded', loadIncludes);
   
@@ -385,5 +387,65 @@
 
     // Ensure correct state on breakpoint changes
     window.matchMedia('(min-width: 768px)').addEventListener('change', () => { setOpen(false); });
+  }
+
+  // Enable smooth scrolling for intra-page links (particularly header About -> #about-us)
+  function enableSmoothScrolling(){
+    // Use CSS fallback if supported
+    try{ document.documentElement.style.scrollBehavior = 'smooth'; }catch(_){ }
+    // Intercept clicks on header links that point to anchors
+    document.querySelectorAll('a[href*="#"]').forEach(a => {
+      const href = a.getAttribute('href') || '';
+      if(!href.includes('#')) return;
+      a.addEventListener('click', (e) => {
+        // Only handle same-page anchors
+        const parts = href.split('#');
+        const anchor = parts[1];
+        if(!anchor) return;
+        const targetEl = document.getElementById(anchor);
+        if(targetEl){
+          e.preventDefault();
+          // Close any open header mobile menu
+          const panel = document.querySelector('#fv-header-mobile-menu');
+          if(panel && panel.classList.contains('fv-open')) panel.classList.remove('fv-open');
+          // Scroll with offset for fixed header
+          const header = document.querySelector('.fv-fixed-header');
+          const headerH = header ? header.offsetHeight : 0;
+          const rect = targetEl.getBoundingClientRect();
+          const top = window.scrollY + rect.top - headerH - 16; // small spacing
+          window.scrollTo({ top, behavior: 'smooth' });
+          try{ targetEl.focus({preventScroll:true}); }catch(_){ targetEl.setAttribute('tabindex','-1'); targetEl.focus(); }
+        }
+      });
+    });
+  }
+
+  // Load About copy from resources/about-us.json into #about-us (if present)
+  async function loadAboutContent(){
+    const container = document.getElementById('about-us');
+    if(!container) return;
+    // If content already present, skip (we added static copy), but support overriding
+    try{
+      const resp = await fetch(new URL('../../resources/about-us.json', window.location.href), {cache:'no-cache'});
+      if(!resp.ok) return;
+      const data = await resp.json();
+      // Replace only if the container is empty or we want to ensure canonical text
+      const heading = container.querySelector('h2');
+      const paras = container.querySelectorAll('p');
+      if(heading && data.title) heading.textContent = data.title;
+      if(paras && paras.length >= 1 && data.description_long){
+        // Replace the paragraphs with the canonical paragraph split by double line-breaks
+        const parts = data.description_long.split(/\n\n+/).map(s => s.trim()).filter(Boolean);
+        const parent = paras[0].parentElement || container;
+        // Remove existing paragraphs
+        parent.querySelectorAll('p').forEach(p => p.remove());
+        parts.forEach(text => {
+          const p = document.createElement('p');
+          p.className = 'text-[#9bb0bb] text-lg';
+          p.textContent = text;
+          parent.appendChild(p);
+        });
+      }
+    }catch(e){ /* silently ignore */ }
   }
 })();
