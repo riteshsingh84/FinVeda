@@ -200,6 +200,54 @@ body::-webkit-scrollbar-thumb:hover {
     background-image: linear-gradient(rgba(17, 22, 24, 0.7) 0%, rgba(17, 22, 24, 0.4) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuANaqEHvdRghRyG-YyUF-PPkF6MxRHTtDIImqx6vH2ZZ5ov5BAPSSeY9HI2WqgZTEDBADwxY7OOazIwaca8eUahJ3cbAXD4Lv5p4x-p1m6JkpS2-RzBaS9HOWoDbhdkkN3ZjJr5NwoCpVStnbaYxvjjLtO3xAjabjAE1xWnblDRWWi2Ss7OuYhdGDWcm78qufpmdnv0eS5guPytSb_dZzfqtAPTRXspU3AIUe9cMUbaGgFfP9D50xH7jlSgjhaDaJA1qGEwSD_HoGw");
 }
 
+/* Card hero backgrounds for About and Solution cards */
+.card-hero-1 {
+    background-position: center;
+    background-size: cover;
+    background-image: linear-gradient(rgba(3,7,10,0.68), rgba(3,7,10,0.4)), url("https://images.unsplash.com/photo-1526378721364-57d2b6a4f8a9?q=80&w=1600&auto=format&fit=crop&ixlib=rb-4.0.3&s=1");
+}
+.card-hero-2 {
+    background-position: center;
+    background-size: cover;
+    background-image: linear-gradient(rgba(2,8,19,0.6), rgba(2,8,19,0.32)), url("https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=1600&auto=format&fit=crop&ixlib=rb-4.0.3&s=4");
+}
+
+/* Image frame for section illustrations */
+.img-frame {
+    padding: 12px;
+    box-sizing: border-box;
+    display: inline-block;
+    border-radius: 12px;
+    background: rgba(255,255,255,0.02);
+    transition: box-shadow 280ms ease, transform 280ms ease;
+}
+.dark .img-frame { background: rgba(255,255,255,0.02); }
+.img-frame .section-illustration {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid rgba(255,255,255,0.04);
+    box-shadow: 0 12px 30px rgba(2,8,19,0.35);
+    transition: transform 420ms cubic-bezier(.2,.9,.3,1), box-shadow 420ms ease;
+    will-change: transform;
+}
+.img-frame:hover .section-illustration {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(2,8,19,0.45);
+}
+
+/* Gentle idle float to make visuals feel alive; subtle and slow */
+@keyframes fv-float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+ 100% { transform: translateY(0); }
+}
+.img-frame .section-illustration {
+  animation: fv-float 8s ease-in-out infinite;
+}
+
 /* About page team card photo helpers */
 .card-photo {
     background-position: center;
