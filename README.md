@@ -106,7 +106,7 @@ FinVeda is a prototype for a smart investing platform focused on transparency, e
 ## Typical User Flow
 
 - Start at Home → Learn more via About/Education → Create account → Login.
-- Explore Dashboard → Review Portfolio → Set Goals → Configure Alerts.
+- Explore View Financial Intelligence → Review Portfolio → Set Goals → Configure Alerts.
 - Continue learning via Education and stay informed via News.
 - Use Support Center for help and self-service.
 

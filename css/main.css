@@ -4,7 +4,7 @@
     --border-dark: #27353a;
 }
 
-/* Utility alias to match Dashboard's Tailwind color key */
+/* Utility alias to match View Financial Intelligence's Tailwind color key */
 .border-border-dark { border-color: var(--border-dark) !important; }
 
 .material-symbols-outlined {
