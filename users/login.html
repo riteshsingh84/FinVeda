@@ -1,12 +1,16 @@
 <!DOCTYPE html>
-<html class="dark" lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>FinTech Dashboard - Login</title>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<script id="tailwind-config">
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>FinTech Dashboard - Login</title>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
         tailwind.config = {
             darkMode: "class",
             theme: {
@@ -27,214 +31,276 @@
             },
         }
     </script>
- <link rel="stylesheet" href="./../css/main.css"/>
+    <link rel="stylesheet" href="./../css/main.css" />
 </head>
-    <body class="bg-background-light dark:bg-background-dark font-display min-h-screen flex flex-col overflow-x-hidden">
+
+<body class="bg-background-light dark:bg-background-dark font-display min-h-screen flex flex-col overflow-x-hidden">
     <div data-include="./shared/header.html"></div>
-<header hidden class="w-full border-b border-border-dark bg-background-dark/80 backdrop-blur-md fixed top-0 z-50 transition-all duration-300">
-<div class="px-6 h-[72px] flex items-center justify-between max-w-7xl mx-auto w-full">
-<a class="flex items-center gap-3 text-white shrink-0 hover:opacity-90 transition-opacity" href="../home.html">
-<div class="size-8 text-primary">
-<svg class="w-full h-full" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-<path clip-rule="evenodd" d="M12.0799 24L4 19.2479L9.95537 8.75216L18.04 13.4961L18.0446 4H29.9554L29.96 13.4961L38.0446 8.75216L44 19.2479L35.92 24L44 28.7521L38.0446 39.2479L29.96 34.5039L29.9554 44H18.0446L18.04 34.5039L9.95537 39.2479L4 28.7521L12.0799 24Z" fill="currentColor" fill-rule="evenodd"></path>
-</svg>
-</div>
-<h2 class="text-white text-xl font-bold tracking-tight">FinTech <span class="text-primary">Prime</span></h2>
-</a>
-<nav class="hidden lg:flex items-center gap-1">
-<div class="relative group">
-<button class="px-4 py-2 text-sm font-semibold text-text-secondary hover:text-white hover:bg-white/5 rounded-lg transition-all flex items-center gap-1">
-                    Overview
-                    <span class="material-symbols-outlined text-[18px]">keyboard_arrow_down</span>
-</button>
-<div class="absolute top-full left-0 mt-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform origin-top-left">
-<div class="bg-surface-dark border border-border-dark rounded-xl shadow-2xl overflow-hidden p-1 flex flex-col gap-0.5 ring-1 ring-black/5">
-<a class="px-3 py-2 text-sm text-text-secondary hover:text-white hover:bg-white/5 rounded-lg transition-colors flex items-center gap-2" href="../app/dashboard.html">
-<span class="material-symbols-outlined text-[18px]">dashboard</span>
-                            Dashboard
-                        </a>
-<a class="px-3 py-2 text-sm text-text-secondary hover:text-white hover:bg-white/5 rounded-lg transition-colors flex items-center gap-2" href="../app/portfolio.html">
-<span class="material-symbols-outlined text-[18px]">pie_chart</span>
-                            Portfolio
-                        </a>
-<a class="px-3 py-2 text-sm text-text-secondary hover:text-white hover:bg-white/5 rounded-lg transition-colors flex items-center gap-2" href="../app/transactions.html">
-<span class="material-symbols-outlined text-[18px]">receipt_long</span>
-                            Transactions
-                        </a>
-</div>
-</div>
-</div>
-<div class="relative group">
-<button class="px-4 py-2 text-sm font-semibold text-text-secondary hover:text-white hover:bg.white/5 rounded-lg transition-all flex items-center gap-1">
-                    Intelligence
-                    <span class="material-symbols-outlined text-[18px]">keyboard_arrow_down</span>
-</button>
-<div class="absolute top-full left-0 mt-2 w-56 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform origin-top-left">
-<div class="bg-surface-dark border border-border-dark rounded-xl shadow-2xl overflow-hidden p-1 flex flex-col gap-0.5 ring-1 ring-black/5">
-<a class="px-3 py-2 text-sm text-text-secondary hover:text-white hover:bg.white/5 rounded-lg transition-colors" href="../app/behavioral.html">Behavioral Finance</a>
-<a class="px-3 py-2 text-sm text-text-secondary hover:text-white hover:bg.white/5 rounded-lg transition-colors" href="../app/projections.html">Projections</a>
-<a class="px-3 py-2 text-sm text-text-secondary hover:text-white hover:bg.white/5 rounded-lg transition-colors" href="../app/risk.html">Risk Profiling</a>
-<a class="px-3 py-2 text-sm text-text-secondary hover:text-white hover:bg.white/5 rounded-lg transition-colors" href="../app/tax.html">Tax Optimization</a>
-</div>
-</div>
-</div>
-<div class="relative group">
-<button class="px-4 py-2 text-sm font-semibold text-text-secondary hover:text-white hover:bg.white/5 rounded-lg transition-all flex items-center gap-1">
-                    Market &amp; Plan
-                    <span class="material-symbols-outlined text-[18px]">keyboard_arrow_down</span>
-</button>
-<div class="absolute top-full left-0 mt-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform origin-top-left">
-<div class="bg-surface-dark border border-border-dark rounded-xl shadow-2xl overflow-hidden p-1 flex flex-col gap-0.5 ring-1 ring-black/5">
-<a class="px-3 py-2 text-sm text-text-secondary hover:text-white hover:bg.white/5 rounded-lg transition-colors" href="../app/goals.html">Goals</a>
-<a class="px-3 py-2 text-sm text-text-secondary hover:text-white hover:bg.white/5 rounded-lg transition-colors" href="../resources/news.html">News Feed</a>
-<a class="px-3 py-2 text-sm text-text-secondary hover:text-white hover:bg.white/5 rounded-lg transition-colors" href="../app/alerts.html">Alerts</a>
-</div>
-</div>
-</div>
-<div class="relative group">
-<button class="px-4 py-2 text-sm font-semibold text-text-secondary hover:text-white hover:bg.white/5 rounded-lg transition-all flex items-center gap-1">
-                    Resources
-                    <span class="material-symbols-outlined text-[18px]">keyboard_arrow_down</span>
-</button>
-<div class="absolute top-full left-0 mt-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform origin-top-left">
-<div class="bg-surface-dark border border-border-dark rounded-xl shadow-2xl overflow-hidden p-1 flex flex-col gap-0.5 ring-1 ring-black/5">
-<a class="px-3 py-2 text-sm text-text-secondary hover:text-white hover:bg.white/5 rounded-lg transition-colors" href="../resources/education.html">Education</a>
-<a class="px-3 py-2 text-sm text-text-secondary hover:text-white hover:bg.white/5 rounded-lg transition-colors" href="../resources/support.html">Support</a>
-</div>
-</div>
-</div>
-</div>
-</main>
-</button>
-<div class="h-6 w-px bg-border-dark hidden lg:block"></div>
-<a class="hidden sm:flex text-sm font-semibold text-white bg-primary/10 hover:bg-primary/20 px-4 py-2 rounded-lg border border-primary/20 transition-all" href="register.html">
-                Get Started
+    <header hidden
+        class="w-full border-b border-border-dark bg-background-dark/80 backdrop-blur-md fixed top-0 z-50 transition-all duration-300">
+        <div class="px-6 h-[72px] flex items-center justify-between max-w-7xl mx-auto w-full">
+            <a class="flex items-center gap-3 text-white shrink-0 hover:opacity-90 transition-opacity"
+                href="../home.html">
+                <div class="size-8 text-primary">
+                    <svg class="w-full h-full" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                        <path clip-rule="evenodd"
+                            d="M12.0799 24L4 19.2479L9.95537 8.75216L18.04 13.4961L18.0446 4H29.9554L29.96 13.4961L38.0446 8.75216L44 19.2479L35.92 24L44 28.7521L38.0446 39.2479L29.96 34.5039L29.9554 44H18.0446L18.04 34.5039L9.95537 39.2479L4 28.7521L12.0799 24Z"
+                            fill="currentColor" fill-rule="evenodd"></path>
+                    </svg>
+                </div>
+                <h2 class="text-white text-xl font-bold tracking-tight">FinTech <span class="text-primary">Prime</span>
+                </h2>
             </a>
-<button class="lg:hidden p-2 text-white">
-<span class="material-symbols-outlined">menu</span>
-</button>
-</div>
-</div>
-</header>
-<div class="flex-1 flex flex-col lg:flex-row h-full pt-[72px] overflow-y-auto fv-pad-header fv-pad-footer">
-<div class="hidden lg:flex lg:w-1/2 bg-surface-dark relative overflow-hidden flex-col justify-between p-12 xl:p-20">
-<div class="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none dot-grid-bg">
-</div>
-<div class="relative z-10">
-<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-bold mb-6">
-<span class="material-symbols-outlined text-[16px]">verified_user</span>
+            <nav class="hidden lg:flex items-center gap-1">
+                <div class="relative group">
+                    <button
+                        class="px-4 py-2 text-sm font-semibold text-text-secondary hover:text-white hover:bg-white/5 rounded-lg transition-all flex items-center gap-1">
+                        Overview
+                        <span class="material-symbols-outlined text-[18px]">keyboard_arrow_down</span>
+                    </button>
+                    <div
+                        class="absolute top-full left-0 mt-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform origin-top-left">
+                        <div
+                            class="bg-surface-dark border border-border-dark rounded-xl shadow-2xl overflow-hidden p-1 flex flex-col gap-0.5 ring-1 ring-black/5">
+                            <a class="px-3 py-2 text-sm text-text-secondary hover:text-white hover:bg-white/5 rounded-lg transition-colors flex items-center gap-2"
+                                href="../app/dashboard.html">
+                                <span class="material-symbols-outlined text-[18px]">dashboard</span>
+                                Dashboard
+                            </a>
+                            <a class="px-3 py-2 text-sm text-text-secondary hover:text-white hover:bg-white/5 rounded-lg transition-colors flex items-center gap-2"
+                                href="../app/portfolio.html">
+                                <span class="material-symbols-outlined text-[18px]">pie_chart</span>
+                                Portfolio
+                            </a>
+                            <a class="px-3 py-2 text-sm text-text-secondary hover:text-white hover:bg-white/5 rounded-lg transition-colors flex items-center gap-2"
+                                href="../app/transactions.html">
+                                <span class="material-symbols-outlined text-[18px]">receipt_long</span>
+                                Transactions
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative group">
+                    <button
+                        class="px-4 py-2 text-sm font-semibold text-text-secondary hover:text-white hover:bg.white/5 rounded-lg transition-all flex items-center gap-1">
+                        Intelligence
+                        <span class="material-symbols-outlined text-[18px]">keyboard_arrow_down</span>
+                    </button>
+                    <div
+                        class="absolute top-full left-0 mt-2 w-56 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform origin-top-left">
+                        <div
+                            class="bg-surface-dark border border-border-dark rounded-xl shadow-2xl overflow-hidden p-1 flex flex-col gap-0.5 ring-1 ring-black/5">
+                            <a class="px-3 py-2 text-sm text-text-secondary hover:text-white hover:bg.white/5 rounded-lg transition-colors"
+                                href="../app/behavioral.html">Behavioral Finance</a>
+                            <a class="px-3 py-2 text-sm text-text-secondary hover:text-white hover:bg.white/5 rounded-lg transition-colors"
+                                href="../app/projections.html">Projections</a>
+                            <a class="px-3 py-2 text-sm text-text-secondary hover:text-white hover:bg.white/5 rounded-lg transition-colors"
+                                href="../app/risk.html">Risk Profiling</a>
+                            <a class="px-3 py-2 text-sm text-text-secondary hover:text-white hover:bg.white/5 rounded-lg transition-colors"
+                                href="../app/tax.html">Tax Optimization</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative group">
+                    <button
+                        class="px-4 py-2 text-sm font-semibold text-text-secondary hover:text-white hover:bg.white/5 rounded-lg transition-all flex items-center gap-1">
+                        Market &amp; Plan
+                        <span class="material-symbols-outlined text-[18px]">keyboard_arrow_down</span>
+                    </button>
+                    <div
+                        class="absolute top-full left-0 mt-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform origin-top-left">
+                        <div
+                            class="bg-surface-dark border border-border-dark rounded-xl shadow-2xl overflow-hidden p-1 flex flex-col gap-0.5 ring-1 ring-black/5">
+                            <a class="px-3 py-2 text-sm text-text-secondary hover:text-white hover:bg.white/5 rounded-lg transition-colors"
+                                href="../app/goals.html">Goals</a>
+                            <a class="px-3 py-2 text-sm text-text-secondary hover:text-white hover:bg.white/5 rounded-lg transition-colors"
+                                href="../resources/news.html">News Feed</a>
+                            <a class="px-3 py-2 text-sm text-text-secondary hover:text-white hover:bg.white/5 rounded-lg transition-colors"
+                                href="../app/alerts.html">Alerts</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative group">
+                    <button
+                        class="px-4 py-2 text-sm font-semibold text-text-secondary hover:text-white hover:bg.white/5 rounded-lg transition-all flex items-center gap-1">
+                        Resources
+                        <span class="material-symbols-outlined text-[18px]">keyboard_arrow_down</span>
+                    </button>
+                    <div
+                        class="absolute top-full left-0 mt-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform origin-top-left">
+                        <div
+                            class="bg-surface-dark border border-border-dark rounded-xl shadow-2xl overflow-hidden p-1 flex flex-col gap-0.5 ring-1 ring-black/5">
+                            <a class="px-3 py-2 text-sm text-text-secondary hover:text-white hover:bg.white/5 rounded-lg transition-colors"
+                                href="../resources/education.html">Education</a>
+                            <a class="px-3 py-2 text-sm text-text-secondary hover:text-white hover:bg.white/5 rounded-lg transition-colors"
+                                href="../resources/support.html">Support</a>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        </main>
+        </button>
+        <div class="h-6 w-px bg-border-dark hidden lg:block"></div>
+        <a class="hidden sm:flex text-sm font-semibold text-white bg-primary/10 hover:bg-primary/20 px-4 py-2 rounded-lg border border-primary/20 transition-all"
+            href="register.html">
+            Get Started
+        </a>
+        <button class="lg:hidden p-2 text-white">
+            <span class="material-symbols-outlined">menu</span>
+        </button>
+        </div>
+        </div>
+    </header>
+    <div class="flex-1 flex flex-col lg:flex-row h-full pt-[72px] overflow-y-auto fv-pad-header fv-pad-footer">
+        <div
+            class="hidden lg:flex lg:w-1/2 bg-surface-dark relative overflow-hidden flex-col justify-between p-12 xl:p-20">
+            <div class="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none dot-grid-bg">
+            </div>
+            <div class="relative z-10">
+                <div
+                    class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-bold mb-6">
+                    <span class="material-symbols-outlined text-[16px]">verified_user</span>
                     BANK-GRADE SECURITY
                 </div>
-<h1 class="text-white text-4xl xl:text-5xl font-bold leading-tight mb-6 tracking-tight">
-                    Secure Investment <br/>
-<span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-400">Portal &amp; Analytics</span>
-</h1>
-<p class="text-text-secondary text-lg max-w-md leading-relaxed">
-                    Join over 10,000+ investors managing their portfolios with precision. Real-time data, global access, and uncompromising security.
+                <h1 class="text-white text-4xl xl:text-5xl font-bold leading-tight mb-6 tracking-tight">
+                    AI-Powered Financial Intelligence For<br />
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-400">Smarter Wealth Decisions</span>
+                </h1>
+                <p class="text-text-secondary text-lg max-w-md mb-12 leading-relaxed">
+                    Join over 10,000+ investors managing their portfolios with precision. Real-time data, global access,
+                    and uncompromising security.
                 </p>
-</div>
-<div class="relative z-10 grid gap-4 mt-12 w-full max-w-lg">
-<div class="flex items-start gap-4 p-4 rounded-xl bg-background-dark/80 border border-border-dark backdrop-blur-md">
-<div class="p-3 rounded-lg bg-primary/10 text-primary">
-<span class="material-symbols-outlined">analytics</span>
-</div>
-<div>
-<h3 class="text-white font-bold text-sm">Real-time Analytics</h3>
-<p class="text-text-secondary text-xs mt-1">Live market data updates with &lt; 50ms latency.</p>
-</div>
-</div>
-<div class="flex items-start gap-4 p-4 rounded-xl bg-background-dark/80 border border-border-dark backdrop-blur-md">
-<div class="p-3 rounded-lg bg-primary/10 text-primary">
-<span class="material-symbols-outlined">globe</span>
-</div>
-<div>
-<h3 class="text-white font-bold text-sm">Global Exchange Access</h3>
-<p class="text-text-secondary text-xs mt-1">Trade on NYSE, NASDAQ, LSE, and more seamlessly.</p>
-</div>
-</div>
-</div>
-<div class="relative z-10 mt-12 flex items-center gap-4 text-text-secondary text-sm">
-<span>© 2024 FinTech Prime</span>
-<span class="w-1 h-1 rounded-full bg-border-dark"></span>
-<a class="hover:text-primary transition-colors" href="#">Privacy Policy</a>
-<span class="w-1 h-1 rounded-full bg-border-dark"></span>
-<a class="hover:text-primary transition-colors" href="#">Terms of Service</a>
-</div>
-</div>
-<div class="w-full lg:w-1/2 flex items-center justify-center p-6 sm:p-12 relative">
-<div class="absolute inset-0 bg-gradient-to-b from-surface-dark to-background-dark lg:hidden -z-10"></div>
-<div class="w-full max-w-[480px] flex flex-col gap-6">
-<div class="text-center lg:text-left mb-4">
-<h2 class="text-white text-3xl font-bold mb-2">Welcome Back</h2>
-<p class="text-text-secondary">Enter your credentials to access your dashboard.</p>
-</div>
-<div class="w-full mb-2">
-<div class="flex border-b border-border-dark">
-<button class="flex-1 pb-4 text-center border-b-2 border-primary text-primary font-bold text-sm transition-all hover:text-primary">
+                <p class="text-text-secondary text-lg leading-relaxed mb-12 max-w-lg">
+                    By continuing, you acknowledge that FinVeda provides financial intelligence and decision-support
+                    insights only. The platform does not provide personalized financial advice or investment
+                    recommendations.
+                </p>
+            </div>
+            <div class="relative z-10 grid gap-4 mt-12 w-full max-w-lg">
+                <div
+                    class="flex items-start gap-4 p-4 rounded-xl bg-background-dark/80 border border-border-dark backdrop-blur-md">
+                    <div class="p-3 rounded-lg bg-primary/10 text-primary">
+                        <span class="material-symbols-outlined">analytics</span>
+                    </div>
+                    <div>
+                        <h3 class="text-white font-bold text-sm">Real-time Analytics</h3>
+                        <p class="text-text-secondary text-xs mt-1">Live market data updates with &lt; 50ms latency.</p>
+                    </div>
+                </div>
+                <!-- <div
+                    class="flex items-start gap-4 p-4 rounded-xl bg-background-dark/80 border border-border-dark backdrop-blur-md">
+                    <div class="p-3 rounded-lg bg-primary/10 text-primary">
+                        <span class="material-symbols-outlined">globe</span>
+                    </div>
+                    <div>
+                        <h3 class="text-white font-bold text-sm">Global Exchange Access</h3>
+                        <p class="text-text-secondary text-xs mt-1">Trade on NYSE, NASDAQ, LSE, and more seamlessly.</p>
+                    </div>
+                </div> -->
+            </div>
+         
+        </div>
+        <div class="w-full lg:w-1/2 flex items-center justify-center p-6 sm:p-12 relative">
+            <div class="absolute inset-0 bg-gradient-to-b from-surface-dark to-background-dark lg:hidden -z-10"></div>
+            <div class="w-full max-w-[480px] flex flex-col gap-6">
+                <div class="text-center lg:text-left mb-4">
+                    <h2 class="text-white text-3xl font-bold mb-2">Welcome Back</h2>
+                    <p class="text-text-secondary">Enter your credentials to access your dashboard.</p>
+                </div>
+                <div class="w-full mb-2">
+                    <div class="flex border-b border-border-dark">
+                        <button
+                            class="flex-1 pb-4 text-center border-b-2 border-primary text-primary font-bold text-sm transition-all hover:text-primary">
                             Log In
                         </button>
-<button class="flex-1 pb-4 text-center border-b-2 border-transparent text-text-secondary font-bold text-sm transition-all hover:text-white hover:border-border-dark" data-path="users/register.html">
+                        <button
+                            class="flex-1 pb-4 text-center border-b-2 border-transparent text-text-secondary font-bold text-sm transition-all hover:text-white hover:border-border-dark"
+                            data-path="users/register.html">
                             Register
                         </button>
-</div>
-</div>
-<form class="flex flex-col gap-5">
-<div class="flex flex-col gap-2">
-<label class="text-white text-sm font-semibold" for="email">Email Address</label>
-<div class="relative">
-<span class="absolute left-4 top-1/2 -translate-y-1/2 text-text-secondary material-symbols-outlined text-[20px]">mail</span>
-<input class="w-full h-12 pl-12 pr-4 bg-surface-dark border border-border-dark rounded-lg text-white placeholder-text-secondary focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all outline-none" id="email" placeholder="name@example.com" type="email"/>
-</div>
-</div>
-<div class="flex flex-col gap-2">
-<div class="flex justify-between items-center">
-<label class="text-white text-sm font-semibold" for="password">Password</label>
-<a class="text-xs text-primary font-medium hover:text-primary/80 transition-colors" href="forgot-password.html">Forgot Password?</a>
-</div>
-<div class="relative">
-<span class="absolute left-4 top-1/2 -translate-y-1/2 text-text-secondary material-symbols-outlined text-[20px]">lock</span>
-<input class="w-full h-12 pl-12 pr-12 bg-surface-dark border border-border-dark rounded-lg text-white placeholder-text-secondary focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all outline-none" id="password" placeholder="Enter your password" type="password"/>
-<button class="absolute right-4 top-1/2 -translate-y-1/2 text-text-secondary hover:text-white transition-colors" type="button">
-<span class="material-symbols-outlined text-[20px]">visibility_off</span>
-</button>
-</div>
-</div>
-<div class="mt-2 flex flex-col gap-4">
-<button class="w-full h-12 bg-primary hover:bg-primary/90 text-background-dark font-bold rounded-lg shadow-[0_0_15px_rgba(6,188,249,0.3)] transition-all hover:shadow-[0_0_25px_rgba(6,188,249,0.5)] flex items-center justify-center gap-2" type="button">
-<span>Secure Login</span>
-<span class="material-symbols-outlined text-[20px]">arrow_forward</span>
-</button>
-<div class="relative py-2 flex items-center justify-center">
-<div class="absolute inset-0 flex items-center">
-<div class="w-full border-t border-border-dark"></div>
-</div>
-<span class="relative bg-background-light dark:bg-background-dark px-4 text-xs text-text-secondary uppercase tracking-wider font-semibold lg:bg-transparent lg:dark:bg-background-dark">Or continue with</span>
-</div>
-<div class="grid grid-cols-2 gap-4">
-<button class="h-12 flex items-center justify-center gap-3 rounded-lg border border-border-dark bg-surface-dark hover:bg-border-dark transition-all text-white font-medium text-sm" type="button">
-<svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-<path d="M12.545,10.239v3.821h5.445c-0.712,2.315-2.647,3.972-5.445,3.972c-3.332,0-6.033-2.701-6.033-6.032s2.701-6.032,6.033-6.032c1.498,0,2.866,0.549,3.921,1.453l2.814-2.814C17.503,2.988,15.139,2,12.545,2C7.021,2,2.543,6.477,2.543,12s4.478,10,10.002,10c8.396,0,10.249-7.85,9.426-11.748L12.545,10.239z"></path>
-</svg>
+                    </div>
+                </div>
+                <form class="flex flex-col gap-5">
+                    <div class="flex flex-col gap-2">
+                        <label class="text-white text-sm font-semibold" for="email">Email Address</label>
+                        <div class="relative">
+                            <span
+                                class="absolute left-4 top-1/2 -translate-y-1/2 text-text-secondary material-symbols-outlined text-[20px]">mail</span>
+                            <input
+                                class="w-full h-12 pl-12 pr-4 bg-surface-dark border border-border-dark rounded-lg text-white placeholder-text-secondary focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all outline-none"
+                                id="email" placeholder="name@example.com" type="email" />
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-2">
+                        <div class="flex justify-between items-center">
+                            <label class="text-white text-sm font-semibold" for="password">Password</label>
+                            <a class="text-xs text-primary font-medium hover:text-primary/80 transition-colors"
+                                href="forgot-password.html">Forgot Password?</a>
+                        </div>
+                        <div class="relative">
+                            <span
+                                class="absolute left-4 top-1/2 -translate-y-1/2 text-text-secondary material-symbols-outlined text-[20px]">lock</span>
+                            <input
+                                class="w-full h-12 pl-12 pr-12 bg-surface-dark border border-border-dark rounded-lg text-white placeholder-text-secondary focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all outline-none"
+                                id="password" placeholder="Enter your password" type="password" />
+                            <button
+                                class="absolute right-4 top-1/2 -translate-y-1/2 text-text-secondary hover:text-white transition-colors"
+                                type="button">
+                                <span class="material-symbols-outlined text-[20px]">visibility_off</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="mt-2 flex flex-col gap-4">
+                        <button
+                            class="w-full h-12 bg-primary hover:bg-primary/90 text-background-dark font-bold rounded-lg shadow-[0_0_15px_rgba(6,188,249,0.3)] transition-all hover:shadow-[0_0_25px_rgba(6,188,249,0.5)] flex items-center justify-center gap-2"
+                            type="button">
+                            <span>Secure Login</span>
+                            <span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+                        </button>
+                        <div class="relative py-2 flex items-center justify-center">
+                            <div class="absolute inset-0 flex items-center">
+                                <div class="w-full border-t border-border-dark"></div>
+                            </div>
+                            <span
+                                class="relative bg-background-light dark:bg-background-dark px-4 text-xs text-text-secondary uppercase tracking-wider font-semibold lg:bg-transparent lg:dark:bg-background-dark">Or
+                                continue with</span>
+                        </div>
+                        <div class="grid grid-cols-2 gap-4">
+                            <button
+                                class="h-12 flex items-center justify-center gap-3 rounded-lg border border-border-dark bg-surface-dark hover:bg-border-dark transition-all text-white font-medium text-sm"
+                                type="button">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                        d="M12.545,10.239v3.821h5.445c-0.712,2.315-2.647,3.972-5.445,3.972c-3.332,0-6.033-2.701-6.033-6.032s2.701-6.032,6.033-6.032c1.498,0,2.866,0.549,3.921,1.453l2.814-2.814C17.503,2.988,15.139,2,12.545,2C7.021,2,2.543,6.477,2.543,12s4.478,10,10.002,10c8.396,0,10.249-7.85,9.426-11.748L12.545,10.239z">
+                                    </path>
+                                </svg>
                                 Google
                             </button>
-<button class="h-12 flex items-center justify-center gap-3 rounded-lg border border-border-dark bg-surface-dark hover:bg-border-dark transition-all text-white font-medium text-sm" type="button">
-<svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-<path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.48 2.24-1.65 3.57-.71.6.43 1.11 1.05 1.54 1.77-3.89 1.49-3.23 6.66 1.48 7.32-.42 1.47-1.16 2.58-1.67 3.79zm-3.27-14.7c1.37-1.67 2.27-4.04 2.11-6.57-2.1.09-4.32 1.25-5.6 2.8-1.12 1.34-1.92 3.61-1.63 6.01 2.26.17 3.99-1.05 5.12-2.24z"></path>
-</svg>
+                            <button
+                                class="h-12 flex items-center justify-center gap-3 rounded-lg border border-border-dark bg-surface-dark hover:bg-border-dark transition-all text-white font-medium text-sm"
+                                type="button">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                        d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.48 2.24-1.65 3.57-.71.6.43 1.11 1.05 1.54 1.77-3.89 1.49-3.23 6.66 1.48 7.32-.42 1.47-1.16 2.58-1.67 3.79zm-3.27-14.7c1.37-1.67 2.27-4.04 2.11-6.57-2.1.09-4.32 1.25-5.6 2.8-1.12 1.34-1.92 3.61-1.63 6.01 2.26.17 3.99-1.05 5.12-2.24z">
+                                    </path>
+                                </svg>
                                 Apple
                             </button>
-</div>
-</div>
-</form>
-<div class="text-center mt-2">
-<p class="text-text-secondary text-sm">
-                        Don't have an account? 
-                        <a class="text-white font-bold hover:text-primary transition-colors underline decoration-border-dark decoration-2 underline-offset-4 hover:decoration-primary" href="register.html">Register Now</a>
-</p>
-</div>
-</div>
-</div>
-</div>
-<div data-include="./shared/footer.html"></div>
-<script src="./../shared/include.js"></script>
-</body></html>
+                        </div>
+                    </div>
+                </form>
+                <div class="text-center mt-2">
+                    <p class="text-text-secondary text-sm">
+                        Don't have an account?
+                        <a class="text-white font-bold hover:text-primary transition-colors underline decoration-border-dark decoration-2 underline-offset-4 hover:decoration-primary"
+                            href="register.html">Register Now</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div data-include="./shared/footer.html"></div>
+    <script src="./../shared/include.js"></script>
+</body>
+
+</html>
